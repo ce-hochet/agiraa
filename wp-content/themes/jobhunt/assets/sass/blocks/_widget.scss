@@ -1,0 +1,924 @@
+.widget {
+    margin-bottom: 30px;
+
+    @include media-breakpoint-up(md) {
+        //margin-bottom: 20px;
+    }
+
+    .widget-title {
+        display: block;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        font-family: $jobhunt-title-font-family;
+    }
+
+    ul {
+        @include list-unstyled;
+
+        .children {
+            padding-left: 20px;
+            margin-bottom: 0;
+            margin-top: 6px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: $e8;
+
+            a {
+                color: $e8;
+                transition: all 0.3s ease 0s;
+            }
+        }
+    }
+
+    &.job_manager {
+        .job_listings {
+            margin-bottom: 0;
+        }
+
+        .job_listing {
+            &:before,
+            li:before {
+                content: none !important;
+            }
+
+            &.job_position_featured h3:after {
+                @include la-font("\f005");
+                font-size: 21px;
+                margin-left: 5px;
+            }
+        }
+    }
+}
+
+.widget_search {
+    form.search-form {
+        label {
+            display: flex;
+            align-items: center;
+            border: 2px solid $treehouse-input-border-color;
+            border-radius: 8px;
+            background-color: $treehouse-input-bg;
+            position: relative;
+
+            @include hover-focus() {
+                border-color: $treehouse-input-border-hover-color;
+            }
+
+            &:focus {
+                background-color: $treehouse-input-bg-focus-color;
+                outline: none;
+            }
+
+            &:after {
+                // content: "\f2eb";
+                // font-family: $la-font-family;
+                // font-weight: 400;
+                @include la-icon-font("\f002");
+                font-size: 24px;
+                line-height: 46px;
+                position: absolute;
+                right: 10px;
+            }
+        }
+
+        .search-field {
+            flex: 0 1 100%;
+            font-size: 13px;
+            line-height: 1;
+            padding: 15px 34px 15px 15px;
+            border: none;
+            margin-bottom: 0;
+            border-radius: 8px;
+
+            @include hover-focus {
+                outline: none;
+            }
+        }
+    }
+
+    .search-submit,
+    input[type=submit],
+    button[type=submit] {
+        @include sr-only;
+    }
+}
+
+.jobhunt_recent_posts_widget {
+    > ul {
+        > li {
+            display: flex;
+            margin: 0 0 28px;
+            padding-left: 0;
+
+            &:before {
+                display: none;
+            }
+        }
+    }
+
+    img {
+        max-width: 74px;
+        max-height: 64px;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+
+    a.post-thumbnail {
+        padding-right: 16px;
+        margin-right: 0;
+    }
+
+    .post-content {
+        a {
+            display: block;
+            font-size: 13px;
+            line-height: 20px;
+            font-weight: 500;
+            color: $treehouse-title-color;
+            word-break: break-word;
+            transition: all 0.3s ease 0s;
+            margin-bottom: 4px;
+            line-height: 1.3;
+        }
+
+        span {
+            display: block;
+            font-size: 13px;
+            line-height: 20px;
+            color: $e8;
+        }
+    }
+
+    .jobhunt-img-placeholder {
+        position: relative;
+    }
+
+    .post-icon {
+        position: relative;
+        width: 74px;
+        height: 64px;
+        background-color: #f5f5f5;
+        border-radius: 8px;
+        margin-bottom: 0;
+
+        i {
+            font-size: 18px;
+            color: #adb5bd;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            transition: all 0.4s ease 0s;
+        }
+    }
+}
+
+.widget_tag_cloud,
+.widget_product_tag_cloud {
+    .tagcloud {
+        display: flex;
+        flex-wrap: wrap;
+
+        a {
+            @include make-button(7px, 15.2px, 13px !important, 1em, 5px);
+            @include button-outline-variant( #eaedee, #3e474f, $white, #dde0e1 );
+            color: #656c72;
+            border-width: 2px;
+            text-transform: capitalize;
+            transition: all 0.4s ease 0s;
+            margin: 0 8px 8px 0;
+        }
+    }
+}
+
+.widget_calendar {
+    .calendar_wrap{
+        @include table-borderless;
+        @include table-striped;
+        @include table-sm;
+        text-align: center;
+
+        caption {
+            text-align: center;
+            font-weight: 600;
+            color: $treehouse-title-color;
+            caption-side: top;
+            padding-top: 0;
+        }
+
+        tfoot {
+            a {
+                font-size: 14px;
+                font-weight: 500;
+            }
+
+            #prev {
+                text-align: left;
+                padding-left: 20px;
+            }
+
+            #next {
+                text-align: right;
+                padding-right: 20px;
+            }
+        }
+    }
+}
+
+.widget_rss {
+    .widget-title img {
+        display: none;
+    }
+
+    ul {
+        li {
+            padding-left: 0;
+
+            &::before {
+                content: none !important;
+            }
+
+            &+ li {
+                border-top: 1px solid #e6e7ef;
+                padding-top: 10px;
+            }
+        }
+    }
+
+    li {
+        .rsswidget {
+            display: block;
+            font-size: 15px;
+            line-height: 22px;
+            font-weight: 500;
+            color: $treehouse-title-color;
+        }
+
+        .rss-date {
+            font-size: 13px;
+        }
+
+        .rssSummary {
+            font-size: 14px;
+            line-height: 22px;
+            color: $e8;
+        }
+
+        cite {
+            font-size: 14px;
+            font-weight: 500;
+            color: $treehouse-title-color;
+        }
+    }
+}
+
+.widget_recent_comments {
+    ul {
+        li {
+            line-height: 22px;
+            margin-bottom: 14px;
+
+            &::before {
+                content: none !important;
+            }
+
+            a {
+                font-weight: 500;
+                color: $treehouse-title-color;
+            }
+        }
+    }
+}
+
+.widget_text {
+    .textwidget {
+        p {
+            font-size: 14px;
+            line-height: 22px;
+            color: $e8;
+
+            strong {
+                color: $treehouse-title-color;
+            }
+        }
+    }
+}
+
+.widget-area,
+.shop-sidebar,
+.blog-sidebar,
+.footer-v1 .footer-widgets,
+.footer-v3 .footer-widgets,
+.footer-v4 .footer-widgets,
+.footer-v5 .footer-widgets {
+    .widget {
+        ul li:before {
+            @include la-icon-font("\f105" #{"/*rtl:\"\f104\"*/"});
+            margin-right: 10px;
+        }
+
+        &.widget_pages,
+        &.widget_product_categories,
+        &.widget_categories,
+        &.widget_nav_menu {
+            .menu-item-inner,
+            .cat-item-inner,
+            .page-item-inner {
+                display: flex;
+                position: relative;
+                justify-content: space-between;
+                @include make-auto-col;
+
+                & + .children {
+                    width: 100%;
+                }
+
+                .child-indicator {
+                    i {
+                        font-size: 18px;
+                    }
+
+                    &:not(.collapsed) {
+                        i {
+                            &::before {
+                                content: "\f146";
+                            }
+                        }
+                    }
+                }
+
+                a:not(.child-indicator) {
+                    flex: 0 1 100%;
+
+                    .count {
+                        margin-left: 4px;
+
+                        &::before {
+                            content: "(";
+                        }
+                        &::after {
+                            content: ")";
+                        }
+                    }
+                }
+            }
+
+            .cat-item,
+            .page_item,
+            .menu-item {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+
+                > .children ul ul ul ul ul {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}
+
+.widget-area {
+    .jobhunt-wpjm-search,
+    .jobhunt-wpjm-location-search,
+    .jobhunt-wpjmc-search,
+    .jobhunt-wpjmc-location-search,
+    .jobhunt-wpjmr-search,
+    .jobhunt-wpjmr-location-search,
+    .woocommerce-product-search {
+        @include make-new-form-control( $treehouse-input-color, $treehouse-input-bg, 2px, $treehouse-input-border-color );
+        @include form-control-size( 0, 0, 14px, normal, 8px );
+        display: flex;
+        height: 50px;
+
+        @include hover-focus() {
+            border-color: $treehouse-input-border-hover-color;
+        }
+
+        &:focus {
+            background-color: $treehouse-input-bg-focus-color;
+            outline: none;
+        }
+
+        .search-field, .location-search-field{
+            border-width: 0;
+            border-radius: 8px;
+
+            &:focus + button {
+                background-color: $treehouse-input-bg-focus-color;
+            }
+        }
+
+        input::placeholder {
+            font-size: 13px;
+            color: $as;
+        }
+
+        button {
+            border-width: 0;
+            background: transparent;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            border-radius: 8px;
+
+            .job-search-text,
+            .job-location-search-text,
+            .company-search-text,
+            .company-location-search-text,
+            .resume-search-text,
+            .resume-location-search-text {
+                display: none;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    .woocommerce-product-search {
+        button {
+            border-width: 0;
+            background: transparent;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            border-radius: 8px;
+            text-indent: -9999px;
+
+            &:after {
+                @include la-font("\f002");
+                text-indent: 0;
+            }
+        }
+    }
+
+    .widget_jobhunt_wpjm_date_filter,
+    .widget_jobhunt_wpjmc_date_filter,
+    .widget_jobhunt_wpjmr_date_filter {
+        .jobhunt-wpjm-date-filter-list__item,
+        .jobhunt-wpjmc-date-filter-list__item,
+        .jobhunt-wpjmr-date-filter-list__item {
+            &:before {
+                display: none;
+            }
+
+            a{
+                font-size: 13px;
+                display: flex;
+                align-items: center;
+
+                &:before {
+                    @include fa-font( "\f111", 400 );
+                    font-size: 18px;
+                    line-height: 1.3;
+                    color: $e6;
+                    margin-right: 9px;
+                }
+            }
+
+            &.chosen a:before {
+               content: "\f192";
+           }
+       }
+    }
+}
+
+.jobhunt-wpjmr-widget-layered-nav-list {
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.jobhunt-wpjm-widget-layered-nav-list .jobhunt-wpjm-widget-layered-nav-list__item,
+.jobhunt-wpjmc-widget-layered-nav-list .jobhunt-wpjmc-widget-layered-nav-list__item,
+.jobhunt-wpjmr-widget-layered-nav-list .jobhunt-wpjmr-widget-layered-nav-list__item {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    margin-bottom: 6px;
+
+    &:before {
+        display: none;
+    }
+
+    a{
+        display: flex;
+        align-items: center;
+        margin-right: 5px;
+        line-height: 30px;
+        @include hover-focus{
+            color: $checkbox-active;
+        }
+
+        &:before {
+            @include la-font( "\f04d" );
+            margin-right: 6px;
+            font-size: 30px;
+            color: #e6e8ef;
+        }
+
+        .count {
+            margin-left: 5px;
+        }
+    }
+
+
+    &.chosen a:before {
+       @include fa-font( "\f14a", 900);
+       font-size: 22px;
+       margin: 0 12px 0 5px;
+       color: $checkbox-active;
+   }
+}
+
+.widget_jobhunt_wpjm_date_filter,
+.widget_jobhunt_wpjmr_date_filter,
+.widget_jobhunt_wpjmc_date_filter,
+.widget_jobhunt_wpjmc_layered_nav,
+.widget_jobhunt_wpjmr_layered_nav,
+.widget_jobhunt_wpjm_layered_nav {
+    .widget-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        margin-bottom: 16px;
+        font-size: 14px;
+        color: $td;
+        font-weight: 500;
+
+        &::after {
+            @include la-font( "\f068" );
+            font-size: 20px;
+            color: $black;
+        }
+    }
+
+    > ul {
+        transition: all 0.2s ease 0s;
+    }
+
+    &.closed {
+        > ul {
+            //display: none;
+            visibility: hidden;
+            height: 0;
+            margin-bottom: 0;
+            opacity: 0;
+        }
+
+        .widget-title {
+            margin-bottom: 0;
+
+            &::after {
+                content: "\f067";
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.widget_jobhunt_wpjmc_search,
+.widget_jobhunt_wpjmc_location_search,
+.widget_jobhunt_wpjmr_search,
+.widget_jobhunt_wpjmr_location_search,
+.widget_jobhunt_wpjm_search,
+.widget_jobhunt_wpjm_location_search {
+    .widget-title {
+        font-size: 14px;
+        color: $td;
+        font-weight: 500;
+        margin-bottom: 16px;
+    }
+}
+
+.company-type-v3,
+.company-type-v2,
+.type-list-classic {
+    .widget-area-inner {
+        .widget {
+            border: 2px solid $e6;
+            border-radius: 4px;
+
+            &.widget_jobhunt_wpjmc_search,
+            &.widget_jobhunt_wpjmc_location_search,
+            &.widget_jobhunt_wpjmr_search,
+            &.widget_jobhunt_wpjmr_location_search,
+            &.widget_jobhunt_wpjm_search,
+            &.widget_jobhunt_wpjm_location_search {
+                border-width: 0;
+                padding: 0;
+            }
+
+            > ul {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.company-type-v3,
+.company-type-v2 {
+    .widget-area-inner {
+        .widget {
+            padding: 12px 24px 12px 16px;
+            margin-bottom: 30px;
+            //padding: 22px 24px 22px 14px;
+        }
+    }
+}
+
+.type-list-classic {
+    .widget-area-inner {
+        .widget {
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.tax-job_listing_type{
+    .jobhunt-wpjm-widget-layered-nav-list__item{
+
+        &.freelance a {
+            @include hover-focus{
+                color: $danger;
+            }
+            &:before {
+                @include button-outline-variant( $danger );
+            }
+        }
+
+        &.full-time a {
+            @include hover-focus{
+                color: $primary;
+            }
+            &:before{
+                @include button-outline-variant( $primary );
+            }
+        }
+
+        &.internship a {
+            @include hover-focus{
+                color: $info;
+            }
+            &:before{
+                @include button-outline-variant( $info );
+            }
+        }
+
+        &.part-time a{
+            @include hover-focus{
+                color: $success;
+            }
+            &:before{
+                @include button-outline-variant( $success );
+            }
+        }
+
+        &.temporary a{
+            @include hover-focus{
+                color: #6033cc;
+            }
+            &:before{
+                @include button-outline-variant( #6033cc );
+            }
+        }
+
+        &.chosen a:before {
+            @include la-font( "\f14a" );
+            font-size: 25px;
+            margin: 0px 8px 0px 1px;
+        }
+    }
+}
+
+.widget_price_filter {
+    .price_slider {
+        margin-bottom: 1.6em;
+    }
+
+    .price_slider_amount {
+        text-align: right;
+        line-height: 2.4em;
+
+        .button {
+            float: left;
+        }
+    }
+
+    .ui-slider {
+        position: relative;
+        text-align: left;
+    }
+
+    .ui-slider .ui-slider-handle {
+        position: absolute;
+        top: -2px;
+        z-index: 2;
+        width: 1em;
+        height: 1em;
+        @include border-top-radius(1em);
+        @include border-bottom-radius(1em);
+        cursor: ew-resize;
+        outline: none;
+        background: #fff;
+        box-sizing: border-box;
+        margin-top: -.25em;
+        margin-left: auto;
+        opacity: 1;
+        border: 2px solid;
+
+        &:last-child {
+            margin-left: -1em;
+        }
+
+        &:hover,
+        &.ui-state-active {
+            box-shadow: 0 0 0 .236em rgba(#000, 0.1);
+        }
+    }
+
+    .ui-slider .ui-slider-range {
+        position: absolute;
+        z-index: 1;
+        font-size: .7em;
+        display: block;
+        border: 0;
+        @include border-top-radius(1em);
+        @include border-bottom-radius(1em);
+    }
+
+    .price_slider_wrapper .ui-widget-content {
+        @include border-top-radius(1em);
+        @include border-bottom-radius(1em);
+        background: rgba(0,0,0,0.1);
+        border: 0;
+    }
+
+    .ui-slider-horizontal {
+        height: 4px;
+    }
+
+    .ui-slider-horizontal .ui-slider-range {
+        top: 0;
+        height: 100%;
+    }
+
+    .ui-slider-horizontal .ui-slider-range-min {
+        left: -1px;
+    }
+
+    .ui-slider-horizontal .ui-slider-range-max {
+        right: -1px;
+    }
+
+    .price_label {
+        .from, .to {
+            font-weight: 500;
+        }
+    }
+}
+
+.widget_recently_viewed_products {
+    .product_list_widget {
+        @include make-row();
+
+        > li {
+            @include make-col-ready();
+            @include make-col(6);
+        }
+
+        .woocommerce-Price-amount {
+            display: none;
+        }
+
+        .reviewer {
+            color: #1a1a1a;
+            opacity: 0.7;
+        }
+    }
+}
+
+.widget .product_list_widget {
+    li {
+        margin-bottom: 20px;
+        @include clearfix();
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        > a {
+            display: block;
+        }
+
+        &:before {
+            content: none !important;
+        }
+    }
+
+    img, .wp-post-image {
+        width: 75px;
+        height: 75px;
+        object-fit: cover;
+        margin-right: 20px;
+        float: left;
+        display: block;
+    }
+
+    .product-title {
+        display: block;
+        font-size: 14px;
+        color: $treehouse-title-color;
+        white-space: pre;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .woocommerce-Price-amount {
+        display: block;
+        font-size: 14px;
+        color: rgba(26, 26, 26, 0.7);
+        margin: 0;
+    }
+
+    del {
+        margin-right: 4px;
+
+        .woocommerce-Price-amount {
+            font-size: 13px;
+            font-weight: 300;
+            color: $e8;
+            text-decoration: line-through;
+        }
+    }
+
+    ins {
+        text-decoration: none;
+    }
+
+    del,
+    ins {
+        .woocommerce-Price-amount {
+            display: inline-block;
+        }
+    }
+}
+
+.woocommerce-widget-layered-nav-dropdown {
+    .select2-container--default {
+        margin-bottom: 15px;
+
+        .select2-selection--multiple {
+            @include make-new-form-control( $treehouse-input-color, $treehouse-input-bg, 2px, $treehouse-input-border-color );
+            @include form-control-size( 0, 0, 14px, normal, 8px );
+            display: flex;
+            min-height: 47px;
+
+            @include hover-focus() {
+                border-color: $treehouse-input-border-hover-color;
+            }
+
+            &:focus {
+                background-color: $treehouse-input-bg-focus-color;
+                outline: none;
+            }
+
+            .select2-selection__rendered {
+                display: flex;
+                align-items: baseline;
+                flex-wrap: wrap;
+            }
+
+            li {
+                @include make-button(5px, 5px, 13px !important, 1em, 5px);
+                border-color: transparent;
+                color: #656c72;
+                border-width: 2px;
+                text-transform: capitalize;
+                transition: all 0.4s ease 0s;
+                margin: 0 5px 0 0;
+
+                span {
+
+                }
+            }
+        }
+
+        &.select2-container--focus .select2-selection--multiple,
+        &.select2-container--open .select2-selection--multiple {
+            border: 2px solid $treehouse-input-border-hover-color;
+        }
+    }
+
+    .woocommerce-widget-layered-nav-dropdown__submit {
+        @include make-new-button();
+        @include button-size( 5px, 25px, 14px, $btn-line-height, 5px );
+        @include button-outline-variant( $treehouse-body-color );
+    }
+}

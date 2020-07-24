@@ -1,0 +1,11 @@
+.woocommerce-shipping-calculator {
+    clear: both;
+}
+
+.shipping-calculator-form {
+    margin-top: 1rem;
+}
+
+button[name="calc_shipping"] {
+    @include button-outline-variant( $treehouse-body-color, #fff );
+}

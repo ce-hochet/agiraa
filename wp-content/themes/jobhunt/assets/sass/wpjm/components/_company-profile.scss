@@ -1,0 +1,161 @@
+.company-profile-section {
+    @include stretch-full-width();
+    background-color: $fd;
+    padding: 42px 0 62px;
+
+    &.v1 {
+        background-color: transparent;
+
+        .company-profile-inner {
+            .company_logo {
+                margin-bottom: 0;
+            }
+
+            .companies {
+                @include media-breakpoint-down(sm) {
+                    margin: 0 -10px;
+                }
+            }
+
+            .company {
+                @include media-breakpoint-down(sm) {
+                    margin: 10px;
+                }
+            }
+        }
+    }
+}
+
+.company-profile-inner {
+    .companies {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        position: relative;
+    }
+
+    .company {
+        @include media-breakpoint-up(md) {
+            padding: 15px;
+        }
+    }
+
+    .company-inner {
+        background-color: $white;
+        border-radius: 8px;
+        transition: all 0.4s ease 0s;
+        box-shadow: 0px 2px 5px 0px rgba(32, 32, 32, 0.1);
+        padding: 20px;
+        min-height: 270px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include hover-focus {
+            outline: none;
+            box-shadow: 0px 0px 30px 0px rgba(32, 32, 32, 0.15);
+        }
+    }
+
+    .company-info {
+        text-align: center;
+    }
+
+    .company_logo {
+        max-width: 80px;
+        height: 80px;
+        width: 80px;
+        margin: auto;
+        object-fit: cover;
+        margin-bottom: 25px;
+    }
+
+    .company-name {
+        margin-bottom: 12px;
+        margin-top: 0;
+    }
+
+    .company-location {
+        display: block;
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+
+    .open-positions {
+        @include make-new-button();
+        @include button-size( $btn-padding-y, $btn-padding-x, 12px, 16px, 4px );
+        @include button-outline-variant( $primary );
+        border-width: 1px;
+        margin: auto;
+    }
+
+    .slick-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 0;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        color: $be;
+        background-color: #fff;
+        @include make-new-button ( 400, 2px, dashed, $be);
+        @include hover-focus {
+            border-style: solid;
+            color: $white;
+            box-shadow: none;
+        }
+    }
+
+    .slick-next,
+    .slick-prev {
+        z-index: 1;
+    }
+
+    .slick-prev {
+        left: -10px;
+
+        @include media-breakpoint-up(xl) {
+            left: -90px;
+        }
+
+        &:before {
+            @include la-font( "\f060" #{"/*rtl:\"\f061\"*/"} );
+            font-size: 30px;
+        }
+    }
+
+    .slick-next {
+        right: -10px;
+
+        @include media-breakpoint-up(xl) {
+            right: -90px;
+        }
+
+        &:before {
+            content: "\f061" #{"/*rtl:\"\f060\"*/"};
+            @include la-font();
+            font-size: 30px;
+        }
+    }
+}
+
+.company-profile-section.v1 {
+    .company-profile-inner .company-inner {
+        min-height: auto;
+    }
+}
+
+.page-template-template-homepage-v1,
+.page-template-template-homepage-v4{
+    .company-profile-section.v1 {
+        padding: 0;
+    }
+}
+
+.page-template-template-homepage-v2 {
+    .company-profile-section.v2 {
+        margin-bottom: 0;
+    }
+}

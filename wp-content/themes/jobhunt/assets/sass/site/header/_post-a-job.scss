@@ -1,0 +1,30 @@
+.post-a-job {
+    a {
+        @include make-button( 0, 18px, 14px, 34px, 4px );
+        border-width: 2px;
+        transition: all 0.4s ease 0s;
+
+        i {
+            font-size: 15px;
+            margin-right: 10px;
+        }
+
+        @include hover-focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+}
+
+.header-v5 {
+    .post-a-job {
+        flex: none;
+        width: auto;
+
+        a {
+            @include make-button(11.5px, 24.85px, 14px, 1.45, 0px);
+            @include button-outline-variant($white);
+            border-width: 2px;
+        }
+    }
+}

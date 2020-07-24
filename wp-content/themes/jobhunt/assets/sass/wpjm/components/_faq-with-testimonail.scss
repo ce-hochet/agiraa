@@ -1,0 +1,70 @@
+.faq-with-testimonail-section {
+    .jobhunt-faq-section,
+    .testimonial-block {
+        padding: 0;
+
+        .section-header .section-title {
+            @include media-breakpoint-only(md) {
+                font-size: 24px;
+            }
+        }
+
+        .faq-content-question-header h5[data-toggle="collapse"] {
+            @include media-breakpoint-only(md) {
+                font-size: 15px;
+            }
+
+            @include media-breakpoint-between(xs, sm) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    &.jh-section {
+        @include media-breakpoint-between(xs, md) {
+            margin-bottom: 0 !important;
+        }
+    }
+
+    .faq-content-question-header {
+        @include media-breakpoint-between(xs, sm) {
+            min-height: 80px;
+        }
+    }
+
+    .section-header {
+        text-align: left;
+    }
+
+    .v3 .testimonials .testimonial-inner {
+        padding: 0;
+    }
+
+    .v3 .testimonial .customer-feedback::before {
+        top: -170px;
+        left: auto;
+        right: 40px;
+        width: 50px;
+        transform: rotate(180deg);
+    }
+
+    .v3 .testimonials img {
+        border-width: 0;
+    }
+
+    .v3 .customer-profile-image {
+        box-shadow: none;
+    }
+
+    .v3 .testimonial .customer-feedback::after {
+        content: none;
+    }
+
+    .slick-dots {
+        padding: 10px 0;
+    }
+
+    .testimonials {
+        padding-top: 24px;
+    }
+}

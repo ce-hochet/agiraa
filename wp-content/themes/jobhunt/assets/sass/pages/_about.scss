@@ -1,0 +1,73 @@
+.page-template-template-aboutpage,
+.about-page {
+    .testimonial-block,
+    .testimonial-block ul,
+    .jh-site-stats-section,
+    .jh-site-stats-section .site-stats .stats-title,
+    .site-content {
+        margin-bottom: 0;
+    }
+
+    .jh-site-stats-section {
+        background-color: $white;
+        padding: 70px 0 54px;
+    }
+
+    .jobhunt-about-content-section {
+        margin-bottom: 37px;
+    }
+}
+
+.about-content {
+    margin-bottom: 40px;
+
+    .content-image {
+        float: right;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 20px;
+        }
+
+        @include media-breakpoint-up(md) {
+            width: 435px;
+            margin-left: 40px;
+        }
+
+        img {
+            height: 280px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    }
+
+    .content {
+        color: $e8;
+    }
+}
+
+.sharedaddy .sd-block {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom-width: 0;
+}
+
+.jobhunt-about-content-section,
+.jobhunt-features-section {
+    .section-header {
+        text-align: left;
+        margin-bottom: 20px;
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+}
+
+.jobhunt-features-section {
+    margin-bottom: 20px;
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+}

@@ -1,0 +1,161 @@
+.handheld-header {
+    @include make-row;
+    justify-content: space-between;
+    padding: 21.5px 0;
+    align-items: center;
+
+    .site-branding,
+    .off-canvas-navigation-wrapper,
+    > .header-menu {
+        @include make-col-ready;
+        @include make-auto-width-col();
+    }
+
+    .site-branding {
+        //@include make-auto-width-col();
+        padding-left: 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+        .off-canvas-navigation-wrapper.toggled {
+            order: -1;
+        }
+    }
+
+    .off-canvas-navigation-wrapper {
+        line-height: 1;
+    }
+
+    .secondary-menu-text {
+        display: none;
+    }
+
+    > .header-menu {
+        padding: 0;
+
+        > li > a {
+            display: flex;
+            align-items: center;
+
+            i {
+                padding-right: 0;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.handheld-header-menu.header-menu {
+    li {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    > li  a {
+        @include make-auto-col;
+    }
+
+    .sub-menu {
+        width: 100%;
+        padding: 14px 0;
+
+        .sub-menu {
+            padding: 0;
+        }
+
+        a {
+            line-height: 2.2;
+            padding: 4px 24px;
+        }
+    }
+
+    button.dropdown-toggle {
+        outline: none;
+        background-color: transparent;
+        padding-right: 1.387em;
+    }
+
+    .menu-item-has-children {
+        .sub-menu.toggled-on {
+            display: block;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+.post-type-archive-job_listing,
+.post-type-archive-resume,
+.post-type-archive-company,
+.tax-job_listing_category {
+    &.right-sidebar,
+    &.left-sidebar {
+        @include media-breakpoint-between(xs, md) {
+            .site-content .widget-area {
+                background-color: #fff;
+                position: fixed;
+                top: 0;
+                left: -340px;
+                width: 288px;
+                height: 100%;
+                transition: all .3s;
+                overflow-y: scroll;
+                -webkit-overflow-scrolling: touch;
+                z-index: 999;
+                padding-top: 20px;
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            .site-content.active-hh-sidebar .widget-area {
+                left: 0;
+                opacity: 1;
+                visibility: visible;
+                box-shadow: 0 0 17px -1px rgba(0,0,0,.66);
+            }
+        }
+    }
+}
+
+.handheld-sidebar-toggle {
+    padding-left: 15px;
+    margin-top: 20px;
+
+    @include media-breakpoint-up(md) {
+        margin-top: 0;
+    }
+
+    @include media-breakpoint-up(lg) {
+        display: none;
+    }
+
+    .btn {
+        @include make-new-button(700);
+        @include button-size( 10px, 20px, 16px, 1, 4px );
+
+        i {
+            margin-right: 8px;
+        }
+    }
+}
+
+.post-type-archive-resume {
+    &.right-sidebar,
+    &.left-sidebar {
+        .handheld-sidebar-toggle {
+            @include media-breakpoint-down(sm) {
+                text-align: center;
+                padding: 0;
+                margin-bottom: 10px;
+            }
+
+            @include media-breakpoint-only(md) {
+                padding: 0 0 16px;
+                border-bottom: 1px solid $ed;
+            }
+        }
+    }
+}

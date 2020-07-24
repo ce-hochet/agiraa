@@ -1,0 +1,18 @@
+.job-categories-section {
+    text-align: center;
+
+    .job-category {
+        @include media-breakpoint-down(sm) {
+            flex-shrink: 0;
+        }
+    }
+
+    .job-categories {
+        @include list-unstyled;
+
+        @include media-breakpoint-down(lg) {
+            overflow-y: scroll;
+            flex-wrap: nowrap;
+        }
+    }
+}

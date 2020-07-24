@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $jobhunt-body-font-family;
+    font-size: 14px;
+    line-height: 1.75;
+    color: $treehouse-body-color;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+	text-decoration: none;
+    color: $treehouse-title-color;
+
+    @include hover-focus {
+        text-decoration: none;
+    }
+}
+
+img {
+    @include img-fluid();
+}
+
+table {
+    @include table;
+    @include table-bordered;
+}
+
+.screen-reader-text {
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+}
+
+.wp-caption {
+    max-width: 100%;
+}
+
+img.alignright, img.alignleft {
+    margin-bottom: 1em;
+}
+
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 1.5em;
+}
+
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
+}
+
+.aligncenter {
+    clear: both;
+    display: block;
+    margin: 0 auto;
+}
+
+.wp-caption-text {
+    margin-top: 4px;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.wp-caption.alignleft,
+.wp-caption.alignright,
+img.alignright,
+img.alignleft {
+    margin-top: 8px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+
+    .section-title {
+        font-size: 30px;
+        margin: .2em 0;
+        line-height: 1.5;
+        color: $td;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 26px;
+            line-height: 1.2;
+        }
+    }
+
+    .section-sub-title {
+        font-size: 16px;
+        color: $e8;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 14px;
+        }
+    }
+}
+
+.jh-section {
+    margin-bottom: 70px;
+
+    &.mb-0 {
+        margin-bottom: 0;
+    }
+}
+
+.mb-0 .site-content {
+    margin-bottom: 0;
+}
+
+/* Font Awesome KC Fix */
+[class^="fa-"],
+[class*=" fa-"],
+[class^="fa-"]:before,
+[class*=" fa-"]:before {
+    font-family: $fa-font-family !important;
+}
+
+[class*="fab fa-"], [class^="fab fa-"]:before, [class*="fab fa-"]:before {
+    font-family: $fab-font-family !important;
+}
+
+[class^="fas fa-"],
+[class*="fas fa-"],
+[class^="fas fa-"]:before,
+[class*="fas fa-"]:before {
+    font-weight: 900 !important;
+}

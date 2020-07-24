@@ -1,0 +1,141 @@
+.container {
+    @include make-container();
+    @include make-container-max-widths();
+
+    @include media-breakpoint-up(xl) {
+        max-width: 1170px;
+    }
+}
+
+.site-content-inner {
+    @include make-row();
+
+    > .content-area,
+    > .widget-area,
+    > .woocommerce {
+        @include make-col-ready();
+        @include make-col(12);
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .desktop-only {
+        display: block !important;
+    }
+
+    .handheld-only {
+        display: none !important;
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .desktop-only {
+        display: none !important;
+    }
+
+    .handheld-only {
+        display: block !important;
+    }
+}
+
+.has-sidebar .site-content-inner,
+.blog.left-sidebar .site-content-inner,
+.blog.right-sidebar .site-content-inner,
+.archive .site-content-inner,
+.single-post.left-sidebar .site-content-inner,
+.single-post.right-sidebar .site-content-inner,
+.page-template-template-sidebar .site-content-inner,
+.page-template-template-job-sidebar .site-content-inner,
+.page-template-template-resume-sidebar .site-content-inner,
+.page-template-template-company-sidebar .site-content-inner,
+.single-product .site-content-inner,
+.company-type-v2.post-type-archive-company .site-content-inner,
+.type-list-classic.post-type-archive-job_listing .site-content-inner,
+.resume-type-v3.post-type-archive-resume .site-content-inner,
+.search-results.left-sidebar .site-content-inner,
+.search-results.right-sidebar .site-content-inner,
+.search-no-results.right-sidebar .site-content-inner,
+.search-no-results.left-sidebar .site-content-inner,
+body.search.right-sidebar .site-content-inner,
+body.search.left-sidebar .site-content-inner {
+    @include media-breakpoint-up (lg) {
+        > .content-area {
+            @include make-col(8.3);
+        }
+
+        > .widget-area {
+            @include make-col(3.7);
+        }
+    }
+
+    @include media-breakpoint-up (xl) {
+        > .content-area {
+            @include make-col(9);
+        }
+
+        > .widget-area {
+            @include make-col(3);
+        }
+    }
+}
+
+.company-type-v3.post-type-archive-company .site-content-inner {
+    > .content-area {
+        @include media-breakpoint-up (md) {
+            @include make-col(12);
+        }
+
+        @include media-breakpoint-up (lg) {
+            @include make-col(8);
+        }
+
+        @include media-breakpoint-up (xl) {
+            @include make-col(9);
+        }
+    }
+
+    > .widget-area {
+        @include media-breakpoint-up (xl) {
+            @include make-col(3);
+        }
+
+        @include media-breakpoint-only(lg) {
+            @include make-col(4);
+        }
+    }
+}
+
+.page-template-template-job-sidebar .site-content-inner {
+    @include media-breakpoint-up(lg) {
+        > .content-area {
+            order: 2;
+        }
+
+        > .widget-area {
+            order: 1;
+        }
+    }
+}
+
+.post-type-archive-resume .site-content-inner,
+.post-type-archive-job_listing .site-content-inner,
+.post-type-archive-company .site-content-inner {
+    @include media-breakpoint-up (lg) {
+        > .content-area {
+            @include make-col(8);
+        }
+
+        > .widget-area {
+            @include make-col(4);
+        }
+    }
+}
+
+.post-type-archive-resume.full-width .site-content-inner,
+.post-type-archive-job_listing.full-width .site-content-inner,
+.post-type-archive-company.full-width .site-content-inner {
+    > .content-area {
+        @include make-col(12);
+    }
+}
+

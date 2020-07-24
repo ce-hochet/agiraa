@@ -1,0 +1,99 @@
+.jh-recent-articles{
+    &.v1,
+    &.v2 {
+        @include stretch-full-width();
+        padding: 42px 0 50px;
+        background-color: $f4;
+    }
+
+    &.v1{
+        margin-bottom: 0;
+        background-image: url("assets/images/inspiration-geometry.png");
+    }
+
+    &.v2 {
+        article.post,
+        article {
+            .entry-meta {
+                position: absolute;
+                top: -260px;
+                border-radius: 8px;
+                left: 20px;
+                padding: 12px 14px;
+                margin-bottom: 0;
+
+                .posted-on {
+                    margin: 0;
+
+                    a {
+                        color: $td;
+                        font-size: 14px;
+                    }
+
+                    time {
+                    }
+                }
+            }
+
+            .entry-title {
+                margin: 20px 0;
+            }
+        }
+
+        .content-body {
+            margin-top: 0;
+            padding: 0 40px;
+        }
+
+        .entry-meta .comments-link {
+            display: none;
+        }
+    }
+
+    .posts {
+        &.columns-1 .post {
+            @include media-breakpoint-up(md) {
+                @include make-col(12);
+            }
+
+            @include media-breakpoint-up(lg) {
+                @include make-col(12);
+            }
+        }
+        &.columns-2 .post {
+            @include media-breakpoint-up(lg) {
+                @include make-col(6);
+            }
+        }
+
+        &.columns-4 .post {
+            @include media-breakpoint-up(lg) {
+                @include make-col(3);
+            }
+        }
+
+        &.columns-5 .post {
+            @include media-breakpoint-up(lg) {
+                @include make-col(3);
+            }
+
+            @include media-breakpoint-up(xl) {
+                @include make-col(2.4);
+            }
+        }
+    }
+}
+
+.blog-grid .jh-recent-articles-inner {
+    .posts {
+        @include make-row;
+    }
+
+    .post-inner {
+        background-color: $white;
+    }
+
+    .post {
+        @include make-col-ready;
+    }
+}

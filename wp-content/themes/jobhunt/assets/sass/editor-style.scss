@@ -1,0 +1,20 @@
+// Vendors
+// External libraries and frameworks.
+@import 'vendors/bootstrap';
+@import 'vendors/fontawesome/fontawesome';
+
+// Utilities
+// Sass tools and helpers used across the project.
+@import 'utils/variables';
+@import 'utils/mixins';
+
+// Base
+// Includes all the main Jobhunt CSS.
+@import 'base/base';
+@import 'base/layout';
+@import 'base/type';
+@import 'base/forms';
+
+body {
+    margin: 15px;
+}

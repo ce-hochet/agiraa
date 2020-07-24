@@ -1,0 +1,5 @@
+.button {
+    @include make-new-button();
+    @include button-size( 0.75em, 2em, 14px, normal, 4px );
+    @include button-outline-variant( $treehouse-body-color );
+}

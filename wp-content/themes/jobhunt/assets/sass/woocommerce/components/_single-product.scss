@@ -1,0 +1,261 @@
+.single-product {
+    .summary {
+        .price {
+            justify-content: flex-start;
+        }
+    }
+
+    .related {
+        display: block;
+
+        &.products,
+        .products {
+            margin: 0;
+        }
+
+        .products {
+            margin: 0 -15px 60px;
+
+            > .product {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .onsale {
+        left: 15px;
+        right: auto;
+        z-index: 1;
+    }
+
+    .woocommerce-product-gallery {
+        .woocommerce-product-gallery__trigger {
+            position: absolute;
+            top: 10px;
+            z-index: 1;
+            right: 25px;
+        }
+
+        .flex-viewport {
+            margin-bottom: 10px;
+        }
+
+        .flex-control-nav {
+            margin: 0;
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: flex-start;
+
+            li + li {
+                margin-left: 10px;
+            }
+        }
+    }
+
+
+    form.cart {
+        display: inline-flex;
+        flex-direction: column;
+
+        &.variations_form {
+            width: 100%;
+
+            .single_variation_wrap {
+                .quantity {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        table {
+            @include table-borderless;
+
+            &.variations {
+                border-width: 0;
+
+                tbody {
+                    @include make-row;
+
+                    tr {
+                        @include make-col-ready;
+                        display: flex;
+                        flex-direction: column;
+
+                        td {
+                            padding: 0;
+                            position: relative;
+                        }
+
+                        @include media-breakpoint-up(md) {
+                            @include make-col(6);
+                        }
+                    }
+                }
+
+                & + .single_variation_wrap .single_variation{
+                    margin-top: 30px;
+                }
+            }
+
+            td,th {
+                vertical-align: middle;
+
+                span,label {
+                    margin: 0;
+                }
+            }
+
+            .woocommerce-Price-amount {
+                font-size: 15px;
+            }
+        }
+
+        > .quantity {
+            margin-bottom: 20px;
+        }
+
+        .quantity {
+            .qty {
+                max-width: 80px;
+            }
+        }
+
+        button {
+            margin-bottom: 20px;
+            @include button-size( 20px, 52px, 15px, 1.2, 4px );
+            text-transform: uppercase;
+        }
+    }
+
+    .woocommerce-tabs {
+        margin-bottom: 30px;
+
+        > .tabs {
+            list-style: none;
+            @include make-row;
+            height: 65px;
+            align-items: center;
+            border-bottom: 1px solid $treehouse-input-border-color;
+            margin: 0 0 30px;
+            padding: 0;
+            flex-wrap: nowrap;
+            overflow: auto;
+
+            @include media-breakpoint-up(md) {
+                flex-wrap: wrap;
+                overflow: visible;
+            }
+
+            > li + li {
+                margin-left: 32px;
+            }
+
+            > li {
+                flex-shrink: 0;
+
+                @include media-breakpoint-up(md) {
+                    flex-shrink: 1;
+                }
+
+                a {
+                    font-size: 16px;
+                    font-weight: 600;
+                    padding-bottom: 21px;
+                    font-family: "Quicksand", sans-serif;
+
+                    @include hover-focus {
+                        border-bottom: solid 2px $treehouse-nav-link-focus-color;
+                        color: $treehouse-title-color;
+                    }
+                }
+
+                &.active a {
+                    border-bottom: solid 2px $treehouse-nav-link-focus-color;
+                }
+            }
+        }
+
+        .comment-form-rating {
+            @include make-col-ready;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .commentlist {
+            .star-rating {
+                margin-top: 0.5em;
+            }
+        }
+    }
+}
+
+p.stars {
+    display: inline-block;
+    line-height: 1;
+    font-size: 18px;
+
+    a {
+        position: relative;
+        height: 1em;
+        width: 1em;
+        text-indent: -999em;
+        display: inline-block;
+        text-decoration: none;
+        margin-right: 4px;
+        font-weight: 400;
+
+        &::before {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1em;
+            height: 1em;
+            @include lar-font( "\f005" );
+            color: #43454b;
+            text-indent: 0;
+            opacity: .25;
+        }
+    }
+
+    @include hover-focus {
+        a {
+            &:before {
+                //content: "\f318";
+                font-weight: 900;
+                color: #f7ca18;
+                opacity: 1;
+            }
+        }
+    }
+
+    &.selected {
+        a.active:before {
+            font-weight: 900;
+            color: #f7ca18;
+            opacity: 1;
+        }
+
+        a:not(.active):before {
+            font-weight: 900;
+            color: #f7ca18;
+            opacity: 1;
+        }
+    }
+
+    a:hover~a:before,
+    &.selected a.active~a:before {
+        color: #43454b;
+        opacity: .25;
+    }
+}
+
+.reset_variations {
+    @include make-new-button();
+    @include button-size( 0.25em, 1em, 13px, 1.25, 4px );
+    @include button-variant( $treehouse-body-color, $treehouse-body-color );
+    position: absolute;
+    top: 110%;
+    right: 0;
+}

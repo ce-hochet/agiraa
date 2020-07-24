@@ -1,0 +1,279 @@
+.post-icon {
+    position: relative;
+    background-color: $page-header-bg;
+    height: 280px;
+    border-radius: 6px;
+    margin-bottom: 0;
+
+    i {
+        font-size: 36px;
+        color: #adb5bd;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        transition: all 0.4s ease 0s;
+    }
+}
+
+article,
+article.post {
+    position: relative;
+    margin-bottom: 30px;
+
+    .post-inner {
+        padding-bottom: 30px;
+        border-bottom: 1px solid #e8ecec;
+    }
+
+    &.sticky,
+    &.category-sticky {
+        .entry-title {
+            &::before {
+                @include fa-font( "\f08d", 900);
+                //transform: rotate(314deg);
+                margin-right: 8px;
+                font-size: 22px;
+            }
+        }
+    }
+
+    .media-attachment {
+        margin-bottom: 17px;
+    }
+
+    .entry-meta {
+        font-size: 13px;
+        display: flex;
+        font-family: $font-family-quicksand;
+        font-weight: 500;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        @include media-breakpoint-up(md) {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .post-author-info {
+            margin-bottom: 10px;
+
+            @include media-breakpoint-up(md) {
+                margin-right: 30px;
+                margin-bottom: 20px;
+            }
+        }
+
+        span {
+            margin-bottom: 10px;
+
+            @include media-breakpoint-up (md) {
+                margin-right: 30px;
+                margin-bottom: 20px;
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                color: #a7a7a7;
+
+                &:before {
+                    @include la-icon-font();
+                    line-height: 22px;
+                    font-size: 22px;
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        .posted-on {
+            flex-shrink: 0;
+
+            a {
+                &:before {
+                    content: "\f133";
+                }
+            }
+        }
+
+        .comments-link {
+            flex-shrink: 0;
+
+            a {
+                &:before {
+                    content: "\f086";
+                }
+            }
+        }
+
+        .cat-links {
+            color: #a7a7a7;
+
+            a {
+                display: inline-block;
+            }
+
+            &:before {
+                @include la-icon-font("\f0c5");
+                line-height: 22px;
+                font-size: 22px;
+                margin-right: 5px;
+                vertical-align: sub;
+            }
+        }
+    }
+
+    .entry-title {
+        margin-top: 0;
+
+        a {
+            color: $t0;
+        }
+    }
+
+    .entry-sub-title {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .entry-content {
+        margin-bottom: 20px;
+        margin-top: 0;
+
+        * + h1, * + h2, * + h3, * + h4, * + h5, * + h6,
+        * + .h1, * + .h2, * + .h3, * + .h4, * + .h5, * + .h6 {
+            margin-top: 1em;
+        }
+    }
+
+    &.post-password-required {
+        .post-password-form {
+            p {
+                display: flex;
+                align-items: center;
+            }
+
+            label {
+                input[type="password"] {
+                    margin-top: 8px;
+                    min-width: 300px;
+                }
+            }
+
+            input[type="submit"] {
+                @include make-new-button(500);
+                @include button-size( 12px, 26px, 15px, 1, 4px );
+                margin-top: 18px;
+                margin-left: 15px;
+            }
+        }
+    }
+
+    blockquote.jh-blockquote {
+        background-color: #f5f7fa;
+        border-radius: 10px;
+        margin: 0 0 22px 0;
+        padding: 22px 40px 4px 64px;
+        font-style: italic;
+
+        .blokq-text {
+            position: relative;
+            margin-bottom: 10px;
+            font-size: 14px;
+            line-height: 26px;
+            color: $e8;
+
+            &:before,
+            &:after {
+                font-size: 60px;
+                position: absolute;
+                color: #afafaf;
+            }
+
+            &:before {
+                left: -23px;
+                top: -16px;
+                transform: rotate(-180deg);
+                content: open-quote;
+            }
+
+            &:after {
+                bottom: -14px;
+                content: close-quote;
+            }
+        }
+
+        cite {
+            font-weight: 500;
+            color: $t0;
+            display: block;
+            margin-top: 0;
+            font-size: 14px;
+            line-height: 26px;
+        }
+
+        .jh-blokq-cite {
+            margin-bottom: 14px;
+        }
+    }
+}
+
+.post-author-info {
+    flex-shrink: 0;
+
+    .media {
+        display: flex;
+        align-items: center;
+    }
+
+    .avatar {
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    .media-body {
+        margin-left: 15px;
+    }
+
+    .media-heading {
+        margin: 0;
+        line-height: 1em;
+
+        a {
+            font-size: 13px;
+            font-weight: 500;
+            color: #a7a7a7;
+            vertical-align: bottom;
+        }
+    }
+}
+
+.type-post .entry-content {
+    color: $e8;
+}
+
+.search-no-results {
+    .content-area .search-form {
+        display: flex;
+        margin-bottom: 40px;
+
+        > label {
+            min-width: 50%;
+            margin-bottom: 0;
+            margin-right: 15px;
+        }
+    }
+
+    .page-content {
+        > p {
+            @include make-alert();
+            @include alert-variant( $treehouse-error-bg, $treehouse-error-border, $treehouse-error-color );
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+@import "post/post-readmore";
+@import "post/blog-post";

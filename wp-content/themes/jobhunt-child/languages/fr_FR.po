@@ -1,0 +1,5352 @@
+# <!=Copyright (C) 2020 MadrasThemes
+# This file is distributed under the GNU General Public License v2 or later.=!>
+msgid ""
+msgstr ""
+"Project-Id-Version: Jobhunt 1.2.3\n"
+"Report-Msgid-Bugs-To: https://madrasthemes.freshdesk.com/\n"
+"POT-Creation-Date: 2020-03-16 08:27:27+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2020-07-08 15:26+0200\n"
+"Language-Team: POT <support@madrasthemes.freshdesk.com>\n"
+"X-Generator: Poedit 2.3.1\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: fr_FR\n"
+
+#: inc/admin/jobhunt-meta-box-functions.php:393
+msgid "1"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:394
+msgid "2"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:395
+msgid "3"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:396
+msgid "4"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:397
+msgid "5"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:398
+msgid "6"
+msgstr ""
+
+#: inc/template-functions/about.php:90 inc/template-functions/home-v2.php:107
+#: inc/template-functions/home-v5.php:108
+msgid "18"
+msgstr ""
+
+#: inc/template-functions/about.php:94 inc/template-functions/home-v2.php:111
+#: inc/template-functions/home-v5.php:112
+msgid "38"
+msgstr ""
+
+#: inc/template-functions/about.php:98 inc/template-functions/home-v2.php:115
+#: inc/template-functions/home-v5.php:116
+msgid "67"
+msgstr ""
+
+#: inc/template-functions/about.php:102 inc/template-functions/home-v2.php:119
+#: inc/template-functions/home-v5.php:120
+msgid "92"
+msgstr ""
+
+#: 404.php:26 inc/redux-framework/options/404-options.php:28
+msgid "We Are Sorry, Page Not Found"
+msgstr "Nous sommes désolés, la page est introuvable"
+
+#: 404.php:27 inc/redux-framework/options/404-options.php:35
+msgid ""
+"Unfortunately the page you were looking for could not be found. It may be "
+"temporarily unavailable, moved or no longer exist. Check the Url you entered "
+"for any mistakes and try again."
+msgstr ""
+"Malheureusement, la page que vous cherchiez est introuvable. Elle peut être "
+"temporairement indisponible, déplacée ou n'existe plus. Vérifiez l'URL que "
+"vous avez entrée pour toute erreur et réessayez."
+
+#: 404.php:28 inc/redux-framework/options/404-options.php:42
+msgid "Back to Homepage"
+msgstr "Retour à la page d'accueil"
+
+#: 404.php:55
+msgid "Error404 Image"
+msgstr "Erreur 404"
+
+#: 404.php:62 inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:175
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:170
+#: inc/template-functions/home-v2.php:16 inc/template-functions/home-v2.php:222
+#: inc/template-functions/home-v4.php:16 inc/template-functions/home-v4.php:210
+#: inc/template-functions/homepage.php:635
+#: inc/woocommerce/jobhunt-woocommerce-template-functions.php:343
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:227
+#: inc/wp-job-manager/widgets/class-jh-wpjm-widget-job-location-search.php:46
+#: inc/wp-job-manager/widgets/class-jh-wpjm-widget-job-search.php:45
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-location-search.php:46
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-search.php:45
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:1314
+#: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-resume-location-search.php:46
+#: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-resume-search.php:45
+msgid "Search"
+msgstr "Rechercher"
+
+#: comments.php:21
+msgid "Post Comments"
+msgstr "Poster un commentaire"
+
+#: comments.php:35
+msgid "Comment Navigation Above"
+msgstr ""
+
+#: comments.php:36 comments.php:54
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:37 comments.php:55
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:38 comments.php:56
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:53
+msgid "Comment Navigation Below"
+msgstr ""
+
+#: comments.php:63
+msgid "Comments are closed."
+msgstr ""
+
+#: content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: content-none.php:20
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: content-none.php:24
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: content-none.php:29
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: inc/admin/class-jobhunt-admin-meta-boxes.php:132
+msgid "Jobhunt Page Options"
+msgstr ""
+
+#: inc/admin/class-jobhunt-admin-meta-boxes.php:150
+msgid "Home v1 Options"
+msgstr ""
+
+#: inc/admin/class-jobhunt-admin-meta-boxes.php:154
+msgid "Home v2 Options"
+msgstr ""
+
+#: inc/admin/class-jobhunt-admin-meta-boxes.php:158
+msgid "Home v3 Options"
+msgstr ""
+
+#: inc/admin/class-jobhunt-admin-meta-boxes.php:162
+msgid "Home v4 Options"
+msgstr ""
+
+#: inc/admin/class-jobhunt-admin-meta-boxes.php:166
+msgid "Home v5 Options"
+msgstr ""
+
+#: inc/admin/class-jobhunt-admin-meta-boxes.php:170
+msgid "About Page Options"
+msgstr ""
+
+#: inc/admin/jobhunt-admin-functions.php:12
+msgid "Kidos Custom Primary Color CSS"
+msgstr ""
+
+#: inc/admin/jobhunt-admin-functions.php:13
+msgid "The generated custom primary color CSS is given below"
+msgstr ""
+
+#: inc/admin/jobhunt-admin-functions.php:15
+msgid "Instructions"
+msgstr ""
+
+#: inc/admin/jobhunt-admin-functions.php:17
+msgid ""
+"Create a file named custom-color.css in your child theme like wp-content/"
+"themes/jobhunt-child/custom-color.css. Latest versions of jobhunt-child "
+"comes with an empty custom-color.css so you don't have to create one"
+msgstr ""
+
+#: inc/admin/jobhunt-admin-functions.php:18
+msgid ""
+"If you do not use a child theme, please use one otherwise all your custom "
+"changes will be lost during update"
+msgstr ""
+
+#: inc/admin/jobhunt-admin-functions.php:19
+msgid ""
+"Copy the CSS above and paste in the custom-color.css file created in step 1"
+msgstr ""
+
+#: inc/admin/jobhunt-admin-functions.php:20
+msgid "Thats it. Your custom-color.css will be loaded automatically."
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:264
+msgid "Products by"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:267
+msgid "Recent Products"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:268
+#: inc/woocommerce/jobhunt-woocommerce-template-functions.php:260
+msgid "Featured Products"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:269
+msgid "Sale Products"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:270
+msgid "Best Selling Products"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:271
+msgid "Top Rated Products"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:272
+msgid "Product Category"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:273
+msgid "Products"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:274
+msgid "Product Attribute"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:283
+msgid "Product Category Slug"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:285
+msgid "Enter slug spearate by comma(,)."
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:293
+msgid "Product Category Operator"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:295
+msgid ""
+"Operator to compare categories. Possible values are 'IN', 'NOT IN', 'AND'."
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:303
+msgid "Show Products by:"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:305
+msgid "IDs"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:306
+msgid "SKUs"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:316
+msgid "Product IDs or SKUs"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:317
+msgid "Enter IDs or SKUs separated by comma"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:325
+msgid "Attribute"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:327
+msgid "Enter single attribute slug."
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:335
+msgid "Terms"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:337
+msgid "Enter term slug spearate by comma(,)."
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:345
+msgid "Terms Operator"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:347
+msgid "Operator to compare terms. Possible values are 'IN', 'NOT IN', 'AND'."
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:357
+msgid "Shortcode Atts"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:381
+#: inc/admin/jobhunt-meta-box-functions.php:464
+msgid "per_page"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:390
+#: inc/admin/jobhunt-meta-box-functions.php:944
+msgid "columns"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:408
+#: inc/admin/jobhunt-meta-box-functions.php:491
+msgid "orderby"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:411
+msgid "Date"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:412
+msgid "Id"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:413
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:273
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:101
+msgid "Menu Order"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:414
+msgid "Popularity"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:415
+msgid "Rand"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:416
+msgid "Rating"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:417
+#: inc/admin/jobhunt-meta-box-functions.php:776
+#: inc/admin/jobhunt-meta-box-functions.php:907
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:434
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:475
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:903
+#: inc/widgets/class-jobhunt-posts-widget.php:52
+msgid "Title"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:426
+#: inc/admin/jobhunt-meta-box-functions.php:500
+msgid "order"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:429
+msgid "ASC"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:430
+msgid "DESC"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:455
+#: inc/admin/jobhunt-meta-box-functions.php:935
+msgid "limit"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:473
+msgid "number"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:482
+msgid "hide_empty"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:509
+msgid "slug"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:555
+#: inc/admin/jobhunt-meta-box-functions.php:806
+#: inc/admin/jobhunt-meta-box-functions.php:817
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:182
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:425
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:510
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:366
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:515
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:727
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:618
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:781
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:347
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:708
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:787
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:797
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:934
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:413
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:423
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:560
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:392
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:691
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:919
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:929
+#: inc/redux-framework/options/404-options.php:18
+msgid "Image"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:558
+#: inc/widgets/class-jobhunt-footer-logo-widget.php:56
+msgid "Upload/Add image"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:559
+#: inc/widgets/class-jobhunt-footer-logo-widget.php:57
+msgid "Remove this image"
+msgstr "Supprimer l'image"
+
+#: inc/admin/jobhunt-meta-box-functions.php:573
+msgid "No Animation"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:674
+msgid "slidesPerRow"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:683
+msgid "slidesToShow"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:692
+msgid "slidesToScroll"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:701
+msgid "rows"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:711
+msgid "dots"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:720
+msgid "arrows"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:730
+msgid "prevArrow"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:739
+msgid "nextArrow"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:748
+msgid "autoplay"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:785
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:299
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:391
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:752
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:282
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:280
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:372
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:276
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:268
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:450
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:491
+msgid "Action Text"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:794
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:308
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:399
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:760
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:291
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:289
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:380
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:285
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:277
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:458
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:499
+msgid "Action Link"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:803
+msgid "Image Choice"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:807
+#: inc/admin/jobhunt-meta-box-functions.php:827
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:434
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:519
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:375
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:524
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:736
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:627
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:790
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:356
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:717
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:806
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:943
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:432
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:569
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:401
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:700
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:938
+#: inc/redux-framework/options/404-options.php:11
+msgid "Background Image"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:837
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:442
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:527
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:383
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:532
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:744
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:635
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:798
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:364
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:725
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:814
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:951
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:440
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:577
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:409
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:708
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:946
+#: inc/redux-framework/options/header-options.php:176
+msgid "Background Color"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:847
+#: inc/redux-framework/options/blog-options.php:31
+#: inc/redux-framework/options/blog-options.php:44
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:381
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:292
+msgid "Full Width"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:856
+msgid "Button Type"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:859
+msgid "Primary"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:860
+msgid "Secondary"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:891
+msgid "Step Value"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:899
+msgid "Pre Title"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:915
+msgid "Caption"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:953
+msgid "Post Choice"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:955
+msgid "Most Recent Posts"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:956
+msgid "Random Posts"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:957
+msgid "Specify by ID"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:958
+msgid "Category by ID"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:969
+msgid "Post ids"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:972
+msgid ""
+"Enter post id spearate by comma(,) Note: Only works with specific by id "
+"choice."
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:980
+msgid "Category ids"
+msgstr ""
+
+#: inc/admin/jobhunt-meta-box-functions.php:983
+msgid ""
+"Enter category id spearate by comma(,) Note: Only works with category by id "
+"choice."
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:48
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:48
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:48
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:48
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:48
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:48
+#: inc/redux-framework/options/general-options.php:8
+#: inc/redux-framework/options/style-options.php:16
+msgid "General"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:53
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:109
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:159
+msgid "About Content Block"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:58
+msgid "Fearture List Block"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:63
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:387
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:68
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:477
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:78
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:743
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:78
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:670
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:846
+#: inc/class-jobhunt.php:583
+msgid "Testimonials"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:68
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:112
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:473
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:73
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:196
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:581
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:73
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:183
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:654
+msgid "Counters Block"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:73
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:113
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:627
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:78
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:215
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:643
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:83
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:198
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:837
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:78
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:192
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:695
+msgid "Recent Posts"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:92
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:102
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:107
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:112
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:102
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:102
+#: inc/redux-framework/options/header-options.php:40
+msgid "Header Style"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:95
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:105
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:110
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:115
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:105
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:105
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-page.php:27
+#: inc/redux-framework/options/header-options.php:45
+msgid "Header v1"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:96
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:106
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:111
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:116
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:106
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:106
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-page.php:28
+#: inc/redux-framework/options/header-options.php:46
+msgid "Header v2"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:97
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:107
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:112
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:117
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:107
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:107
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-page.php:29
+#: inc/redux-framework/options/header-options.php:47
+msgid "Header v3"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:98
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:108
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:113
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:118
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:108
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:108
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-page.php:30
+#: inc/redux-framework/options/header-options.php:48
+msgid "Header v4"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:99
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:109
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:114
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:119
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:109
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:109
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-page.php:31
+#: inc/redux-framework/options/header-options.php:49
+msgid "Header v5"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:108
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:209
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:191
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:188
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:186
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:178
+msgid "Page content"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:110
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:197
+msgid "Feature List Block"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:111
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:213
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:197
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:194
+msgid "Testimonials Block"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:119
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:222
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:205
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:203
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:199
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:191
+msgid "Block"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:120
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:223
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:206
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:204
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:200
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:192
+msgid "Animation"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:121
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:224
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:207
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:205
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:201
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:193
+msgid "Priority"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:122
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:225
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:208
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:206
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:202
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:194
+msgid "Enabled ?"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:141
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:244
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:227
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:225
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:221
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:213
+#: inc/redux-framework/options/footer-options.php:20
+msgid "Footer Style"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:144
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:247
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:230
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:228
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:224
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:216
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-page.php:42
+#: inc/redux-framework/options/footer-options.php:25
+msgid "Footer v1"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:145
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:248
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:231
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:229
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:225
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:217
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-page.php:43
+#: inc/redux-framework/options/footer-options.php:26
+msgid "Footer v2"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:146
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:249
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:232
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:230
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:226
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:218
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-page.php:44
+#: inc/redux-framework/options/footer-options.php:27
+msgid "Footer v3"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:147
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:250
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:233
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:231
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:227
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:219
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-page.php:45
+#: inc/redux-framework/options/footer-options.php:28
+msgid "Footer v4"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:148
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:251
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:234
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:232
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:228
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:220
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-page.php:46
+#: inc/redux-framework/options/footer-options.php:29
+msgid "Footer v5"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:166
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:204
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:394
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:480
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:634
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:120
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:269
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:347
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:437
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:484
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:578
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:650
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:708
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:125
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:252
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:330
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:377
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:516
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:588
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:750
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:844
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:902
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:130
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:250
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:328
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:418
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:466
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:605
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:677
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:771
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:915
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:1004
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:120
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:246
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:397
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:541
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:630
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:702
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:760
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:120
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:238
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:318
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:343
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:522
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:661
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:825
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:850
+msgid "Section Title"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:167
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:205
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:395
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:481
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:635
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:121
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:270
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:348
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:438
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:485
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:579
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:651
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:709
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:126
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:253
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:331
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:378
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:517
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:589
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:751
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:845
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:903
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:131
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:251
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:329
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:419
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:467
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:606
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:678
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:772
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:916
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:1005
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:121
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:247
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:327
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:352
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:398
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:542
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:631
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:703
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:761
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:121
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:239
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:319
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:344
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:523
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:662
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:826
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:851
+msgid "Enter the Section Title here"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:174
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:402
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:488
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:642
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:128
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:277
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:355
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:445
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:492
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:586
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:658
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:716
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:133
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:260
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:338
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:385
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:524
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:596
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:758
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:852
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:910
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:138
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:258
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:336
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:426
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:474
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:613
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:685
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:779
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:923
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:1012
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:128
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:254
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:405
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:549
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:638
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:710
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:768
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:128
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:246
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:442
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:483
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:530
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:669
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:911
+#: inc/redux-framework/options/404-options.php:32
+msgid "Sub Title"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:175
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:403
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:489
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:643
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:129
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:278
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:356
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:446
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:493
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:587
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:659
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:717
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:134
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:261
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:339
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:386
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:525
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:597
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:759
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:853
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:911
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:139
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:259
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:337
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:427
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:475
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:614
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:686
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:780
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:924
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:1013
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:129
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:255
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:406
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:550
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:639
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:711
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:769
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:129
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:247
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:531
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:670
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:912
+msgid "Enter the Sub Title here"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:213
+msgid "Feature 1"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:219
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:247
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:275
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:303
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:331
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:359
+msgid "Feature Title"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:220
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:248
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:276
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:304
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:332
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:360
+msgid "Enter the feature title for your features here"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:226
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:254
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:282
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:310
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:338
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:366
+msgid "Feature Description"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:227
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:255
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:283
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:311
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:339
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:367
+msgid "Enter the feature description for your features here"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:233
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:261
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:289
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:317
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:345
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:373
+msgid "Feature Icon"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:234
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:262
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:290
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:318
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:346
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:374
+msgid "Enter the feature icon for your features here"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:241
+msgid "Feature 2"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:269
+msgid "Feature 3"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:297
+msgid "Feature 4"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:325
+msgid "Feature 5"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:353
+msgid "Feature 6"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:410
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:496
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:650
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:285
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:500
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:594
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:666
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:268
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:393
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:532
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:604
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:766
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:860
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:266
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:482
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:621
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:693
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:262
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:646
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:718
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:776
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:254
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:538
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:677
+msgid "Select Version"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:413
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:499
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:653
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:288
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:503
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:597
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:669
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:271
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:396
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:535
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:607
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:769
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:863
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:269
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:485
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:624
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:696
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:265
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:649
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:721
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:779
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:257
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:541
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:680
+msgid "v1"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:414
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:500
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:654
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:289
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:504
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:598
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:670
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:272
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:397
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:536
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:608
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:770
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:864
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:270
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:486
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:625
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:697
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:266
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:650
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:722
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:780
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:258
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:542
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:681
+msgid "v2"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:415
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:655
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:290
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:505
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:671
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:273
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:398
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:771
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:865
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:271
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:487
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:698
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:267
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:723
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:781
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:259
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:543
+msgid "v3"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:422
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:507
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:363
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:512
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:724
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:615
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:778
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:344
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:705
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:794
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:931
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:420
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:557
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:389
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:688
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:926
+msgid "Background Choice"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:426
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:511
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:367
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:516
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:728
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:619
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:782
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:348
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:709
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:798
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:935
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:424
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:561
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:393
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:692
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:930
+msgid "Color"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:457
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:547
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:619
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:557
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:813
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:646
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:740
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:973
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:599
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:671
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:865
+msgid "Carousel Args"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:537
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:653
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:726
+msgid "Counter 1"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:543
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:564
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:585
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:606
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:659
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:680
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:701
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:722
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:732
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:753
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:774
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:795
+msgid "Counter Title"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:544
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:565
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:586
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:607
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:660
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:681
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:702
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:723
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:733
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:754
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:775
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:796
+msgid "Enter the counter title for your counters here"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:550
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:571
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:592
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:613
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:666
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:687
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:708
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:729
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:739
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:760
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:781
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:802
+msgid "Count Value"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:551
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:572
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:593
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:614
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:667
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:688
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:709
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:730
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:740
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:761
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:782
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:803
+msgid "Enter the count value for your counters here"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:558
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:674
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:747
+msgid "Counter 2"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:579
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:695
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:768
+msgid "Counter 3"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-about.php:600
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:716
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:789
+msgid "Counter 4"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:53
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:262
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:53
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:245
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:53
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:243
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:53
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:239
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:53
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:231
+msgid "Job Categories"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:58
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:211
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:340
+msgid "Banner v1"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:63
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:430
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:58
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:323
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:63
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:411
+msgid "Job List"
+msgstr "Liste des missions"
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:73
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:214
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:571
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:68
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:195
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:509
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:73
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:193
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:598
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:73
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:191
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:623
+msgid "Company Carousel"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:83
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:216
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:701
+msgid "Banner v2"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:136
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:141
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:146
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:136
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:136
+msgid "Search Placeholder Text"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:137
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:142
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:147
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:137
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:137
+msgid "Enter the Search Placeholder Text here"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:139
+#: inc/template-functions/home-v1.php:11 inc/template-functions/home-v1.php:177
+#: inc/template-functions/homepage.php:630
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:222
+#: inc/wp-job-manager/widgets/class-jh-wpjm-widget-job-search.php:44
+msgid "Job title, keywords or company name"
+msgstr "Titre de la catégorie, mots clés ou nom de l'association"
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:144
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:149
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:154
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:144
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:144
+msgid "Location Placeholder Text"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:145
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:150
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:155
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:145
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:145
+msgid "Enter the Location Placeholder Text here"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:147
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:157
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:147
+#: inc/template-functions/home-v1.php:12 inc/template-functions/home-v1.php:178
+#: inc/template-functions/home-v3.php:13 inc/template-functions/home-v3.php:238
+#: inc/template-functions/home-v4.php:12 inc/template-functions/home-v4.php:206
+#: inc/template-functions/homepage.php:631
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:223
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:1310
+msgid "City, province or region"
+msgstr "Entrez votre région, ville ou adresse"
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:152
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:157
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:162
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:152
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:152
+msgid "Show Categories Select"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:159
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:164
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:169
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:159
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:159
+msgid "All Categories Text"
+msgstr "Choisissez une catégorie"
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:160
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:165
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:170
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:160
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:160
+msgid "Enter the All Categories Text here"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:162
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:167
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:172
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:162
+#: inc/template-functions/home-v1.php:13 inc/template-functions/home-v1.php:180
+#: inc/template-functions/home-v2.php:14 inc/template-functions/home-v2.php:220
+#: inc/template-functions/home-v3.php:15 inc/template-functions/home-v3.php:240
+#: inc/template-functions/home-v5.php:14 inc/template-functions/home-v5.php:209
+#: inc/template-functions/homepage.php:632
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:224
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:1311
+msgid "Any Category"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:167
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:180
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:177
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:175
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:167
+msgid "Search Button Icon"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:168
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:181
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:178
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:176
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:168
+msgid "Enter the Search Button Icon here"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:175
+msgid "Show Browse Button"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:182
+msgid "Browse Button Label"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:183
+msgid "Enter the label here"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:190
+msgid "Browse Button Text"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:191
+msgid "Enter the button text here"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:198
+msgid "Browse Button Link"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:199
+msgid "Enter the button link here"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:210
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:192
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:189
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:187
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:179
+msgid "Job Categories Block"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:212
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:193
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:191
+msgid "Job List Block"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:291
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:274
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:399
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:272
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:488
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:268
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:782
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:260
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:544
+msgid "v4"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:300
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:392
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:753
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:283
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:281
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:373
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:277
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:269
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:451
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:492
+msgid "Enter the action text here"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:309
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:400
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:761
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:292
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:290
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:381
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:286
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:278
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:459
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:500
+msgid "Enter the action link here"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:324
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:414
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:461
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:555
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:627
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:685
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:775
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:307
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:354
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:406
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:565
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:643
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:821
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:879
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:925
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:305
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:395
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:442
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:495
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:654
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:748
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:822
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:981
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:1027
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:301
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:374
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:448
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:607
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:679
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:737
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:789
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:293
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:366
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:417
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:551
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:716
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:880
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:954
+msgid "Extra Class"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:325
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:415
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:462
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:556
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:628
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:686
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:776
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:308
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:355
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:407
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:566
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:644
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:822
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:880
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:926
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:306
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:396
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:443
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:496
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:655
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:749
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:823
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:982
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:1028
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:302
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:375
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:449
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:608
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:680
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:738
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:790
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:294
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:367
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:418
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:552
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:717
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:881
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:955
+msgid "Enter the extra here"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:407
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:768
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:388
+msgid "Enable Action"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:453
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:346
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:434
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:334
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:359
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:326
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:351
+msgid "Job Shortcode"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:454
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:347
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:435
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:335
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:360
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:327
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:352
+msgid "Enter the shorcode for your job here"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:605
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:543
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:632
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:959
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:585
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:657
+msgid "Show Featured"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:63
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:194
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:370
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:68
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:192
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:459
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:83
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:193
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:753
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:68
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:182
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:515
+msgid "How It Works Block"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:88
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:895
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:93
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:997
+msgid "Job Pricing Block"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:144
+#: inc/template-functions/home-v2.php:11 inc/template-functions/home-v2.php:217
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:258
+#: inc/wp-job-manager/widgets/class-jh-wpjm-widget-job-location-search.php:44
+#: inc/wp-job-manager/widgets/class-jh-wpjm-widget-job-search.php:43
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-location-search.php:44
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-search.php:43
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:1343
+#: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-resume-location-search.php:44
+#: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-resume-search.php:43
+#: job_manager/job-filters.php:30 job_manager/job-filters.php:31
+msgid "Keywords"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:152
+#: inc/template-functions/home-v2.php:12 inc/template-functions/home-v2.php:218
+msgid "All Regions"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:172
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:167
+msgid "Search Button Text"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:173
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:168
+msgid "Enter the Search Button Text here"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:199
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:197
+msgid "Job Pricing"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:416
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:505
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:799
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:561
+msgid "Step 1"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:422
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:451
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:480
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:511
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:540
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:569
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:805
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:834
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:863
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:567
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:596
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:625
+msgid "Icon"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:423
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:452
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:481
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:512
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:541
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:570
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:806
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:835
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:864
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:568
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:597
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:626
+msgid "Enter the icon for your steps here"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:430
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:459
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:488
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:519
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:548
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:577
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:813
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:842
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:871
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:575
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:604
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:633
+msgid "Step Title"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:431
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:460
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:489
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:520
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:549
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:578
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:814
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:843
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:872
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:576
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:605
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:634
+msgid "Enter the step title for your steps here"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:437
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:466
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:495
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:526
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:555
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:584
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:820
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:849
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:878
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:582
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:611
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:640
+msgid "Step Description"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:438
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:467
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:496
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:527
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:556
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:585
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:821
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:850
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:879
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:583
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:612
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:641
+msgid "Enter the step description for your steps here"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:445
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:534
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:828
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:590
+msgid "Step 2"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:474
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:563
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:857
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:619
+msgid "Step 3"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:58
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:190
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:321
+msgid "Banner"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:83
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:195
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:764
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:63
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:189
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:390
+msgid "App Promo Block"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:88
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:196
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:908
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:68
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:190
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:534
+msgid "Candidate Info Block"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:149
+#: inc/template-functions/home-v3.php:12 inc/template-functions/home-v3.php:237
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:1309
+msgid "Search freelancer services (e.g. logo design)"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:832
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:458
+msgid "App 1"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:838
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:873
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:464
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:499
+msgid "App Title"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:839
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:874
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:465
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:500
+msgid "Enter the app title for your apps here"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:845
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:880
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:471
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:506
+msgid "App Description"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:846
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:881
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:472
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:507
+msgid "Enter the app description for your apps here"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:852
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:887
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:478
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:513
+msgid "App Store Icon"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:853
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:888
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:479
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:514
+msgid "Enter the app store icon for your apps here"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:859
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:894
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:485
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:520
+msgid "App Store Link"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:860
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:895
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:486
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:521
+msgid "Enter the app store link for your apps here"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:867
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:493
+msgid "App 2"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:58
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:188
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:317
+msgid "Job List Tabs"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:139
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:139
+#: inc/template-functions/home-v4.php:11 inc/template-functions/home-v4.php:205
+#: inc/template-functions/home-v5.php:11 inc/template-functions/home-v5.php:206
+msgid "Search Keywords"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:162
+#: inc/template-functions/home-v4.php:14 inc/template-functions/home-v4.php:208
+msgid "All specialisms"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:322
+msgid "Tabs 1"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:326
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:351
+msgid "Tab Title"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v4.php:347
+msgid "Tabs 2"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:58
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:180
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:309
+msgid "Job With Summary"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:63
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:181
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:382
+msgid "Dual Banner"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:78
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:184
+msgid "Faq with Testimonials Block"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:83
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:185
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:896
+msgid "Banner with Image Block"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:147
+#: inc/template-functions/home-v5.php:12 inc/template-functions/home-v5.php:207
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:394
+msgid "Locations"
+msgstr "Localisation"
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:314
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:95
+msgid "Jobs"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:339
+msgid "Summary"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:430
+msgid "Banner 1"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:435
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:476
+msgid "Enter the title here"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:443
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:484
+msgid "Enter the sub title here"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:471
+msgid "Banner 2"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:816
+msgid "Faq with Testimonial Block"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:821
+msgid "Faq"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:833
+msgid "Faq Shortcode"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:834
+msgid "Enter the shorcode for your faq here"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:904
+msgid "Enter the Title here"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-page.php:21
+msgid "Site Header Style"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-page.php:22
+msgid "Choose a site header style for this page"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-page.php:26
+msgid "Default Header"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-page.php:36
+msgid "Site Footer Style"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-page.php:37
+msgid "Choose a site footer style for this page"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-page.php:41
+msgid "Default Footer"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-page.php:51
+msgid "Hide Page Header"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-page.php:52
+msgid ""
+"Check this if you want to hide page header that contains page title and "
+"subtitle."
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-page.php:58
+#: inc/redux-framework/options/404-options.php:25
+msgid "Page Title"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-page.php:59
+msgid ""
+"Add a custom page title or leave empty if you want the page title to be the "
+"same as the page name"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-page.php:65
+msgid "Page Subtitle"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-page.php:66
+msgid "Add a subtitle to the page"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-page.php:72
+msgid "Additional Body Classes"
+msgstr ""
+
+#: inc/admin/meta-boxes/class-jobhunt-meta-box-page.php:73
+msgid "Add custom classes to page <body>"
+msgstr ""
+
+#: inc/class-jobhunt.php:106
+msgid "Top Bar Left Menu"
+msgstr ""
+
+#: inc/class-jobhunt.php:107
+msgid "Top Bar Right Menu"
+msgstr ""
+
+#: inc/class-jobhunt.php:108
+msgid "Primary Menu"
+msgstr ""
+
+#: inc/class-jobhunt.php:109
+msgid "Handheld Menu"
+msgstr ""
+
+#: inc/class-jobhunt.php:113
+msgid "User Dropdown Menu"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Sidebar"
+msgstr ""
+
+#: inc/class-jobhunt.php:188
+msgid ""
+"Widgets added to this region will appear in the blog and single post page."
+msgstr ""
+
+#: inc/class-jobhunt.php:200
+msgid "Footer Column %1$d"
+msgstr ""
+
+#: inc/class-jobhunt.php:201
+msgid "Widgets added here will appear in column %1$d of the footer."
+msgstr ""
+
+#: inc/class-jobhunt.php:203
+msgid "Footer Row %1$d - Column %2$d"
+msgstr ""
+
+#: inc/class-jobhunt.php:204
+msgid "Widgets added here will appear in column %1$d of footer row %2$d."
+msgstr ""
+
+#: inc/class-jobhunt.php:400
+msgid "Expand child menu"
+msgstr ""
+
+#: inc/class-jobhunt.php:401
+msgid "Collapse child menu"
+msgstr ""
+
+#: inc/class-jobhunt.php:498
+msgid "Post Navigation"
+msgstr ""
+
+#: inc/class-jobhunt.php:511
+msgid "Envato Market"
+msgstr ""
+
+#: inc/class-jobhunt.php:522
+msgid "Jetpack"
+msgstr ""
+
+#: inc/class-jobhunt.php:532
+msgid "Jobhunt Extensions"
+msgstr ""
+
+#: inc/class-jobhunt.php:543
+msgid "KingComposer"
+msgstr ""
+
+#: inc/class-jobhunt.php:553
+msgid "One Click Demo Import"
+msgstr ""
+
+#: inc/class-jobhunt.php:563
+msgid "Redux Framework"
+msgstr ""
+
+#: inc/class-jobhunt.php:573
+msgid "Regenerate Thumbnails"
+msgstr ""
+
+#: inc/class-jobhunt.php:593
+msgid "WooCommerce"
+msgstr ""
+
+#: inc/class-jobhunt.php:603
+msgid "WP Job Manager"
+msgstr ""
+
+#: inc/class-jobhunt.php:613
+msgid "WPForms Lite"
+msgstr ""
+
+#: inc/class-jobhunt.php:633 inc/classes/class-tgm-plugin-activation.php:334
+msgid "Install Required Plugins"
+msgstr ""
+
+#: inc/class-jobhunt.php:634 inc/classes/class-tgm-plugin-activation.php:335
+msgid "Install Plugins"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: inc/class-jobhunt.php:635 inc/classes/class-tgm-plugin-activation.php:337
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: inc/class-jobhunt.php:636 inc/classes/class-tgm-plugin-activation.php:340
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: inc/class-jobhunt.php:637
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-jobhunt.php:638
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-jobhunt.php:639
+msgid ""
+"Sorry, but you do not have the correct permissions to install the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"installed."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to install the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins installed."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-jobhunt.php:640
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-jobhunt.php:641
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-jobhunt.php:642
+msgid ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugin. Contact the administrator of this site for help on getting the "
+"plugin activated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins activated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-jobhunt.php:643
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-jobhunt.php:644
+msgid ""
+"Sorry, but you do not have the correct permissions to update the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"updated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to update the %s plugins. "
+"Contact the administrator of this site for help on getting the plugins "
+"updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: inc/class-jobhunt.php:645 inc/classes/class-tgm-plugin-activation.php:377
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-jobhunt.php:646
+msgid "Activate installed plugin"
+msgid_plural "Activate installed plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-jobhunt.php:647 inc/classes/class-tgm-plugin-activation.php:392
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: inc/class-jobhunt.php:648 inc/classes/class-tgm-plugin-activation.php:394
+#: inc/classes/class-tgm-plugin-activation.php:3244
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: inc/class-jobhunt.php:649
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""
+
+#: inc/classes/class-jobhunt-walker-category.php:80
+msgid "Feed for all posts filed under %s"
+msgstr ""
+
+#. translators: %d: ID of a post
+#: inc/classes/class-jobhunt-walker-page.php:102
+msgid "#%d (no title)"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: inc/classes/class-tgm-plugin-activation.php:339
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:382
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/classes/class-tgm-plugin-activation.php:387
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/classes/class-tgm-plugin-activation.php:393
+#: inc/classes/class-tgm-plugin-activation.php:912
+#: inc/classes/class-tgm-plugin-activation.php:2618
+#: inc/classes/class-tgm-plugin-activation.php:3668
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:395
+#: inc/classes/class-tgm-plugin-activation.php:3037
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/classes/class-tgm-plugin-activation.php:397
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/classes/class-tgm-plugin-activation.php:399
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#. translators: 1: dashboard link.
+#: inc/classes/class-tgm-plugin-activation.php:401
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:402
+msgid "Dismiss this notice"
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:403
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:404
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:607
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:608
+msgid "Update Required"
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:1019
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:1019
+#: inc/classes/class-tgm-plugin-activation.php:1022
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:1022
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#. translators: %s: version number
+#: inc/classes/class-tgm-plugin-activation.php:2067
+msgid "TGMPA v%s"
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:2358
+msgid "Required"
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:2361
+msgid "Recommended"
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:2377
+msgid "WordPress Repository"
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:2380
+msgid "External Source"
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:2383
+msgid "Pre-Packaged"
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:2400
+msgid "Not Installed"
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:2404
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:2406
+msgid "Active"
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:2412
+msgid "Required Update not Available"
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:2415
+msgid "Requires Update"
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:2418
+msgid "Update recommended"
+msgstr ""
+
+#. translators: 1: number of plugins.
+#: inc/classes/class-tgm-plugin-activation.php:2477
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: inc/classes/class-tgm-plugin-activation.php:2481
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: inc/classes/class-tgm-plugin-activation.php:2485
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/classes/class-tgm-plugin-activation.php:2575
+msgid "Installed version:"
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:2583
+msgid "Minimum required version:"
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:2595
+msgid "Available version:"
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:2618
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:2632
+msgid "Plugin"
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:2633
+msgid "Source"
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:2634
+msgid "Type"
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:2638
+msgid "Version"
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:2639
+msgid "Status"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: inc/classes/class-tgm-plugin-activation.php:2688
+msgid "Install %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: inc/classes/class-tgm-plugin-activation.php:2693
+msgid "Update %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: inc/classes/class-tgm-plugin-activation.php:2699
+msgid "Activate %2$s"
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:2769
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:2802
+msgid "Install"
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:2808
+msgid "Update"
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:2811
+msgid "Activate"
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:2842
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:2844
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:2885
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:2887
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:2993
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:3019
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:3243
+msgid "Plugin activation failed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: inc/classes/class-tgm-plugin-activation.php:3583
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#. translators: 1: plugin name, 2: error message.
+#: inc/classes/class-tgm-plugin-activation.php:3586
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/classes/class-tgm-plugin-activation.php:3588
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:3591
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/classes/class-tgm-plugin-activation.php:3593
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:3594
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: inc/classes/class-tgm-plugin-activation.php:3596
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:3599
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/classes/class-tgm-plugin-activation.php:3601
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:3602
+msgid "All installations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: inc/classes/class-tgm-plugin-activation.php:3604
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:3608
+msgid "Show Details"
+msgstr ""
+
+#: inc/classes/class-tgm-plugin-activation.php:3608
+msgid "Hide Details"
+msgstr ""
+
+#. translators: %s: title of menu item which is invalid
+#: inc/functions/menu.php:148
+msgid "%s (Invalid)"
+msgstr ""
+
+#. translators: %s: title of menu item in draft status
+#: inc/functions/menu.php:152
+msgid "%s (Pending)"
+msgstr ""
+
+#: inc/functions/menu.php:164
+msgid "sub item"
+msgstr ""
+
+#: inc/functions/menu.php:179
+msgid "Move up"
+msgstr ""
+
+#: inc/functions/menu.php:192
+msgid "Move down"
+msgstr ""
+
+#: inc/functions/menu.php:194 inc/functions/menu.php:196
+msgid "Edit Menu Item"
+msgstr ""
+
+#: inc/functions/menu.php:205
+msgid "URL"
+msgstr ""
+
+#: inc/functions/menu.php:212
+msgid "Navigation Label"
+msgstr ""
+
+#: inc/functions/menu.php:218
+msgid "Title Attribute"
+msgstr ""
+
+#: inc/functions/menu.php:225
+msgid "Open link in a new window/tab"
+msgstr ""
+
+#: inc/functions/menu.php:230
+msgid "CSS Classes (optional)"
+msgstr ""
+
+#: inc/functions/menu.php:236
+msgid "Link Relationship (XFN)"
+msgstr ""
+
+#: inc/functions/menu.php:242
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:713
+msgid "Description"
+msgstr "Description"
+
+#: inc/functions/menu.php:244
+msgid ""
+"The description will be displayed in the menu if the current theme supports "
+"it."
+msgstr ""
+
+#: inc/functions/menu.php:254
+msgid "Icon Class"
+msgstr ""
+
+#: inc/functions/menu.php:261
+msgid "Move"
+msgstr ""
+
+#: inc/functions/menu.php:262
+msgid "Up one"
+msgstr ""
+
+#: inc/functions/menu.php:263
+msgid "Down one"
+msgstr ""
+
+#: inc/functions/menu.php:266
+msgid "To the top"
+msgstr ""
+
+#: inc/functions/menu.php:273
+msgid "Original: %s"
+msgstr ""
+
+#: inc/functions/menu.php:286
+msgid "Remove"
+msgstr "Supprimer"
+
+#: inc/functions/menu.php:287
+msgid "Cancel"
+msgstr ""
+
+#: inc/functions/my-account.php:9 inc/functions/my-account.php:63
+#: inc/redux-framework/options/header-options.php:90
+#: inc/template-functions/header.php:77
+msgid "Register"
+msgstr "S'inscrire"
+
+#: inc/functions/my-account.php:27 wp-job-manager-resumes/account-signin.php:57
+msgid "Username"
+msgstr "Nom d'utilisateur"
+
+#: inc/functions/my-account.php:33
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:745
+msgid "Email"
+msgstr "E-mail"
+
+#: inc/functions/my-account.php:38
+msgid "Please leave this field empty"
+msgstr "Veuillez laisser ce champ vide."
+
+#: inc/functions/my-account.php:44 inc/functions/my-account.php:101
+msgid "Password"
+msgstr "Mot de passe"
+
+#: inc/functions/my-account.php:51
+msgid "I want to register as"
+msgstr "S'enregistrer en tant que"
+
+#: inc/functions/my-account.php:53
+msgid "Candidate"
+msgstr "Particulier"
+
+#: inc/functions/my-account.php:54
+msgid "Employer"
+msgstr "Association de protection animale"
+
+#: inc/functions/my-account.php:80 inc/functions/my-account.php:109
+#: inc/redux-framework/options/header-options.php:104
+#: inc/template-functions/header.php:80
+msgid "Login"
+msgstr "Se connecter"
+
+#: inc/functions/my-account.php:96
+msgid "Username or email address"
+msgstr "Nom d'utilisateur ou e-mail"
+
+#: inc/functions/my-account.php:111
+msgid "Lost Password?"
+msgstr "Mot de passe oublié ?"
+
+#: inc/functions/my-account.php:167
+msgid "Username already taken"
+msgstr "Nom d'utilisateur déjà pris"
+
+#: inc/functions/my-account.php:171
+msgid "Invalid username"
+msgstr "Nom d'utilisateur incorrecte"
+
+#: inc/functions/my-account.php:175
+msgid "Please enter a username"
+msgstr "Veuillez entrez un nom d'utilisateur"
+
+#: inc/functions/my-account.php:179
+msgid "Invalid email"
+msgstr "E-mail incorrecte"
+
+#: inc/functions/my-account.php:183
+msgid "Email already registered"
+msgstr "E-mail déjà enregistré"
+
+#: inc/functions/my-account.php:225
+msgid ""
+"Account created successfully. Please check your email to create your account "
+"password"
+msgstr ""
+
+#: inc/functions/my-account.php:286
+msgid "Invalid username or email address"
+msgstr "Non d'utilisateur ou e-mail incorrecte "
+
+#: inc/functions/my-account.php:291
+msgid "Please enter a password"
+msgstr "Veuillez entrer un mot de passe"
+
+#: inc/functions/my-account.php:298
+msgid "Incorrect password"
+msgstr ""
+
+#: inc/functions/single-post.php:13
+msgid "Next Post"
+msgstr ""
+
+#: inc/functions/single-post.php:30
+msgid "Prev Post"
+msgstr ""
+
+#: inc/jobhunt-functions.php:691 inc/jobhunt-functions.php:692
+msgid "Enter Valid Email Address"
+msgstr ""
+
+#: inc/ocdi/functions.php:20 inc/ocdi/functions.php:38
+msgid ""
+"Import process may take 3-5 minutes. If you facing any issues please contact "
+"our support."
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Jobhunt"
+msgstr ""
+
+#: inc/redux-framework/options/404-options.php:7
+msgid "404 Page"
+msgstr ""
+
+#: inc/redux-framework/options/404-options.php:12
+msgid "Upload your 404 page background image."
+msgstr ""
+
+#: inc/redux-framework/options/404-options.php:19
+msgid "Upload your 404 page image."
+msgstr ""
+
+#: inc/redux-framework/options/404-options.php:39
+msgid "Button Text"
+msgstr ""
+
+#: inc/redux-framework/options/404-options.php:46
+msgid "Button Link"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:8
+#: inc/redux-framework/options/blog-options.php:73
+#: inc/template-functions/pages.php:24
+msgid "Blog"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:13
+msgid "Blog Page View"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:14
+msgid "Select the view for the Blog Listing."
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:18
+msgid "Default"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:19
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:369
+msgid "Grid"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:20
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:367
+msgid "List"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:26
+msgid "Blog Page Layout"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:27
+msgid "Select the layout for the Blog Listing."
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:32
+#: inc/redux-framework/options/blog-options.php:45
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:379
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:290
+msgid "Left Sidebar"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:33
+#: inc/redux-framework/options/blog-options.php:46
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:380
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:291
+msgid "Right Sidebar"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:39
+msgid "Single Post Layout"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:40
+msgid "Select the layout for the Single Post."
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:52
+msgid "Blog Post Placeholder Icon"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:54
+#: inc/redux-framework/options/blog-options.php:63
+msgid "Show"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:55
+#: inc/redux-framework/options/blog-options.php:64
+#: wp-job-manager-resumes/candidate-dashboard.php:65
+msgid "Hide"
+msgstr "Cacher"
+
+#: inc/redux-framework/options/blog-options.php:61
+msgid "Blog Post Author Info"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:70
+msgid "Blog Page Title"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:77
+msgid "Blog Page Subtitle"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:80
+#: inc/template-functions/pages.php:25
+msgid "Keep up to date with the latest news"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:7
+msgid "Footer"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:8
+msgid ""
+"Options related to the footer section. The Footer has : Brands Slider, "
+"Footer Widgets, Footer Newsletter Section, Footer Contact Block, Footer "
+"Bottom Wigets"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:16
+msgid "Footer Style Block"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:21
+msgid "Select the footer style."
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:43
+msgid "Footer Widgets"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:44
+msgid ""
+"Options related to Footer Widgets. Please add widgets in Appearance > "
+"Widgets > Footer Column widget area."
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:49
+msgid "Show Footer Widgets ?"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:56
+msgid "Newsletter signup form"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:59
+msgid "Paste your newsletter signup form or shortcode"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:72
+msgid "Footer Bottom Bar"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:73
+msgid "The Footer Bottom Bar is available bottom of Footer."
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:79
+msgid "Enable Footer Copyright"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:86
+msgid "Footer Copyright Text"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:87
+#: inc/template-functions/footer.php:52
+msgid ""
+"&copy; %s  <a href=\"%s\">%s</a>. All rights reserved. Design by <a href="
+"\"https://madrasthemes.com/\">Madras Themes</a>"
+msgstr ""
+
+#: inc/redux-framework/options/general-options.php:12
+msgid "Logo SVG"
+msgstr ""
+
+#: inc/redux-framework/options/general-options.php:13
+msgid "Enable to display svg logo instead of site title."
+msgstr ""
+
+#: inc/redux-framework/options/general-options.php:14
+msgid "This will not work when you use site logo in customizer."
+msgstr ""
+
+#: inc/redux-framework/options/general-options.php:17
+#: inc/redux-framework/options/general-options.php:25
+#: inc/redux-framework/options/general-options.php:41
+#: inc/redux-framework/options/general-options.php:50
+#: inc/redux-framework/options/general-options.php:59
+#: inc/redux-framework/options/header-options.php:58
+#: inc/redux-framework/options/header-options.php:81
+#: inc/redux-framework/options/header-options.php:159
+msgid "Enabled"
+msgstr ""
+
+#: inc/redux-framework/options/general-options.php:18
+#: inc/redux-framework/options/general-options.php:26
+#: inc/redux-framework/options/general-options.php:42
+#: inc/redux-framework/options/general-options.php:51
+#: inc/redux-framework/options/general-options.php:60
+#: inc/redux-framework/options/header-options.php:59
+#: inc/redux-framework/options/header-options.php:82
+#: inc/redux-framework/options/header-options.php:160
+msgid "Disabled"
+msgstr ""
+
+#: inc/redux-framework/options/general-options.php:22
+msgid "Scroll To Top"
+msgstr "Faire défiler vers le haut"
+
+#: inc/redux-framework/options/general-options.php:31
+msgid "Register/Login Page"
+msgstr "S'inscrire/Se connecter"
+
+#: inc/redux-framework/options/general-options.php:32
+msgid "Choose a page that will be the register/login page."
+msgstr ""
+
+#: inc/redux-framework/options/general-options.php:37
+msgid "Register Image Size"
+msgstr ""
+
+#: inc/redux-framework/options/general-options.php:38
+msgid ""
+"Enable and regenerate thumbnails to enable theme registered image sizes."
+msgstr ""
+
+#: inc/redux-framework/options/general-options.php:46
+msgid "Enable Live Search"
+msgstr ""
+
+#: inc/redux-framework/options/general-options.php:47
+msgid "Enable/Disable Live Search."
+msgstr ""
+
+#: inc/redux-framework/options/general-options.php:55
+msgid "Enable Location Geocomplete"
+msgstr ""
+
+#: inc/redux-framework/options/general-options.php:56
+msgid "Geocomplete will work only with a valid google maps api key."
+msgstr ""
+
+#: inc/redux-framework/options/general-options.php:66
+msgid "Google Maps API Key"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:8
+msgid "Header"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:10
+msgid ""
+"Options related to the header section. The header has 2 different styles "
+"including top bar, masthead, etc."
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:13
+msgid "Top Bar"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:21
+msgid "Show Top Bar"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:33
+msgid "Masthead"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:41
+msgid "Select the header style."
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:55
+#: inc/redux-framework/options/header-options.php:74
+#: inc/template-functions/header.php:205 job_manager/job-dashboard.php:116
+msgid "Post A Job"
+msgstr "Poster une mission"
+
+#: inc/redux-framework/options/header-options.php:66
+msgid "Post A Job Icon"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:73
+msgid "Post A Job Title"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:78
+msgid "Secondary Nav"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:89
+msgid "Register Title"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:96
+msgid "Register Icon"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:103
+msgid "Login Title"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:110
+msgid "Login Icon"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:117
+msgid "User Page Title"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:118
+#: inc/template-functions/header.php:83
+msgid "User Page"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:124
+msgid "User Page Icon"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:131
+msgid "Log Out Title"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:132
+#: inc/template-functions/header.php:86
+msgid "Log Out"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:138
+msgid "Log Out Icon"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:149
+#: inc/redux-framework/options/header-options.php:156
+msgid "Sticky Header"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:165
+msgid "Use default color"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:166
+#: inc/redux-framework/options/style-options.php:23
+#: inc/redux-framework/options/typography-options.php:13
+msgid "Yes"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:167
+#: inc/redux-framework/options/style-options.php:24
+#: inc/redux-framework/options/typography-options.php:14
+msgid "No"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:185
+msgid "Text Color"
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:7
+msgid "Custom Primary CSS"
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:10
+msgid "Styling"
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:17
+msgid "General Theme Style Settings"
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:22
+msgid "Use a predefined color scheme"
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:31
+msgid "Main Theme Color"
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:32
+msgid "The main color of the site."
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:36
+msgid "Blue Pink"
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:37
+msgid "Pink Purple"
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:38
+msgid "Purple Blue"
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:46
+msgid "Custom Primary Color 1"
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:55
+msgid "Custom Primary Color 2"
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:64
+msgid "Custom Secondary BG Color"
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:73
+msgid "Custom Primary Text Color"
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:82
+msgid "How to include custom color ?"
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:85
+msgid "Inline"
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:86
+msgid "External File"
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:95
+msgid "Custom Primary Color CSS"
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:96
+msgid ""
+"If you choose \"External File\", then please \"Save Changes\" and then click "
+"on ths link to get the custom color primary CSS: "
+msgstr ""
+
+#: inc/redux-framework/options/typography-options.php:8
+msgid "Typography"
+msgstr ""
+
+#: inc/redux-framework/options/typography-options.php:12
+msgid "Use default font scheme ?"
+msgstr ""
+
+#: inc/redux-framework/options/typography-options.php:21
+msgid "Title Font Family"
+msgstr ""
+
+#: inc/redux-framework/options/typography-options.php:38
+msgid "Content Font Family"
+msgstr ""
+
+#: inc/template-functions/about.php:12 inc/template-functions/about.php:163
+#: inc/template-functions/homepage.php:586
+msgid "About Job Hunt"
+msgstr ""
+
+#: inc/template-functions/about.php:13 inc/template-functions/about.php:164
+#: inc/template-functions/homepage.php:587
+msgid ""
+"<p>Far much that one rank beheld bluebird after outside ignobly allegedly "
+"more when oh arrogantly vehement irresistibly fussy penguin insect "
+"additionally wow absolutely crud meretriciously hastily dalmatian a glowered "
+"inset one echidna cassowary some parrot and much as goodness some froze the "
+"sullen much connected bat wonderfully on instantaneously eel valiantly "
+"petted this along across highhandedly much.</p>\n"
+"                <p>Repeatedly dreamed alas opossum but dramatically despite "
+"expeditiously that jeepers loosely yikes that as or eel underneath kept and "
+"slept compactly far purred sure abidingly up above fitting to strident wiped "
+"set waywardly far the and pangolin horse approving paid chuckled cassowary "
+"oh above a much opposite far much hypnotically more therefore wasp less that "
+"hey apart well like while superbly orca and far hence one.Far much that one "
+"rank beheld bluebird after outside ignobly allegedly more when oh arrogantly "
+"vehement irresistibly fussy.</p>\n"
+"                <p>Far much that one rank beheld bluebird after outside "
+"ignobly allegedly more when oh arrogantly vehement irresistibly fussy "
+"penguin insect additionally wow absolutely crud meretriciously hastily "
+"dalmatian a glowered inset one echidna cassowary some parrot and much as "
+"goodness some froze the sullen much connected bat wonderfully on "
+"instantaneously eel valiantly petted this along across highhandedly much. </"
+"p>\n"
+"                <p>Repeatedly dreamed alas opossum but dramatically despite "
+"expeditiously that jeepers loosely yikes that as or eel underneath kept and "
+"slept compactly far purred sure abidingly up above fitting to strident wiped "
+"set waywardly far the and pangolin horse approving paid chuckled cassowary "
+"oh above a much opposite far much hypnotically more therefore wasp less that "
+"hey apart well like while superbly orca and far hence one.Far much that one "
+"rank beheld bluebird after outside ignobly allegedly more when oh arrogantly "
+"vehement irresistibly fussy. </p>"
+msgstr ""
+
+#: inc/template-functions/about.php:22 inc/template-functions/about.php:194
+#: inc/template-functions/homepage.php:609
+msgid "Our Service"
+msgstr ""
+
+#: inc/template-functions/about.php:26
+msgid "Advertise A Job"
+msgstr ""
+
+#: inc/template-functions/about.php:27 inc/template-functions/about.php:32
+#: inc/template-functions/about.php:37 inc/template-functions/about.php:42
+#: inc/template-functions/about.php:47 inc/template-functions/about.php:52
+msgid ""
+"Duis a tristique lacus. Donec vehicula ante id lorem venenatis posuere. "
+"Morbi in lectus."
+msgstr ""
+
+#: inc/template-functions/about.php:31
+msgid "CV Search"
+msgstr ""
+
+#: inc/template-functions/about.php:36
+msgid "Recruiter Profiles"
+msgstr ""
+
+#: inc/template-functions/about.php:41
+msgid "Temp Search"
+msgstr ""
+
+#: inc/template-functions/about.php:46
+msgid "Display Jobs"
+msgstr ""
+
+#: inc/template-functions/about.php:51
+msgid "For Agencies"
+msgstr ""
+
+#: inc/template-functions/about.php:60 inc/template-functions/about.php:240
+#: inc/template-functions/home-v1.php:64 inc/template-functions/home-v1.php:332
+msgid "Kind Words From Happy Candidates"
+msgstr ""
+
+#: inc/template-functions/about.php:61 inc/template-functions/about.php:241
+#: inc/template-functions/home-v1.php:65 inc/template-functions/home-v1.php:333
+#: inc/template-functions/home-v2.php:128
+#: inc/template-functions/home-v2.php:500
+#: inc/template-functions/home-v3.php:112
+#: inc/template-functions/home-v3.php:513
+msgid "What other people thought about the service provided by Jobhunt"
+msgstr ""
+
+#: inc/template-functions/about.php:89 inc/template-functions/home-v2.php:106
+#: inc/template-functions/home-v5.php:107
+msgid "Jobs Posted"
+msgstr ""
+
+#: inc/template-functions/about.php:93 inc/template-functions/home-v2.php:110
+#: inc/template-functions/home-v5.php:111
+msgid "Jobs Filled"
+msgstr ""
+
+#: inc/template-functions/about.php:97 inc/template-functions/home-v2.php:114
+#: inc/template-functions/home-v5.php:115
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:73
+msgid "Companies"
+msgstr "Liste des associations"
+
+#: inc/template-functions/about.php:101 inc/template-functions/home-v2.php:118
+#: inc/template-functions/home-v5.php:119
+msgid "Members"
+msgstr ""
+
+#: inc/template-functions/about.php:111 inc/template-functions/about.php:364
+#: inc/template-functions/home-v1.php:114
+#: inc/template-functions/home-v1.php:501
+#: inc/template-functions/home-v2.php:152
+#: inc/template-functions/home-v2.php:584
+#: inc/template-functions/home-v4.php:129
+#: inc/template-functions/home-v4.php:536
+msgid "Quick Career Tips"
+msgstr ""
+
+#: inc/template-functions/about.php:112 inc/template-functions/about.php:365
+#: inc/template-functions/home-v1.php:115
+#: inc/template-functions/home-v1.php:502
+#: inc/template-functions/home-v2.php:153
+#: inc/template-functions/home-v2.php:585
+#: inc/template-functions/home-v4.php:130
+#: inc/template-functions/home-v4.php:537
+msgid ""
+"Found by employers communicate directly with hiring managers and recruiters."
+msgstr ""
+
+#: inc/template-functions/header.php:189
+msgid "Close"
+msgstr ""
+
+#: inc/template-functions/home-v1.php:9 inc/template-functions/home-v1.php:175
+#: inc/template-functions/home-v2.php:9 inc/template-functions/home-v2.php:215
+msgid "The Easiest Way to Get Your New Job"
+msgstr ""
+
+#: inc/template-functions/home-v1.php:10 inc/template-functions/home-v1.php:176
+#: inc/template-functions/home-v2.php:10 inc/template-functions/home-v2.php:216
+msgid "Find Jobs, Employment & Career Opportunities"
+msgstr ""
+
+#: inc/template-functions/home-v1.php:17 inc/template-functions/home-v1.php:183
+#: inc/template-functions/homepage.php:637
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:229
+msgid "Or browse job offers by"
+msgstr ""
+
+#: inc/template-functions/home-v1.php:18 inc/template-functions/home-v1.php:184
+#: inc/template-functions/homepage.php:638
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:230
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:274
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:728
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:1317
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:1352
+#: job_manager/job-filters.php:45
+msgid "Category"
+msgstr ""
+
+#: inc/template-functions/home-v1.php:25 inc/template-functions/home-v1.php:215
+#: inc/template-functions/home-v3.php:22 inc/template-functions/home-v3.php:271
+#: inc/template-functions/home-v4.php:22 inc/template-functions/home-v4.php:240
+#: inc/template-functions/home-v5.php:21 inc/template-functions/home-v5.php:240
+msgid "Popular Categories"
+msgstr ""
+
+#: inc/template-functions/home-v1.php:26 inc/template-functions/home-v1.php:216
+#: inc/template-functions/home-v3.php:23 inc/template-functions/home-v3.php:272
+#: inc/template-functions/home-v4.php:23 inc/template-functions/home-v4.php:241
+msgid "37 jobs live - 0 added today."
+msgstr ""
+
+#: inc/template-functions/home-v1.php:30 inc/template-functions/home-v1.php:219
+#: inc/template-functions/home-v2.php:27 inc/template-functions/home-v2.php:256
+#: inc/template-functions/home-v3.php:27 inc/template-functions/home-v3.php:275
+#: inc/template-functions/home-v4.php:27 inc/template-functions/home-v4.php:244
+#: inc/template-functions/home-v5.php:26 inc/template-functions/home-v5.php:244
+#: inc/template-functions/homepage.php:116
+msgid "Browse All Categories"
+msgstr ""
+
+#: inc/template-functions/home-v1.php:44 inc/template-functions/home-v1.php:255
+#: inc/template-functions/home-v3.php:41 inc/template-functions/home-v3.php:311
+msgid "Make a Difference with Your Online Resume!"
+msgstr ""
+
+#: inc/template-functions/home-v1.php:45 inc/template-functions/home-v1.php:256
+#: inc/template-functions/home-v3.php:42 inc/template-functions/home-v3.php:312
+msgid "Your resume in minutes with Jobhunt resume assistant is ready!"
+msgstr ""
+
+#: inc/template-functions/home-v1.php:49 inc/template-functions/home-v1.php:131
+#: inc/template-functions/home-v1.php:260
+#: inc/template-functions/home-v1.php:539 inc/template-functions/home-v3.php:46
+#: inc/template-functions/home-v3.php:316
+#: inc/template-functions/homepage.php:146
+msgid "Create an Account"
+msgstr ""
+
+#: inc/template-functions/home-v1.php:56 inc/template-functions/home-v1.php:292
+#: inc/template-functions/home-v3.php:53 inc/template-functions/home-v3.php:348
+#: inc/template-functions/home-v4.php:42 inc/template-functions/home-v4.php:285
+#: inc/template-functions/home-v5.php:41 inc/template-functions/home-v5.php:284
+msgid "Featured Jobs"
+msgstr ""
+
+#: inc/template-functions/home-v1.php:57 inc/template-functions/home-v1.php:293
+#: inc/template-functions/home-v2.php:41 inc/template-functions/home-v2.php:296
+#: inc/template-functions/home-v3.php:54 inc/template-functions/home-v3.php:349
+msgid "Leading Employers already using job and talent."
+msgstr ""
+
+#: inc/template-functions/home-v1.php:88 inc/template-functions/home-v1.php:416
+#: inc/template-functions/home-v4.php:103
+#: inc/template-functions/home-v4.php:451
+msgid "Companies We've Helped"
+msgstr ""
+
+#: inc/template-functions/home-v1.php:89 inc/template-functions/home-v1.php:417
+#: inc/template-functions/home-v2.php:75 inc/template-functions/home-v2.php:366
+#: inc/template-functions/home-v3.php:87 inc/template-functions/home-v3.php:420
+#: inc/template-functions/home-v4.php:104
+#: inc/template-functions/home-v4.php:452
+msgid ""
+"Some of the companies we've helped recruit excellent applicants over the "
+"years."
+msgstr ""
+
+#: inc/template-functions/home-v1.php:126
+#: inc/template-functions/home-v1.php:534
+msgid "Gat a question?"
+msgstr ""
+
+#: inc/template-functions/home-v1.php:127
+#: inc/template-functions/home-v1.php:535
+msgid ""
+"We're here to help. Check out our FAQs, send us an email or call us at 1 "
+"(800) 555-5555"
+msgstr ""
+
+#: inc/template-functions/home-v2.php:40 inc/template-functions/home-v2.php:295
+#: inc/template-functions/home-v4.php:46 inc/template-functions/home-v4.php:290
+#: inc/template-functions/home-v5.php:45 inc/template-functions/home-v5.php:288
+msgid "Recent Jobs"
+msgstr ""
+
+#: inc/template-functions/home-v2.php:50 inc/template-functions/home-v2.php:325
+#: inc/template-functions/home-v3.php:62 inc/template-functions/home-v3.php:379
+#: inc/template-functions/home-v4.php:142
+#: inc/template-functions/home-v4.php:569 inc/template-functions/home-v5.php:78
+#: inc/template-functions/home-v5.php:358
+msgid "How It Works"
+msgstr ""
+
+#: inc/template-functions/home-v2.php:51 inc/template-functions/home-v2.php:326
+#: inc/template-functions/home-v3.php:63 inc/template-functions/home-v3.php:380
+#: inc/template-functions/home-v4.php:143
+#: inc/template-functions/home-v4.php:570
+msgid ""
+"Each month, more than 7 million Jobhunt turn to website in their search for "
+"work, making over 160,000 applications every day."
+msgstr ""
+
+#: inc/template-functions/home-v2.php:55 inc/template-functions/home-v3.php:67
+#: inc/template-functions/home-v4.php:147 inc/template-functions/home-v5.php:82
+msgid "Register an account"
+msgstr "Créer votre compte"
+
+#: inc/template-functions/home-v2.php:56 inc/template-functions/home-v3.php:68
+#: inc/template-functions/home-v4.php:148 inc/template-functions/home-v5.php:83
+msgid ""
+"Post a job to tell us about your project. We'll quickly match you with the "
+"right freelancers."
+msgstr ""
+
+#: inc/template-functions/home-v2.php:60 inc/template-functions/home-v3.php:72
+#: inc/template-functions/home-v4.php:152 inc/template-functions/home-v5.php:87
+msgid "Specify & search your job"
+msgstr ""
+
+#: inc/template-functions/home-v2.php:61 inc/template-functions/home-v3.php:73
+#: inc/template-functions/home-v4.php:153 inc/template-functions/home-v5.php:88
+msgid "Browse profiles, reviews, and proposals then interview top candidates."
+msgstr ""
+
+#: inc/template-functions/home-v2.php:65 inc/template-functions/home-v3.php:77
+#: inc/template-functions/home-v4.php:157 inc/template-functions/home-v5.php:92
+msgid "Apply for job"
+msgstr "Candidater"
+
+#: inc/template-functions/home-v2.php:66 inc/template-functions/home-v3.php:78
+#: inc/template-functions/home-v4.php:158 inc/template-functions/home-v5.php:93
+msgid ""
+"Use the Upwork platform to chat, share files, and collaborate from your "
+"desktop or on the go."
+msgstr ""
+
+#: inc/template-functions/home-v2.php:74 inc/template-functions/home-v2.php:365
+#: inc/template-functions/home-v3.php:86 inc/template-functions/home-v3.php:419
+msgid "Top Company Registered"
+msgstr ""
+
+#: inc/template-functions/home-v2.php:99 inc/template-functions/home-v2.php:448
+msgid "Projob Site Stats"
+msgstr ""
+
+#: inc/template-functions/home-v2.php:100
+#: inc/template-functions/home-v2.php:449
+msgid ""
+"Here we list our site stats and how many people we’ve helped find a job and "
+"companies have found recruits. It's a pretty awesome stats area!"
+msgstr ""
+
+#: inc/template-functions/home-v2.php:127
+#: inc/template-functions/home-v2.php:499
+#: inc/template-functions/home-v3.php:111
+#: inc/template-functions/home-v3.php:512
+msgid "What our clients say about us"
+msgstr ""
+
+#: inc/template-functions/home-v2.php:164
+#: inc/template-functions/home-v2.php:618
+#: inc/template-functions/home-v3.php:183
+#: inc/template-functions/home-v3.php:727
+msgid "Buy Our Plans And Packeges"
+msgstr ""
+
+#: inc/template-functions/home-v2.php:165
+#: inc/template-functions/home-v2.php:619
+#: inc/template-functions/home-v3.php:184
+#: inc/template-functions/home-v3.php:728
+msgid ""
+"One of our jobs has some kind of flexibility option - such as telecommuting, "
+"a part-time schedule or a flexible or flextime schedule."
+msgstr ""
+
+#: inc/template-functions/home-v3.php:10 inc/template-functions/home-v3.php:235
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:1307
+msgid "Find Candidate"
+msgstr ""
+
+#: inc/template-functions/home-v3.php:11 inc/template-functions/home-v3.php:236
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:1308
+msgid "We have 2.567 resumes in our database"
+msgstr ""
+
+#: inc/template-functions/home-v3.php:135
+#: inc/template-functions/home-v3.php:596 inc/template-functions/home-v4.php:55
+#: inc/template-functions/home-v4.php:321
+msgid "Download & Enjoy"
+msgstr ""
+
+#: inc/template-functions/home-v3.php:136
+#: inc/template-functions/home-v3.php:597 inc/template-functions/home-v4.php:56
+#: inc/template-functions/home-v4.php:322
+msgid ""
+"Search, find and apply for jobs directly on your mobile device or desktop "
+"Manage all of the jobs you have applied to from a convenience secure "
+"dashboard."
+msgstr ""
+
+#: inc/template-functions/home-v3.php:143 inc/template-functions/home-v4.php:63
+msgid "App Store"
+msgstr ""
+
+#: inc/template-functions/home-v3.php:144 inc/template-functions/home-v4.php:64
+msgid "Available now on the"
+msgstr ""
+
+#: inc/template-functions/home-v3.php:149 inc/template-functions/home-v4.php:69
+msgid "Google Play"
+msgstr ""
+
+#: inc/template-functions/home-v3.php:150 inc/template-functions/home-v4.php:70
+msgid "Get in on"
+msgstr ""
+
+#: inc/template-functions/home-v3.php:158
+#: inc/template-functions/home-v3.php:641 inc/template-functions/home-v4.php:78
+#: inc/template-functions/home-v4.php:366
+msgid "Featured Candidates"
+msgstr ""
+
+#: inc/template-functions/home-v3.php:159
+#: inc/template-functions/home-v3.php:642 inc/template-functions/home-v4.php:79
+#: inc/template-functions/home-v4.php:367
+msgid "Every single one of our jobs has some kind of flexibility option"
+msgstr ""
+
+#: inc/template-functions/home-v4.php:9 inc/template-functions/home-v4.php:203
+msgid "Find the career you deserve"
+msgstr ""
+
+#: inc/template-functions/home-v4.php:10 inc/template-functions/home-v4.php:204
+msgid "Your job search starts and ends with us."
+msgstr ""
+
+#: inc/template-functions/home-v5.php:9 inc/template-functions/home-v5.php:204
+msgid "Great Job"
+msgstr ""
+
+#: inc/template-functions/home-v5.php:10 inc/template-functions/home-v5.php:205
+msgid "Greater Talent"
+msgstr ""
+
+#: inc/template-functions/home-v5.php:58
+msgid "I AM RECRUITER!"
+msgstr ""
+
+#: inc/template-functions/home-v5.php:59 inc/template-functions/home-v5.php:66
+msgid ""
+"One of our One of our jobs has some kind of flexibility jobs has some kind "
+"of flexibility option such as telecommuting, a part-time schedule or a "
+"flexible or flextime."
+msgstr ""
+
+#: inc/template-functions/home-v5.php:60
+msgid "Post new job"
+msgstr ""
+
+#: inc/template-functions/home-v5.php:65
+msgid "I AM JOBSEEKER!"
+msgstr ""
+
+#: inc/template-functions/home-v5.php:67
+msgid "Browse Jobs"
+msgstr ""
+
+#: inc/template-functions/home-v5.php:101
+#: inc/template-functions/home-v5.php:395
+msgid "Jobhunt Site Stats"
+msgstr ""
+
+#: inc/template-functions/home-v5.php:130
+#: inc/template-functions/home-v5.php:437
+msgid "Frequently Asked Questions?"
+msgstr ""
+
+#: inc/template-functions/home-v5.php:135
+#: inc/template-functions/home-v5.php:443
+msgid "What People Say"
+msgstr ""
+
+#: inc/template-functions/home-v5.php:158
+#: inc/template-functions/home-v5.php:533
+msgid "Are You Hiring?"
+msgstr ""
+
+#: inc/template-functions/home-v5.php:159
+msgid ""
+"Find everything you need to post a job and receive the best candidates by "
+"visiting our Employer website. We offer small business and enterprise "
+"options."
+msgstr ""
+
+#: inc/template-functions/home-v5.php:534
+msgid ""
+"Find everything you need to post a job and receive the best candidates by "
+"visiting our Empl oyer website. We offer small business and enterprise "
+"options."
+msgstr ""
+
+#: inc/template-functions/homepage.php:90 inc/template-functions/pages.php:67
+#: inc/template-functions/posts.php:371 inc/template-functions/posts.php:411
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:367
+msgid "Pages:"
+msgstr ""
+
+#: inc/template-functions/homepage.php:515
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: inc/template-functions/homepage.php:593
+msgid "Contact Us"
+msgstr ""
+
+#: inc/template-functions/homepage.php:677
+msgid "Scroll Button"
+msgstr ""
+
+#: inc/template-functions/pages.php:38
+msgid "Search results for &ldquo;%s&rdquo;"
+msgstr ""
+
+#: inc/template-functions/pages.php:80
+msgid "Filters"
+msgstr ""
+
+#: inc/template-functions/posts.php:190
+msgid "Leave a comment"
+msgstr "Laisser un commentaire"
+
+#: inc/template-functions/posts.php:190
+msgid "1 comment"
+msgstr ""
+
+#: inc/template-functions/posts.php:190
+msgid "% comments"
+msgstr ""
+
+#: inc/template-functions/posts.php:261
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/template-functions/posts.php:280 job_manager/job-dashboard.php:59
+#: job_manager/job-dashboard.php:76
+#: wp-job-manager-resumes/candidate-dashboard.php:60
+#: wp-job-manager-resumes/candidate-dashboard.php:72
+#: wp-job-manager-resumes/candidate-dashboard.php:85
+msgid "Edit"
+msgstr "Modifier"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-functions/posts.php:308 inc/template-functions/posts.php:466
+msgid ", "
+msgstr ""
+
+#: inc/template-functions/posts.php:389
+msgid "Read More"
+msgstr "Lire plus"
+
+#: inc/template-functions/posts.php:406
+msgid "Continue reading %s"
+msgstr ""
+
+#: inc/widgets/class-jobhunt-footer-logo-widget.php:13
+msgid "Your site&#8217;s most footer logo."
+msgstr ""
+
+#: inc/widgets/class-jobhunt-footer-logo-widget.php:16
+msgid "Jobhunt Footer Logo"
+msgstr ""
+
+#: inc/widgets/class-jobhunt-footer-logo-widget.php:50
+msgid "Logo:"
+msgstr ""
+
+#: inc/widgets/class-jobhunt-newsletter-widget.php:25
+msgid "Your site&#8217;s newsletter block."
+msgstr ""
+
+#: inc/widgets/class-jobhunt-newsletter-widget.php:28
+msgid "Jobhunt Newsletter"
+msgstr ""
+
+#: inc/widgets/class-jobhunt-newsletter-widget.php:81
+msgid "Newsletter Title"
+msgstr ""
+
+#: inc/widgets/class-jobhunt-newsletter-widget.php:86
+msgid "Newsletter Dsecription"
+msgstr ""
+
+#: inc/widgets/class-jobhunt-posts-widget.php:13
+msgid "Your site&#8217;s most recent Posts."
+msgstr ""
+
+#: inc/widgets/class-jobhunt-posts-widget.php:16
+msgid "Jobhunt Recent Posts"
+msgstr ""
+
+#: inc/widgets/class-jobhunt-posts-widget.php:57
+msgid "Number of posts to show:"
+msgstr ""
+
+#: inc/widgets/class-jobhunt-posts-widget.php:63
+msgid "Display post date?"
+msgstr ""
+
+#: inc/widgets/class-jobhunt-social-menu-widget.php:14
+msgid "Add a social menu to your sidebar/footer."
+msgstr ""
+
+#: inc/widgets/class-jobhunt-social-menu-widget.php:17
+msgid "Jobhunt Social Links Menu"
+msgstr ""
+
+#: inc/widgets/class-jobhunt-social-menu-widget.php:124
+msgid "No menus have been created yet."
+msgstr ""
+
+#: inc/widgets/class-jobhunt-social-menu-widget.php:124
+msgid "Create some"
+msgstr ""
+
+#: inc/widgets/class-jobhunt-social-menu-widget.php:128
+#: inc/wp-job-manager/widgets/class-jh-wpjm-widget-job-date-filter.php:91
+#: inc/wp-job-manager/widgets/class-jh-wpjm-widget-job-location-search.php:79
+#: inc/wp-job-manager/widgets/class-jh-wpjm-widget-job-search.php:78
+#: inc/wp-job-manager/widgets/class-jh-wpjm-widget-layered-nav.php:70
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-location-search.php:78
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-search.php:78
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-layered-nav.php:70
+#: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-layered-nav.php:70
+#: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-resume-date-filter.php:91
+#: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-resume-location-search.php:79
+#: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-resume-search.php:78
+msgid "Title:"
+msgstr ""
+
+#: inc/widgets/class-jobhunt-social-menu-widget.php:132
+msgid "Select Menu:"
+msgstr ""
+
+#: inc/widgets/class-jobhunt-social-menu-widget.php:134
+#: inc/wp-job-manager/widgets/class-jh-wpjm-widget-layered-nav.php:76
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-layered-nav.php:76
+#: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-layered-nav.php:76
+msgid "&mdash; Select &mdash;"
+msgstr ""
+
+#: inc/widgets/class-jobhunt-social-menu-widget.php:144
+msgid "Edit Menu"
+msgstr ""
+
+#: inc/woocommerce/class-jobhunt-woocommerce.php:143
+msgid "Shop Sidebar"
+msgstr ""
+
+#: inc/woocommerce/class-jobhunt-woocommerce.php:145
+msgid "Widgets added to this region will appear in the shop page."
+msgstr ""
+
+#: inc/woocommerce/jobhunt-woocommerce-template-functions.php:73
+#: inc/woocommerce/jobhunt-woocommerce-template-functions.php:356
+msgid "View your shopping cart"
+msgstr ""
+
+#: inc/woocommerce/jobhunt-woocommerce-template-functions.php:74
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/woocommerce/jobhunt-woocommerce-template-functions.php:268
+msgid "On Sale Now"
+msgstr ""
+
+#: inc/woocommerce/jobhunt-woocommerce-template-functions.php:276
+msgid "New In Store"
+msgstr ""
+
+#: inc/woocommerce/jobhunt-woocommerce-template-functions.php:370
+msgid "My Account"
+msgstr ""
+
+#: inc/woocommerce/jobhunt-woocommerce-template-functions.php:405
+msgid "More products"
+msgstr ""
+
+#: inc/woocommerce/jobhunt-woocommerce-template-functions.php:448
+msgid "You're viewing:"
+msgstr ""
+
+#: inc/woocommerce/jobhunt-woocommerce-template-functions.php:482
+msgid "Shop by Brand"
+msgstr ""
+
+#: inc/woocommerce/jobhunt-woocommerce-template-functions.php:485
+msgid "Product Brands"
+msgstr ""
+
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:97
+msgid "Jobs Sidebar"
+msgstr ""
+
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:99
+msgid "Widgets added to this region will appear in the jobs page."
+msgstr ""
+
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:264
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:281
+msgid "Icon for category"
+msgstr ""
+
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:266
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:284
+msgid "This is alternative for font based icons"
+msgstr ""
+
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:309
+msgid "Salary"
+msgstr ""
+
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:310
+msgid "Enable listing salary"
+msgstr ""
+
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:311
+msgid ""
+"This lets users select from a list of salary when submitting a job. Note: an "
+"admin has to create salary before site users can select them."
+msgstr ""
+
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:318
+#: job_manager/job-listing-overview.php:23
+msgid "Career Level"
+msgstr ""
+
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:319
+msgid "Enable listing career level"
+msgstr ""
+
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:320
+msgid ""
+"This lets users select from a list of career level when submitting a job. "
+"Note: an admin has to create career level before site users can select them."
+msgstr ""
+
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:327
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:211
+#: job_manager/job-listing-overview.php:33
+#: wp-job-manager-resumes/resume-overview.php:13
+msgid "Experience"
+msgstr ""
+
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:328
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:212
+msgid "Enable listing experience"
+msgstr ""
+
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:329
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:213
+msgid ""
+"This lets users select from a list of experience when submitting a job. "
+"Note: an admin has to create experience before site users can select them."
+msgstr ""
+
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:336
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:247
+#: job_manager/job-listing-overview.php:18
+#: wp-job-manager-resumes/resume-overview.php:33
+msgid "Gender"
+msgstr "Genre"
+
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:337
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:248
+msgid "Enable listing gender"
+msgstr ""
+
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:338
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:249
+msgid ""
+"This lets users select from a list of gender when submitting a job. Note: an "
+"admin has to create gender before site users can select them."
+msgstr ""
+
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:345
+#: job_manager/job-listing-overview.php:28
+msgid "Industry"
+msgstr ""
+
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:346
+msgid "Enable listing industry"
+msgstr ""
+
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:347
+msgid ""
+"This lets users select from a list of industry when submitting a job. Note: "
+"an admin has to create industry before site users can select them."
+msgstr ""
+
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:354
+#: job_manager/job-listing-overview.php:38
+msgid "Qualification"
+msgstr ""
+
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:355
+msgid "Enable listing qualification"
+msgstr ""
+
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:356
+msgid ""
+"This lets users select from a list of qualification when submitting a job. "
+"Note: an admin has to create qualification before site users can select them."
+msgstr ""
+
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:363
+msgid "Jobs Listings Style"
+msgstr ""
+
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:364
+msgid ""
+"Select the style for jobs listing style. This lets the plugin know the style "
+"of jobs listings."
+msgstr ""
+
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:368
+msgid "List Classic"
+msgstr ""
+
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:375
+msgid "Jobs Listings Sidebar"
+msgstr ""
+
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:376
+msgid ""
+"Select the position for jobs listing sidebar. This lets the plugin know the "
+"position of jobs listings sidebar."
+msgstr ""
+
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:387
+msgid "Single job Style"
+msgstr ""
+
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:388
+msgid ""
+"Select the style for single job style. This lets the plugin know the style "
+"of single job."
+msgstr ""
+
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:391
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:278
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:302
+msgid "Style v1"
+msgstr ""
+
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:392
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:279
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:303
+msgid "Style v2"
+msgstr ""
+
+#: inc/wp-job-manager/class-jobhunt-wpjm.php:393
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:280
+msgid "Style v3"
+msgstr ""
+
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:63
+msgid "Showing %s - %s of %s jobs"
+msgstr "Affichage de %s - %s sur %s missions"
+
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:65
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:52
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:58
+msgid "Showing one job"
+msgid_plural "Showing all %s jobs"
+msgstr[0] "Affichage d'une mission"
+msgstr[1] "Affichage des %s missions"
+
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:145
+msgid ""
+"To check your Job Listings and Applications visit %1$sEmployer Dashboard%2$s."
+msgstr ""
+
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:153
+msgid ""
+"To check your Resumes and Past Applications visit %1$sCandidate Dashboard"
+"%2$s."
+msgstr ""
+
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:161
+msgid "To check your Job Listings visit %1$sEmployer Dashboard%2$s."
+msgstr ""
+
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:168
+msgid "To check your Resumes visit %1$sCandidate Dashboard%2$s."
+msgstr ""
+
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:220
+msgid "Explore Thousand Of Jobs With Just Simple Search..."
+msgstr "Des missions dans la cause animale près de chez vous"
+
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:263
+msgid "Region"
+msgstr ""
+
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:268
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:737
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:1347
+#: job_manager/job-filters.php:35 job_manager/job-filters.php:36
+msgid "Location"
+msgstr ""
+
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:391
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:252
+msgid "Last Hour"
+msgstr "Dernière heure"
+
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:392
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:253
+msgid "Last 24 Hours"
+msgstr "Dernières 24 heures"
+
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:393
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:254
+msgid "Last 7 Days"
+msgstr "Les 7 derniers jours"
+
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:394
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:255
+msgid "Last 14 Days"
+msgstr "Les 14 derniers jours"
+
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:395
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:256
+msgid "Last 30 Days"
+msgstr "Les 30 derniers jours"
+
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:396
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:363
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:164
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:257
+msgid "All"
+msgstr "toute les missions"
+
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:896
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:904
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:910
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:918
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:924
+msgid "Remove filter"
+msgstr "Enlever le filtre"
+
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:924
+msgid "Clean"
+msgstr "Supprimer"
+
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:972
+msgid "Posted on "
+msgstr "Posté il y a"
+
+#. translators: Placeholder %s is the relative, human readable time since the
+#. job listing was posted.
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:975
+#: indeed/content-imported-job-listing.php:31
+#: ziprecruiter/content-imported-job-listing.php:31
+msgid "%s ago"
+msgstr "il y a %s"
+
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1054
+msgid "Job Salary"
+msgstr ""
+
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1058
+msgid "Choose a salary…"
+msgstr ""
+
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1065
+msgid "Job Career Level"
+msgstr ""
+
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1069
+msgid "Choose a career level…"
+msgstr ""
+
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1076
+msgid "Job Experience"
+msgstr ""
+
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1080
+msgid "Choose a job experience…"
+msgstr ""
+
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1087
+msgid "Job Gender"
+msgstr ""
+
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1091
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:837
+msgid "Choose a gender…"
+msgstr ""
+
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1098
+msgid "Job Industry"
+msgstr ""
+
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1102
+msgid "Choose a job industry…"
+msgstr ""
+
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1109
+msgid "Job Qualification"
+msgstr ""
+
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1113
+msgid "Choose a job qualification…"
+msgstr ""
+
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1219
+msgid "Please select a form"
+msgstr ""
+
+#. translators: %d: total results
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:177
+msgid "Showing the single job"
+msgid_plural "Showing all %d jobs"
+msgstr[0] "Affichage d'une mission"
+msgstr[1] "Affichage des %d missions"
+
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:190
+msgid "No jobs were found matching your selection."
+msgstr ""
+
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:271
+msgid "New Jobs"
+msgstr "Nouvelles missions"
+
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:272
+msgid "Featured"
+msgstr ""
+
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:274
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:102
+msgid "Name: Ascending"
+msgstr "Titre : croissant"
+
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:275
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:103
+msgid "Name: Descending"
+msgstr "Titre : décroissant"
+
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:282
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:110
+msgid "Relevance"
+msgstr ""
+
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:292
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:121
+msgid "Sort by"
+msgstr "Trier par"
+
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:362
+msgid "Show %s"
+msgstr "Afficher %s"
+
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:423
+msgid "Monthly Salary : "
+msgstr ""
+
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:429
+msgid "Roles :"
+msgstr ""
+
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:452
+msgid "Closed"
+msgstr ""
+
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:452
+msgid "Closes"
+msgstr ""
+
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:452
+msgid "M j, Y"
+msgstr ""
+
+#: inc/wp-job-manager/widgets/class-jh-wpjm-widget-job-date-filter.php:25
+msgid "Add job date filter widgets to your sidebar."
+msgstr ""
+
+#: inc/wp-job-manager/widgets/class-jh-wpjm-widget-job-date-filter.php:26
+msgid "Jobhunt Job Date Filter"
+msgstr ""
+
+#: inc/wp-job-manager/widgets/class-jh-wpjm-widget-job-date-filter.php:86
+#: inc/wp-job-manager/widgets/class-jh-wpjm-widget-job-location-search.php:74
+#: inc/wp-job-manager/widgets/class-jh-wpjm-widget-job-search.php:73
+#: inc/wp-job-manager/widgets/class-jh-wpjm-widget-layered-nav.php:65
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-location-search.php:73
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-search.php:73
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-layered-nav.php:65
+#: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-layered-nav.php:65
+#: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-resume-date-filter.php:86
+#: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-resume-location-search.php:74
+#: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-resume-search.php:73
+msgid "No sidebars are available."
+msgstr ""
+
+#: inc/wp-job-manager/widgets/class-jh-wpjm-widget-job-location-search.php:25
+msgid "Add job location search widgets to your sidebar."
+msgstr ""
+
+#: inc/wp-job-manager/widgets/class-jh-wpjm-widget-job-location-search.php:26
+msgid "Jobhunt Job Location Search"
+msgstr ""
+
+#: inc/wp-job-manager/widgets/class-jh-wpjm-widget-job-location-search.php:45
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-location-search.php:45
+#: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-resume-location-search.php:45
+msgid "All Locations"
+msgstr "Région ou ville"
+
+#: inc/wp-job-manager/widgets/class-jh-wpjm-widget-job-search.php:25
+msgid "Add job search widgets to your sidebar."
+msgstr ""
+
+#: inc/wp-job-manager/widgets/class-jh-wpjm-widget-job-search.php:26
+msgid "Jobhunt Job Search"
+msgstr ""
+
+#: inc/wp-job-manager/widgets/class-jh-wpjm-widget-layered-nav.php:20
+msgid "Add job filter widgets to your sidebar."
+msgstr ""
+
+#: inc/wp-job-manager/widgets/class-jh-wpjm-widget-layered-nav.php:21
+msgid "Jobhunt Filter Job by Taxonomy"
+msgstr ""
+
+#: inc/wp-job-manager/widgets/class-jh-wpjm-widget-layered-nav.php:74
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-layered-nav.php:74
+#: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-layered-nav.php:74
+msgid "Taxonomy:"
+msgstr ""
+
+#: inc/wp-job-manager/widgets/class-jh-wpjm-widget-layered-nav.php:85
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-layered-nav.php:85
+#: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-layered-nav.php:85
+msgid "Query type:"
+msgstr ""
+
+#: inc/wp-job-manager/widgets/class-jh-wpjm-widget-layered-nav.php:87
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-layered-nav.php:87
+#: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-layered-nav.php:87
+msgid "AND"
+msgstr ""
+
+#: inc/wp-job-manager/widgets/class-jh-wpjm-widget-layered-nav.php:88
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-layered-nav.php:88
+#: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-layered-nav.php:88
+msgid "OR"
+msgstr ""
+
+#: inc/wp-job-manager/widgets/class-jh-wpjm-widget-layered-nav.php:108
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-layered-nav.php:108
+#: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-layered-nav.php:108
+msgid "Filter by"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Company Sidebar"
+msgstr ""
+
+#: inc/wp-job-manager-companies/class-jobhunt-wpjmc.php:66
+msgid "Widgets added to this region will appear in the Company page."
+msgstr ""
+
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:50
+msgid "Showing %s - %s of %s companies"
+msgstr "Affichage de %s - %s sur %s associations de protection animale"
+
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:719
+msgid "Team size"
+msgstr ""
+
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:722
+msgid "Choose Team Size&hellip;"
+msgstr ""
+
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:738
+msgid "Leave this blank if the location is not important"
+msgstr ""
+
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:741
+msgid "e.g. \"London\""
+msgstr ""
+
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:748
+msgid "you@yourdomain.com"
+msgstr ""
+
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:752
+msgid "Phone"
+msgstr ""
+
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:755
+msgid "Phone Number"
+msgstr ""
+
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:759
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:737
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:863
+msgid "Facebook"
+msgstr ""
+
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:762
+msgid "Facebook page url"
+msgstr ""
+
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:766
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:741
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:870
+msgid "Google+"
+msgstr ""
+
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:769
+msgid "Google+ url"
+msgstr ""
+
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:773
+msgid "LinkedIn"
+msgstr ""
+
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:776
+msgid "LinkedIn url"
+msgstr ""
+
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:780
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:425
+msgid "Since"
+msgstr "Création"
+
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:783
+msgid "Established date/year"
+msgstr ""
+
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:840
+#: wp-job-manager-resumes/account-signin.php:57
+msgid "(optional)"
+msgstr ""
+
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:67
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:234
+msgid "%s Job"
+msgid_plural "%s Jobs"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:89
+msgid "Total of %s Employer"
+msgid_plural "Total of %s Employers"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:100
+msgid "New Employer"
+msgstr ""
+
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:231
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:343
+#: templates/home/company-info-carousel.php:73
+msgid "%s Open Position"
+msgid_plural "%s Open Positions"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:354
+msgid "See On Map"
+msgstr "Voir sur la carte"
+
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:363
+msgid "About Business Network"
+msgstr "A propos de l'association"
+
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:379
+msgid "Company Information"
+msgstr "Information de l'association"
+
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:408
+msgid "Categories"
+msgstr ""
+
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:446
+msgid "Team Size"
+msgstr ""
+
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:460
+msgid "Posted Jobs"
+msgstr "Missions postées"
+
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:474
+msgid "Jobs From Business Network"
+msgstr "Les missions de l'association"
+
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:487
+msgid "No companies were found matching your selection."
+msgstr "Aucune association ne correspond à votre recherche"
+
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:499
+msgid "Contact Business Network"
+msgstr ""
+
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-location-search.php:25
+msgid "Add company location search widgets to your sidebar."
+msgstr ""
+
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-location-search.php:26
+msgid "Jobhunt Company Location Search"
+msgstr ""
+
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-search.php:25
+msgid "Add company search widgets to your sidebar."
+msgstr ""
+
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-search.php:26
+msgid "Jobhunt Company Search"
+msgstr ""
+
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-search.php:44
+msgid "Company title or keywords"
+msgstr "Nom de l'association ou mots-clés"
+
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-layered-nav.php:20
+msgid "Add company filter widgets to your sidebar."
+msgstr ""
+
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-layered-nav.php:21
+msgid "Jobhunt Filter Company by Taxonomy"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Resume Sidebar"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:77
+msgid "Widgets added to this region will appear in the Resume page."
+msgstr ""
+
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:220
+#: wp-job-manager-resumes/resume-overview.php:18
+msgid "Age"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:221
+msgid "Enable listing age"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:222
+msgid ""
+"This lets users select from a list of age when submitting a job. Note: an "
+"admin has to create age before site users can select them."
+msgstr ""
+
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:229
+#: wp-job-manager-resumes/resume-overview.php:23
+msgid "Current Salary"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:230
+msgid "Enable listing current salary"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:231
+msgid ""
+"This lets users select from a list of current salary when submitting a job. "
+"Note: an admin has to create current salary before site users can select "
+"them."
+msgstr ""
+
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:238
+#: wp-job-manager-resumes/resume-overview.php:28
+msgid "Expected Salary"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:239
+msgid "Enable listing expected salary"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:240
+msgid ""
+"This lets users select from a list of expected salary when submitting a job. "
+"Note: an admin has to create expected salary before site users can select "
+"them."
+msgstr ""
+
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:256
+#: wp-job-manager-resumes/resume-overview.php:43
+msgid "Education Level"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:257
+msgid "Enable listing education level"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:258
+msgid ""
+"This lets users select from a list of education level when submitting a job. "
+"Note: an admin has to create education level before site users can select "
+"them."
+msgstr ""
+
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:265
+#: wp-job-manager-resumes/resume-overview.php:38
+msgid "Language"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:266
+msgid "Enable listing language"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:267
+msgid ""
+"This lets users select from a list of language when submitting a job. Note: "
+"an admin has to create language before site users can select them."
+msgstr ""
+
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:274
+msgid "Resumes Listings Style"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:275
+msgid ""
+"Select the style for resumes listing style. This lets the plugin know the "
+"style of resumes listings."
+msgstr ""
+
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:286
+msgid "Resumes Listings Sidebar"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:287
+msgid ""
+"Select the position for resumes listing sidebar. This lets the plugin know "
+"the position of resumes listings sidebar."
+msgstr ""
+
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:298
+msgid "Single Resume Style"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:299
+msgid ""
+"Select the style for single resume style. This lets the plugin know the "
+"style of single resume."
+msgstr ""
+
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:310
+msgid "Single Resume Contact Form"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:311
+msgid ""
+"Select the form for single resume contact form. This lets the plugin know "
+"the contact form of single resume. This only for single resume style v1"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:56
+msgid "Showing %s - %s of %s resumes"
+msgstr "Affichage de %s - %s sur %s profils"
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:79
+msgid "Candidates"
+msgstr "Bénévoles"
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:733
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:856
+msgid "Twitter"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:734
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:858
+msgid "your twitter page link"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:738
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:865
+msgid "your facebook page link"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:742
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:872
+msgid "your google plus page link"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:745
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:877
+msgid "Linked in"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:746
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:879
+msgid "your linked in page link"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:749
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:884
+msgid "Instagram"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:750
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:886
+msgid "your instagram page link"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:753
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:891
+msgid "Youtube"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:754
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:893
+msgid "your youtube page link"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:757
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:898
+msgid "Behance"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:758
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:900
+msgid "your behance page link"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:761
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:905
+msgid "Pinterest"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:762
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:907
+msgid "your pinterest page link"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:765
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:912
+msgid "Github"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:766
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:914
+msgid "your github in page link"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:778
+msgid "Candidate Experience"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:782
+msgid "Choose a experience…"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:789
+msgid "Candidate Current Salary"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:793
+msgid "Choose a current salary…"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:800
+msgid "Candidate Expected Salary"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:804
+msgid "Choose a expected salary…"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:811
+msgid "Candidate Education Level"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:815
+msgid "Choose a education level…"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:822
+msgid "Candidate Language"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:826
+msgid "Choose a language…"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:833
+msgid "Candidate Gender"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:845
+msgid "Candidate Age"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:849
+msgid "Choose a age…"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:919
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-template-functions.php:273
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-template-functions.php:434
+msgid "Awards"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:920
+msgid "Add Awards"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:927
+msgid "Award Title"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:934
+msgid "Start/end date"
+msgstr "Date de début/fin"
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:941
+msgid "Notes"
+msgstr "Brève description"
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:1316
+msgid "Or browse resumes offers by"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-template-functions.php:215
+#: templates/home/candidate-info-block.php:94
+msgid "View Resume"
+msgstr "Voir le profil"
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-template-functions.php:261
+msgid "Candidate About"
+msgstr "A propos"
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-template-functions.php:264
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-template-functions.php:382
+msgid "Education"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-template-functions.php:267
+msgid "Work Experience"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-template-functions.php:270
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-template-functions.php:460
+msgid "Professional Skills"
+msgstr "Compétences"
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-template-functions.php:276
+msgid "Candidate Video"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-template-functions.php:324
+msgid "Member Since "
+msgstr "Membre depuis"
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-template-functions.php:346
+msgid "Download CV"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-template-functions.php:370
+msgid "Candidates About"
+msgstr "A propos"
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-template-functions.php:408
+msgid "Work & Experience"
+msgstr "Expérience associative"
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-template-functions.php:480
+msgid "Candidates Video"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-template-functions.php:499
+msgid "Contact"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-template-functions.php:517
+msgid "Contact "
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-template-functions.php:526
+msgid "No resumes were found matching your selection."
+msgstr ""
+
+#: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-layered-nav.php:20
+msgid "Add resume filter widgets to your sidebar."
+msgstr ""
+
+#: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-layered-nav.php:21
+msgid "Jobhunt Filter Resume by Taxonomy"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-resume-date-filter.php:25
+msgid "Add resume date filter widgets to your sidebar."
+msgstr ""
+
+#: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-resume-date-filter.php:26
+msgid "Jobhunt Resume Date Filter"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-resume-location-search.php:25
+msgid "Add resume location search widgets to your sidebar."
+msgstr ""
+
+#: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-resume-location-search.php:26
+msgid "Jobhunt Resume Location Search"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-resume-search.php:25
+msgid "Add resume search widgets to your sidebar."
+msgstr ""
+
+#: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-resume-search.php:26
+msgid "Jobhunt Resume Search"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-resume-search.php:44
+msgid "By Name"
+msgstr ""
+
+#: job_manager/content-single-job_listing.php:24
+msgid "This listing has expired."
+msgstr ""
+
+#: job_manager/job-dashboard-login.php:24
+msgid "You need to be signed in to manage your listings."
+msgstr ""
+
+#: job_manager/job-dashboard-login.php:24
+#: wp-job-manager-resumes/account-signin.php:41
+#: wp-job-manager-resumes/candidate-dashboard-login.php:24
+msgid "Sign in"
+msgstr "Se connecter"
+
+#: job_manager/job-dashboard.php:26
+msgid "Your listings are shown in the table below."
+msgstr "Gérer vos missions dans le tableau ci-dessous."
+
+#: job_manager/job-dashboard.php:38
+msgid "You do not have any active listings."
+msgstr "Vous n'avez encore aucune mission"
+
+#: job_manager/job-dashboard.php:51
+msgid "Featured Job"
+msgstr "Missions vedettes"
+
+#: job_manager/job-dashboard.php:62
+msgid "Mark not filled"
+msgstr "Marquer \"non pourvue\""
+
+#: job_manager/job-dashboard.php:64
+msgid "Mark filled"
+msgstr "Marquer \"pourvue\""
+
+#: job_manager/job-dashboard.php:66
+msgid "Duplicate"
+msgstr "Dupliquer"
+
+#: job_manager/job-dashboard.php:70
+#: wp-job-manager-resumes/candidate-dashboard.php:92
+msgid "Relist"
+msgstr "Republier"
+
+#: job_manager/job-dashboard.php:81
+msgid "Continue Submission"
+msgstr ""
+
+#: job_manager/job-dashboard.php:85
+#: wp-job-manager-resumes/candidate-dashboard.php:98
+msgid "Delete"
+msgstr "Supprimer"
+
+#: job_manager/job-filters.php:49
+msgid "Any category"
+msgstr "Toutes les catégories"
+
+#: job_manager/job-filters.php:66
+msgid "Search Jobs"
+msgstr ""
+
+#: job_manager/job-filters.php:78
+msgid ""
+"Your browser does not support JavaScript, or it is disabled. JavaScript must "
+"be enabled in order to view listings."
+msgstr ""
+
+#: job_manager/job-listing-location-map.php:16
+msgid "Job Location"
+msgstr "Lieu de la mission"
+
+#: job_manager/job-listing-overview.php:13
+msgid "Offered Salary"
+msgstr ""
+
+#: job_manager/job-listing-overview.php:63
+msgid "Job Overview"
+msgstr "Aperçu de la mission"
+
+#: job_manager/job-listing-related-jobs.php:30
+msgid "Related Jobs"
+msgstr "Ces missions peuvent vous intéresser"
+
+#: job_manager/job-submitted.php:24
+msgid ""
+"%s listed successfully. To view your listing <a href=\"%s\">click here</a>."
+msgstr ""
+
+#: job_manager/job-submitted.php:33
+msgid "%s submitted successfully. Your listing will be visible once approved."
+msgstr ""
+
+#: templates/home/about-content-block.php:34
+msgid "About Content Image"
+msgstr ""
+
+#: templates/home/app-promo-block.php:82
+msgid "App Promo Image"
+msgstr ""
+
+#: templates/home/banner-with-image-block.php:53
+msgid "Banner Image"
+msgstr ""
+
+#: templates/home/job-categories-block.php:61
+msgid "%s open position"
+msgid_plural "%s open positions"
+msgstr[0] ""
+msgstr[1] ""
+
+#: wp-job-manager-applications/job-applications.php:6
+msgid "Download CSV"
+msgstr ""
+
+#: wp-job-manager-applications/job-applications.php:7
+msgid "The job applications for \"%s\" are listed below."
+msgstr ""
+
+#: wp-job-manager-applications/job-applications.php:12
+msgid "Filter by status"
+msgstr ""
+
+#: wp-job-manager-applications/job-applications.php:20
+msgid "Newest first"
+msgstr ""
+
+#: wp-job-manager-applications/job-applications.php:21
+msgid "Sort by name"
+msgstr ""
+
+#: wp-job-manager-applications/job-applications.php:22
+msgid "Sort by rating"
+msgstr ""
+
+#: wp-job-manager-resumes/account-signin.php:21
+msgid "Your account"
+msgstr "Votre compte"
+
+#: wp-job-manager-resumes/account-signin.php:25
+msgid "You are currently signed in as <strong>%s</strong>."
+msgstr "Vous êtes actuellement connecté en tant que <strong>%s</strong>."
+
+#: wp-job-manager-resumes/account-signin.php:28
+msgid "Sign out"
+msgstr "Se déconnecter"
+
+#: wp-job-manager-resumes/account-signin.php:39
+msgid "Have an account?"
+msgstr "Avez-vous un compte ?"
+
+#: wp-job-manager-resumes/account-signin.php:45
+msgid ""
+"If you don&rsquo;t have an account you can create one below by entering your "
+"email address. Your account details will be confirmed via email."
+msgstr ""
+
+#: wp-job-manager-resumes/account-signin.php:49
+msgid "You must sign in to submit a resume."
+msgstr "Vous devez être connecté pour renseigner un profil. "
+
+#: wp-job-manager-resumes/candidate-dashboard-login.php:24
+msgid "You need to be signed in to manage your resumes."
+msgstr ""
+
+#: wp-job-manager-resumes/candidate-dashboard.php:27
+msgid "Your resume can be viewed, edited or removed below."
+msgid_plural "Your resume(s) can be viewed, edited or removed below."
+msgstr[0] ""
+msgstr[1] ""
+
+#: wp-job-manager-resumes/candidate-dashboard.php:39
+msgid "You do not have any active resume listings."
+msgstr "Vous n'avez pas encore renseigner votre profil."
+
+#: wp-job-manager-resumes/candidate-dashboard.php:77
+msgid "Publish"
+msgstr "Publier"
+
+#: wp-job-manager-resumes/candidate-dashboard.php:127
+msgid "Expires %s"
+msgstr ""
+
+#: wp-job-manager-resumes/candidate-dashboard.php:145
+msgid "Add Resume"
+msgstr "Renseigner votre profil"
+
+#: wp-job-manager-resumes/resume-overview.php:68
+msgid "Candidate Overview"
+msgstr "Informations"
+
+#. Theme URI of the plugin/theme
+msgid ""
+"https://themeforest.net/item/jobhunt-job-board-wordpress-theme-for-wp-job-"
+"manager/22563674"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Jobhunt is an easy to use, cleanly coded and light weight Job Board "
+"WordPress theme built for WP Job Manager. It supports all the features of WP "
+"Job Manager such as Filterable Job Listings, Job Submissions, Employer "
+"Dashboard and Job Submissions. It also supports WP Job Manager Core Add-on "
+"Bundle that includes features such as Resume Manager, Job Alerts, Indeed "
+"Integration, Job Tags, Paid Listings, Job Applications, etc"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "MadrasThemes"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://madrasthemes.com/"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "About Us"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Homepage v1"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Homepage v2"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Homepage v3"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Homepage v4"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Homepage v5"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Job Sidebar"
+msgstr ""
+
+#: comments.php:28
+msgctxt "comments title"
+msgid "One Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/classes/class-tgm-plugin-activation.php:1206
+#: inc/classes/class-tgm-plugin-activation.php:3033
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#. translators: 1: install status, 2: update status
+#: inc/classes/class-tgm-plugin-activation.php:2427
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#. translators: 1: number of plugins.
+#: inc/classes/class-tgm-plugin-activation.php:2473
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/classes/class-tgm-plugin-activation.php:2567
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: inc/functions/posts.php:71
+msgctxt "Next post"
+msgid "Next"
+msgstr ""
+
+#: inc/functions/posts.php:72
+msgctxt "Previous post"
+msgid "Prev"
+msgstr ""
+
+#: inc/template-functions/posts.php:213
+msgctxt "post date"
+msgid "%s"
+msgstr ""
+
+#. translators: 1: first job 2: last job 3: total jobs
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:182
+msgctxt "with first and last job"
+msgid "Showing the single job"
+msgid_plural "Showing %1$d&ndash;%2$d of %3$d jobs"
+msgstr[0] "Affichage d'une mission"
+msgstr[1] "Affichage de %1$d&ndash;%2$d sur %3$d missions"
+
+#: inc/wp-job-manager/widgets/class-jh-wpjm-widget-job-location-search.php:46
+#: inc/wp-job-manager/widgets/class-jh-wpjm-widget-job-search.php:45
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-location-search.php:46
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-search.php:45
+#: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-resume-location-search.php:46
+#: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-resume-search.php:45
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:694
+msgctxt "Company permalink - resave permalinks after changing this"
+msgid "company"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:716
+msgctxt "Resume permalink - resave permalinks after changing this"
+msgid "resume"
+msgstr ""

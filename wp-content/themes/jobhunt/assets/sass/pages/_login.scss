@@ -1,0 +1,133 @@
+#customer_login {
+    @include make-row;
+
+    @include media-breakpoint-up(md) {
+        &::after {
+            content: " ";
+            width: 1px;
+            height: 100%;
+            display: block;
+            background-color: $e7;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .col-1,
+    .col-2 {
+        .woocommerce-form-register > * {
+            @include make-col-ready;
+            @include make-col(12);
+        }
+        
+        @include media-breakpoint-up(md) {
+            @include make-col-ready;
+            @include make-col(6);
+        }
+    }
+
+    .woocommerce-form {
+        @include media-breakpoint-up(xl) {
+            margin: 0 80px;
+        }
+
+        &.woocommerce-form-login {
+            @include make-col(12);
+        }
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    .create-account {
+        margin-bottom: 2px;
+    }
+
+    .woocommerce-privacy-policy-text {
+        color: $n5;
+    }
+}
+
+.woocommerce-account:not(.logged-in) h2 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.woocommerce-form.woocommerce-form-login {
+    @include make-col(4);
+    margin: 0 auto;
+}
+
+#customer_login .woocommerce-form,
+.woocommerce-form.woocommerce-form-login {
+    position: relative;
+
+    .woocommerce-Button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .woocommerce-LostPassword {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: auto;
+        line-height: 2.2;
+        font-family: $font-family-quicksand;
+        color: $treehouse-input-color;
+        font-weight: 600;
+        display: inline-block;
+    }
+
+    .woocommerce-form__label {
+        span {
+            padding-left: 4px;
+        }
+    }
+}
+
+.modal-register-login-wrapper {
+    .jobhunt-register-login-form {
+        .jobhunt-register-login-form-inner {
+            @include make-col(12);
+            margin-left: 0;
+
+            .tab-content #jobhunt_login_form fieldset p:nth-child(3),
+            .tab-content #jobhunt_login_form fieldset p:nth-child(4) {
+                width: 48.6%;
+            }
+        }
+    }
+
+    .close-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        line-height: 1;
+        margin: 10px;
+
+        i {
+            font-size: 24px;
+            line-height: 28px;
+            width: 28px;
+            text-align: center;
+            vertical-align: middle;
+            border-radius: 50%;
+            color: $white !important;
+            background-color: rgba( 0, 0, 0, 0.2 );
+        }
+
+        @include media-breakpoint-up(sm) {
+            left: 100%;
+            right: auto;
+            margin: 2px;
+            i {
+                background-color: transparent;
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.woocommerce-pagination {
+    margin-bottom: 60px;
+}
+
+.rtl .woocommerce-pagination a {
+    &.next,
+    &.prev {
+        transform: rotateY(180deg);
+    }
+}
+
+ul.page-numbers {
+    @include make-jobhunt-pagination();
+    margin-bottom: 0;
+}

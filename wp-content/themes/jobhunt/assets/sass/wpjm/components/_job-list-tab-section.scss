@@ -1,0 +1,165 @@
+.job-list-tab-section {
+    @include stretch-full-width;
+    margin-bottom: 60px;
+
+    .job-list-tab-inner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-tabs {
+        align-self: center;
+        border: 1px solid $e7;
+        padding: 4px;
+        border-radius: 4px;
+        font-size: 18px;
+        margin-bottom: 34px;
+
+        .nav-item {
+            width: 100%;
+
+            @include media-breakpoint-up(md) {
+                width: auto;
+            }
+        }
+
+        .nav-link {
+            border-width: 0;
+            padding: 9.5px 22.5px;
+            border-radius: 4px;
+            font-weight: 700;
+            letter-spacing: .6px;
+            text-align: center;
+            color: $td;
+            font-family: $jobhunt-title-font-family;
+            min-width: inherit;
+
+            @include media-breakpoint-up(md) {
+                min-width: 190px;
+            }
+
+            @include hover-focus {
+                outline: none;
+                box-shadow: none !important;
+            }
+        }
+    }
+
+    .showing_jobs,
+    .job-published-date {
+        display: none;
+    }
+
+    .job-details {
+        flex-direction: column;
+    }
+
+    .job-details-inner {
+        padding-right: 0;
+        margin-bottom: 20px;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 0;
+        }
+
+        .job-location {
+            display: none;
+        }
+
+        > * + * {
+            margin-top: 4px;
+        }
+    }
+
+    .job-listing-meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+        margin-top: 5px;
+        flex-direction: column;
+
+        @include media-breakpoint-up(md) {
+            flex-direction: row;
+        }
+
+        .job-location {
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+
+            @include media-breakpoint-up(md) {
+                margin-right: 10px;
+                margin-bottom: 0;
+            }
+
+            i {
+                font-size: 21px;
+                padding-bottom: 4px;
+            }
+        }
+
+        .job-types {
+            text-align: center;
+            
+            @include media-breakpoint-up(md) {
+                text-align: right;
+            }
+        }
+    }
+
+    ul.job_listings {
+        @include make-row;
+        column-count: 2;
+        margin-bottom: 10px;
+
+        .job_listing {
+            @include make-col-ready;
+
+            @include media-breakpoint-up(lg) {
+                @include make-col(6);
+            }
+
+            padding-bottom: 30px;
+
+            a {
+                margin: 0;
+                border: 1px solid $e7;
+                border-radius: 4px;
+                height: 100%;
+                align-items: center;
+
+                @include hover-focus {
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+
+    .job_listings + .load_more_jobs {
+        margin: auto;
+    }
+
+    .load_more_jobs {
+        @include make-new-button(700);
+        @include button-size( 15px, 36px, 16px, 1, 8px );
+        width: fit-content;
+        margin: auto;
+
+        strong {
+            font-weight: 500;
+            font-size: 15px;
+        }
+
+        @include hover-focus {
+            strong {color: $white;}
+        }
+    }
+
+    div.job_listings {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,34 @@
+.page-template-template-homepage-v1 .site-content,
+.page-template-template-homepage-v2 .site-content,
+.page-template-template-homepage-v4 .site-content,
+.page-template-template-homepage-v5 .site-content,
+.page-template-template-homepage-v4 .site-content-page-header,
+.page-template-template-homepage-v2 .site-content-page-header,
+.page-template-template-homepage-v2 .testimonial-block,
+.page-template-template-homepage-v3 .testimonial-block {
+    margin-bottom: 0;
+}
+
+.page-template-template-homepage-v1,
+.page-template-template-homepage-v2,
+.page-template-template-homepage-v3,
+.page-template-template-homepage-v4,
+.page-template-template-homepage-v5 {
+    .grid {
+        margin-top: 0;
+    }
+
+    .jh-section + .entry-content {
+        @include clearfix;
+    }
+}
+
+.page-template-template-homepage-v5 {
+    .section-header {
+        margin-bottom: 20px;
+    }
+
+    .jh-section {
+        margin-bottom: 60px;
+    }
+}

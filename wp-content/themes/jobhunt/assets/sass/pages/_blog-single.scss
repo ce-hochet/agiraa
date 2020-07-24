@@ -1,0 +1,62 @@
+.single-post .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.single-post figure.gallery-item {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin:0;
+
+    .gallery-caption {
+        position: absolute;
+        background: black;
+        background: rgba(0,0,0,0.75);
+        color: white;
+        padding: 0.625rem 1.25rem;
+        opacity: 0;
+        -webkit-transition: all 0.6s ease;
+        -moz-transition: all 0.6s ease;
+        -o-transition: all 0.6s ease;
+        bottom: 0;
+        line-height: 1.5;
+        font-weight: 300;
+    }
+
+    img {
+        display: block;
+        width:100%;
+        height:auto;
+    }
+
+    &:hover {
+        .gallery-caption {
+            opacity: 1;
+            width: 100%;
+        }
+    }
+}
+
+.gallery .gallery-item {    width: 25%; }
+.gallery-columns-1 .gallery-item {  width: 100%; }
+.gallery-columns-2 .gallery-item {  width: 50%;  }
+.gallery-columns-3 .gallery-item {  width: 33%; }
+.gallery-columns-4 .gallery-item {  width: 25%; }
+.gallery-columns-5 .gallery-item {  width: 20%; }
+.gallery-columns-6 .gallery-item {  width: 16%; }
+.gallery-columns-7 .gallery-item {  width: 14%; }
+.gallery-columns-8 .gallery-item {  width: 12%; }
+.gallery-columns-9 .gallery-item {  width: 11%; }
+.gallery-columns-10 .gallery-item { width: 10%; }
+
+.gallery-columns-10 figure.gallery-item .gallery-caption,
+.gallery-columns-9 figure.gallery-item .gallery-caption,
+.gallery-columns-8 figure.gallery-item .gallery-caption,
+.gallery-columns-7 figure.gallery-item .gallery-caption,
+.gallery-columns-6 figure.gallery-item .gallery-caption,
+.gallery-columns-5 figure.gallery-item .gallery-caption,
+.gallery-columns-4 figure.gallery-item .gallery-caption {
+    display: none;
+}

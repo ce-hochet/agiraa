@@ -1,0 +1,98 @@
+@mixin la-icon-font($content: false) {
+    @if ($content) {
+        content: $content;
+    }
+    
+    font-family: $la-font-family;
+    font-weight: 900;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+@mixin lar-icon-font($content: false) {
+    @if ($content) {
+        content: $content;
+    }
+    
+    font-family: $la-font-family;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+@mixin lab-icon-font($content: false) {
+    @if ($content) {
+        content: $content;
+    }
+    
+    font-family: $lab-font-family;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+@mixin la-font( $content: false ) {
+    @if ($content) {
+        content: $content;
+    }
+
+    font-family: $la-font-family;
+    font-weight: 900;
+    display: inline-block;
+    font-display: auto;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-size: inherit;
+    text-decoration: inherit;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+@mixin lar-font( $content: false ) {
+    @if ($content) {
+        content: $content;
+    }
+
+    font-family: $la-font-family;
+    font-weight: 400;
+    display: inline-block;
+    font-display: auto;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-size: inherit;
+    text-decoration: inherit;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+@mixin lab-font( $content: false ) {
+    @if ($content) {
+        content: $content;
+    }
+
+    font-family: $lab-font-family;
+    font-weight: 400;
+    display: inline-block;
+    font-display: auto;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-size: inherit;
+    text-decoration: inherit;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}

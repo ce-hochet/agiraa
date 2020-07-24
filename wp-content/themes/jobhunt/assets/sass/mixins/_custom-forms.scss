@@ -1,0 +1,48 @@
+@mixin make-custom-select( $color, $bg, $border-width, $border-color, $border-focus-color ) {
+    display: inline-block;
+    width: 100%;
+    padding: $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x;
+    line-height: normal;
+    color: $color;
+    vertical-align: middle;
+    background: $bg $jh-select-indicator no-repeat right $custom-select-padding-x center;
+    background-size: 16px;
+    border: $border-width solid $border-color;
+    border-radius: 4px;
+    appearance: none;
+
+    &:focus {
+        border-color: $border-focus-color;
+        outline: 0;
+        box-shadow: none;
+
+        &::-ms-value {
+            color: $input-color;
+            background-color: $input-bg;
+        }
+    }
+
+    &[multiple],
+    &[size]:not([size="1"]) {
+        height: auto;
+        padding-right: $custom-select-padding-x;
+        background-image: none;
+    }
+
+    &:disabled {
+        color: $custom-select-disabled-color;
+        background-color: $custom-select-disabled-bg;
+    }
+
+    // Hides the default caret in IE11
+    &::-ms-expand {
+        opacity: 0;
+    }
+}
+
+@mixin custom-select-size( $height, $padding-top, $padding-bottom, $font-size ) {
+    height: $height;
+    padding-top: $padding-top;
+    padding-bottom: $padding-bottom;
+    font-size: $font-size;
+}

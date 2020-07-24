@@ -1,0 +1,348 @@
+.comments-title {
+    font-size: 20px;
+    margin: 0 0 20px 0;
+}
+
+.comment-list {
+    @include list-unstyled();
+
+    > li + li {
+        border-top: 1px solid #e8ecec;
+    }
+
+    .bypostauthor {
+        .woocommerce-review__author {
+            &:after {
+                @include la-icon-font("\f02e");
+                // content: "\f14f";
+                // font-family: $la-font-family;
+                margin: 0 8px;
+                font-size: 15px;
+            }
+        }
+    }
+
+    .children {
+        @include list-unstyled();
+        padding-left: 0px;
+        border-top: 1px solid #e8ecec;
+
+        @include media-breakpoint-up(md) {
+            padding-left: 60px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding-left: 80px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            iframe {
+                height: 100%;
+            }
+        }
+
+        > li {
+            border-top: 1px solid #e8ecec;
+
+            &:first-child {
+                border-top: none;
+            }
+        }
+
+        .depth-5 .children {
+            padding-left: 0;
+        }
+    }
+
+    .avatar {
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+    }
+
+    .comment_container {
+        display: flex;
+        padding: 30px 0;
+        //flex-direction: column;
+
+        @include media-breakpoint-up(md) {
+            flex-direction: row;
+        }
+    }
+
+    .comment-text {
+        flex: 1;
+        min-width: 0;
+
+        // @include media-breakpoint-up(md) {
+        //     padding-left: 30px;
+        // }
+    }
+
+    .avatar + .comment-text {
+        padding-left: 20px;
+
+        @include media-breakpoint-up(md) {
+            padding-left: 30px;
+        }
+    }
+
+    .woocommerce-review__published-date:before,
+    .comment-reply-link:before {
+        // font-family: $la-font-family;
+        // font-weight: 400;
+        @include la-icon-font();
+        font-size: 22px;
+        line-height: 1em;
+        vertical-align: sub;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .meta {
+        display: flex;
+        line-height: 1em;
+        flex-direction: column;
+        margin-bottom: 20px;
+
+        @include media-breakpoint-up(md) {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
+            margin-bottom: 0;
+        }
+    }
+
+    .woocommerce-review__author,
+    .woocommerce-review__author a {
+        font-size: 16px;
+        font-weight: 600;
+        font-family: $jobhunt-title-font-family;
+    }
+
+    .woocommerce-review__author {
+        line-height: 1.3;
+        padding-right: 20px;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 12px;
+        }
+    }
+
+    .woocommerce-review__published-date {
+        flex-shrink: 0;
+    }
+
+    .woocommerce-review__published-date,
+    .woocommerce-review__published-date a {
+        font-size: 13px;
+    }
+
+    .woocommerce-review__published-date:before {
+        content: '\f133';
+        padding-right: 7px;
+    }
+
+    .reply {
+        margin-top: 13px;
+        line-height: 1em;
+
+        a {
+            font-size: 14px;
+
+            &+ a {
+                margin-left: 7px;
+            }
+        }
+
+        .comment-reply-link:before {
+            content: '\f3e5';
+            padding-right: 6px;
+        }
+    }
+
+    .description > p {
+        font-size: 14px;
+        line-height: 26px;
+        color: $e8;
+        margin-bottom: 0;
+        margin-top: 11px;
+
+        strong {
+            color: $t0;
+        }
+    }
+
+    .comment-respond {
+        margin-top: 20px;
+        padding: 20px 28px;
+        background-color: $fc;
+        border-radius: 8px;
+
+        #reply-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 6px;
+
+            @include media-breakpoint-up(md) {
+                margin-bottom: 0;
+            }
+        }
+
+        small {
+            display: inherit;
+        }
+
+        #cancel-comment-reply-link {
+            color: $treehouse-comment-reply-color;
+            display: flex;
+            align-items: center;
+
+            text-transform: capitalize;
+            @include make-new-button(700);
+            @include button-size( 6px, 12px, 12px, 1, 5px );
+            background-color: $treehouse-comment-reply-bg;
+
+            @include hover-focus {
+                background-color: darken($treehouse-comment-reply-bg, 4%);
+            }
+
+            &::after {
+                // content: "\f00d";
+                // font-family: LineAwesome;
+                @include la-icon-font("\f00d");
+                padding-left: 4px;
+                padding-top: 1px;
+            }
+        }
+    }
+
+    .depth-2 #reply-title {
+        flex-direction: column;
+
+        @media (min-width: 361px) {
+            flex-direction: row;
+        }
+    }
+}
+
+.comment-respond {
+    .comment-reply-title{
+        font-size: 18px;
+        color: $treehouse-title-color;
+        font-weight: 600;
+        font-family: $jobhunt-title-font-family;
+
+        @include media-breakpoint-up(md) {
+            font-size: 20px;
+        }
+    }
+
+    .comment-form {
+        @include make-row;
+
+        > p,
+        .comment-form-rating {
+            @include make-col-ready;
+        }
+
+        .logged-in-as,
+        .comment-notes {
+            font-size: 14px;
+        }
+
+        .logged-in-as,
+        .comment-notes,
+        .comment-form-comment,
+        .comment-form-cookies-consent,
+        .form-submit {
+            @include make-col(12);
+        }
+
+        .comment-form-author,
+        .comment-form-email {
+            @include make-col(6);
+        }
+
+        .comment-form-comment {
+            order: 6;
+            margin-bottom: 26px;
+        }
+
+        .form-submit {
+            order: 7;
+        }
+
+        .comment-form-cookies-consent {
+            label {
+                margin-left: 10px;
+            }
+        }
+
+        input[type="submit"] {
+            @include make-new-button();
+            @include button-size( 10px, 26px, 14px, $btn-line-height, 5px );
+        }
+    }
+}
+
+.comment-navigation {
+    @include make-row;
+    margin: 0;
+    padding: 10px 0;
+    border-top: 1px solid #e8ecec;
+    border-bottom: 1px solid #e8ecec;
+    margin-bottom: 20px;
+    flex-direction: column;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-previous,
+    .nav-next {
+        @include make-col-ready;
+        line-height: 2.5;
+
+        @include media-breakpoint-up(md) {
+            line-height: 1.75;
+        }
+
+        > a {
+            display: inline-block;
+            font-size: 15px;
+        }
+    }
+
+    .nav-next {
+        @include media-breakpoint-up(md) {
+            padding-right: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    .nav-previous {
+        @include media-breakpoint-up(md) {
+            @include make-auto-col;
+            padding-left: 0;
+
+            & + .nav-next {
+                @include make-col(6);
+            }
+        }
+    }
+
+    a {
+        color: $t0;
+    }
+}
+
+#comment-nav-above {
+    display: none;
+}

@@ -1,0 +1,81 @@
+.job_filters {
+    margin-bottom: 20px;
+
+    .job_types {
+        @include make-nav();
+        margin-left: -$nav-link-padding-x;
+        margin-right: -$nav-link-padding-x;
+
+        > li {
+            margin: $nav-link-padding-y $nav-link-padding-x;
+        }
+    }
+}
+
+.search_jobs {
+    @include make-row();
+    margin-bottom: 16px;
+
+    > div {
+        @include make-col-ready();
+
+        &.search_keywords {
+            @include make-col(6);
+        }
+
+        &.search_location {
+            @include make-col(3);
+        }
+
+        &.search_categories {
+            @include make-col(3);
+        }
+    }
+}
+
+.single-job_listing .showing_jobs {
+    span {
+       font-size: 16px;
+    }
+}
+
+.showing_jobs {
+    margin: 20px 0;
+    color: $treehouse-title-color; 
+    display: flex;
+    align-items: center;
+
+    span {
+       font-family: $jobhunt-title-font-family;
+       font-weight: 600;
+       font-size: 20px;
+    }
+    
+    .reset {
+        display: inline-block;
+        padding: $badge-padding-y $badge-padding-x;
+        font-size: 85%;
+        line-height: 1;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: baseline;
+        @include border-radius($badge-border-radius);
+        text-transform: lowercase;
+        margin-left: 15px;
+
+        // Empty badges collapse automatically
+        &:empty {
+            display: none;
+        }
+
+        @include badge-variant( #eee );
+    }
+
+    .rss_link {
+        @include sr-only();
+    }
+
+    .highlight {
+        border-bottom: 1px solid $treehouse-title-color;
+    }
+}

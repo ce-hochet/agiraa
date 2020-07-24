@@ -1,0 +1,28 @@
+.woocommerce-error,
+.woocommerce-message,
+.woocommerce-notice {
+    @include list-unstyled();
+    @include make-alert();
+}
+
+.woocommerce-message,
+.woocommerce-notice--success {
+    @include alert-variant( $treehouse-success-bg, $treehouse-success-border, $treehouse-success-color );
+
+    a, strong {
+        color: $treehouse-success-color;
+    }
+}
+
+.woocommerce-error,
+.woocommerce-notice--error {
+    @include alert-variant( $treehouse-error-bg, $treehouse-error-border, $treehouse-error-color );
+
+    a, strong {
+        color: $treehouse-error-color;
+    }
+}
+
+.woocommerce-invalid .input-text {
+    border-color: $treehouse-error-border;
+}

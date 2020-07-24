@@ -1,0 +1,201 @@
+.how-it-works-section {
+    .steps {
+        list-style: none;
+        padding: 0;
+        @include make-row;
+    }
+
+    .step {
+        text-align: center;
+        @include make-col-ready;
+
+        @include media-breakpoint-up(md) {
+            @include make-col(4);
+        }
+
+        & + .step {
+            margin-top: 50px;
+
+            @include media-breakpoint-up(md) {
+                margin-top: 0;
+            }
+        }
+
+        i {
+            width: 100px;
+            height: 100px;
+            font-size: 42px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &.v1 {
+        .step {
+            i {
+                border: 2px dashed transparent;
+            }
+
+            @include hover-focus {
+                i {
+                    color: $o4;
+                    border-color: $o4;
+                }
+            }
+        }
+    }
+
+    &.v2 {
+        .step {
+            i {
+                color: $white;
+            }
+
+            @include hover-focus {
+                i {
+                    background-color: $s4;
+                }
+
+                .step-thumbnail {
+                    box-shadow: 0px 0px 30px 0px rgba(32, 32, 32, 0.15);
+                    border-radius: 50%;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    &.v1,
+    &.v2 {
+        .steps {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .step {
+
+            i {
+                background-color: $white;
+                box-shadow: 0px 0px 0px 10px rgba(255,255,255,1);
+            }
+
+            .step-info {
+                background-color: $white;
+                //padding-top: 20px;
+                padding: 20px 20px 0;
+            }
+        }
+
+        @include media-breakpoint-up(xl) {
+            .step + .step {
+                &::before {
+                    content: " ";
+                    width: 456px;
+                    height: 288px;
+                    border: 1px dashed transparent;
+                    position: absolute;
+                    border-radius: 50%;
+                    border-top-width: 0;
+                    border-left-width: 0;
+                    border-right-width: 0;
+                    left: -56%;
+                    top: -90%;
+                    z-index: -1;
+                }
+            }
+
+            .step {
+                &:nth-child(3) {
+                    &::before {
+                        top: 0;
+                        border-top-width: 1px;
+                        border-bottom-width: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &.v3 {
+        padding: 60px 0;
+
+        i {
+            border: 1px solid $e7;
+            color: $s4;
+        }
+
+        .step-thumbnail {
+            margin-bottom: 34px;
+        }
+
+        .step-title {
+            color: $td;
+            font-size: 18px;
+            font-weight: 500;
+            margin-top: 0;
+        }
+
+        .step-desc {
+            color: $e8;
+            font-size: 14px;
+        }
+    }
+
+    &.v4 {
+        .step {
+            padding: 0px 34px;
+
+            @include hover-focus {
+                i {
+                    color: $td;
+                }
+
+            }
+
+            i {
+                background-color: $f4;
+            }
+
+            & + .step {
+                &::before {
+                    @include media-breakpoint-up(md) {
+                        content: " ";
+                        width: 190px;
+                        left: -94px;
+                        height: 1px;
+                        background-color: #f4f5fa;
+                        display: block;
+                        position: absolute;
+                        top: 50px;
+                    }
+
+                    @include media-breakpoint-up(lg) {
+                        width: 270px;
+                        left: -136px;
+                    }
+                }
+            }
+        }
+
+        .step-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: $td;
+        }
+
+        .step-desc {
+            font-size: 14px;
+            color: $e8;
+        }
+
+        .step-thumbnail {
+            margin-bottom: 30px;
+        }
+
+        .section-header {
+            margin-bottom: 40px;
+        }
+    }
+}

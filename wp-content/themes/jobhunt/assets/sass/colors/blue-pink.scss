@@ -1,0 +1,10 @@
+$primary-color-1:        #FF5668;
+$primary-color-2:        #3B63F5;
+$primary-bg-color-1:     $primary-color-1;
+$primary-bg-color-2:     $primary-color-2;
+$secondary-bg:           #555;
+$primary-text-color:     #fff;
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+@import "../utils/primary-color.scss";

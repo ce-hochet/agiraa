@@ -1,0 +1,53 @@
+.job-manager-job-dashboard-content {
+    table {
+        td {
+            vertical-align: top;
+            small {
+                font-size: 0.92em;
+                color: #999;
+                display: block;
+            }
+        }
+
+        ul.job-dashboard-actions {
+            font-size: 0.92em;
+            padding:0;
+            margin-bottom: 0;
+
+            @include media-breakpoint-up(xl) {
+                visibility: hidden;
+            }
+
+            li {
+                display: inline-block;
+                padding: 0;
+                margin: 0 .5em 0 0;
+                font-weight: normal;
+                list-style: none outside;
+
+                .job-dashboard-action-delete {
+                    color: red;
+                }
+
+                &:after {
+                    padding: 0 0 0 .5em;
+                    content: "\2023";
+                }
+
+                &:last-child:after {
+                    content: '';
+                }
+            }
+        }
+
+        tr {
+            @include media-breakpoint-up(xl) {
+                @include hover-focus() {
+                    ul.job-dashboard-actions {
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.job-list-summary-inner {
+    @include make-row;
+
+    .job-list,
+    .job-summary {
+        @include make-col-ready;
+    }
+
+    .job-list {
+        @include media-breakpoint-up(lg) {
+            @include make-col(8.5);
+        }
+
+        @include media-breakpoint-up(xl) {
+            @include make-col(9);
+        }
+    }
+
+    .job-summary {
+        @include media-breakpoint-up(lg) {
+            @include make-col(3.5);
+        }
+
+        @include media-breakpoint-up(xl) {
+            @include make-col(3);
+        }
+    }
+
+    ul.job_listings.grid > li {
+        @include make-col(12);
+    }
+}

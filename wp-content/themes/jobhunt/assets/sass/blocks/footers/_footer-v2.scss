@@ -1,0 +1,48 @@
+.footer-v2 {
+    .footer-logo-widget .site-title {
+        color: $z9;
+    }
+
+    .footer-widget.footer-widget-1 {
+        padding: 0 15px;
+    }
+
+    .jobhunt_newsletter_widget {
+        @include stretch-full-width;
+        background-color: $page-header-bg;
+        padding: 34px 0 46px;
+
+        > div {
+            @include make-container;
+            @include make-container-max-widths;
+        }
+    }
+
+    .footer-widgets {
+        background-color: $white;
+        color: $e8;
+
+        .widget-title,
+        span.widget-title {
+            color: $td;
+        }
+
+        a,
+        address,
+        address a,
+        .textwidget,
+        .textwidget p,
+        .textwidget a,
+        .widget-description {
+            color: $e8;
+        }
+    }
+
+    .footer-widgets-inner {
+        padding: 0;
+
+        .footer-widget {
+            @include make-col(12);
+        }
+    }
+}

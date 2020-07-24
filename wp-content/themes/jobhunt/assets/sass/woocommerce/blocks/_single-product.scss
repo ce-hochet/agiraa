@@ -1,0 +1,21 @@
+.single-product {
+    .site-main {
+        > .product {
+            @include make-row;
+        }
+    }
+
+    .woocommerce-product-gallery,
+    .summary {
+        @include make-col-ready;
+        @include media-breakpoint-up(md) {
+            @include make-col(6);
+            margin-bottom: 30px;
+        }
+    }
+
+    .woocommerce-tabs,
+    .related {
+        @include make-col-ready;
+    }
+}

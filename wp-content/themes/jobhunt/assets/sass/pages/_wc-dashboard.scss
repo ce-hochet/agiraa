@@ -1,0 +1,205 @@
+.woocommerce-account.logged-in {
+    .content-area .woocommerce {
+        @include make-row;
+    }
+
+    .woocommerce-MyAccount-navigation,
+    .woocommerce-MyAccount-content {
+        @include make-col-ready;
+    }
+
+    .woocommerce-MyAccount-navigation {
+        padding: 0;
+    }
+}
+
+.woocommerce-MyAccount-navigation {
+    @include make-col(12);
+
+    @include media-breakpoint-up(lg) {
+        @include make-col(3);
+    }
+
+    ul {
+        @include list-unstyled;
+        display: flex;
+        font-family: $font-family-quicksand;
+        font-weight: 600;
+        flex-direction: row;
+
+        @include media-breakpoint-up(lg) {
+            flex-direction: column;
+        }
+
+        @include media-breakpoint-down(md) {
+            overflow: auto;
+        }
+
+        li {
+            height: 46px;
+            display: flex;
+            align-items: stretch;
+            padding: 0 15px;
+            background-color: $f9;
+
+            a {
+                width: 100%;
+                display: flex;
+                align-items: center;
+            }
+
+            &.is-active {
+                background-color: $e7;
+            }
+
+            @include media-breakpoint-down(md) {
+                flex-shrink: 0;
+            }
+
+            @include media-breakpoint-only(md) {
+                max-width: 33%;
+                flex: 0 0 33%;
+            }
+        }
+    }
+}
+
+.woocommerce-MyAccount-content {
+    @include make-col(12);
+
+    @include media-breakpoint-up(lg) {
+        @include make-col(9);
+    }
+
+    .addresses {
+        @include make-row;
+
+        .col-1,
+        .col-2 {
+            @include make-col-ready;
+            @include make-col(12);
+
+            @include media-breakpoint-up(md) {
+                @include make-col(6);
+            }
+        }
+    }
+
+    .woocommerce-Address {
+        @include make-col-ready;
+        @include make-col(12);
+
+        @include media-breakpoint-up(md) {
+            @include make-col(6);
+        }
+
+        .title h3 {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .edit {
+            @include make-new-button();
+            @include button-size( 4px, 22px, 15px, 16px, 4px );
+            margin-bottom: 8px;
+        }
+    }
+
+    .woocommerce-info {
+        .button {
+            margin-right: 20px;
+        }
+    }
+}
+
+form.woocommerce-EditAccountForm.edit-account {
+    @include make-row;
+
+    > * {
+        @include make-col-ready();
+        @include make-col(12);
+    }
+
+    > .form-row-wide {
+        @include make-col(12);
+    }
+
+    @include media-breakpoint-up(md) {
+        > .form-row-first,
+        > .form-row-last {
+            @include make-col(6);
+        }
+    }
+}
+
+.woocommerce-lost-password {
+    article,
+    article.post,
+    article .entry-content,
+    article.post .entry-content {
+        margin-bottom: 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+        .woocommerce-Button {
+            width: 100%;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        article,
+        article.post, {
+            padding: 40px 0;
+        }
+
+        .woocommerce-form-row--first,
+        .woocommerce-form-row--last {
+            width: 40%;
+        }
+
+        .woocommerce-form-row--first + .woocommerce-form-row--last {
+            margin-left: 15px;
+        }
+
+        .lost_reset_password {
+            display: flex;
+            flex-wrap: wrap;
+
+            p:not(.form-row) {
+                width: 100%;
+            }
+
+            .woocommerce-form-row {
+                margin-bottom: 0;
+
+                input[type="text"] {
+                    min-width: 400px;
+                }
+
+                .woocommerce-Button {
+                    margin-left: 15px;
+                    margin-top: 25px;
+                }
+            }
+        }
+    }
+}
+
+.woocommerce-info {
+    @include make-alert();
+    @include alert-variant( $treehouse-info-bg, $treehouse-info-border, $treehouse-error-color );
+
+    a, strong {
+        color: $treehouse-error-color;
+
+        @include hover-focus {
+            color: $treehouse-error-color;
+        }
+    }
+
+    a {
+        @include hover-focus {
+            text-decoration: underline;
+        }
+    }
+}

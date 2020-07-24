@@ -1,0 +1,51 @@
+.related-jobs {
+    .job-listing-loop-job__title {
+        font-size: 14px;
+    }
+
+    .job_listing {
+        border-bottom: 1px solid #e8ecec;
+
+        > a {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+
+    .showing_jobs {
+        display: none;
+    }
+
+    .job-details {
+        align-items: center;
+    }
+}
+
+.single_job_listing .related-jobs .job_listing {
+    border-bottom: 1px solid $e6;
+    
+    &:last-child {
+        border-bottom: none;
+    }
+
+    @include media-breakpoint-up(xl) {
+        border-bottom: none;
+    }
+
+    > a {
+        @include hover-focus {
+            box-shadow: none;
+        }
+    } 
+
+    > a {
+        @include media-breakpoint-up(xl) {
+            border: 2px solid transparent;
+        
+            @include hover-focus {
+                border-color: $e6;
+                border-radius: 4px;
+            }
+        }
+    }
+}

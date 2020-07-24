@@ -1,0 +1,100 @@
+@mixin make-pagination() {
+    display: flex;
+    @include list-unstyled();
+    @include border-radius();
+}
+
+@mixin make-page-link( $pagination-color: $pagination-color, $pagination-border-width:$pagination-border-width, $pagination-border-color:$pagination-border-color ) {
+    position: relative;
+    display: block;
+    padding: $pagination-padding-y $pagination-padding-x;
+    margin-left: -$pagination-border-width;
+    line-height: $pagination-line-height;
+    color: $pagination-color;
+    background-color: $pagination-bg;
+    border: $pagination-border-width solid $pagination-border-color;
+
+    &:hover {
+        z-index: 2;
+        color: $pagination-hover-color;
+        text-decoration: none;
+        background-color: $pagination-hover-bg;
+        border-color: $pagination-hover-border-color;
+    }
+
+    &:focus {
+        z-index: 2;
+        outline: $pagination-focus-outline;
+        box-shadow: $pagination-focus-box-shadow;
+    }
+
+    // Opinionated: add "hand" cursor to non-disabled .page-link elements
+    &:not(:disabled):not(.disabled) {
+        cursor: pointer;
+    }
+}
+
+@mixin make-page-item() {
+    &:first-child {
+        .page-link {
+            margin-left: 0;
+            @include border-left-radius($border-radius);
+        }
+    }
+    &:last-child {
+        .page-link {
+            @include border-right-radius($border-radius);
+        }
+    }
+
+    &.active .page-link {
+        z-index: 1;
+        color: $pagination-active-color;
+        background-color: $pagination-active-bg;
+        border-color: $pagination-active-border-color;
+    }
+
+    &.disabled .page-link {
+        color: $pagination-disabled-color;
+        pointer-events: none;
+        // Opinionated: remove the "hand" cursor set previously for .page-link
+        cursor: auto;
+        background-color: $pagination-disabled-bg;
+        border-color: $pagination-disabled-border-color;
+    }
+}
+
+@mixin make-jobhunt-pagination() {
+    @include make-pagination();
+    justify-content: center;
+
+    > li {
+        @include make-page-item();
+    }
+
+    a, span {
+        @include make-page-link( $treehouse-body-color, 2px, $treehouse-page-item-border-color);
+        border-radius: 5px;
+        margin: 0 4px;
+        transition: border-color, 200ms ease-in-out, color, 200ms ease-in-out;
+        font-weight: 600;
+        font-family: $jobhunt-title-font-family;
+
+        &:not(.current) {
+            @include hover-focus() {
+                border-color: #b9c1c8;
+                background-color: transparent;
+                color: $treehouse-body-color;
+            }
+        }
+
+        &.current {
+            border-color: #f2f4f5;
+
+            @include hover-focus() {
+                background-color: transparent;
+                color: $treehouse-body-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,97 @@
+.single-job_listing {
+    .page-title-area {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .page-title-area-inner {
+        flex: 0 0 100%;
+        max-width: 100%;
+        z-index: 1;
+        position: relative;
+    }
+
+    .page-header-aside {
+        display: none;
+    }
+
+    .site-content-page-title {
+        color: $white;
+    }
+
+    .site-content-page-subtitle {
+        margin-top: 30px;
+    }
+}
+
+.site-content-page-subtitle {
+    .job-listing-meta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0;
+        flex-direction: column;
+
+        @include media-breakpoint-up(md) {
+            flex-direction: row;
+        }
+
+        > li {
+            margin-bottom: 10px;
+
+            @include media-breakpoint-up(md){
+                margin-bottom: 0;
+
+                & + li {
+                    margin-left: 40px;
+                    margin-top: 0;
+                }
+            }
+        }
+
+        li.job-type {
+            border-radius: 16px;
+        }
+
+        .application-deadline {
+
+            label {
+                color: $white;
+                font-weight: 500;
+            }
+
+            &::before {
+                font-size: 24px;
+                margin-right: 6px;
+                position: relative;
+                top: 4px;
+            }
+        }
+
+        .claim-link a {
+            color: $white;
+        }
+    }
+}
+
+.job-listing-meta {
+    li.location {
+        &:before {
+            @include la-font( "\f3c5" );
+            font-size: 24px;
+            margin-right: 5px;
+            position: relative;
+            top: 4px;
+        }
+    }
+
+    li.date-posted {
+        &:before {
+            @include la-font( "\f073" );
+            font-size: 24px;
+            margin-right: 5px;
+            position: relative;
+            top: 4px;
+        }
+    }
+}

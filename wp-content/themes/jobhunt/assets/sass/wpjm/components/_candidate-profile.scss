@@ -1,0 +1,96 @@
+.candidate-profile-section {
+    @include stretch-full-width();
+    background-color: $fd;
+    padding: 42px 0 0;
+}
+
+.candidate-profile-inner {
+    .candidates {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .candidate {
+        padding: 0 15px;
+
+        @include hover-focus {
+            outline: none;
+
+            .candidate-inner {
+                box-shadow: 0px 0px 30px 0px rgba(32, 32, 32, 0.15);
+            }
+        }
+    }
+
+    .candidate-inner {
+        height: 264px;
+        background-color: $white;
+        border-radius: 8px;
+        padding: 86px 20px 16px;
+        position: relative;
+        margin-top: 80px;
+        margin-bottom: 22px;
+        transition: all 0.4s ease 0s;
+    }
+
+    img {
+        width: 122px;
+        height: 122px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 0px 10px rgba(255,255,255,1);
+        position: absolute;
+        top: -66px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        background-color: $e7;
+    }
+
+    .candidate-name {
+        font-size: 16px;
+        margin: 0 0 6px;
+        font-weight: 500;
+        color: $td;
+    }
+
+    .candidate-info {
+        margin-bottom: 16px;
+    }
+
+    .profession,
+    .candidate-content  {
+        font-size: 14px;
+        color: $e8;
+    }
+
+    .candidate-content {
+        margin-bottom: 22px;
+    }
+
+    .view-resume {
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include hover-focus {
+            outline: none;
+        }
+
+        i {
+            font-size: 18px;
+            margin-left: 10px;
+        }
+    }
+
+    .slick-dots button::before,
+    .slick-dots li.slick-active button::before {
+        font-size: 22px;
+        color: $s4;
+    }
+
+    .slick-dots {
+        padding: 20px 0 40px;
+    }
+}

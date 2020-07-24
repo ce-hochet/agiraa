@@ -1,0 +1,47 @@
+.coupon {
+    @include media-breakpoint-up(md) {
+        display: flex;
+    }
+
+    @include media-breakpoint-only(md) {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    @include media-breakpoint-up(lg) {
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+
+    label[for="coupon_code"] {
+        @include sr-only();
+    }
+
+    input[name="coupon_code"] {
+        @include media-breakpoint-up(md) {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 20px;
+        }
+    }
+
+    button[name="apply_coupon"] {
+        @include media-breakpoint-up(md) {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            margin-left: -1px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+button[name="apply_coupon"] {
+    @include button-variant( $treehouse-title-color, $treehouse-title-color );
+}

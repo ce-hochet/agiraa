@@ -1,0 +1,22 @@
+.site-header .jobhunt-stick-this.stuck,
+.site-header.header-v5 .jobhunt-stick-this.stuck {
+    background-color: $sticky-header-bg;
+}
+
+.site-header.header-bg-default .stuck .header-menu > li > a,
+.site-header.header-v5 .stuck .post-a-job a:hover {
+    color: $sticky-header-text;
+}
+
+.site-header.header-v5 .stuck .post-a-job a,
+.site-header.header-v5 .stuck .post-a-job a:hover {
+    border-color: $sticky-header-text;
+}
+
+.site-header.header-v5 .stuck .post-a-job a:hover {
+    background-color: $sticky-header-text;
+}
+
+.site-header.header-bg-default .stuck .site-branding svg path {
+    fill: $sticky-header-text;
+}

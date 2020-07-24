@@ -1,0 +1,15 @@
+.place-order {
+    margin-top: 0.75rem;
+}
+
+.woocommerce-terms-and-conditions-wrapper {
+    font-size: 12px;
+}
+
+button[name="woocommerce_checkout_place_order"] {
+    display: block;
+    width: 100%;
+    font-family: $jobhunt-title-font-family;
+    font-weight: 600;
+    @include button-size( $btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $btn-line-height-lg, $btn-border-radius-lg );
+}

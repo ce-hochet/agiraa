@@ -1,0 +1,15 @@
+https://wpformation.com/comment-traduire-son-theme-wordpress-dans-un-theme-enfant/
+
+1. Créer un dossier "languages" dans le theme enfant
+2. Copier le fichier .po disponible dans votre thème parent
+3. Coller le fichier dans le dossier "languages" du theme enfant
+4. Modifier le fichier avec Poedit
+5. Enregistrer sous : fr_FR
+6. Ajouter dans fonction.php du thème enfant : 
+
+function my_child_theme_setup() {
+ load_child_theme_textdomain( 'jobhunt', get_stylesheet_directory() . '/languages' ); // languages étant le chemin du dossier dans lequel se trouvent vos fichiers .po et .mo
+}
+add_action( 'after_setup_theme', 'my_child_theme_setup' );
+
+De manière générale, le text domain du thème parent est facilement localisable dans l’entête du fichier style.css de celui-ci et c’est souvent le même nom que celui de la template…

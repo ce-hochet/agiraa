@@ -1,0 +1,4378 @@
+# Copyright (C) 2020 Myles McNamara
+# This file is distributed under the same license as the WP Job Manager Field Editor package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Job Manager Field Editor 1.9.2\n"
+"Report-Msgid-Bugs-To: http://plugins.smyl.es\n"
+"POT-Creation-Date: 2020-05-06 22:00:29+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2020-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Myles McNamara\n"
+"Language-Team: sMyles <get@smyl.es>\n"
+"X-Generator: grunt-wp-i18n 0.4.9\n"
+
+#: classes/admin/ajax.php:41
+msgid "Unable to remove group -- group not found."
+msgstr ""
+
+#: classes/admin/ajax.php:51
+msgid "Successfully removed \"%s\" conditional group."
+msgstr ""
+
+#: classes/admin/ajax.php:93
+msgid "You must specify a group name to save the configuration!"
+msgstr ""
+
+#: classes/admin/ajax.php:139
+msgid "Successfully saved group configuration."
+msgstr ""
+
+#: classes/admin/ajax.php:141
+msgid "Unable to update, are you sure there is anything to update?"
+msgstr ""
+
+#: classes/admin/ajax.php:193
+msgid ""
+"A field group is required in order to save/edit/update fields, please "
+"contact support."
+msgstr ""
+
+#: classes/admin/ajax.php:210
+msgid ""
+"Sorry, the taxonomy <code>%1$s</code> does not exists, please verify you "
+"are using the correct taxonomy slug"
+msgstr ""
+
+#: classes/admin/ajax.php:217
+msgid ""
+"You MUST set/configure a Google Maps/Places Auto Suggest client side API "
+"key from the Field Editor Settings page!"
+msgstr ""
+
+#: classes/admin/ajax.php:236
+msgid ""
+"You <strong>must</strong> include the correct MIME <strong>type</strong>! "
+"As example, for jpeg extension you <strong>must</strong> include the type "
+"that is <code>image/jpeg</code>.  These values can be found for all "
+"supported extensions <a href=\"%2$s\" target=\"_blank\">here</a>."
+msgstr ""
+
+#: classes/admin/ajax.php:238
+msgid ""
+"Sorry, <code>%1$s</code> is not a valid WordPress MIME "
+"<strong>type</strong>! A list of the default ones can be found <a "
+"href=\"%2$s\" target=\"_blank\">here</a>.<br />"
+msgstr ""
+
+#: classes/admin/ajax.php:243
+msgid ""
+"Sorry, <code>%1$s</code> is not a valid WordPress MIME type "
+"<strong>extension</strong>! A list of the default ones can be found <a "
+"href=\"%2$s\" target=\"_blank\">here</a>.<br />You <strong>must</strong> "
+"include at least one of the MIME type extensions. As example, for jpeg you "
+"can use <code>jpg</code> or <code>jpg|jpeg|jpe</code>, but you "
+"<strong>must</strong> include at least one, or the entire string."
+msgstr ""
+
+#: classes/admin/ajax.php:268
+msgid "Sorry, that meta key already exists in the "
+msgstr ""
+
+#: classes/admin/ajax.php:268
+msgid ""
+" field group.  Please edit the existing field, or choose another meta "
+"key.<br /><small>Meta keys must be unique throughout your entire site.  As "
+"an example, you can't have the meta key <strong>job_date</strong> in both "
+"Job, and Company fields.</small>"
+msgstr ""
+
+#: classes/admin/ajax.php:277
+msgid "Sorry, there was an error adding this field.  Unable to add new field."
+msgstr ""
+
+#: classes/admin/ajax.php:281
+msgid "Field added successfully!"
+msgstr ""
+
+#: classes/admin/ajax.php:297
+msgid ""
+"This field can not be changed to optional as it is required for core "
+"functionality of WP Job Manager"
+msgstr ""
+
+#: classes/admin/ajax.php:307
+msgid "Field edited successfully!"
+msgstr ""
+
+#: classes/admin/ajax.php:316
+msgid ""
+"Sorry, there was an error updating this field.  Unable to create new field "
+"configuration."
+msgstr ""
+
+#: classes/admin/ajax.php:320
+msgid "Field configuration created, and updated successfully!"
+msgstr ""
+
+#: classes/admin/ajax.php:335
+msgid "Succesfully enabled "
+msgstr ""
+
+#: classes/admin/ajax.php:344
+msgid ""
+"Sorry, there was an error enabling this field.  Unable to create new field "
+"configuration."
+msgstr ""
+
+#: classes/admin/ajax.php:348
+msgid "Field configuration created, and enabled successfully!"
+msgstr ""
+
+#: classes/admin/ajax.php:360
+msgid ""
+"This field can not be disabled as it is required for core functionality of "
+"WP Job Manager"
+msgstr ""
+
+#: classes/admin/ajax.php:367
+msgid "Succesfully disabled "
+msgstr ""
+
+#: classes/admin/ajax.php:376
+msgid ""
+"Sorry, there was an error disabling this field.  Unable to create new field "
+"configuration."
+msgstr ""
+
+#: classes/admin/ajax.php:382
+msgid "Field configuration created, and disabled successfully!"
+msgstr ""
+
+#: classes/admin/ajax.php:396
+msgid "Field configuration removed succesfully!"
+msgstr ""
+
+#: classes/admin/ajax.php:401
+msgid ""
+"Sorry, you can only remove a default field configuration, not the actual "
+"field itself, if you want to remove it from the form, please use disable."
+msgstr ""
+
+#: classes/admin/conditionals/backup.php:58
+msgid "Logic type not specified in AJAX call!"
+msgstr ""
+
+#: classes/admin/conditionals/backup.php:76
+msgid "Successfully saved %s logic configuration!"
+msgstr ""
+
+#: classes/admin/conditionals/backup.php:78
+msgid ""
+"Unable to update %s logic configuration, are you sure you made changes? You "
+"will receive this error if nothing has changed in the configuration, or if "
+"you are trying to save an empty JSON object.  To reset all data in "
+"configuration, set the value to CONFIRM_RESET and save."
+msgstr ""
+
+#: classes/admin/conditionals/backup.php:131
+#: classes/admin/conditionals/backup.php:132
+msgid "Field Editor Conditional Logic Backup/Restore"
+msgstr ""
+
+#: classes/admin/conditionals/backup.php:179
+msgid "Field Editor Conditional Logic Editor (Backup/Restore)"
+msgstr ""
+
+#: classes/admin/conditionals/backup.php:204
+msgid "Logic Configuration"
+msgstr ""
+
+#: classes/admin/conditionals/backup.php:207
+#: classes/admin/conditionals/backup.php:228
+msgid "Beautify JSON Code"
+msgstr ""
+
+#: classes/admin/conditionals/backup.php:208
+#: classes/admin/conditionals/backup.php:229
+msgid "Minify JSON Code"
+msgstr ""
+
+#: classes/admin/conditionals/backup.php:212
+msgid "Save %s Logic JSON"
+msgstr ""
+
+#: classes/admin/conditionals/backup.php:213
+#: classes/admin/conditionals/backup.php:234
+msgid "Download as file"
+msgstr ""
+
+#: classes/admin/conditionals/backup.php:225
+msgid "Resume Logic Configuration"
+msgstr ""
+
+#: classes/admin/conditionals/backup.php:233
+msgid "Save Resume Logic JSON"
+msgstr ""
+
+#: classes/admin/conditionals.php:207 classes/admin/conditionals.php:619
+msgid "is"
+msgstr ""
+
+#: classes/admin/conditionals.php:210
+msgid "is not"
+msgstr ""
+
+#: classes/admin/conditionals.php:213
+msgid "is greater than"
+msgstr ""
+
+#: classes/admin/conditionals.php:216
+msgid "is less than"
+msgstr ""
+
+#: classes/admin/conditionals.php:219
+msgid "starts with"
+msgstr ""
+
+#: classes/admin/conditionals.php:222
+msgid "does not start with"
+msgstr ""
+
+#: classes/admin/conditionals.php:225
+msgid "ends with"
+msgstr ""
+
+#: classes/admin/conditionals.php:228
+msgid "does not end with"
+msgstr ""
+
+#: classes/admin/conditionals.php:231
+msgid "contains"
+msgstr ""
+
+#: classes/admin/conditionals.php:234
+msgid "does not contain"
+msgstr ""
+
+#: classes/admin/conditionals.php:268 classes/admin/settings.php:247
+msgid "Resume"
+msgstr ""
+
+#: classes/admin/conditionals.php:274
+msgid "Add Conditional Section"
+msgstr ""
+
+#: classes/admin/conditionals.php:281
+msgid "%s Conditional Fields"
+msgstr ""
+
+#: classes/admin/conditionals.php:282
+msgid "BETA"
+msgstr ""
+
+#: classes/admin/conditionals.php:290 classes/admin/conditionals.php:383
+msgid "Conditional Group"
+msgstr ""
+
+#: classes/admin/conditionals.php:299 classes/translations.php:468
+msgid "Success"
+msgstr ""
+
+#: classes/admin/conditionals.php:300 classes/admin/settings-fields.php:240
+#: includes/updater/smyles-updater-licenses.php:243
+#: includes/updater/smyles-updater-licenses.php:353
+msgid "Error!"
+msgstr ""
+
+#: classes/admin/conditionals.php:310
+msgid "Select a group, or save group configuration to show conditional logic."
+msgstr ""
+
+#: classes/admin/conditionals.php:316
+msgid "Group Conditional Logic"
+msgstr ""
+
+#: classes/admin/conditionals.php:317
+msgid ""
+"Below you will define the conditional logic that will trigger the "
+"configuration above."
+msgstr ""
+
+#: classes/admin/conditionals.php:323
+msgid "Conditional Logic"
+msgstr ""
+
+#: classes/admin/conditionals.php:385
+msgid ""
+"Conditional groups are used for setting up conditional statements for "
+"groups of fields."
+msgstr ""
+
+#: classes/admin/conditionals.php:406
+msgid "Group Name:"
+msgstr ""
+
+#: classes/admin/conditionals.php:408
+msgid "Group Name"
+msgstr ""
+
+#: classes/admin/conditionals.php:414
+msgid "Group Type:"
+msgstr ""
+
+#: classes/admin/conditionals.php:418
+msgid "Select a type"
+msgstr ""
+
+#: classes/admin/conditionals.php:429
+msgid "Status:"
+msgstr ""
+
+#: classes/admin/conditionals.php:435
+msgid "Enabled"
+msgstr ""
+
+#: classes/admin/conditionals.php:436 classes/translations.php:496
+msgid "Disabled"
+msgstr ""
+
+#: classes/admin/conditionals.php:444
+msgid "Group Applied Fields:"
+msgstr ""
+
+#: classes/admin/conditionals.php:449
+msgid "Select fields to apply this group conditional to..."
+msgstr ""
+
+#: classes/admin/conditionals.php:460 classes/admin/modal.php:825
+#: classes/admin/modal.php:876
+msgid "Remove"
+msgstr ""
+
+#: classes/admin/conditionals.php:463
+msgid "Save Configuration"
+msgstr ""
+
+#: classes/admin/conditionals.php:496
+msgid "No groups found."
+msgstr ""
+
+#: classes/admin/conditionals.php:517 classes/admin/conditionals.php:553
+msgid "OR"
+msgstr ""
+
+#: classes/admin/conditionals.php:525 classes/admin/conditionals.php:566
+#: classes/admin/conditionals.php:597
+msgid "AND"
+msgstr ""
+
+#: classes/admin/conditionals.php:597
+msgid "IF"
+msgstr ""
+
+#: classes/admin/conditionals.php:602
+msgid "Select a logic check"
+msgstr ""
+
+#: classes/admin/conditionals.php:628 classes/admin/js.php:770
+#: classes/admin/js.php:780 classes/admin/js.php:790
+#: classes/admin/modal.php:382 classes/translations.php:493 includes/pmi.php:88
+msgid "Value"
+msgstr ""
+
+#: classes/admin/conditionals.php:654
+msgid "Remove Group and Group Logic?"
+msgstr ""
+
+#: classes/admin/conditionals.php:657
+msgid ""
+"Are you sure you want to remove this group, and all associated logic "
+"created with it?  Once it's removed, it's gone forever!"
+msgstr ""
+
+#: classes/admin/conditionals.php:660 classes/admin/modal.php:636
+#: classes/translations.php:459 classes/widget.php:241
+#: includes/updater/smyles-updater-licenses.php:440
+msgid "No"
+msgstr ""
+
+#: classes/admin/conditionals.php:661 classes/admin/modal.php:628
+#: classes/plugins/facetwp.php:619 classes/translations.php:458
+#: classes/widget.php:237 includes/updater/smyles-updater-licenses.php:444
+msgid "Yes"
+msgstr ""
+
+#: classes/admin/cpt.php:310
+msgid "WPJM Custom Fields"
+msgstr ""
+
+#: classes/admin/cpt.php:311
+msgid "WPJM Custom Field"
+msgstr ""
+
+#: classes/admin/cpt.php:333
+msgid "Disabled (%s)"
+msgid_plural "Disabled (%s)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: classes/admin/cpt.php:342
+msgid "Enabled (%s)"
+msgid_plural "Enabled (%s)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: classes/admin/js.php:144
+msgid ""
+"Make sure you disable the Regions plugin (if you are using it) to prevent "
+"issues when disabling this field."
+msgstr ""
+
+#: classes/admin/js.php:257 classes/admin/js.php:306
+msgid ""
+"This field is used for the title of the listing, and can not be disabled, "
+"as it is required by the core WP Job Manager plugin to function correctly."
+msgstr ""
+
+#: classes/admin/js.php:279
+msgid ""
+"Disabling this field will disable Geo location data, and could potentially "
+"cause problems, do so at your own risk!"
+msgstr ""
+
+#: classes/admin/js.php:282 classes/admin/js.php:540
+msgid ""
+"Disabling this field is NOT recommended as it is the main post content! You "
+"have been WARNED! DISABLE AT YOUR OWN RISK!"
+msgstr ""
+
+#: classes/admin/js.php:539
+msgid ""
+"Disable this field and ... The APPLY NOW button will no longer show on "
+"listing, and the GeoMyWP plugin will not function correctly!"
+msgstr ""
+
+#: classes/admin/js.php:758 classes/admin/list-table.php:641
+#: classes/admin/modal.php:95 classes/admin/settings.php:361
+#: classes/translations.php:488
+msgid "Type"
+msgstr ""
+
+#: classes/admin/js.php:759 classes/translations.php:492
+msgid "Extension"
+msgstr ""
+
+#: classes/admin/js.php:767 classes/admin/js.php:777 classes/admin/js.php:787
+#: classes/admin/modal.php:454 classes/translations.php:481
+msgid "Caption"
+msgstr ""
+
+#: classes/admin/js.php:768 classes/admin/js.php:778 classes/admin/js.php:788
+#: classes/translations.php:485
+msgid "value"
+msgstr ""
+
+#: classes/admin/js.php:769 classes/admin/js.php:779 classes/admin/js.php:789
+#: classes/admin/list-table.php:642 classes/admin/modal.php:127
+#: classes/admin/modal.php:390 classes/admin/settings.php:330
+#: classes/translations.php:489
+msgid "Label"
+msgstr ""
+
+#: classes/admin/list-table.php:61
+msgid " Field"
+msgstr ""
+
+#: classes/admin/list-table.php:205 classes/admin/settings.php:910
+msgid "Field Data"
+msgstr ""
+
+#: classes/admin/list-table.php:214 classes/admin/settings.php:443
+msgid "Fields"
+msgstr ""
+
+#: classes/admin/list-table.php:220
+msgid "View"
+msgstr ""
+
+#: classes/admin/list-table.php:275
+msgid "Disabled Field"
+msgstr ""
+
+#: classes/admin/list-table.php:276
+msgid "Default Field"
+msgstr ""
+
+#: classes/admin/list-table.php:276 classes/widget.php:19
+msgid "Custom Field"
+msgstr ""
+
+#: classes/admin/list-table.php:276
+msgid "Custom Default Field"
+msgstr ""
+
+#: classes/admin/list-table.php:277
+msgid "Required Field"
+msgstr ""
+
+#: classes/admin/list-table.php:447
+msgid "Successfully DISABLED "
+msgstr ""
+
+#: classes/admin/list-table.php:455
+msgid "Successfully ENABLED "
+msgstr ""
+
+#: classes/admin/list-table.php:497
+msgid "Conditional Logic BETA"
+msgstr ""
+
+#: classes/admin/list-table.php:509
+msgid ""
+"Below you will find all of the fields that have been customized.  This "
+"includes newly created custom ones, as well as any default fields that have "
+"been customized."
+msgstr ""
+
+#: classes/admin/list-table.php:518
+msgid ""
+"The default fields below WILL include any custom configuration you have "
+"made to them."
+msgstr ""
+
+#: classes/admin/list-table.php:524
+msgid "Dissmiss this notice"
+msgstr ""
+
+#: classes/admin/list-table.php:639
+msgid "Status"
+msgstr ""
+
+#: classes/admin/list-table.php:640 classes/admin/modal.php:88
+#: classes/admin/modal.php:685
+msgid "Meta Key"
+msgstr ""
+
+#: classes/admin/list-table.php:643 classes/admin/modal.php:134
+msgid "Description"
+msgstr ""
+
+#: classes/admin/list-table.php:644 classes/admin/modal.php:141
+#: classes/admin.php:146 classes/admin.php:333
+msgid "Placeholder"
+msgstr ""
+
+#: classes/admin/list-table.php:645 classes/admin/modal.php:148
+#: classes/admin/modal.php:446
+msgid "Priority"
+msgstr ""
+
+#: classes/admin/list-table.php:647 classes/admin/modal.php:418
+#: classes/admin/modal.php:425 classes/admin/settings.php:678
+msgid "Output"
+msgstr ""
+
+#: classes/admin/list-table.php:648 classes/admin/modal.php:439
+msgid "Output As"
+msgstr ""
+
+#: classes/admin/list-table.php:649
+msgid "Output Show Label"
+msgstr ""
+
+#: classes/admin/list-table.php:650
+msgid "Output Priority"
+msgstr ""
+
+#: classes/admin/list-table.php:651
+msgid "Origin"
+msgstr ""
+
+#: classes/admin/list-table.php:652
+msgid "Post ID"
+msgstr ""
+
+#: classes/admin/list-table.php:808 classes/admin/settings.php:559
+#: classes/admin/settings.php:755 classes/admin/settings.php:873
+#: classes/admin/settings.php:882 classes/conditionals.php:1287
+#: classes/translations.php:465
+msgid "Disable"
+msgstr ""
+
+#: classes/admin/list-table.php:809 classes/admin/settings.php:198
+#: classes/admin/settings.php:214 classes/admin/settings.php:231
+#: classes/admin/settings.php:253 classes/admin/settings.php:269
+#: classes/admin/settings.php:286 classes/admin/settings.php:403
+#: classes/admin/settings.php:424 classes/admin/settings.php:434
+#: classes/admin/settings.php:538 classes/admin/settings.php:586
+#: classes/admin/settings.php:718 classes/admin/settings.php:763
+#: classes/admin/settings.php:771 classes/admin/settings.php:779
+#: classes/admin/settings.php:787 classes/admin/settings.php:804
+#: classes/admin/settings.php:812 classes/admin/settings.php:855
+#: classes/admin/settings.php:864 classes/conditionals.php:1293
+#: classes/translations.php:464
+msgid "Enable"
+msgstr ""
+
+#: classes/admin/list-table.php:836
+msgid "Default <span class=\"count\">(%s)</span>"
+msgid_plural "Default <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: classes/admin/list-table.php:839
+msgid "Customized Default <span class=\"count\">(%s)</span>"
+msgid_plural "Customized Default <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: classes/admin/list-table.php:842
+msgid "Custom <span class=\"count\">(%s)</span>"
+msgid_plural "Custom <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: classes/admin/list-table.php:845
+msgid "Enabled <span class=\"count\">(%s)</span>"
+msgid_plural "Enabled <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: classes/admin/list-table.php:848
+msgid "Disabled <span class=\"count\">(%s)</span>"
+msgid_plural "Disabled <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: classes/admin/list-table.php:970
+msgid "Select All"
+msgstr ""
+
+#: classes/admin/modal.php:80
+msgid "Configuration"
+msgstr ""
+
+#: classes/admin/modal.php:85
+msgid "Config"
+msgstr ""
+
+#: classes/admin/modal.php:89
+msgid "Should be something unique and lowercase, like <code>job_pay</code>"
+msgstr ""
+
+#: classes/admin/modal.php:96
+msgid "Textbox, WP-Editor, Dropdown, Upload, etc."
+msgstr ""
+
+#: classes/admin/modal.php:102 classes/admin/modal.php:334
+#: classes/admin.php:309
+msgid "Multiple"
+msgstr ""
+
+#: classes/admin/modal.php:103
+msgid "Allow multiple selections for this field."
+msgstr ""
+
+#: classes/admin/modal.php:109
+msgid "Ajax"
+msgstr ""
+
+#: classes/admin/modal.php:110
+msgid "Use built-in Ajax uploader"
+msgstr ""
+
+#: classes/admin/modal.php:116
+msgid "Taxonomy"
+msgstr ""
+
+#: classes/admin/modal.php:117
+msgid ""
+"<a target=\"_blank\" "
+"href=\"http://codex.wordpress.org/Taxonomies\">WordPress Taxonomy</a>"
+msgstr ""
+
+#: classes/admin/modal.php:131
+msgid "This will be the label next to or above your field (HTML supported)"
+msgstr ""
+
+#: classes/admin/modal.php:138
+msgid ""
+"This should be the help text below the field, HTML is supported in this "
+"field."
+msgstr ""
+
+#: classes/admin/modal.php:145
+msgid "This text you are reading."
+msgstr ""
+
+#: classes/admin/modal.php:149
+msgid "Highest number will be the last field on the form, can include decimal."
+msgstr ""
+
+#: classes/admin/modal.php:155
+msgid "Visibility"
+msgstr ""
+
+#: classes/admin/modal.php:156
+msgid "If enabled this field will not show on frontend."
+msgstr ""
+
+#: classes/admin/modal.php:161 classes/admin.php:144 classes/admin.php:326
+msgid "Required"
+msgstr ""
+
+#: classes/admin/modal.php:169
+msgid "Advanced"
+msgstr ""
+
+#: classes/admin/modal.php:173 classes/admin.php:304
+msgid "Child Dropdown"
+msgstr ""
+
+#: classes/admin/modal.php:174
+msgid ""
+"If enabled, this will hide child taxonomy values from the main dropdown, "
+"showing them in a dynamically created dropdown when the associated parent "
+"is selected."
+msgstr ""
+
+#: classes/admin/modal.php:174
+msgid ""
+"Dropdown type (single/multi) and max selections can be set on edit page for "
+"taxonomy terms."
+msgstr ""
+
+#: classes/admin/modal.php:177
+msgid "Show in separate dropdown"
+msgstr ""
+
+#: classes/admin/modal.php:180
+msgid "Exclude Terms"
+msgstr ""
+
+#: classes/admin/modal.php:181
+msgid ""
+"Specific terms, or child terms to exclude from dropdown.  Must use the TERM "
+"ID, separated by a comma for multiple."
+msgstr ""
+
+#: classes/admin/modal.php:188 classes/admin/modal.php:678
+#: classes/admin/settings.php:523 classes/translations.php:495
+msgid "Default"
+msgstr ""
+
+#: classes/admin/modal.php:189
+msgid "Default value to use for field."
+msgstr ""
+
+#: classes/admin/modal.php:189 classes/admin/modal.php:196
+#: classes/admin/modal.php:204 classes/admin/modal.php:212
+#: classes/admin/modal.php:220 classes/admin/modal.php:228
+#: classes/admin/modal.php:236 classes/admin/modal.php:244
+#: classes/admin/modal.php:252 classes/admin/modal.php:260
+#: classes/admin/modal.php:268 classes/admin/modal.php:276
+#: classes/admin/modal.php:284 classes/admin/modal.php:292
+#: classes/admin/modal.php:304 classes/field-types.php:131
+#: classes/job/fields.php:551 classes/job/fields.php:581
+#: classes/resume/fields.php:422
+msgid "(optional)"
+msgstr ""
+
+#: classes/admin/modal.php:195
+msgid "Title"
+msgstr ""
+
+#: classes/admin/modal.php:196
+msgid ""
+"Tooltip text and/or notice shown to user when field value does not "
+"validate.  Validation requires pattern field below to be set. If you do not "
+"see pattern field below the current field type does not support it."
+msgstr ""
+
+#: classes/admin/modal.php:203
+msgid "Max Length"
+msgstr ""
+
+#: classes/admin/modal.php:204
+msgid "Max characters allowed in field, including spaces."
+msgstr ""
+
+#: classes/admin/modal.php:211 classes/admin.php:315
+msgid "Max Selections"
+msgstr ""
+
+#: classes/admin/modal.php:212
+msgid ""
+"Maximum amount of selections that can be selected (for all values related "
+"to this field).  This does NOT apply to dynamic child dropdowns, set those "
+"on edit term page."
+msgstr ""
+
+#: classes/admin/modal.php:219
+msgid "Max Uploads"
+msgstr ""
+
+#: classes/admin/modal.php:220
+msgid "Max amount of files that can be uploaded in this field"
+msgstr ""
+
+#: classes/admin/modal.php:227
+msgid "Max Upload Size"
+msgstr ""
+
+#: classes/admin/modal.php:228
+msgid ""
+"Max size of file that can be uploaded (in bytes).  Add <strong>mb</strong> "
+"for megabytes, or <strong>kb</strong> for kilobytes."
+msgstr ""
+
+#: classes/admin/modal.php:235
+msgid "Max Upload Width"
+msgstr ""
+
+#: classes/admin/modal.php:236
+msgid ""
+"Max image width dimensions in Pixels (px) that can be uploaded via this "
+"field (only works for images)."
+msgstr ""
+
+#: classes/admin/modal.php:243
+msgid "Max Upload Height"
+msgstr ""
+
+#: classes/admin/modal.php:244
+msgid ""
+"Max image height dimensions in Pixels (px) that can be uploaded via this "
+"field (only works for images)."
+msgstr ""
+
+#: classes/admin/modal.php:251 classes/admin/settings.php:350
+msgid "Size"
+msgstr ""
+
+#: classes/admin/modal.php:252
+msgid "Width of input field, in characters."
+msgstr ""
+
+#: classes/admin/modal.php:259 classes/admin/settings.php:707
+msgid "Prepend"
+msgstr ""
+
+#: classes/admin/modal.php:260
+msgid "Prepend value to use for field"
+msgstr ""
+
+#: classes/admin/modal.php:267 classes/admin/settings.php:703
+msgid "Append"
+msgstr ""
+
+#: classes/admin/modal.php:268
+msgid "Append value to use for field"
+msgstr ""
+
+#: classes/admin/modal.php:275
+msgid "Minimum"
+msgstr ""
+
+#: classes/admin/modal.php:276
+msgid "Smallest value allowed in field"
+msgstr ""
+
+#: classes/admin/modal.php:283
+msgid "Maximum"
+msgstr ""
+
+#: classes/admin/modal.php:284
+msgid "Largest value allowed in field"
+msgstr ""
+
+#: classes/admin/modal.php:291
+msgid "Step"
+msgstr ""
+
+#: classes/admin/modal.php:292
+msgid "Amount to increase each step when using spinner"
+msgstr ""
+
+#: classes/admin/modal.php:303
+msgid "Pattern"
+msgstr ""
+
+#: classes/admin/modal.php:304
+msgid ""
+"Validate field value using JavaScript regular expressions.  Title (from "
+"above) will be used as notice when pattern does not match. (HTML5)"
+msgstr ""
+
+#: classes/admin/modal.php:315
+msgid "Output Label"
+msgstr ""
+
+#: classes/admin/modal.php:316
+msgid ""
+"If enabled, this will return or output the label instead of the actual "
+"saved value."
+msgstr ""
+
+#: classes/admin/modal.php:319
+msgid "Output Label instead of Value"
+msgstr ""
+
+#: classes/admin/modal.php:322
+msgid "Frontend Only"
+msgstr ""
+
+#: classes/admin/modal.php:323
+msgid "If enabled, this field will not show in the admin section."
+msgstr ""
+
+#: classes/admin/modal.php:329
+msgid "Picker Mode"
+msgstr ""
+
+#: classes/admin/modal.php:330
+msgid "Select the mode to initialize this picker with, default is single."
+msgstr ""
+
+#: classes/admin/modal.php:333
+msgid "Single/Standard"
+msgstr ""
+
+#: classes/admin/modal.php:335
+msgid "Range"
+msgstr ""
+
+#: classes/admin/modal.php:340
+msgid "Picker Min Date"
+msgstr ""
+
+#: classes/admin/modal.php:341
+msgid "Select the minimum/earliest date (inclusively) allowed for selection."
+msgstr ""
+
+#: classes/admin/modal.php:341
+msgid ""
+"Accepted formats are: <strong>today</strong> for current day, "
+"<strong>-14</strong> minus symbol with integer for days prior to current "
+"day, or a date in exact format set in Settings > General."
+msgstr ""
+
+#: classes/admin/modal.php:351
+msgid "Picker Max Date"
+msgstr ""
+
+#: classes/admin/modal.php:352
+msgid "Select the maximum/latest date (inclusively) allowed for selection."
+msgstr ""
+
+#: classes/admin/modal.php:352
+msgid ""
+"Accepted formats are: <strong>+14</strong> plus symbol with integer for "
+"days from current day, or a date in exact format set in Settings > General."
+msgstr ""
+
+#: classes/admin/modal.php:362
+msgid "Picker Minute Increment"
+msgstr ""
+
+#: classes/admin/modal.php:363
+msgid "Adjusts the step for the minute input (default is 5)"
+msgstr ""
+
+#: classes/admin/modal.php:369
+msgid "Output CSV"
+msgstr ""
+
+#: classes/admin/modal.php:370
+msgid ""
+"Output multiple values as CSV (comma separated value), instead of on "
+"separate lines."
+msgstr ""
+
+#: classes/admin/modal.php:378 classes/translations.php:461
+#: classes/translations.php:477
+msgid "Options"
+msgstr ""
+
+#: classes/admin/modal.php:398
+msgid "Default Selection"
+msgstr ""
+
+#: classes/admin/modal.php:407
+msgid "Disabled Option"
+msgstr ""
+
+#: classes/admin/modal.php:426
+msgid "Automatically output on the Job/Resume listing."
+msgstr ""
+
+#: classes/admin/modal.php:428
+msgid "Do not automatically output the value"
+msgstr ""
+
+#: classes/admin/modal.php:432
+msgid "Additional Output"
+msgstr ""
+
+#: classes/admin/modal.php:433
+msgid "Output to additional locations (optional)"
+msgstr ""
+
+#: classes/admin/modal.php:435
+msgid "Select additional outputs (if required)"
+msgstr ""
+
+#: classes/admin/modal.php:440 classes/admin/modal.php:455
+msgid "Choose what you want the value to be output as."
+msgstr ""
+
+#: classes/admin/modal.php:447
+msgid "<strong>optional</strong>"
+msgstr ""
+
+#: classes/admin/modal.php:449
+msgid "1.5"
+msgstr ""
+
+#: classes/admin/modal.php:457
+msgid "My Link"
+msgstr ""
+
+#: classes/admin/modal.php:462
+msgid "Wrap Output"
+msgstr ""
+
+#: classes/admin/modal.php:463
+msgid "Add an HTML element wrap around entire output."
+msgstr ""
+
+#: classes/admin/modal.php:469
+msgid "Output Wrapper"
+msgstr ""
+
+#: classes/admin/modal.php:470
+msgid ""
+"Specify an HTML element wrapper for entire output, such as "
+"<strong>div</strong>, or <strong>ul</strong>. Do not include brackets. "
+"Default is <code>div</code>."
+msgstr ""
+
+#: classes/admin/modal.php:472 classes/admin/modal.php:495
+#: classes/widget.php:132 classes/widget.php:138
+msgid "div"
+msgstr ""
+
+#: classes/admin/modal.php:477
+msgid "Output Attributes"
+msgstr ""
+
+#: classes/admin/modal.php:478
+msgid ""
+"Enter any additional HTML attributes you want to be included in the output "
+"wrapper HTML element."
+msgstr ""
+
+#: classes/admin/modal.php:485
+msgid "Wrap Value"
+msgstr ""
+
+#: classes/admin/modal.php:486
+msgid "Add an HTML element wrap around each value that is output"
+msgstr ""
+
+#: classes/admin/modal.php:492
+msgid "Value Wrapper"
+msgstr ""
+
+#: classes/admin/modal.php:493
+msgid ""
+"Specify an HTML element wrapper for each value output, such as "
+"<strong>div</strong>. Do not include brackets. For list use "
+"<code>li</code>.  Default is <code>div</code>."
+msgstr ""
+
+#: classes/admin/modal.php:500
+msgid "Value Attributes"
+msgstr ""
+
+#: classes/admin/modal.php:501
+msgid ""
+"Enter any additional HTML attributes you want to be included in the value "
+"wrapper HTML element."
+msgstr ""
+
+#: classes/admin/modal.php:508
+msgid "Classes"
+msgstr ""
+
+#: classes/admin/modal.php:509
+msgid ""
+"Add any additional classes separated by spaces, only used for value wrapper "
+"element."
+msgstr ""
+
+#: classes/admin/modal.php:511
+msgid "my-class my-custom-class my-other-class"
+msgstr ""
+
+#: classes/admin/modal.php:516
+msgid "Show Label"
+msgstr ""
+
+#: classes/admin/modal.php:523
+msgid "Label Wrapper"
+msgstr ""
+
+#: classes/admin/modal.php:524
+msgid ""
+"Specify an HTML element wrapper for the label, such as <strong>h3</strong>, "
+"or <strong>strong</strong>. Do not include brackets, only the type of "
+"element. Default is <code>strong</code>"
+msgstr ""
+
+#: classes/admin/modal.php:526 classes/widget.php:144
+msgid "strong"
+msgstr ""
+
+#: classes/admin/modal.php:531
+msgid "Label Attributes"
+msgstr ""
+
+#: classes/admin/modal.php:532
+msgid ""
+"Enter any additional HTML attributes you want to be output in the label "
+"wrapper HTML element."
+msgstr ""
+
+#: classes/admin/modal.php:539
+msgid "Multi Label Wrap"
+msgstr ""
+
+#: classes/admin/modal.php:540
+msgid ""
+"Check this box to disable wrapping label inside another DIV element. This "
+"ONLY applies to fields that save multiple values (multiselect, checklist, "
+"file, etc)!"
+msgstr ""
+
+#: classes/admin/modal.php:546 classes/widget.php:210
+msgid "oEmbed Width"
+msgstr ""
+
+#: classes/admin/modal.php:547 classes/widget.php:208 classes/widget.php:213
+msgid ""
+"Set a specific width for oEmbed (in pixels), use only numbers do not "
+"include px."
+msgstr ""
+
+#: classes/admin/modal.php:547 classes/admin/modal.php:555
+#: classes/admin/modal.php:602 classes/admin/modal.php:610
+#: classes/admin/modal.php:618
+msgid "<strong>(optional)</strong>"
+msgstr ""
+
+#: classes/admin/modal.php:554 classes/widget.php:205
+msgid "oEmbed Height"
+msgstr ""
+
+#: classes/admin/modal.php:555
+msgid ""
+"Set a specific height for oEmbed (in pixels), use only numbers do not "
+"include px."
+msgstr ""
+
+#: classes/admin/modal.php:562
+msgid "Allow Download"
+msgstr ""
+
+#: classes/admin/modal.php:563 classes/widget.php:219
+msgid "Will display a download link for browsers incompatible with HTML5 video."
+msgstr ""
+
+#: classes/admin/modal.php:569
+msgid "Auto Play"
+msgstr ""
+
+#: classes/admin/modal.php:570
+msgid "Causes the media to automatically play as soon as the media file is ready"
+msgstr ""
+
+#: classes/admin/modal.php:576
+msgid "Loop"
+msgstr ""
+
+#: classes/admin/modal.php:577
+msgid "Allows for the looping of media."
+msgstr ""
+
+#: classes/admin/modal.php:583
+msgid "Preload"
+msgstr ""
+
+#: classes/admin/modal.php:584
+msgid ""
+"Specifies if and how the video should be loaded when the page loads. "
+"Defaults to \"metadata\""
+msgstr ""
+
+#: classes/admin/modal.php:587
+msgid "metadata"
+msgstr ""
+
+#: classes/admin/modal.php:588
+msgid "none"
+msgstr ""
+
+#: classes/admin/modal.php:589
+msgid "auto"
+msgstr ""
+
+#: classes/admin/modal.php:594
+msgid "Image Link"
+msgstr ""
+
+#: classes/admin/modal.php:595
+msgid "Will wrap the image in a link to the URL of the image."
+msgstr ""
+
+#: classes/admin/modal.php:601
+msgid "Poster URL"
+msgstr ""
+
+#: classes/admin/modal.php:602
+msgid ""
+"A URL for an image to show until the user plays or seeks. For HTML5 Video - "
+"if not specified, the first frame of video will be used when it becomes "
+"available."
+msgstr ""
+
+#: classes/admin/modal.php:609 classes/widget.php:225
+msgid "Video Height"
+msgstr ""
+
+#: classes/admin/modal.php:610 classes/widget.php:228
+msgid ""
+"Set a specific height for video (in pixels), use only numbers do not "
+"include px."
+msgstr ""
+
+#: classes/admin/modal.php:617 classes/widget.php:230
+msgid "Video Width"
+msgstr ""
+
+#: classes/admin/modal.php:618 classes/widget.php:233
+msgid ""
+"Set a specific width for video (in pixels), use only numbers do not include "
+"px."
+msgstr ""
+
+#: classes/admin/modal.php:625
+msgid "Checkbox True"
+msgstr ""
+
+#: classes/admin/modal.php:626 classes/widget.php:238
+msgid "Custom caption to use if checkbox field type is checked."
+msgstr ""
+
+#: classes/admin/modal.php:633
+msgid "Checkbox False"
+msgstr ""
+
+#: classes/admin/modal.php:634
+msgid "Custom caption to use if checkbox field type is not checked"
+msgstr ""
+
+#: classes/admin/modal.php:643
+msgid "Populate"
+msgstr ""
+
+#: classes/admin/modal.php:649
+msgid ""
+"You can view, edit, or add user meta using my free open source <strong><a "
+"target=\"_blank\" "
+"href=\"https://wordpress.org/plugins/user-meta-display/\">User Meta "
+"Display</a></strong> plugin."
+msgstr ""
+
+#: classes/admin/modal.php:653
+msgid "Auto Save"
+msgstr ""
+
+#: classes/admin/modal.php:654
+msgid ""
+"Save the value (except default) when a listing is submitted, to the user's "
+"meta."
+msgstr ""
+
+#: classes/admin/modal.php:659
+msgid "Save As"
+msgstr ""
+
+#: classes/admin/modal.php:660
+msgid ""
+"<strong>ONLY</strong> set this value if you want to specify a custom meta "
+"key to save the value to!  Default value for this field should be "
+"blank/empty."
+msgstr ""
+
+#: classes/admin/modal.php:666
+msgid "URL Populate"
+msgstr ""
+
+#: classes/admin/modal.php:667
+msgid ""
+"Auto populate from variable in URL.  Multiple value fields should be "
+"separated by comma (?job_category=slug,slug-two)"
+msgstr ""
+
+#: classes/admin/modal.php:672 classes/admin/settings.php:776
+msgid "Auto Populate"
+msgstr ""
+
+#: classes/admin/modal.php:673
+msgid "This box must be checked to enable auto populate."
+msgstr ""
+
+#: classes/admin/modal.php:679
+msgid "Default value for logged in users."
+msgstr ""
+
+#: classes/admin/modal.php:686
+msgid ""
+"Specify the <strong>USER</strong> meta key to auto populate this field from "
+"if it exists (and user is logged in).  If meta key is set and meta exists "
+"for user, it will take priority over default value.<br /><br />If using a "
+"meta key from WPJM or WPRM you <strong>must</strong> prepend it with an "
+"underscore.  <i>As example, company_website would be "
+"<code>_company_website</code></i>"
+msgstr ""
+
+#: classes/admin/modal.php:688
+msgid "_company_facebook"
+msgstr ""
+
+#: classes/admin/modal.php:714 classes/admin/modal.php:727
+msgid "Packages"
+msgstr ""
+
+#: classes/admin/modal.php:721
+msgid "Require"
+msgstr ""
+
+#: classes/admin/modal.php:722
+msgid "Require specific packages to display this field"
+msgstr ""
+
+#: classes/admin/modal.php:728
+msgid ""
+"Select packages you want this field to show for.  Require checkbox above "
+"must be enabled for this to work."
+msgstr ""
+
+#: classes/admin/modal.php:837
+msgid "Add Another"
+msgstr ""
+
+#: classes/admin/modal.php:837
+msgid "Import CSV"
+msgstr ""
+
+#: classes/admin/modal.php:837
+msgid "Clear Options"
+msgstr ""
+
+#: classes/admin/modal.php:838
+msgid "CSV File"
+msgstr ""
+
+#: classes/admin/modal.php:838
+msgid ""
+"CSV format should be value,label or just value (each option on separate "
+"line)"
+msgstr ""
+
+#: classes/admin/modal.php:912
+msgid "WP Job Manager"
+msgstr ""
+
+#: classes/admin/modal.php:913
+msgid "Field Editor"
+msgstr ""
+
+#: classes/admin/modal.php:985 classes/translations.php:462
+msgid "Cancel"
+msgstr ""
+
+#: classes/admin/modal.php:986 classes/translations.php:446
+msgid "Save Field"
+msgstr ""
+
+#: classes/admin/settings-fields.php:190
+msgid ""
+"No fields to remove!  A button will appear here when there is field data "
+"you can remove."
+msgstr ""
+
+#: classes/admin/settings-fields.php:231
+msgid "Loading ..."
+msgstr ""
+
+#: classes/admin/settings-fields.php:245
+msgid "Unknown Error"
+msgstr ""
+
+#: classes/admin/settings-fields.php:253
+msgid "Refresh"
+msgstr ""
+
+#: classes/admin/settings-fields.php:379
+msgid "Please use the"
+msgstr ""
+
+#: classes/admin/settings-fields.php:379
+msgid "page to activate or deactivate your licenses."
+msgstr ""
+
+#: classes/admin/settings-fields.php:381
+msgid ""
+"This tab is kept here for compatibility purposes, and as a backup method "
+"for activation"
+msgstr ""
+
+#: classes/admin/settings-fields.php:401
+#: includes/updater/views/html-license-deactivate.php:64
+msgid "Deactivate License"
+msgstr ""
+
+#: classes/admin/settings-fields.php:453
+msgid "Cache Disabled"
+msgstr ""
+
+#: classes/admin/settings-handlers.php:34
+msgid "All custom posts removed!"
+msgstr ""
+
+#: classes/admin/settings-handlers.php:42
+msgid "There are not any fields that need options purged."
+msgstr ""
+
+#: classes/admin/settings-handlers.php:49
+msgid "Options were purged from"
+msgstr ""
+
+#: classes/admin/settings-handlers.php:49
+msgid "fields:"
+msgstr ""
+
+#: classes/admin/settings-handlers.php:56
+msgid ""
+"All custom fields with translatable configuration values have been "
+"registered in string translation."
+msgstr ""
+
+#: classes/admin/settings-handlers.php:58
+msgid ""
+"There are not any custom fields to add to string translation.  Please setup "
+"some custom fields."
+msgstr ""
+
+#: classes/admin/settings-handlers.php:187
+msgid "All cache (with AND without expirations) has been purged/removed!"
+msgstr ""
+
+#: classes/admin/settings-handlers.php:193
+msgid "The core WordPress cache has been flushed!"
+msgstr ""
+
+#: classes/admin/settings.php:72 classes/admin.php:385 classes/admin.php:386
+msgid "Field Editor Settings"
+msgstr ""
+
+#: classes/admin/settings.php:135
+msgid "Swing (default)"
+msgstr ""
+
+#: classes/admin/settings.php:136
+msgid "Linear"
+msgstr ""
+
+#: classes/admin/settings.php:137
+msgid "Spring"
+msgstr ""
+
+#: classes/admin/settings.php:138
+msgid "Ease (CSS3)"
+msgstr ""
+
+#: classes/admin/settings.php:139
+msgid "Ease In (CSS3)"
+msgstr ""
+
+#: classes/admin/settings.php:140
+msgid "Ease Out (CSS3)"
+msgstr ""
+
+#: classes/admin/settings.php:141
+msgid "Ease InOut (CSS3)"
+msgstr ""
+
+#: classes/admin/settings.php:142
+msgid "Ease In Sine"
+msgstr ""
+
+#: classes/admin/settings.php:143
+msgid "Ease Out Sine"
+msgstr ""
+
+#: classes/admin/settings.php:144
+msgid "Ease InOut Sine"
+msgstr ""
+
+#: classes/admin/settings.php:145
+msgid "Ease In Quad"
+msgstr ""
+
+#: classes/admin/settings.php:146
+msgid "Ease Out Quad"
+msgstr ""
+
+#: classes/admin/settings.php:147
+msgid "Ease In Cubic"
+msgstr ""
+
+#: classes/admin/settings.php:148
+msgid "Ease Out Cubic"
+msgstr ""
+
+#: classes/admin/settings.php:149
+msgid "Ease InOut Cubic"
+msgstr ""
+
+#: classes/admin/settings.php:150
+msgid "Ease In Quart"
+msgstr ""
+
+#: classes/admin/settings.php:151
+msgid "Ease Out Quart"
+msgstr ""
+
+#: classes/admin/settings.php:152
+msgid "Ease InOut Quart"
+msgstr ""
+
+#: classes/admin/settings.php:153
+msgid "Ease In Quint"
+msgstr ""
+
+#: classes/admin/settings.php:154
+msgid "Ease Out Quint"
+msgstr ""
+
+#: classes/admin/settings.php:155
+msgid "Ease InOut Quint"
+msgstr ""
+
+#: classes/admin/settings.php:156
+msgid "Ease In Expo"
+msgstr ""
+
+#: classes/admin/settings.php:157
+msgid "Ease Out Expo"
+msgstr ""
+
+#: classes/admin/settings.php:158
+msgid "Ease InOut Expo"
+msgstr ""
+
+#: classes/admin/settings.php:159
+msgid "Ease In Circ"
+msgstr ""
+
+#: classes/admin/settings.php:160
+msgid "Ease Out Circ"
+msgstr ""
+
+#: classes/admin/settings.php:161
+msgid "Ease InOut Circ"
+msgstr ""
+
+#: classes/admin/settings.php:168
+msgid "General"
+msgstr ""
+
+#: classes/admin/settings.php:173
+msgid "Google Client Side API Key"
+msgstr ""
+
+#: classes/admin/settings.php:175
+#. translators: Placeholder %s is URL to set up a Google Maps API key.
+msgid ""
+"Enter a Google API key here to use for any client side based API calls made "
+"by Field Editor, like the Places Auto Suggest field type/feature. In "
+"previous versions (and if not set here) the API key from Job Manager "
+"settings was/is used. It is recommended to use a different API key here "
+"specifically for client-side based API calls.  Acquire an API key from the "
+"<a href=\"%s\">Google Maps API developer site</a>."
+msgstr ""
+
+#: classes/admin/settings.php:182
+msgid "Keywords Search"
+msgstr ""
+
+#: classes/admin/settings.php:183
+msgid "Enable search all meta"
+msgstr ""
+
+#: classes/admin/settings.php:184
+msgid ""
+"As of WP Job Manager 1.26.0+ the only meta keys searched are %s.  With this "
+"setting enabled, all meta will be searched (like pre version 1.26.0)"
+msgstr ""
+
+#: classes/admin/settings.php:197 classes/admin/settings.php:252
+msgid "Custom Required Label"
+msgstr ""
+
+#: classes/admin/settings.php:199 classes/admin/settings.php:254
+msgid ""
+"Use a custom label for required fields instead of optional fields. HTML is "
+"supported."
+msgstr ""
+
+#: classes/admin/settings.php:205 classes/admin/settings.php:260
+msgid "Required Field Label"
+msgstr ""
+
+#: classes/admin/settings.php:208 classes/admin/settings.php:263
+msgid "<small>(required)</small>"
+msgstr ""
+
+#: classes/admin/settings.php:213 classes/admin/settings.php:268
+msgid "Custom Optional Label"
+msgstr ""
+
+#: classes/admin/settings.php:215 classes/admin/settings.php:270
+msgid ""
+"Use a custom label for optional fields instead of required fields. HTML is "
+"supported. (default is optional)"
+msgstr ""
+
+#: classes/admin/settings.php:222 classes/admin/settings.php:277
+msgid "Optional Field Label"
+msgstr ""
+
+#: classes/admin/settings.php:225 classes/admin/settings.php:280
+msgid "<small>(optional)</small>"
+msgstr ""
+
+#: classes/admin/settings.php:230 classes/admin/settings.php:285
+msgid "Custom Submit Button"
+msgstr ""
+
+#: classes/admin/settings.php:232 classes/admin/settings.php:287
+msgid "Use a custom value for the submit button (on initial submit page)"
+msgstr ""
+
+#: classes/admin/settings.php:239 classes/admin/settings.php:294
+msgid "Submit Button Caption"
+msgstr ""
+
+#: classes/admin/settings.php:241 classes/admin/settings.php:296
+msgid "Preview &rarr;"
+msgstr ""
+
+#: classes/admin/settings.php:242 classes/admin/settings.php:297
+msgid ""
+"The default button is <code>Preview &rarr;</code>, use "
+"<code>&amp;rarr;</code> for the arrow"
+msgstr ""
+
+#: classes/admin/settings.php:302
+msgid "Multiple Candidate Photos"
+msgstr ""
+
+#: classes/admin/settings.php:303
+msgid "Yes, allow"
+msgstr ""
+
+#: classes/admin/settings.php:303
+msgid "to be set as multiple file uploads"
+msgstr ""
+
+#: classes/admin/settings.php:304
+msgid "By default the"
+msgstr ""
+
+#: classes/admin/settings.php:304
+msgid ""
+"field is a single upload.  Enable this option to allow changing this to "
+"multiple files, but be aware that there may be issues with the list in "
+"admin, etc.  Use at your own risk."
+msgstr ""
+
+#: classes/admin/settings.php:312
+msgid "reCAPTCHA"
+msgstr ""
+
+#: classes/admin/settings.php:316
+msgid "Site Key"
+msgstr ""
+
+#: classes/admin/settings.php:319 classes/admin/settings.php:326
+msgid ""
+"Required to use reCAPTCHA, you can get one from <a href=\"%s\" "
+"target=\"_blank\">Google</a>."
+msgstr ""
+
+#: classes/admin/settings.php:323
+msgid "Secret Key"
+msgstr ""
+
+#: classes/admin/settings.php:332 classes/recaptcha.php:50
+#: classes/recaptcha.php:92
+msgid "Are you human?"
+msgstr ""
+
+#: classes/admin/settings.php:334
+msgid "This value will be used as the label that shows next to the actual reCAPTCHA"
+msgstr ""
+
+#: classes/admin/settings.php:338
+msgid "Theme"
+msgstr ""
+
+#: classes/admin/settings.php:341 classes/admin/settings.php:527
+msgid "Light"
+msgstr ""
+
+#: classes/admin/settings.php:342 classes/admin/settings.php:526
+msgid "Dark"
+msgstr ""
+
+#: classes/admin/settings.php:345
+msgid ""
+"By default the light theme is used, changed this to dark if you wish to use "
+"the dark theme."
+msgstr ""
+
+#: classes/admin/settings.php:353
+msgid "Normal"
+msgstr ""
+
+#: classes/admin/settings.php:354
+msgid "Compact"
+msgstr ""
+
+#: classes/admin/settings.php:357
+msgid ""
+"By default the normal size is used.  Change this to compact to show a "
+"smaller recaptcha."
+msgstr ""
+
+#: classes/admin/settings.php:364 classes/auto-output.php:302
+msgid "Image"
+msgstr ""
+
+#: classes/admin/settings.php:365
+msgid "Audio"
+msgstr ""
+
+#: classes/admin/settings.php:368
+msgid ""
+"Images are used as the default reCAPTCHA verification, select Audio to "
+"change the default to audio. Visitors will still be able to use either "
+"audio or images, this setting sets the default type shown initially."
+msgstr ""
+
+#: classes/admin/settings.php:373
+msgid "Disable for Logged In Users"
+msgstr ""
+
+#: classes/admin/settings.php:374
+msgid "Yes, disable reCAPTCHA for users that are already logged in."
+msgstr ""
+
+#: classes/admin/settings.php:375
+msgid ""
+"Enable this setting to disable reCAPTCHA for any user that is already "
+"logged into an account.  reCAPTCHA will still show for users not logged in."
+msgstr ""
+
+#: classes/admin/settings.php:382
+msgid "Force Language"
+msgstr ""
+
+#: classes/admin/settings.php:383
+msgid "Yes, force custom language (disables Google reCAPTCHA auto detection)"
+msgstr ""
+
+#: classes/admin/settings.php:384
+msgid ""
+"Google reCAPTCHA auto-detects the user's language by default, enable this "
+"setting to use language returned by WordPress, or a custom language set "
+"below."
+msgstr ""
+
+#: classes/admin/settings.php:392
+msgid "Custom"
+msgstr ""
+
+#: classes/admin/settings.php:396
+msgid ""
+"Select <strong>%1$s</strong> to force the widget to render in the language "
+"returned by <a href=\"%2$s\" "
+"target=\"_blank\"><code>get_locale()</code></a>, which will be converted to "
+"a <a href=\"%4$s\" target=\"_blank\">Google reCAPTCHA supported "
+"language</a>, which is <strong>(%5$s)</strong> for the current locale of "
+"<strong>(%3$s)</strong>.  Otherwise, select a specific language to force "
+"the reCAPTCHA to use."
+msgstr ""
+
+#: classes/admin/settings.php:396 classes/recaptcha.php:142
+msgid "Auto (based on WordPress get_locale)"
+msgstr ""
+
+#: classes/admin/settings.php:402
+msgid "%s Submit Page"
+msgstr ""
+
+#: classes/admin/settings.php:404
+msgid ""
+"If enabled, a reCAPTCHA input will be added to the bottom of the submit "
+"%1$s page. See the <a target=\"_blank\" href=\"%2$s\">WP Job Manager "
+"Documentation</a> page."
+msgstr ""
+
+#: classes/admin/settings.php:413
+msgid "Output Location"
+msgstr ""
+
+#: classes/admin/settings.php:414
+msgid "After %s fields"
+msgstr ""
+
+#: classes/admin/settings.php:415
+msgid ""
+"Select this checkbox to output the reCAPTCHA after the %s fields.  You "
+"should only need to do this if you have disabled all company fields, or "
+"prefer to have the reCAPTCHA above company fields."
+msgstr ""
+
+#: classes/admin/settings.php:423
+msgid "Resume Submit Page"
+msgstr ""
+
+#: classes/admin/settings.php:425
+msgid ""
+"If enabled, a reCAPTCHA input will be added to the bottom of the submit "
+"resume page. See the <a target=\"_blank\" href=\"%s\">WP Job Manager "
+"Documentation</a> page."
+msgstr ""
+
+#: classes/admin/settings.php:433
+msgid "Application Form"
+msgstr ""
+
+#: classes/admin/settings.php:435
+msgid ""
+"If enabled, a reCAPTCHA input will be added to the bottom of the WP Job "
+"Manager Applications contact/apply form. See the <a target=\"_blank\" "
+"href=\"%s\">WP Job Manager Documentation</a> page."
+msgstr ""
+
+#: classes/admin/settings.php:448
+msgid "Date Save Format"
+msgstr ""
+
+#: classes/admin/settings.php:449
+msgid ""
+"Select the type of format you want the date picker field (not flatpickr) to "
+"save as.  Default is WordPress Date Format (defined in WordPress settings)"
+msgstr ""
+
+#: classes/admin/settings.php:451
+msgid "WordPress Date Format"
+msgstr ""
+
+#: classes/admin/settings.php:452
+msgid "Epoch Timestamp "
+msgstr ""
+
+#: classes/admin/settings.php:453
+msgid "ISO 8601 "
+msgstr ""
+
+#: classes/admin/settings.php:454
+msgid "RFC 2822 "
+msgstr ""
+
+#: classes/admin/settings.php:455
+msgid "MySQL DATETIME "
+msgstr ""
+
+#: classes/admin/settings.php:456
+msgid "PHP Ymd | JS: yymmdd "
+msgstr ""
+
+#: classes/admin/settings.php:457
+msgid "PHP ymd | JS: ymmdd "
+msgstr ""
+
+#: classes/admin/settings.php:458
+msgid "Custom Format (set below)"
+msgstr ""
+
+#: classes/admin/settings.php:463
+msgid "Date Save Custom Format"
+msgstr ""
+
+#: classes/admin/settings.php:467
+msgid ""
+"If you chose Custom Format above, enter the PHP custom format here (only "
+"for standard date field, not for flatpickr)"
+msgstr ""
+
+#: classes/admin/settings.php:472 classes/admin/settings.php:752
+msgid "HTML5 Required"
+msgstr ""
+
+#: classes/admin/settings.php:473
+msgid "Yes, enable HTML5 required attributes"
+msgstr ""
+
+#: classes/admin/settings.php:474
+msgid ""
+"Enable this to use the HTML5 required attribute on fields that support it.  "
+"This will popup a notice if the user leaves this field blank, asking them "
+"to fill it in."
+msgstr ""
+
+#: classes/admin/settings.php:481
+msgid "Date Display"
+msgstr ""
+
+#: classes/admin/settings.php:482
+msgid "Yes, use <code>date_i18n()</code>"
+msgstr ""
+
+#: classes/admin/settings.php:483
+msgid ""
+"Enable this to use the core WordPress <a href=\"%s\" "
+"target=\"_blank\"><code>date_i18n()</code></a> function to attempt "
+"translation/format of date based on locale. Default value is unchecked."
+msgstr ""
+
+#: classes/admin/settings.php:490
+msgid "Sortable Uploads"
+msgstr ""
+
+#: classes/admin/settings.php:491
+msgid "Yes, enable sortable file/image uploads"
+msgstr ""
+
+#: classes/admin/settings.php:492
+msgid ""
+"By default, any files uploaded using AJAX are not sortable.  Enable this "
+"setting to add sortable feature (allow users to drag and move/sort "
+"uploads). <strong>This ONLY works for AJAX uploads</strong>"
+msgstr ""
+
+#: classes/admin/settings.php:500
+msgid "Option Labels"
+msgstr ""
+
+#: classes/admin/settings.php:501
+msgid "Yes, output/return the option Label/Caption instead of the value"
+msgstr ""
+
+#: classes/admin/settings.php:502
+msgid ""
+"By default, when using any field type that has options (Dropdown, Radio "
+"Buttons, Multi-Select), the <strong>value</strong> is saved to the listing, "
+"and that is what is output when using any of the built-in methods.  Enable "
+"this setting to output/return the Label/Caption instead of the value."
+msgstr ""
+
+#: classes/admin/settings.php:509
+msgid "Force Register String Translations"
+msgstr ""
+
+#: classes/admin/settings.php:512
+msgid "String Translation"
+msgstr ""
+
+#: classes/admin/settings.php:513
+msgid ""
+"This is specifically for WPML or Polylang.  Only use this if you know you "
+"need to.  This will force loop through all custom fields and register all "
+"supported translatable values in string translation."
+msgstr ""
+
+#: classes/admin/settings.php:520
+msgid "Flatpickr Theme"
+msgstr ""
+
+#: classes/admin/settings.php:521
+msgid ""
+"If you want to use a custom theme for the Flatpickr date picker, select it "
+"here. %s"
+msgstr ""
+
+#: classes/admin/settings.php:521
+msgid "Preview Themes"
+msgstr ""
+
+#: classes/admin/settings.php:524
+msgid "Airbnb"
+msgstr ""
+
+#: classes/admin/settings.php:525
+msgid "Confetti"
+msgstr ""
+
+#: classes/admin/settings.php:528
+msgid "Material Blue"
+msgstr ""
+
+#: classes/admin/settings.php:529
+msgid "Material Green"
+msgstr ""
+
+#: classes/admin/settings.php:530
+msgid "Material Orange"
+msgstr ""
+
+#: classes/admin/settings.php:531
+msgid "Material Red"
+msgstr ""
+
+#: classes/admin/settings.php:537
+msgid "Custom Avatar"
+msgstr ""
+
+#: classes/admin/settings.php:539
+msgid "Enable this setting to use a value from a user's meta for the user's avatar."
+msgstr ""
+
+#: classes/admin/settings.php:549
+msgid "User Meta Key"
+msgstr ""
+
+#: classes/admin/settings.php:550
+msgid ""
+"Enter the full user meta key that will contain the full URL to an image to "
+"use as the user's avatar. If using a field from Field Editor, make sure to "
+"include the prepended underscore."
+msgstr ""
+
+#: classes/admin/settings.php:558
+msgid "Application Form Templates"
+msgstr ""
+
+#: classes/admin/settings.php:560
+msgid ""
+"Set this checkbox if you want to disable using the custom field templates "
+"(included in this plugin) when the Applications addon outputs fields in the "
+"apply form."
+msgstr ""
+
+#: classes/admin/settings.php:568
+msgid "Select2"
+msgstr ""
+
+#: classes/admin/settings.php:569
+msgid ""
+"Yes, use Select2 instead of Chosen for multiselect, select, term-select, "
+"and term-multiselect fields"
+msgstr ""
+
+#: classes/admin/settings.php:570
+msgid ""
+"Enable this setting to use Select2 instead of the legacy Chosen.js "
+"framework for select field types.  PLEASE NOTE: If you enable this Dynamic "
+"Child Taxonomies and Max Selected will 100% NOT work.  Conditional Logic "
+"may also have some issues with any Select2 fields (should still work for "
+"others). The next version, 1.10.0 will move from using Chosen to Select2."
+msgstr ""
+
+#: classes/admin/settings.php:578
+msgid "Logic"
+msgstr ""
+
+#: classes/admin/settings.php:583
+msgid "Case Sensitivity"
+msgstr ""
+
+#: classes/admin/settings.php:584
+msgid ""
+"Enable this option to make logic checks case sensitive (meaning case must "
+"match), this is not recommended and is disabled by default."
+msgstr ""
+
+#: classes/admin/settings.php:590
+msgid "Key Up Delay"
+msgstr ""
+
+#: classes/admin/settings.php:593
+msgid ""
+"Only set this value if you want to specify a custom debounce (key up) delay "
+"(default is 250).  This is the amount of time, in milliseconds (1000ms = "
+"1s), after a user types a key, before the logic will be checked.  If you "
+"are having performance issues, raise this to 500 or 750.  Anything below "
+"250ms can cause degraded performance, <strong>only set this if you know "
+"what you're doing.</strong>"
+msgstr ""
+
+#: classes/admin/settings.php:598
+msgid "Velocity.JS Show"
+msgstr ""
+
+#: classes/admin/settings.php:600
+msgid ""
+"By default, to show fields, the jQuery .show method is used.  If you would "
+"rather use the "
+msgstr ""
+
+#: classes/admin/settings.php:600
+msgid ""
+"fadeIn or slideDown, which is used for increased performance, enable this "
+"setting."
+msgstr ""
+
+#: classes/admin/settings.php:603
+msgid "Use a Velocity.JS method to show fields"
+msgstr ""
+
+#: classes/admin/settings.php:608
+msgid "Show Method"
+msgstr ""
+
+#: classes/admin/settings.php:609
+msgid ""
+"The default Velocity.JS method for showing fields is the Slide Down "
+"feature.  You can also use Fade In if you prefer, just select the show "
+"method you would like to use from the dropdown."
+msgstr ""
+
+#: classes/admin/settings.php:611
+msgid "Velocity.JS Slide Down (default)"
+msgstr ""
+
+#: classes/admin/settings.php:612
+msgid "Velocity.JS Fade In"
+msgstr ""
+
+#: classes/admin/settings.php:617
+msgid "Show Duration"
+msgstr ""
+
+#: classes/admin/settings.php:620
+msgid ""
+"Amount of time (in milliseconds) for the show method to complete (default "
+"is 400)"
+msgstr ""
+
+#: classes/admin/settings.php:624
+msgid "Show Easing"
+msgstr ""
+
+#: classes/admin/settings.php:628 classes/admin/settings.php:663
+msgid "includes numerous easing methods (CSS3 or JavaScript), see demos of each at"
+msgstr ""
+
+#: classes/admin/settings.php:633
+msgid "Velocity.JS Hide"
+msgstr ""
+
+#: classes/admin/settings.php:635
+msgid ""
+"By default, to hide fields, the jQuery .hide method is used.  If you would "
+"rather use the "
+msgstr ""
+
+#: classes/admin/settings.php:635
+msgid ""
+"fadeOut or slideUp, which is used for increased performance, enable this "
+"setting."
+msgstr ""
+
+#: classes/admin/settings.php:638
+msgid "Use a Velocity.JS method to hide fields"
+msgstr ""
+
+#: classes/admin/settings.php:643
+msgid "Hide Method"
+msgstr ""
+
+#: classes/admin/settings.php:644
+msgid ""
+"The default Velocity.JS method for hiding fields is the Slide Up feature.  "
+"You can also use Fade Out if you prefer, just select the hide method you "
+"would like to use from the dropdown."
+msgstr ""
+
+#: classes/admin/settings.php:646
+msgid "Velocity.JS Slide Up (default)"
+msgstr ""
+
+#: classes/admin/settings.php:647
+msgid "Velocity.JS Fade Out"
+msgstr ""
+
+#: classes/admin/settings.php:652
+msgid "Hide Duration"
+msgstr ""
+
+#: classes/admin/settings.php:655
+msgid ""
+"Amount of time (in milliseconds) for the hide method to complete (default "
+"is 400)"
+msgstr ""
+
+#: classes/admin/settings.php:659
+msgid "Hide Easing"
+msgstr ""
+
+#: classes/admin/settings.php:667
+msgid "Goto Logic JSON Editor Page"
+msgstr ""
+
+#: classes/admin/settings.php:670
+msgid "Logic JSON Editor"
+msgstr ""
+
+#: classes/admin/settings.php:672
+msgid ""
+"Click this button to go to the conditional logic JSON editor page, where "
+"you can manually edit (advanced users only), backup, or restore logic "
+"configuration."
+msgstr ""
+
+#: classes/admin/settings.php:683
+msgid "Auto Paragraph"
+msgstr ""
+
+#: classes/admin/settings.php:684
+msgid ""
+"Select which field types you want to automatically add paragraphs to, when "
+"using one of the built-in output methods."
+msgstr ""
+
+#: classes/admin/settings.php:687
+msgid "WP-Editor"
+msgstr ""
+
+#: classes/admin/settings.php:691 classes/field-types.php:728
+msgid "Text Area"
+msgstr ""
+
+#: classes/admin/settings.php:699
+msgid "Range Output"
+msgstr ""
+
+#: classes/admin/settings.php:700
+msgid ""
+"Select if you want to include any Append or Prepend values you have "
+"configured on range fields, when using one of the built-in output methods."
+msgstr ""
+
+#: classes/admin/settings.php:715
+msgid "As Link URL Scheme"
+msgstr ""
+
+#: classes/admin/settings.php:716
+msgid ""
+"Enable this option to automatically prepend <code>http://</code> if it does "
+"not exist, when using the output as Link feature."
+msgstr ""
+
+#: classes/admin/settings.php:723
+msgid "Gallery Output"
+msgstr ""
+
+#: classes/admin/settings.php:724
+msgid ""
+"When enabled, Magnific Popup will be used for gallery image output (same "
+"popup used by Jobify, Listify, Listable, and WorkScout themes)."
+msgstr ""
+
+#: classes/admin/settings.php:726
+msgid "Enable Magnific Popup"
+msgstr ""
+
+#: classes/admin/settings.php:731
+msgid "Value Wrap Value Class"
+msgstr ""
+
+#: classes/admin/settings.php:732
+msgid ""
+"Enable this setting to add a dynamic class to the Value Wrapper based on "
+"the meta key and the actual value of the field."
+msgstr ""
+
+#: classes/admin/settings.php:734
+msgid "Enable dynamic value wrapper class"
+msgstr ""
+
+#: classes/admin/settings.php:739
+msgid "Auto Output Default Fields"
+msgstr ""
+
+#: classes/admin/settings.php:740
+msgid ""
+"Auto output is disabled by default for any default fields, as they are "
+"already hard coded in template files to be output.  By enabling this "
+"setting you understand that even if Auto Output is disabled for a default "
+"field, that does NOT mean it will remove the hard coded output in template "
+"file from other themes/plugins!"
+msgstr ""
+
+#: classes/admin/settings.php:742
+msgid "Yes, enable Auto Output for default fields (I understand the caveats below)"
+msgstr ""
+
+#: classes/admin/settings.php:747
+msgid "Admin"
+msgstr ""
+
+#: classes/admin/settings.php:753
+msgid ""
+"Disable adding the HTML5 required flag (to not require value for admins) "
+"for fields in the Admin Area (when HTML5 required is enabled under Fields "
+"tab)"
+msgstr ""
+
+#: classes/admin/settings.php:760
+msgid "Required/Optional Label"
+msgstr ""
+
+#: classes/admin/settings.php:761
+msgid ""
+"Enable this setting to show the required (or optional) label in the admin "
+"area for fields (like shown on frontend)"
+msgstr ""
+
+#: classes/admin/settings.php:768
+msgid "Description Output"
+msgstr ""
+
+#: classes/admin/settings.php:769
+msgid ""
+"Enable this setting to show the field description value below the input "
+"field (instead of default in [?] popover)"
+msgstr ""
+
+#: classes/admin/settings.php:777
+msgid ""
+"Auto populate fields when adding listings via admin backend with value from "
+"the current admin user meta, or default value if admin user meta does not "
+"exist."
+msgstr ""
+
+#: classes/admin/settings.php:784
+msgid "Chosen.JS"
+msgstr ""
+
+#: classes/admin/settings.php:785
+msgid ""
+"Chosen.JS is the framework used by WP Job Manager that makes long, unwieldy "
+"select/multiselect boxes much more user-friendly."
+msgstr ""
+
+#: classes/admin/settings.php:792 classes/field-types.php:729
+msgid "WP Editor"
+msgstr ""
+
+#: classes/admin/settings.php:793
+msgid ""
+"For any fields that are set as WP-Editor field type, show in admin section "
+"as full WP Editor instead of TextArea."
+msgstr ""
+
+#: classes/admin/settings.php:796
+msgid "Show WP-Editor instead of TextArea"
+msgstr ""
+
+#: classes/admin/settings.php:801
+msgid "WP Editor at Bottom"
+msgstr ""
+
+#: classes/admin/settings.php:802
+msgid ""
+"Enable this option to output WP Editor fields by their priority, after all "
+"other fields have been output (recommended)"
+msgstr ""
+
+#: classes/admin/settings.php:809
+msgid "WP Editor Full Width"
+msgstr ""
+
+#: classes/admin/settings.php:810
+msgid ""
+"Enable this option to output WP Editor fields as full width in the admin "
+"area (instead of default half width)"
+msgstr ""
+
+#: classes/admin/settings.php:817
+msgid "Backup"
+msgstr ""
+
+#: classes/admin/settings.php:821
+msgid "Create Backup!"
+msgstr ""
+
+#: classes/admin/settings.php:824
+msgid "Generate Backup"
+msgstr ""
+
+#: classes/admin/settings.php:825
+msgid "Generate and download a backup of all fields."
+msgstr ""
+
+#: classes/admin/settings.php:830
+msgid "Import Backup!"
+msgstr ""
+
+#: classes/admin/settings.php:833
+msgid "Import Backup"
+msgstr ""
+
+#: classes/admin/settings.php:834
+msgid ""
+"Import a previously generated backup for custom fields.  This uses the "
+"default WordPress import feature, if you do not see a file upload after "
+"clicking this button, make sure to import using WordPress importer."
+msgstr ""
+
+#: classes/admin/settings.php:839
+msgid "Goto Logic Backup/Restore"
+msgstr ""
+
+#: classes/admin/settings.php:842
+msgid "Logic Backup/Restore"
+msgstr ""
+
+#: classes/admin/settings.php:843
+msgid ""
+"Backing up, and restoring the conditional logic, can be done from the "
+"conditional logic JSON editor.  Click the button to goto the editor, where "
+"you will find a button to download the configuration."
+msgstr ""
+
+#: classes/admin/settings.php:849
+msgid "Debug"
+msgstr ""
+
+#: classes/admin/settings.php:854
+msgid "Enable Bug Reporter"
+msgstr ""
+
+#: classes/admin/settings.php:856
+msgid "Enable the bug report icon in the top right corner to submit bug reports"
+msgstr ""
+
+#: classes/admin/settings.php:863
+msgid "Enable Post Meta Inspector"
+msgstr ""
+
+#: classes/admin/settings.php:865
+msgid ""
+"Will add a meta box at the bottom of each listing that shows all the meta "
+"and values associated with the listing."
+msgstr ""
+
+#: classes/admin/settings.php:872
+msgid "License Deactivate"
+msgstr ""
+
+#: classes/admin/settings.php:874
+msgid ""
+"By default when you deactivate this plugin it will also "
+"deactivate/unregister your API/License Key.  With this setting checked your "
+"license will not be deactivated when you deactivate the plugin."
+msgstr ""
+
+#: classes/admin/settings.php:881
+msgid "Translation Files"
+msgstr ""
+
+#: classes/admin/settings.php:883
+msgid ""
+"Enable this setting to prevent loading the included language files included "
+"with this plugin (which will result in using English version)."
+msgstr ""
+
+#: classes/admin/settings.php:889
+msgid "I understand, remove all data!"
+msgstr ""
+
+#: classes/admin/settings.php:892
+msgid "Remove All"
+msgstr ""
+
+#: classes/admin/settings.php:893
+msgid "This will remove all custom and customized field data!"
+msgstr ""
+
+#: classes/admin/settings.php:898
+msgid "Purge Options!"
+msgstr ""
+
+#: classes/admin/settings.php:901
+msgid "Purge Options"
+msgstr ""
+
+#: classes/admin/settings.php:902
+msgid ""
+"Older versions of this plugin saved option values for fields that do not "
+"require them. You can purge those values by clicking this button."
+msgstr ""
+
+#: classes/admin/settings.php:907
+msgid "Show Field Data"
+msgstr ""
+
+#: classes/admin/settings.php:911
+msgid ""
+"Click this button to pull all the field data and configuration via AJAX and "
+"display it below here."
+msgstr ""
+
+#: classes/admin/settings.php:917
+msgid "License"
+msgstr ""
+
+#: classes/admin/settings.php:929
+msgid "Email"
+msgstr ""
+
+#: classes/admin/settings.php:933
+msgid ""
+"The email associated with your license key, this <strong>MUST</strong> "
+"match the email found on your <a href=\"%s\" target=\"_blank\">My "
+"Account</a> page."
+msgstr ""
+
+#: classes/admin/settings.php:938
+msgid "License Key"
+msgstr ""
+
+#: classes/admin/settings.php:942
+msgid "The license key associated with the email above."
+msgstr ""
+
+#: classes/admin/settings.php:948
+msgid "Support"
+msgstr ""
+
+#: classes/admin/settings.php:958
+msgid "About"
+msgstr ""
+
+#: classes/admin.php:143 classes/field-types.php:730
+msgid "Dropdown"
+msgstr ""
+
+#: classes/admin.php:145
+msgid "Max"
+msgstr ""
+
+#: classes/admin.php:299
+msgid "Field Editor Child Dropdown"
+msgstr ""
+
+#: classes/admin.php:300
+msgid ""
+"The settings below are specific to the WP Job Manager Field Editor plugin "
+"for Dynamic Child Taxonomy fields, and will apply only to child terms for "
+"this term.  You must enable dynamic child dropdown on any fields using this "
+"taxonomy for these settings to apply to that field."
+msgstr ""
+
+#: classes/admin.php:307 classes/admin.php:325
+msgid "Inherit"
+msgstr ""
+
+#: classes/admin.php:308
+msgid "Single"
+msgstr ""
+
+#: classes/admin.php:311
+msgid ""
+"Choose how to display the Child Terms of this term in dynamically shown "
+"dropdown (either single dropdown select, multiple select, or inherit from "
+"field type)."
+msgstr ""
+
+#: classes/admin.php:318
+msgid ""
+"If child dropdown is multiselect, set max selections that can be made for "
+"child terms of this term.  Leave empty, or set to 0 (zero) for default (or "
+"no limit)"
+msgstr ""
+
+#: classes/admin.php:322
+msgid "Require Selection"
+msgstr ""
+
+#: classes/admin.php:327
+msgid "Not Required"
+msgstr ""
+
+#: classes/admin.php:329
+msgid ""
+"Whether or not to require a selection for children of this term. Inherit "
+"will use main field configuration, Required/Not Required will force "
+"regardless of main field configuration."
+msgstr ""
+
+#: classes/admin.php:329
+msgid ""
+"Please note, this uses HTML5 required validation, if you use this setting, "
+"please make sure to test it to make sure it works correctly with your theme!"
+msgstr ""
+
+#: classes/admin.php:336
+msgid ""
+"If set, this value will be used over the main field placeholder for dynamic "
+"child dropdown (value that shows when no selections are made yet)."
+msgstr ""
+
+#: classes/admin.php:471
+msgid "Fields Per Page"
+msgstr ""
+
+#: classes/admin.php:480
+msgid "Company"
+msgstr ""
+
+#: classes/admin.php:481
+msgid "%1$s Field"
+msgstr ""
+
+#: classes/admin.php:540 classes/resume/menu.php:34 classes/resume/menu.php:35
+msgid "Resume Fields"
+msgstr ""
+
+#: classes/admin.php:565 classes/plugins/facetwp.php:254
+msgid "%1$s Fields"
+msgstr ""
+
+#: classes/admin.php:566
+msgid "Company Fields"
+msgstr ""
+
+#: classes/assets.php:323 classes/translations.php:460
+msgid "OK"
+msgstr ""
+
+#: classes/assets.php:324
+msgid "Clear"
+msgstr ""
+
+#: classes/assets.php:374
+msgid "Done"
+msgstr ""
+
+#: classes/assets.php:375
+msgid "Today"
+msgstr ""
+
+#: classes/auto-output.php:300
+msgid "Standard Value Output (Regular text)"
+msgstr ""
+
+#: classes/auto-output.php:301
+msgid "Link"
+msgstr ""
+
+#: classes/auto-output.php:303
+msgid "oEmbed (YouTube/Vimeo/SoundCloud etc)"
+msgstr ""
+
+#: classes/auto-output.php:304
+msgid "HTML5 Video"
+msgstr ""
+
+#: classes/auto-output.php:305 classes/auto-output.php:306
+msgid "WordPress %s Shortcode"
+msgstr ""
+
+#: classes/auto-output.php:307
+msgid "Value Only (No HTML)"
+msgstr ""
+
+#: classes/auto-output.php:308
+msgid "WordPress Image Gallery"
+msgstr ""
+
+#: classes/auto-output.php:309
+msgid "Flatpickr Calendar"
+msgstr ""
+
+#: classes/auto-output.php:310
+msgid "Checkbox Output Options"
+msgstr ""
+
+#: classes/auto-output.php:311
+msgid "Checkbox (Only show label if checked)"
+msgstr ""
+
+#: classes/auto-output.php:312
+msgid "Checkbox (Custom True/False Labels)"
+msgstr ""
+
+#: classes/auto-output.php:435
+msgid "Jobera Theme"
+msgstr ""
+
+#: classes/auto-output.php:436
+msgid "Single Job Listing Above Logo"
+msgstr ""
+
+#: classes/auto-output.php:437
+msgid "Single Job Listing Below Social Links"
+msgstr ""
+
+#: classes/auto-output.php:438
+msgid "Single Job Listing Below Location Map"
+msgstr ""
+
+#: classes/auto-output.php:487
+msgid "Default Single Job Page"
+msgstr ""
+
+#: classes/auto-output.php:488
+msgid "Before Job Meta"
+msgstr ""
+
+#: classes/auto-output.php:489
+msgid "Job Meta Start (before Job Type)"
+msgstr ""
+
+#: classes/auto-output.php:490
+msgid "Job Meta End (after Date Posted)"
+msgstr ""
+
+#: classes/auto-output.php:491
+msgid "After Job Meta"
+msgstr ""
+
+#: classes/auto-output.php:492
+msgid "Before Company Meta"
+msgstr ""
+
+#: classes/auto-output.php:493
+msgid "After Company Meta"
+msgstr ""
+
+#: classes/auto-output.php:494
+msgid "Top of Job Description"
+msgstr ""
+
+#: classes/auto-output.php:495
+msgid "Bottom of Job Description"
+msgstr ""
+
+#: classes/auto-output.php:496
+msgid "Bottom of Job Listing"
+msgstr ""
+
+#: classes/auto-output.php:497
+msgid "Before Application Button"
+msgstr ""
+
+#: classes/auto-output.php:498
+msgid "After Application Button"
+msgstr ""
+
+#: classes/auto-output.php:501
+msgid "Default Jobs List Page"
+msgstr ""
+
+#: classes/auto-output.php:502
+msgid "Jobs List Meta Start"
+msgstr ""
+
+#: classes/auto-output.php:503
+msgid "Jobs List Meta End"
+msgstr ""
+
+#: classes/auto-output.php:535
+msgid "Default Single Resume Page"
+msgstr ""
+
+#: classes/auto-output.php:536
+msgid "Meta Start (before Category)"
+msgstr ""
+
+#: classes/auto-output.php:537
+msgid "Meta End (after Date Posted)"
+msgstr ""
+
+#: classes/auto-output.php:540
+msgid "Top of Resume Listing"
+msgstr ""
+
+#: classes/auto-output.php:541
+msgid "Bottom of Resume Listing"
+msgstr ""
+
+#: classes/auto-output.php:542
+msgid "Top of Resume Description"
+msgstr ""
+
+#: classes/auto-output.php:543
+msgid "Bottom of Resume Description"
+msgstr ""
+
+#: classes/conditionals.php:267
+msgid "Please select from the list below..."
+msgstr ""
+
+#: classes/conditionals.php:1277
+msgid "Show"
+msgstr ""
+
+#: classes/conditionals.php:1282
+msgid "Hide"
+msgstr ""
+
+#: classes/field-types.php:588
+msgid "None"
+msgstr ""
+
+#: classes/field-types.php:720
+msgid "HTML5 Field Types"
+msgstr ""
+
+#: classes/field-types.php:721
+msgid "HTML5 - Number Spinner"
+msgstr ""
+
+#: classes/field-types.php:722
+msgid "HTML5 - Range Slider"
+msgstr ""
+
+#: classes/field-types.php:723
+msgid "HTML5 - Email"
+msgstr ""
+
+#: classes/field-types.php:724
+msgid "HTML5 - URL"
+msgstr ""
+
+#: classes/field-types.php:725
+msgid "HTML5 - Telephone"
+msgstr ""
+
+#: classes/field-types.php:726
+msgid "Standard Field Types"
+msgstr ""
+
+#: classes/field-types.php:727
+msgid "Text Box"
+msgstr ""
+
+#: classes/field-types.php:731
+msgid "File Upload"
+msgstr ""
+
+#: classes/field-types.php:732
+msgid "Password Text Box"
+msgstr ""
+
+#: classes/field-types.php:733
+msgid "Radio Buttons"
+msgstr ""
+
+#: classes/field-types.php:734
+msgid "Checklist (Multiple Checkboxes)"
+msgstr ""
+
+#: classes/field-types.php:735
+msgid "Date Picker (jQuery UI)"
+msgstr ""
+
+#: classes/field-types.php:736
+msgid "Date Picker (flatpickr)"
+msgstr ""
+
+#: classes/field-types.php:737
+msgid "Time Picker (flatpickr)"
+msgstr ""
+
+#: classes/field-types.php:738
+msgid "Phone Number (intl-tel-input.com plugin)"
+msgstr ""
+
+#: classes/field-types.php:739
+msgid "Frontend Hidden Input (text box in admin)"
+msgstr ""
+
+#: classes/field-types.php:740
+msgid "Google Maps - Places Auto Complete"
+msgstr ""
+
+#: classes/field-types.php:763
+msgid "No Value Field Types"
+msgstr ""
+
+#: classes/field-types.php:764
+msgid "Section Header"
+msgstr ""
+
+#: classes/field-types.php:765
+msgid "HTML"
+msgstr ""
+
+#: classes/field-types.php:766
+msgid "WordPress Action Hook"
+msgstr ""
+
+#: classes/field-types.php:826
+msgid "Checkbox (Single Checkbox)"
+msgstr ""
+
+#: classes/field-types.php:829
+msgid "Multi-Select"
+msgstr ""
+
+#: classes/field-types.php:830 classes/field-types.php:863
+msgid "Taxonomy Field Types"
+msgstr ""
+
+#: classes/field-types.php:831 classes/field-types.php:864
+msgid "Taxonomy Checklist"
+msgstr ""
+
+#: classes/field-types.php:832 classes/field-types.php:865
+msgid "Taxonomy Dropdown"
+msgstr ""
+
+#: classes/field-types.php:833 classes/field-types.php:866
+msgid "Taxonomy Multi-Select Dropdown"
+msgstr ""
+
+#: classes/fields.php:1093
+msgid "No field data found!"
+msgstr ""
+
+#: classes/integration.php:96
+msgid "%1$s max allowed selections is %2$s"
+msgstr ""
+
+#: classes/integration.php:181
+msgid "The max allowed file size is %1$s, %2$s is %3$s"
+msgstr ""
+
+#: classes/integration.php:223
+msgid "Max image dimensions are %1$s x %2$s (in pixels)"
+msgstr ""
+
+#: classes/integration.php:226
+msgid ""
+"The max allowed image width for %1$s is %2$s pixels, the one you uploaded "
+"is %3$s pixels. %4$s"
+msgstr ""
+
+#: classes/integration.php:230
+msgid ""
+"The max allowed image height for %1$s is %2$s pixels, the one you uploaded "
+"is %3$s pixels. %4$s"
+msgstr ""
+
+#: classes/integration.php:330
+msgid "The max allowed files is %2$s for %1$s"
+msgstr ""
+
+#: classes/plugins/facetwp.php:198
+msgid "FacetWP"
+msgstr ""
+
+#: classes/plugins/facetwp.php:203
+msgid "Indexing"
+msgstr ""
+
+#: classes/plugins/facetwp.php:204
+msgid "Yes, force reindex when adding or updating a field configuration"
+msgstr ""
+
+#: classes/plugins/facetwp.php:205
+msgid ""
+"FacetWP uses its own database table to store value/label information for "
+"facets.  Enable this option to automatically force FacetWP to reindex "
+"whenever a field is added or updated. <strong>If you get errors when "
+"saving/adding fields, or it takes a very long time, disable this option and "
+"manually reindex after adding/updating fields.</strong>"
+msgstr ""
+
+#: classes/plugins/facetwp.php:213
+msgid "Taxonomy Links"
+msgstr ""
+
+#: classes/plugins/facetwp.php:214
+msgid ""
+"Yes, when using output as Link for taxonomies, link to submit listing page "
+"with facet filter"
+msgstr ""
+
+#: classes/plugins/facetwp.php:215
+msgid ""
+"Normally when outputting a taxonomy using the Link output as, it will link "
+"to the taxonomy archive, enable this setting to link to the listings page "
+"with the facet filter instead."
+msgstr ""
+
+#: classes/plugins/facetwp.php:540
+msgid " to "
+msgstr ""
+
+#: classes/recaptcha.php:93
+msgid "\"%s\" check failed. Please try again."
+msgstr ""
+
+#: classes/recaptcha.php:143
+msgid "Arabic"
+msgstr ""
+
+#: classes/recaptcha.php:144
+msgid "Afrikaans"
+msgstr ""
+
+#: classes/recaptcha.php:145
+msgid "Amharic"
+msgstr ""
+
+#: classes/recaptcha.php:146
+msgid "Armenian"
+msgstr ""
+
+#: classes/recaptcha.php:147
+msgid "Azerbaijani"
+msgstr ""
+
+#: classes/recaptcha.php:148
+msgid "Basque"
+msgstr ""
+
+#: classes/recaptcha.php:149
+msgid "Bengali"
+msgstr ""
+
+#: classes/recaptcha.php:150
+msgid "Bulgarian"
+msgstr ""
+
+#: classes/recaptcha.php:151
+msgid "Catalan"
+msgstr ""
+
+#: classes/recaptcha.php:152
+msgid "Chinese (Hong Kong)"
+msgstr ""
+
+#: classes/recaptcha.php:153
+msgid "Chinese (Simplified)"
+msgstr ""
+
+#: classes/recaptcha.php:154
+msgid "Chinese (Traditional)"
+msgstr ""
+
+#: classes/recaptcha.php:155
+msgid "Croatian"
+msgstr ""
+
+#: classes/recaptcha.php:156
+msgid "Czech"
+msgstr ""
+
+#: classes/recaptcha.php:157
+msgid "Danish"
+msgstr ""
+
+#: classes/recaptcha.php:158
+msgid "Dutch"
+msgstr ""
+
+#: classes/recaptcha.php:159
+msgid "English (UK)"
+msgstr ""
+
+#: classes/recaptcha.php:160
+msgid "English (US)"
+msgstr ""
+
+#: classes/recaptcha.php:161
+msgid "Estonian"
+msgstr ""
+
+#: classes/recaptcha.php:162
+msgid "Filipino"
+msgstr ""
+
+#: classes/recaptcha.php:163
+msgid "Finnish"
+msgstr ""
+
+#: classes/recaptcha.php:164
+msgid "French"
+msgstr ""
+
+#: classes/recaptcha.php:165
+msgid "French (Canadian)"
+msgstr ""
+
+#: classes/recaptcha.php:166
+msgid "Galician"
+msgstr ""
+
+#: classes/recaptcha.php:167
+msgid "Georgian"
+msgstr ""
+
+#: classes/recaptcha.php:168
+msgid "German"
+msgstr ""
+
+#: classes/recaptcha.php:169
+msgid "German (Austria)"
+msgstr ""
+
+#: classes/recaptcha.php:170
+msgid "German (Switzerland)"
+msgstr ""
+
+#: classes/recaptcha.php:171
+msgid "Greek"
+msgstr ""
+
+#: classes/recaptcha.php:172
+msgid "Gujarati"
+msgstr ""
+
+#: classes/recaptcha.php:173
+msgid "Hebrew"
+msgstr ""
+
+#: classes/recaptcha.php:174
+msgid "Hindi"
+msgstr ""
+
+#: classes/recaptcha.php:175
+msgid "Hungarain"
+msgstr ""
+
+#: classes/recaptcha.php:176
+msgid "Icelandic"
+msgstr ""
+
+#: classes/recaptcha.php:177
+msgid "Indonesian"
+msgstr ""
+
+#: classes/recaptcha.php:178
+msgid "Italian"
+msgstr ""
+
+#: classes/recaptcha.php:179
+msgid "Japanese"
+msgstr ""
+
+#: classes/recaptcha.php:180
+msgid "Kannada"
+msgstr ""
+
+#: classes/recaptcha.php:181
+msgid "Korean"
+msgstr ""
+
+#: classes/recaptcha.php:182
+msgid "Laothian"
+msgstr ""
+
+#: classes/recaptcha.php:183
+msgid "Latvian"
+msgstr ""
+
+#: classes/recaptcha.php:184
+msgid "Lithuanian"
+msgstr ""
+
+#: classes/recaptcha.php:185
+msgid "Malay"
+msgstr ""
+
+#: classes/recaptcha.php:186
+msgid "Malayalam"
+msgstr ""
+
+#: classes/recaptcha.php:187
+msgid "Marathi"
+msgstr ""
+
+#: classes/recaptcha.php:188
+msgid "Mongolian"
+msgstr ""
+
+#: classes/recaptcha.php:189
+msgid "Norwegian"
+msgstr ""
+
+#: classes/recaptcha.php:190
+msgid "Persian"
+msgstr ""
+
+#: classes/recaptcha.php:191
+msgid "Polish"
+msgstr ""
+
+#: classes/recaptcha.php:192
+msgid "Portuguese"
+msgstr ""
+
+#: classes/recaptcha.php:193
+msgid "Portuguese (Brazil)"
+msgstr ""
+
+#: classes/recaptcha.php:194
+msgid "Portuguese (Portugal)"
+msgstr ""
+
+#: classes/recaptcha.php:195
+msgid "Romanian"
+msgstr ""
+
+#: classes/recaptcha.php:196
+msgid "Russian"
+msgstr ""
+
+#: classes/recaptcha.php:197
+msgid "Serbian"
+msgstr ""
+
+#: classes/recaptcha.php:198
+msgid "Sinhalese"
+msgstr ""
+
+#: classes/recaptcha.php:199
+msgid "Slovak"
+msgstr ""
+
+#: classes/recaptcha.php:200
+msgid "Slovenian"
+msgstr ""
+
+#: classes/recaptcha.php:201
+msgid "Spanish"
+msgstr ""
+
+#: classes/recaptcha.php:202
+msgid "Spanish (Latin America)"
+msgstr ""
+
+#: classes/recaptcha.php:203
+msgid "Swahili"
+msgstr ""
+
+#: classes/recaptcha.php:204
+msgid "Swedish"
+msgstr ""
+
+#: classes/recaptcha.php:205
+msgid "Tamil"
+msgstr ""
+
+#: classes/recaptcha.php:206
+msgid "Telugu"
+msgstr ""
+
+#: classes/recaptcha.php:207
+msgid "Thai"
+msgstr ""
+
+#: classes/recaptcha.php:208
+msgid "Turkish"
+msgstr ""
+
+#: classes/recaptcha.php:209
+msgid "Ukrainian"
+msgstr ""
+
+#: classes/recaptcha.php:210
+msgid "Urdu"
+msgstr ""
+
+#: classes/recaptcha.php:211
+msgid "Vietnamese"
+msgstr ""
+
+#: classes/recaptcha.php:212
+msgid "Zulu"
+msgstr ""
+
+#: classes/recaptcha.php:237
+msgid "Error converting get_locale()!"
+msgstr ""
+
+#: classes/requires.php:32 wp-job-manager-field-editor.php:123
+msgid ""
+"WP Job Manager <strong>MUST</strong> be installed and activated for WP Job "
+"Manager Field Editor to work!"
+msgstr ""
+
+#: classes/resume/menu.php:44 classes/resume/menu.php:45
+msgid "Education Fields"
+msgstr ""
+
+#: classes/resume/menu.php:54 classes/resume/menu.php:55
+msgid "Experience Fields"
+msgstr ""
+
+#: classes/resume/menu.php:64 classes/resume/menu.php:65
+msgid "Links Fields"
+msgstr ""
+
+#: classes/shortcodes.php:100 classes/shortcodes.php:250
+#: classes/shortcodes.php:520
+msgid "Meta Key was not specified!"
+msgstr ""
+
+#: classes/shortcodes.php:104 classes/shortcodes.php:254
+#: classes/shortcodes.php:524
+msgid "Unable to determine correct job/resume/post ID!"
+msgstr ""
+
+#: classes/shortcodes.php:116
+msgid "You must have content inside the each_custom_field shortcode!"
+msgstr ""
+
+#: classes/themes/jobify.php:138 classes/themes/jobify.php:158
+msgid "Jobify Single Listing Page"
+msgstr ""
+
+#: classes/themes/jobify.php:139
+msgid "Single Job Listing Before"
+msgstr ""
+
+#: classes/themes/jobify.php:140
+msgid "Single Job Listing After"
+msgstr ""
+
+#: classes/themes/jobify.php:141
+msgid "Single Job Listing Start"
+msgstr ""
+
+#: classes/themes/jobify.php:142
+msgid "Single Job Listing End"
+msgstr ""
+
+#: classes/themes/jobify.php:147
+msgid "Jobify Theme Widgets"
+msgstr ""
+
+#: classes/themes/jobify.php:148
+msgid "After Apply"
+msgstr ""
+
+#: classes/themes/jobify.php:149
+msgid "Before Company Social Icons"
+msgstr ""
+
+#: classes/themes/jobify.php:150
+msgid "After Company Social Icons"
+msgstr ""
+
+#: classes/themes/jobify.php:159
+msgid "Single Resume Listing Before"
+msgstr ""
+
+#: classes/themes/jobify.php:160
+msgid "Single Resume Listing After"
+msgstr ""
+
+#: classes/themes/jobify.php:161
+msgid "Single Resume Listing Start"
+msgstr ""
+
+#: classes/themes/jobify.php:162
+msgid "Single Resume Listing End"
+msgstr ""
+
+#: classes/themes/listify.php:349
+msgid ""
+"When using <em>WP Job Manager Field Editor</em> with the <em>Listify</em> "
+"theme it is <strong>strongly</strong> recommended that you use/check/enable "
+"the <a href=\"%s\" target=\"_blank\">Directory Submission Fields</a>"
+msgstr ""
+
+#: classes/themes/listify.php:381
+msgid "Listify Listing List"
+msgstr ""
+
+#: classes/themes/listify.php:382
+msgid "List Before Header"
+msgstr ""
+
+#: classes/themes/listify.php:383
+msgid "List Meta"
+msgstr ""
+
+#: classes/themes/listify.php:384
+msgid "List After Header"
+msgstr ""
+
+#: classes/themes/listify.php:385
+msgid "List Footer"
+msgstr ""
+
+#: classes/themes/listify.php:388
+msgid "Listify Single Listing"
+msgstr ""
+
+#: classes/themes/listify.php:389
+msgid "Single Listing Meta"
+msgstr ""
+
+#: classes/themes/listify.php:390
+msgid "Single Listing Actions"
+msgstr ""
+
+#: classes/themes/listify.php:391
+msgid "Single Listing Below Location Map"
+msgstr ""
+
+#: classes/themes/listify.php:394
+msgid "Listify Theme Widgets"
+msgstr ""
+
+#: classes/themes/listify.php:395
+msgid "Single Listing Top of Map Widget"
+msgstr ""
+
+#: classes/themes/listify.php:396
+msgid "Single Listing Bottom of Map Widget"
+msgstr ""
+
+#: classes/themes/listify.php:397
+msgid "Single Listing Top of Hours Widget"
+msgstr ""
+
+#: classes/themes/listify.php:398
+msgid "Single Listing Bottom of Hours Widget"
+msgstr ""
+
+#: classes/themes/listify.php:399
+msgid "Single Listing Bottom of Author Widget"
+msgstr ""
+
+#: classes/themes/listify.php:400
+msgid "Single Listing Top of Main Content Widget"
+msgstr ""
+
+#: classes/themes/listify.php:401
+msgid "Single Listing Bottom of Main Content Widget"
+msgstr ""
+
+#: classes/themes/listify.php:402
+msgid "Single Listing Top of Gallery Slider Widget"
+msgstr ""
+
+#: classes/themes/listify.php:403
+msgid "Single Listing Bottom of Gallery Slider Widget"
+msgstr ""
+
+#: classes/themes/listify.php:404
+msgid "Single Listing Top of Gallery Widget"
+msgstr ""
+
+#: classes/themes/listify.php:405
+msgid "Single Listing Bottom of Gallery Widget"
+msgstr ""
+
+#: classes/themes/listify.php:406
+msgid "Single Listing Top of Tags Widget"
+msgstr ""
+
+#: classes/themes/listify.php:407
+msgid "Single Listing Bottom of Tags Widget"
+msgstr ""
+
+#: classes/themes/listify.php:408
+msgid "Single Listing Top of Video Widget"
+msgstr ""
+
+#: classes/themes/listify.php:409
+msgid "Single Listing Bottom of Video Widget"
+msgstr ""
+
+#: classes/themes/listify.php:414
+msgid "List Before"
+msgstr ""
+
+#: classes/themes/listify.php:415
+msgid "List After"
+msgstr ""
+
+#: classes/themes/listify.php:416
+msgid "List Header Start"
+msgstr ""
+
+#: classes/themes/listify.php:417
+msgid "List Header End"
+msgstr ""
+
+#: classes/themes/listify.php:420
+msgid "Single Listing Cover Start"
+msgstr ""
+
+#: classes/themes/listify.php:421
+msgid "Single Listing Cover End"
+msgstr ""
+
+#: classes/themes/workscout.php:36
+msgid "WorkScout Listing List"
+msgstr ""
+
+#: classes/themes/workscout.php:37
+msgid "Job Content Start"
+msgstr ""
+
+#: classes/themes/workscout.php:38
+msgid "WorkScout Meta Start"
+msgstr ""
+
+#: classes/themes/workscout.php:39
+msgid "WorkScout Meta End"
+msgstr ""
+
+#: classes/themes/workscout.php:42 classes/themes/workscout.php:51
+msgid "WorkScout Single Listing"
+msgstr ""
+
+#: classes/themes/workscout.php:43 classes/themes/workscout.php:52
+msgid "Bookmark Hook"
+msgstr ""
+
+#: classes/transients.php:94
+msgid "Cache"
+msgstr ""
+
+#: classes/transients.php:99
+msgid "Enable Cache"
+msgstr ""
+
+#: classes/transients.php:100
+msgid "Yes, enable caching of all field configuration"
+msgstr ""
+
+#: classes/transients.php:101
+msgid ""
+"This plugin uses WordPress transients to cache field configs to prevent "
+"excessive, and unecessary database queries. <strong><em>Whenever a new "
+"field is added, or updated, this cache is automatically purged and "
+"updated.</em></strong>.  Disable this if you have issues with your custom "
+"filters not working correctly, or while debugging."
+msgstr ""
+
+#: classes/transients.php:108
+msgid "Expiration"
+msgstr ""
+
+#: classes/transients.php:109
+msgid ""
+"This will be the amount of time the cache is stored before it is "
+"automatically removed and has to be regenerated."
+msgstr ""
+
+#: classes/transients.php:113
+msgid "1 Minute"
+msgstr ""
+
+#: classes/transients.php:114
+msgid "5 Minutes"
+msgstr ""
+
+#: classes/transients.php:115
+msgid "15 Minutes"
+msgstr ""
+
+#: classes/transients.php:116
+msgid "30 Minutes"
+msgstr ""
+
+#: classes/transients.php:117
+msgid "1 Hour"
+msgstr ""
+
+#: classes/transients.php:118
+msgid "12 Hours"
+msgstr ""
+
+#: classes/transients.php:119
+msgid "24 Hours"
+msgstr ""
+
+#: classes/transients.php:120
+msgid "1 Week"
+msgstr ""
+
+#: classes/transients.php:121
+msgid "2 Weeks"
+msgstr ""
+
+#: classes/transients.php:122
+msgid "1 Month"
+msgstr ""
+
+#: classes/transients.php:123
+msgid "3 Months"
+msgstr ""
+
+#: classes/transients.php:124
+msgid "6 Months"
+msgstr ""
+
+#: classes/transients.php:125
+msgid "1 Year"
+msgstr ""
+
+#: classes/transients.php:130
+msgid "Purge All"
+msgstr ""
+
+#: classes/transients.php:133
+msgid "Purge"
+msgstr ""
+
+#: classes/transients.php:134
+msgid ""
+"This will purge all field configuration cache, which will be regenerated "
+"immediately (and automatically)."
+msgstr ""
+
+#: classes/transients.php:140
+msgid "WP Cache"
+msgstr ""
+
+#: classes/transients.php:143
+msgid "Flush Cache"
+msgstr ""
+
+#: classes/transients.php:144
+msgid "This will flush the entire WordPress core cache."
+msgstr ""
+
+#: classes/translations.php:429
+msgid ""
+"If you continue receive this error, please submit a <a target=\"_blank\" "
+"href=\"%s\">support ticket</a>."
+msgstr ""
+
+#: classes/translations.php:430
+msgid ""
+"If you want to edit this field, please click the <strong>Edit</strong> link "
+"from the list table."
+msgstr ""
+
+#: classes/translations.php:431
+msgid "A valid meta key is required!"
+msgstr ""
+
+#: classes/translations.php:432
+msgid ""
+"Meta keys can NOT have spaces in them, use an underscore instead! As an "
+"example, job shift should be job_shift."
+msgstr ""
+
+#: classes/translations.php:433
+msgid ""
+"You can not use a <a href=\"%s\" target=\"_blank\">WordPress Public Query "
+"Variable</a> as a meta key as it will cause the submit listing page to show "
+"a 404 error! Choose something different!"
+msgstr ""
+
+#: classes/translations.php:434
+msgid ""
+"If you change the meta key it will be saved as a new field!  You should NOT "
+"do this unless you know what your doing!"
+msgstr ""
+
+#: classes/translations.php:435
+msgid ""
+"The ONLY supported characters for meta keys are a-z (lowercase), 0-9 "
+"(numbers), and _ (underscores, in place of space) for meta keys!<br />Do "
+"<strong>NOT</strong> use any other characters or you will have issues!"
+msgstr ""
+
+#: classes/translations.php:436
+msgid "Spaces are not allowed in this field!"
+msgstr ""
+
+#: classes/translations.php:437
+msgid "A valid type is required!"
+msgstr ""
+
+#: classes/translations.php:438
+msgid "This field is required!"
+msgstr ""
+
+#: classes/translations.php:439
+msgid ""
+"Options are required for this field type!  Value IS required, label is "
+"optional.  If label is not provided the value will be used instead."
+msgstr ""
+
+#: classes/translations.php:440
+msgid ""
+"Option values can NOT contain the asterisk (*) or tilde (~) characters! "
+"Labels are allowed to have these characters, but values can not!"
+msgstr ""
+
+#: classes/translations.php:441
+msgid "A valid priority is required! Priority must be a numerical value."
+msgstr ""
+
+#: classes/translations.php:442
+msgid "This field MUST be a number/integer.  Decimals are allowed."
+msgstr ""
+
+#: classes/translations.php:443
+msgid "Add New Field"
+msgstr ""
+
+#: classes/translations.php:444
+msgid "Edit Field"
+msgstr ""
+
+#: classes/translations.php:445
+msgid "View Field"
+msgstr ""
+
+#: classes/translations.php:447
+msgid "Remove Field"
+msgstr ""
+
+#: classes/translations.php:448
+msgid "Enable Field"
+msgstr ""
+
+#: classes/translations.php:449
+msgid "Disable Field"
+msgstr ""
+
+#: classes/translations.php:450
+msgid "type"
+msgstr ""
+
+#: classes/translations.php:451
+msgid "label"
+msgstr ""
+
+#: classes/translations.php:452
+msgid "description"
+msgstr ""
+
+#: classes/translations.php:453
+msgid "placeholder"
+msgstr ""
+
+#: classes/translations.php:454
+msgid "priority"
+msgstr ""
+
+#: classes/translations.php:455
+msgid "required"
+msgstr ""
+
+#: classes/translations.php:456
+#: templates/listable/form-fields/uploaded-file-html.php:44
+#: templates/listable/form-fields/uploaded-file-html.php:47
+msgid "remove"
+msgstr ""
+
+#: classes/translations.php:457
+msgid "disable"
+msgstr ""
+
+#: classes/translations.php:463
+msgid "Close"
+msgstr ""
+
+#: classes/translations.php:466
+#: includes/updater/smyles-updater-licenses.php:184
+#: includes/updater/smyles-updater-licenses.php:278
+msgid "Error"
+msgstr ""
+
+#: classes/translations.php:467
+msgid "Unknown Error! Refresh the page and try again."
+msgstr ""
+
+#: classes/translations.php:469
+msgid "Are you sure you want to remove"
+msgstr ""
+
+#: classes/translations.php:470
+msgid "Are you sure you want to disable"
+msgstr ""
+
+#: classes/translations.php:471
+msgid "Are you sure you want to enable"
+msgstr ""
+
+#: classes/translations.php:472
+msgid ""
+"Are you sure?  This will remove ALL of your custom and customized field "
+"data!"
+msgstr ""
+
+#: classes/translations.php:473
+msgid "Using the syntax "
+msgstr ""
+
+#: classes/translations.php:474
+msgid "Edit Field Options"
+msgstr ""
+
+#: classes/translations.php:476
+msgid ""
+"Allowed<br/><a href=\"%1$s\" target=\"_blank\">Mime "
+"Types</a><br/><small>NOT required</small>"
+msgstr ""
+
+#: classes/widget.php:21
+msgid ""
+"Output a custom/default field value from WP Job Manager Field Editor on any "
+"listing that supports widgets."
+msgstr ""
+
+#: classes/widget.php:120
+msgid "Title:"
+msgstr ""
+
+#: classes/widget.php:124
+msgid "Use Widget Style:"
+msgstr ""
+
+#: classes/widget.php:128
+msgid ""
+"Wrappers are HTML elements used to surround the output.  When specifying "
+"one, do not include brackets, only the type of element. All are optional, "
+"and if left blank the default will be used."
+msgstr ""
+
+#: classes/widget.php:130
+msgid "Wrap Output:"
+msgstr ""
+
+#: classes/widget.php:133 classes/widget.php:139
+msgid "Default is <code>div</code>"
+msgstr ""
+
+#: classes/widget.php:136
+msgid "Wrap Value:"
+msgstr ""
+
+#: classes/widget.php:142
+msgid "Show Label:"
+msgstr ""
+
+#: classes/widget.php:145
+msgid "Default is <code>strong</code>"
+msgstr ""
+
+#: classes/widget.php:149
+msgid "Field Meta Key:"
+msgstr ""
+
+#: classes/widget.php:172
+msgid "Extra Classes:"
+msgstr ""
+
+#: classes/widget.php:173
+msgid "my-class my-class2"
+msgstr ""
+
+#: classes/widget.php:176
+msgid "Output As:"
+msgstr ""
+
+#: classes/widget.php:200
+msgid "Caption:"
+msgstr ""
+
+#: classes/widget.php:201
+msgid "Click Here!"
+msgstr ""
+
+#: classes/widget.php:202
+msgid ""
+"If you want to use a specific caption for the link enter it above. Leave "
+"blank to use the URL as the caption."
+msgstr ""
+
+#: classes/widget.php:205 classes/widget.php:210 classes/widget.php:221
+#: classes/widget.php:225 classes/widget.php:230
+msgid "Optional"
+msgstr ""
+
+#: classes/widget.php:216
+msgid "Allow Download:"
+msgstr ""
+
+#: classes/widget.php:221
+msgid "Poster URL:"
+msgstr ""
+
+#: classes/widget.php:223
+msgid ""
+"A URL for an image to show until the user plays or seeks. If not specified, "
+"the first frame of video will be used when it becomes available."
+msgstr ""
+
+#: classes/widget.php:236
+msgid "Checkbox True:"
+msgstr ""
+
+#: classes/widget.php:240
+msgid "Checkbox False:"
+msgstr ""
+
+#: classes/widget.php:242
+msgid "Custom caption to use if checkbox field type is not checked."
+msgstr ""
+
+#: classes/widget.php:245
+msgid "Wrap Image with a Link to the URL:"
+msgstr ""
+
+#: includes/compatibility.php:73
+msgid ""
+"Your server is using a <strong>VERY OLD, unsupported, and no longer "
+"maintained</strong> version of PHP, version %5$s. <a href=\"%1$s\" "
+"target=\"_blank\">EOL (End of Life)</a> for PHP 5.2 was about <strong>%2$s "
+"ago</strong>!! This means there may be bugs, and security vulnerabilities "
+"that have not, and will never be patched for this version of PHP!<br /><br "
+"/>It is <strong>strongly</strong> recommended that you contact your web "
+"hosting provider and request to upgrade to PHP 5.4 or newer ... or <a "
+"href=\"%3$s\">Hide this Notice Forever!</a> (but don't say I didn't warn "
+"you)<br/><br /><a href=\"%4$s\" target=\"_blank\">Contact me</a> for an "
+"exclusive sMyles Plugins customer promo code discount for any shared "
+"<strong>SSD (Solid State Drive)</strong> hosting packages!  Data centers in "
+"Florida USA, Arizona USA, Montreal Canada, and France.  Your site will run "
+"faster than it ever has, or your money back!"
+msgstr ""
+
+#: includes/compatibility.php:77
+msgid ""
+"Your server is using an <strong>OLD, unsupported, and no longer "
+"maintained</strong> version of PHP, version %5$s. <a href=\"%1$s\" "
+"target=\"_blank\">EOL (End of Life)</a> for PHP 5.3 was about <strong>%2$s "
+"ago</strong>!! This means there may be bugs, and security vulnerabilities "
+"that have not, and will never be patched for this version of PHP!<br /><br "
+"/>It is <strong>strongly</strong> recommended that you contact your web "
+"hosting provider and request to upgrade to PHP 5.4 or newer ... or <a "
+"href=\"%3$s\">Hide this Notice Forever!</a> (but don't say I didn't warn "
+"you)<br/><br /><a href=\"%4$s\" target=\"_blank\">Contact me</a> for an "
+"exclusive sMyles Plugins customer promo code discount for any shared "
+"<strong>SSD (Solid State Drive)</strong> hosting packages!  Data centers in "
+"Florida USA, Arizona USA, Montreal Canada, and France.  Your site will run "
+"faster than it ever has, or your money back!"
+msgstr ""
+
+#: includes/functions.php:788
+msgid ""
+"Sorry, your browser doesn't support embedded videos, you should upgrade to "
+"a modern browser."
+msgstr ""
+
+#: includes/functions.php:789
+msgid "Or you can"
+msgstr ""
+
+#: includes/functions.php:789
+msgid "Download The File"
+msgstr ""
+
+#: includes/functions.php:789
+msgid "(right click and select Save As)"
+msgstr ""
+
+#: includes/functions.php:860
+msgid "True"
+msgstr ""
+
+#: includes/functions.php:865
+msgid "False"
+msgstr ""
+
+#: includes/pmi.php:53
+msgid "Post Meta Inspector"
+msgstr ""
+
+#: includes/pmi.php:60
+msgid "Click to show&hellip;"
+msgstr ""
+
+#: includes/pmi.php:87
+msgid "Key"
+msgstr ""
+
+#: includes/smyles-bug-report/smyles-bug-report.php:112
+msgid "Debug logging has been disabled."
+msgstr ""
+
+#: includes/smyles-bug-report/smyles-bug-report.php:120
+msgid "Debug logging has been enabled."
+msgstr ""
+
+#: includes/smyles-bug-report/smyles-bug-report.php:184
+msgid "Bug Report submitted succesfully!  Thank You!"
+msgstr ""
+
+#: includes/smyles-bug-report/smyles-bug-report.php:185
+msgid "There was an error submitting your bug report, please try again later."
+msgstr ""
+
+#: includes/smyles-bug-report/smyles-bug-report.php:290
+msgid "Invalid Email"
+msgstr ""
+
+#: includes/smyles-bug-report/smyles-bug-report.php:374
+#: includes/smyles-bug-report/smyles-bug-report.php:377
+msgid "Report a Bug"
+msgstr ""
+
+#: includes/smyles-bug-report/smyles-bug-report.php:383
+msgid "Email Address"
+msgstr ""
+
+#: includes/smyles-bug-report/smyles-bug-report.php:384
+msgid "Your Email"
+msgstr ""
+
+#: includes/smyles-bug-report/smyles-bug-report.php:387
+msgid "Bug Description"
+msgstr ""
+
+#: includes/smyles-bug-report/smyles-bug-report.php:388
+msgid "Short Bug Description ..."
+msgstr ""
+
+#: includes/smyles-bug-report/smyles-bug-report.php:391
+msgid "Bug Details"
+msgstr ""
+
+#: includes/smyles-bug-report/smyles-bug-report.php:392
+msgid ""
+"Please describe the bug, how to replicate the bug, and any other details "
+"you can add.  Links to screenshots would be helpful as well."
+msgstr ""
+
+#: includes/smyles-bug-report/smyles-bug-report.php:399
+msgid "Debug is <strong>ENABLED</strong>"
+msgstr ""
+
+#: includes/smyles-bug-report/smyles-bug-report.php:413
+msgid "Disable Force Debug"
+msgstr ""
+
+#: includes/smyles-bug-report/smyles-bug-report.php:416
+msgid "Enable Force Debug"
+msgstr ""
+
+#: includes/updater/smyles-updater-licenses.php:184
+msgid "Unable to determine slug to deactivate license."
+msgstr ""
+
+#: includes/updater/smyles-updater-licenses.php:198
+msgid "Error determining the plugin Product ID."
+msgstr ""
+
+#: includes/updater/smyles-updater-licenses.php:202
+msgid "Error pulling the license key from option data."
+msgstr ""
+
+#: includes/updater/smyles-updater-licenses.php:206
+msgid "Error pulling the email associated with the license key from option data."
+msgstr ""
+
+#: includes/updater/smyles-updater-licenses.php:210
+msgid ""
+"Error pulling the instance ID associated with the license key from option "
+"data."
+msgstr ""
+
+#: includes/updater/smyles-updater-licenses.php:223
+msgid "Connection failed to the License Key API server - possible server issue."
+msgstr ""
+
+#: includes/updater/smyles-updater-licenses.php:230
+msgid " Successfully Deactivated!"
+msgstr ""
+
+#: includes/updater/smyles-updater-licenses.php:231
+msgid "You have successfully deactivated the %s license."
+msgstr ""
+
+#: includes/updater/smyles-updater-licenses.php:243
+msgid ""
+"The license has been successfully deactivated locally, but please visit "
+"your sMyles Plugins <a href=\"%s\" target=\"_blank\">My Account</a> page to "
+"verify this activation has been removed from our server.  There was an "
+"error automatically removing it, and chances are that is because it was "
+"already removed via your <a href=\"%s\" target=\"_blank\">My Account</a> "
+"page already.."
+msgstr ""
+
+#: includes/updater/smyles-updater-licenses.php:279
+msgid ""
+"Unable to determine slug, license key, and/or email to activate license, "
+"contact support."
+msgstr ""
+
+#: includes/updater/smyles-updater-licenses.php:338
+msgid " Successfully Activated!"
+msgstr ""
+
+#: includes/updater/smyles-updater-licenses.php:338
+msgid ""
+"You have successfully activated the %s license, and will now be able to "
+"automatically upgrade this plugin through WordPress when an update is "
+"available."
+msgstr ""
+
+#: includes/updater/smyles-updater-licenses.php:435
+msgid "Deactivate the %s License?"
+msgstr ""
+
+#: includes/updater/smyles-updater-licenses.php:450
+msgid "sMyles Plugins Licensing"
+msgstr ""
+
+#: includes/updater/smyles-updater-licenses.php:453
+msgid "Plugins"
+msgstr ""
+
+#: includes/updater/views/html-key-input.php:5
+msgid ""
+"<a href=\"%1$s\">Click here to activate your license key</a> in order to "
+"receive updates and support for this plugin."
+msgstr ""
+
+#: includes/updater/views/html-key-notice.php:6
+msgid "Hide notice"
+msgstr ""
+
+#: includes/updater/views/html-key-notice.php:7
+msgid ""
+"<a href=\"%1$s\">Please activate your license key</a> in order to receive "
+"updates and support for \"%2$s\"."
+msgstr ""
+
+#: includes/updater/views/html-license-activate.php:3
+msgid "Activating ..."
+msgstr ""
+
+#: includes/updater/views/html-license-activate.php:6
+#: includes/updater/views/html-license-deactivate.php:6
+msgid "Plugin Not Found"
+msgstr ""
+
+#: includes/updater/views/html-license-activate.php:18
+#: includes/updater/views/html-license-deactivate.php:20
+msgid "Details"
+msgstr ""
+
+#: includes/updater/views/html-license-activate.php:33
+#: includes/updater/views/html-license-deactivate.php:35
+msgid "Installed Version:"
+msgstr ""
+
+#: includes/updater/views/html-license-activate.php:54
+msgid "Activate License"
+msgstr ""
+
+#: includes/updater/views/html-license-deactivate.php:3
+msgid "Deactivating ..."
+msgstr ""
+
+#: includes/updater/views/html-license-deactivate.php:43
+msgid "Activated:"
+msgstr ""
+
+#: includes/updater/views/html-ms-update.php:6
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" "
+"class=\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a "
+"href=\"%4$s\">update now</a>."
+msgstr ""
+
+#: templates/cariera/form-fields/file-field.php:20
+#: templates/form-fields/file-field.php:20
+#: templates/jobify/form-fields/file-field.php:22
+#: templates/workscout/form-fields/file-field.php:21
+msgid "The max allowed files is %s"
+msgstr ""
+
+#: templates/cariera/form-fields/file-field.php:51
+msgid "Upload"
+msgstr ""
+
+#: templates/cariera/form-fields/file-field.php:62
+#: templates/form-fields/file-field.php:57
+#: templates/jobify/form-fields/file-field.php:66
+#: templates/workscout/form-fields/file-field.php:88
+msgid "Maximum files: %s."
+msgstr ""
+
+#: templates/cariera/form-fields/file-field.php:69
+#: templates/form-fields/file-field.php:64
+#: templates/jobify/form-fields/file-field.php:72
+#: templates/workscout/form-fields/file-field.php:93
+msgid "Maximum file size: %s."
+msgstr ""
+
+#: templates/cariera/form-fields/file-field.php:78
+#: templates/form-fields/file-field.php:73
+#: templates/jobify/form-fields/file-field.php:81
+#: templates/workscout/form-fields/file-field.php:102
+msgid "Maximum image dimensions: %1$s x %2$s (in pixels)"
+msgstr ""
+
+#: templates/cariera/form-fields/file-field.php:81
+#: templates/form-fields/file-field.php:76
+#: templates/jobify/form-fields/file-field.php:84
+#: templates/workscout/form-fields/file-field.php:105
+msgid "Maximum image width: %1$s (in pixels)"
+msgstr ""
+
+#: templates/cariera/form-fields/file-field.php:84
+#: templates/form-fields/file-field.php:79
+#: templates/jobify/form-fields/file-field.php:87
+#: templates/workscout/form-fields/file-field.php:108
+msgid "Maximum image height: %1$s (in pixels)"
+msgstr ""
+
+#: templates/form-fields/checklist-field.php:55
+#: templates/form-fields/multiselect-field.php:31
+#: templates/form-fields/term-checklist-field.php:59
+#: templates/form-fields/term-multiselect-field.php:66
+msgid "Maximum selections: %s"
+msgstr ""
+
+#: templates/form-fields/multiselect-field.php:15
+msgid "Select Some Options"
+msgstr ""
+
+#: templates/form-fields/multiselect-field.php:40
+msgid "No results match"
+msgstr ""
+
+#: templates/form-fields/radio-field.php:39
+msgid "Clear Selection"
+msgstr ""
+
+#: templates/form-fields/term-select-field.php:53
+msgid "Select an Option..."
+msgstr ""
+
+#: templates/jobify/form-fields/file-field.php:49
+msgid "%d files selected"
+msgstr ""
+
+#: templates/jobify/form-fields/file-field.php:53
+msgid "Choose Image"
+msgstr ""
+
+#: templates/jobify/form-fields/file-field.php:55
+msgid "Choose File"
+msgstr ""
+
+#: templates/workscout/form-fields/file-field.php:52
+#: templates/workscout/form-fields/file-field.php:73
+msgid "Browse"
+msgstr ""
+
+#: wp-job-manager-field-editor.php:155
+msgid ""
+"The activated copy of the %1$s plugin, is installed in the incorrect "
+"directory, the directory should match <code>%2$s</code>."
+msgstr ""
+
+#: wp-job-manager-field-editor.php:156
+msgid "Please rename the directory from: <code>%1$s</code> to <code>%2$s</code>"
+msgstr ""
+
+#: wp-job-manager-field-editor.php:157
+msgid "You can find the directory located at: <br/> <code>%1$s</code>"
+msgstr ""
+
+#: wp-job-manager-field-editor.php:158
+msgid ""
+"Once you have renamed the directory, come back to the Plugins page to "
+"reactivate the plugin.  You will not lose any of your settings or "
+"configurations."
+msgstr ""
+
+#: wp-job-manager-field-editor.php:159
+msgid ""
+"You can also just <a href=\"%1$s\">hide this notice</a>, but be warned, "
+"there may be issues due to using the incorrect plugin directory!"
+msgstr ""
+
+#: wp-job-manager-field-editor.php:408
+msgid "Once Weekly"
+msgstr ""
+
+#: wp-job-manager-field-editor.php:445
+msgid "Translations"
+msgstr ""
+
+#: wp-job-manager-field-editor.php:668 wp-job-manager-field-editor.php:670
+msgid "Job"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WP Job Manager Field Editor"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://plugins.smyl.es/wp-job-manager-field-editor"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Fully featured AJAX plugin to create, and edit WP Job Manager fields, with "
+"numerous advanced features including 10+ custom field types, Conditional "
+"Logic, and more!"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Myles McNamara"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://plugins.smyl.es"
+msgstr ""
+
+#: classes/admin/cpt.php:332
+msgctxt "Disabled Field Status"
+msgid "disabled"
+msgstr ""
+
+#: classes/admin/cpt.php:341
+msgctxt "Enabled Field Status"
+msgid "enabled"
+msgstr ""
+
+#: classes/admin/list-table.php:833
+msgctxt "fields"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""

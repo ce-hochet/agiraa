@@ -1,0 +1,131 @@
+.job-pricing-section {
+    .products,
+    .products > .product {
+        @include media-breakpoint-up(lg) {
+            margin-top: 0;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .products > .product {
+            @include hover-focus {
+                .job-pricing-inner {
+                    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+                    transition: all 0.4s ease 0s;
+                }    
+            }
+        }
+    }
+}
+
+.job-pricing-inner {
+    //height: 560px;
+    background-color: $f4;
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px 10px 44px;
+    flex-direction: column;
+    display: flex;
+
+    .price {
+        flex-direction: column;
+    }
+
+    .job-pricing-features {
+        flex: 0 1 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            display: none;
+        }
+
+        > p {
+            padding: 30px;
+        }
+
+        .added_to_cart {
+            margin-left: 0;
+        }
+
+        .add_to_cart_button.added {
+            display: none;
+        }
+
+        ul {
+            flex: 0 1 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            list-style: none;
+            line-height: 4.6;
+            padding: 20px 0;
+            color: $e8;
+        }
+
+        a {
+            @include make-new-button(700);
+            @include button-size( 10px, 26px, 15px, $btn-line-height, 4px );
+            text-transform: uppercase;
+        }
+    }
+
+    .job-pricing-header {
+        height: 180px;
+        padding: 34px 20px;
+        border-radius: 8px;
+        background-color: $white;
+        box-shadow: 0px 2px 5px 0px rgba(32, 32, 32, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 0 0 180px;
+    }
+
+    .woocommerce-loop-product__title {
+        font-size: 20px;
+        font-weight: 500;
+        margin-top: 0;
+    }
+
+    .woocommerce-Price-amount {
+        font-size: 60px;
+        line-height: 1;
+        margin: 0;
+        font-weight: 700;
+        font-family: $jobhunt-title-font-family;
+    }
+
+    .woocommerce-Price-currencySymbol {
+        font-size: 18px;
+        font-weight: 500;
+        font-family: $jobhunt-body-font-family;
+        color: $td;
+    }
+
+    del {
+        .woocommerce-Price-currencySymbol {
+            font-size: 14px;
+            color: $n9;
+        }
+
+        .woocommerce-Price-amount {
+            margin-left: 0;
+        }
+    }
+}
+
+.products.columns-4 .job-pricing-inner .job-pricing-features ul {
+    line-height: 3.6;
+    padding: 30px 0;
+}
+
+.product.featured {
+    .job-pricing-inner {
+        .job-pricing-features,
+        .job-pricing-features ul {
+            color: $white;
+        }
+    }
+}

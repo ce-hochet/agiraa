@@ -1,0 +1,221 @@
+.how-it-works-page-wrapper {
+    padding: 30px 0 20px;
+}
+
+div.how-it-works-page {
+    align-items: center;
+    display: flex !important;
+    flex-wrap: wrap;
+
+    & + .how-it-works-page {
+        margin-top: 150px;
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 60px;
+        }
+    }
+
+    &::after,
+    &::before {
+        content: none !important;
+    }
+}
+
+div.how-it-works-content {
+    padding-left: 112px;
+    z-index: 1;
+    box-shadow: 0px 0px 50px 0px rgba(32, 32, 32, 0.15);
+    display: flex;
+    align-items: center;
+    padding-right: 50px;
+
+    @include media-breakpoint-down(md) {
+        width: 92%;
+        margin: -30px 4% 0;
+        padding-left: 60px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        height: 100%;
+        padding: 0 26px 20px;
+    }
+
+    > div {
+        height: auto !important;
+    }
+
+    i {
+        font-size: 70px;
+        color: $ed;
+        position: absolute;
+        top: 20px;
+        right: 30px;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 50px;
+            right: 20px;
+            top: 16px;
+        }
+    }
+
+    h2 {
+        margin-top: 0;
+        font-size: 22px;
+        color: $td;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 20px;
+            padding-top: .9em;
+        }
+    }
+
+    p {
+        color: $e8;
+        line-height: 2;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 13px;
+            line-height: 1.8;
+        }
+    }
+}
+
+.how-it-works-step {
+    width: 66px;
+    height: 66px;
+    color: $white;
+    font-size: 25px;
+    border-radius: 50px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+
+    @include media-breakpoint-down(md) {
+        left: 50%;
+        top: 0;
+    }
+}
+
+.how-it-works-page.right {
+    .how-it-works-step {
+        @include media-breakpoint-up(lg) {
+            left: auto;
+            right: 0;
+            transform: translate(50%, -50%);
+        }
+    }
+
+    .how-it-works-image {
+        img {
+            float: right;
+        }
+    }
+
+    div.how-it-works-content {
+        padding-left: 60px;
+        padding-right: 112px;
+        justify-content: flex-end;
+
+        @include media-breakpoint-down(md) {
+            padding-right: 60px;
+            order: 2;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding: 0 26px 30px;
+        }
+
+        i {
+            left: 30px;
+            right: auto;
+
+            @include media-breakpoint-down(sm) {
+                left: 20px;
+            }
+        }
+    }
+
+    div.how-it-works-image {
+        @include media-breakpoint-up(lg) {
+            padding-left: 15px;
+            padding-right: 0;
+
+            .image-gradient {
+                &::before {
+                    left: -99px;
+                }
+            }
+
+            .vc_align_left.image-gradient {
+                &::before {
+                    left: -84px;
+                }
+            }
+        }
+    }
+}
+
+div.how-it-works-image {
+    @include media-breakpoint-down(md) {
+        width: 100%;
+        padding: 0;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding-left: 0;
+    }
+
+    img {
+        max-width: 100%;
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 8px;
+
+        @include media-breakpoint-up(md) {
+            height: 416px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            max-width: 550px;
+            width: 550px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            max-width: 654px;
+            width: 654px;
+        }
+    }
+
+    .image-gradient {
+        &::before {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            border-radius: 8px;
+            opacity: 0.8;
+
+            @include media-breakpoint-up(lg) {
+                width: 550px;
+            }
+
+            @include media-breakpoint-up(xl) {
+                width: 654px;
+            }
+        }
+    }
+}
+
+.how-it-works-content {
+    background-color: $white;
+    height: 356px;
+    border-radius: 8px;    
+}

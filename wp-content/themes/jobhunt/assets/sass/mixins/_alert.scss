@@ -1,0 +1,7 @@
+@mixin make-alert( $alert-padding-y:$alert-padding-y, $alert-padding-x: $alert-padding-x, $alert-border-radius: $alert-border-radius, $alert-margin-bottom: $alert-margin-bottom ) {
+    position: relative;
+    padding: $alert-padding-y $alert-padding-x;
+    margin-bottom: $alert-margin-bottom;
+    border: $alert-border-width solid transparent;
+    @include border-radius($alert-border-radius);
+}

@@ -1,0 +1,81 @@
+embed,
+iframe,
+object,
+video {
+    max-width: 100%;
+    width: 100%;
+}
+
+blockquote {
+    background: transparent url(assets/images/blockquote-icon.svg) center center no-repeat;
+    background-size: 161px 112px;
+    border: none;
+    padding: 40px 10%;
+    margin: 20px 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    font-family: $jobhunt-title-font-family;
+    
+    cite {
+        &:before {
+            content: "— ";
+        }
+        
+        display: block;
+        margin-top: 10px;
+        font-size: 16px;
+        color: #717f86;
+        font-style: normal;
+        font-weight: 600;
+    }
+
+    > p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: $jobhunt-title-font-family;
+    font-weight: 600;
+    text-rendering: optimizeLegibility;
+    color: $treehouse-title-color;
+}
+
+h1, .h1 {
+  font-size: 24px; }
+
+h2, .h2 {
+  font-size: 22px; }
+
+h3, .h3 {
+  font-size: 20px; }
+
+h4, .h4 {
+  font-size: 18px; }
+
+h5, .h5 {
+  font-size: 16px; }
+
+h6, .h6 {
+  font-size: 14px; }
+
+b, strong, dt, th {
+    font-family: $jobhunt-title-font-family;
+    color: $treehouse-title-color;
+}
+
+pre {
+    border-radius: 5px;
+    overflow: auto;
+    padding: 10px 20px;
+    margin: 20px 0;
+    background: #f6f9fa;
+    line-height: 1.4;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
+    color: $treehouse-title-color;
+}

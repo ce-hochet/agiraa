@@ -1,0 +1,165 @@
+.post-type-archive-company.company-type-v1 {
+    .site-content-page-header,
+    .site-content {
+        margin-bottom: 0;
+    }
+
+    .content-area,
+    .widget-area {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+.right-sidebar {
+    &.post-type-archive-resume .site-content-inner,
+    &.post-type-archive-job_listing .site-content-inner,
+    &.post-type-archive-company .site-content-inner {
+        > .widget-area {
+            @include media-breakpoint-up(lg) {
+                padding-left: 45px;
+            }
+        }
+    }
+
+    &.resume-type-v3.post-type-archive-resume .site-content-inner > .widget-area {
+        @include media-breakpoint-up(lg) {
+            padding-left: 15px;
+        }
+    }
+
+    &.post-type-archive-company.company-type-v1 .site-content-inner {
+        @include media-breakpoint-up(lg) {
+            > .widget-area {
+                border-left: 1px solid #e8ecec;
+                margin-left: -15px;
+            }
+
+            > .content-area {
+                margin-right: 15px;
+                padding-right: 0;
+            }
+        }
+    }
+
+    .site-content-inner {
+        @include media-breakpoint-up(lg) {
+            .content-area {
+                order: 1;
+            }
+
+            .widget-area {
+                order: 2;
+            }
+        }
+    }
+}
+
+.left-sidebar {
+    &.post-type-archive-resume .site-content-inner,
+    &.post-type-archive-job_listing .site-content-inner,
+    &.post-type-archive-company .site-content-inner {
+        > .widget-area {
+            @include media-breakpoint-up(lg) {
+                padding-right: 45px;
+            }
+        }
+    }
+
+    &.resume-type-v3.post-type-archive-resume .site-content-inner > .widget-area {
+        @include media-breakpoint-up(lg) {
+            padding-right: 15px;
+        }
+    }
+
+    &.post-type-archive-company.company-type-v1 .site-content-inner {
+        @include media-breakpoint-up(lg) {
+            > .widget-area {
+                border-right: 1px solid #e8ecec;
+                margin-right: -15px;
+            }
+
+            > .content-area {
+                margin-left: 15px;
+                padding-left: 0;
+            }
+        }
+    }
+
+    .site-content-inner {
+        @include media-breakpoint-up(lg) {
+            .content-area {
+                order: 2;
+            }
+
+            .widget-area {
+                order: 1;
+            }
+        }
+    }
+}
+
+.company-type-v2.left-sidebar.post-type-archive-company .site-content-inner > .widget-area,
+.company-type-v3.left-sidebar.post-type-archive-company .site-content-inner > .widget-area,
+.type-list-classic.left-sidebar.post-type-archive-job_listing .site-content-inner > .widget-area {
+    padding-right: 15px;
+}
+
+.company-type-v2.right-sidebar.post-type-archive-company .site-content-inner > .widget-area,
+.company-type-v3.right-sidebar.post-type-archive-company .site-content-inner > .widget-area,
+.type-list-classic.right-sidebar.post-type-archive-job_listing .site-content-inner > .widget-area {
+    padding-left: 15px;
+}
+
+.post-type-archive-job_listing.type-list,
+.post-type-archive-resume.resume-type-v1,
+.post-type-archive-resume.resume-type-v2 {
+    .site-content-page-header,
+    .site-content {
+        margin-bottom: 0;
+    }
+
+    #primary,
+    #secondary {
+        padding-top: 32px;
+    }
+
+    #secondary {
+        padding-bottom: 60px;
+    }
+}
+
+.post-type-archive-job_listing.type-list.left-sidebar,
+.post-type-archive-resume.resume-type-v1.left-sidebar,
+.post-type-archive-resume.resume-type-v2.left-sidebar {
+    .content-area {
+        @include media-breakpoint-up(lg) {
+            border-left: 1px solid $ed;
+            padding-left: 0;
+        }
+    }
+}
+
+.post-type-archive-job_listing.type-list.right-sidebar,
+.post-type-archive-resume.resume-type-v1.right-sidebar,
+.post-type-archive-resume.resume-type-v2.right-sidebar {
+    .content-area {
+        @include media-breakpoint-up(lg) {
+            border-right: 1px solid $ed;
+            padding-right: 0;
+        }
+    }
+}
+
+.company-category .categories li,
+.single-job-listing-overview__detail-content--value li,
+.single-resume-overview__detail-content--value li {
+    &::after {
+        content: ",";
+        margin-right: 4px;
+    }
+
+    &:last-child::after {
+        display: none;
+    }
+}

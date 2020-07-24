@@ -1,0 +1,58 @@
+#job_package_selection,
+#wpjmcl_submit_claim {
+    &.job-manager-form {
+        margin-left: 0;
+        margin-right: 0;
+
+        > * {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .job_listing_packages_title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 22px 30px;
+
+        input[type="submit"] {
+            order: 1;
+        }
+
+        @include media-breakpoint-down(sm) {
+            flex-direction: column;
+
+            input[type="submit"] {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .job_listing_packages {
+        border-width: 1px;
+        
+        .package-section {
+            background-color: #f9f9f9;
+            padding: 20px 32px;
+        }
+
+        .job-package,
+        .user-job-package,
+        .resume-package,
+        .user-resume-package {
+            position: relative;
+            padding: 20px 55px;
+        }
+
+        input[type="radio"] {
+            position: absolute;
+            left: 32px;
+            top: 25px;
+        }
+    }
+
+    .resume_packages {
+        border-width: 1px;
+    }
+}

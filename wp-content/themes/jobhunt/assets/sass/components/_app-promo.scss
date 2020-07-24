@@ -1,0 +1,115 @@
+.app-promo-section {
+    @include stretch-full-width;
+}
+
+.app-promo-section-inner {
+    @include make-row;
+    align-items: center;
+    padding: 50px 15px 0;
+
+    @include media-breakpoint-up(md) {
+        height: 500px;
+        padding: 0;
+    }
+
+    .app-promo-details,
+    .app-promo-banner {
+        @include make-col-ready;
+    }
+
+    .app-promo-details {
+        margin-bottom: 30px;
+
+        @include media-breakpoint-up(md) {
+            @include make-col(7);
+            margin-bottom: 0;
+        }
+    }
+
+    .app-promo-banner {
+        @include media-breakpoint-up(md) {
+            @include make-col(5);
+            align-self: flex-end;
+        }
+    }
+
+    .section-header {
+        text-align: left;
+
+        .section-title,
+        .section-sub-title {
+            color: $white;
+        }
+    }
+}
+
+.app-promo-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin-bottom: 0;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    @include media-breakpoint-up(md) {
+        flex-direction: row;
+    }
+}
+
+.app-promo-link {
+    width: 100%;
+
+    @include media-breakpoint-up(md) {
+        width: auto;
+    }
+
+    a {
+        @include make-new-button();
+        @include button-size( 10px, 19px, 14px, $btn-line-height, 8px );
+        @include button-outline-variant( $white, $td );
+        display: flex;
+        align-items: center;
+        text-align: left;
+        min-width: 230px;
+        height: 100%;
+
+        .app-sub-title,
+        .app-title {
+            font-size: 14px;
+            font-weight: 500;
+            color: $white;
+        }
+
+        @include hover-focus {
+            .app-sub-title,
+            .app-title {
+                color: $td;
+            }
+        }
+    }
+
+    .app-link-info {
+        margin-left: 20px;
+    }
+
+    .app-title {
+        margin: 0;
+    }
+
+    i {
+        font-size: 34px;
+    }
+
+    .fa-apple {
+        font-size: 40px;
+    }
+
+    & + .app-promo-link {
+        margin-top: 15px;
+
+        @include media-breakpoint-up(lg) {
+            margin-left: 30px;
+            margin-top: 0;
+        }
+    }
+}

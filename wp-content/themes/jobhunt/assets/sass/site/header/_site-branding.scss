@@ -1,0 +1,30 @@
+.site-branding { 
+    .custom-logo-link {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .site-title {
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 1.2;
+        margin: 0;
+    }
+
+    .site-description {
+        font-size: 13px;
+        line-height: 1;
+        margin-bottom: 0;
+        display: none;
+    }
+}
+
+.header-bg-default {
+    .site-branding {
+        .custom-logo-link,
+        .site-title {
+            color: #fff;
+        }
+    }
+}

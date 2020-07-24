@@ -1,0 +1,43 @@
+p.job-manager-single-alert-link {
+    display: inline-block;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    @include media-breakpoint-only(md) {
+        padding: 0 15px;
+    }
+
+    a {
+        @include button-size( $btn-padding-y-lg, $btn-padding-x-lg, 14px, $btn-line-height-lg, $btn-border-radius-lg );
+        @include button-outline-variant( $treehouse-body-color );
+        border: 2px solid;
+        text-align: center;
+        display: block;
+        width: 100%;
+
+        &:before {
+            content: none;
+        }
+    }
+}
+
+.job-single-type-v2 {
+    p.job-manager-single-alert-link {
+        a {
+            width: fit-content;
+            min-width: 250px;
+            margin: auto;
+        }
+    }
+}
+
+#job-manager-alerts {
+    td,th {
+        padding: .5em 1em;
+    }
+}
+
+.job-manager-applications-applied-notice {
+    margin-top: 15px;
+}

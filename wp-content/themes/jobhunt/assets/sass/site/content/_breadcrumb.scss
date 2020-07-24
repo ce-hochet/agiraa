@@ -1,0 +1,9 @@
+.woocommerce-breadcrumb {
+    a {
+        border-bottom: 1px solid $treehouse-nav-link-color;
+
+        @include hover-focus() {
+            border-bottom-color: $treehouse-nav-link-focus-color;
+        }
+    }
+}

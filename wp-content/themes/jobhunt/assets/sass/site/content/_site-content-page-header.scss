@@ -1,0 +1,131 @@
+.site-content-page-header {
+    background-color: $page-header-bg;
+    border-bottom: 1px solid #e9f0f3;
+    margin-bottom: 40px;
+    color: $treehouse-nav-link-color;
+
+    a {
+        color: $treehouse-nav-link-color;
+
+        @include hover-focus() {
+            color: $treehouse-nav-link-focus-color;
+        }
+    }
+}
+
+.site-content-page-header-inner {
+    @include make-container();
+    @include make-container-max-widths( $jobhunt-container-max-widths );
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.site-content-page-title {
+    font-size: 30px;
+    margin: 0 0 0.5rem 0;
+}
+
+.page-title-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media-breakpoint-down(sm) {
+        flex-direction: column;
+
+        .page-title-area-inner {
+            text-align: center;
+        }
+    }
+}
+
+.header-transparent + .site-content-page-header {
+    margin-top: -70px;
+    padding-top: 70px;
+
+    @include media-breakpoint-down(lg) {
+        margin-top: -90px;
+    }
+}
+
+.header-bg-default + .site-content-page-header {
+    position: relative;
+    color: $white;
+
+    a {
+        color: $white;
+
+        @include hover-focus() {
+            color: $white;
+        }
+    }
+
+    .page-title {
+        color: $white;
+    }
+
+    .page-header-inner {
+        z-index: 1;
+    }
+
+    &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0.8;
+        content: '';
+        z-index: 0;
+    }
+}
+
+body:not(.page-template-template-homepage-v1):not(.page-template-template-homepage-v2):not(.page-template-template-homepage-v3):not(.page-template-template-homepage-v4):not(.page-template-template-homepage-v5) {
+    .header-bg-default + .site-content-page-header {
+        a {
+            border-bottom-color: $white;
+        }
+
+        .site-content-page-title {
+            color: $white;
+        }
+
+        .site-content-page-header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+            min-height: 280px;
+        }
+
+        .page-title-area {
+            flex-direction: column;
+        }
+    }
+}
+
+.page-template-template-homepage-v1 .header-bg-default + .site-content-page-header:after {
+    background-image: linear-gradient(45deg,  rgba(139,145,221,1) 0%,rgba(16,25,93,1) 71%,rgba(16,25,93,1) 100%) ;
+}
+
+.page-template-template-homepage-v1:not(.wpjm-activated),
+.page-template-template-homepage-v2:not(.wpjm-activated),
+.page-template-template-homepage-v3:not(.wpjm-activated),
+.page-template-template-homepage-v4:not(.wpjm-activated),
+.page-template-template-homepage-v5:not(.wpjm-activated) {
+    .site-content-page-header-inner {
+        position: relative;
+        z-index: 1;
+        color: $white;
+
+        .page-title-area {
+            width: 100%;
+        }
+
+        .site-content-page-title, a {
+            color: $white;
+        }
+    }
+}
+

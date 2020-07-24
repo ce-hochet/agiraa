@@ -1,0 +1,101 @@
+.woocommerce-checkout-review-order-table {
+    thead, tbody, tfoot {
+        tr {
+            align-items: center;
+
+            td {
+                @include media-breakpoint-up(md) {
+                    padding: 0.5em 0.75em;
+                }
+            }
+        }
+    }
+
+    tbody {
+        padding: 0;
+        padding-top: 10px;
+    }
+
+    tfoot {
+        tr {
+            justify-content: space-between;
+
+            th {
+                border-width: 0;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .woocommerce-Price-amount {
+        margin: 0;
+    }
+
+    .order-total {
+        margin-top: 10px;
+        border-top: 1px solid #dee2e6;
+        border-bottom: 1px solid #dee2e6;
+    }
+}
+
+.woocommerce-order-pay {
+    tfoot {
+        tr {
+            justify-content: space-between;
+
+            &:last-child {
+                border-top: 1px solid #dee2e6;
+                border-bottom: 1px solid #dee2e6;
+                align-items: center;
+
+                .product-total {
+                    font-family: $font-family-quicksand;
+                    color: $treehouse-title-color;
+                    font-weight: 700;
+                }
+            }
+
+            th {
+                border-width: 0;
+                font-size: 14px;
+            }
+        }
+    }
+
+
+    @include media-breakpoint-down(sm) {
+        .shop_table .product-name {
+            flex: 1;
+            max-width: 50%;
+        }
+
+        #order_review .shop_table .product-subtotal {
+            padding-right: 0;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .shop_table .product-subtotal {
+            max-width: max-content;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        form#order_review {
+            @include make-row();
+
+            > .shop_table,
+            > #payment {
+                @include make-col-ready();
+            }
+
+            > .shop_table {
+                @include make-col(7);
+            }
+
+            > #payment {
+                @include make-col(5);
+            }
+        }
+    }
+}

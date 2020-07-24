@@ -1,0 +1,1351 @@
+.single-resume {
+    .site-content-page-header {
+        display: none;
+    }
+}
+
+.single-resume-head {
+    @include stretch-full-width;
+    margin-bottom: 30px;
+    margin-top: -83px;
+    padding-top: 210px;
+
+    @include media-breakpoint-up(md) {
+        margin-top: -71px;
+    }
+
+    &::before,
+    &::after {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        content: '';
+        z-index: 0;
+    }
+
+    &::before {
+        top: 0;
+        opacity: 0.8;
+    }
+
+    &::after {
+        top: 300px;
+        background-color: $white;
+    }
+
+    @include media-breakpoint-down(md) {
+       padding-top: 140px;
+
+       &::after {
+            top: 230px;
+        }
+    }
+}
+
+.single-resume-inner {
+    .single-resume-head-inner {
+        @include make-row;
+        @include make-container();
+        @include make-container-max-widths();
+        z-index: 1;
+        position: relative;
+        padding: 0;
+
+        > div {
+            @include make-col(12);
+            @include make-col-ready;
+        }
+
+        .single-candidate-details {
+            text-align: center;
+        }
+
+        ul {
+            @include list-unstyled;
+        }
+
+        .single-candidate-details {
+            order: 1;
+        }
+
+        .single-candidate-head-left {
+            order: 2;
+        }
+
+        .single-candidate-head-right {
+            order: 3;
+        }
+
+        @include media-breakpoint-up(xl) {
+            .single-candidate-head-left,
+            .single-candidate-head-right,
+            .single-candidate-details {
+                @include make-col(4);
+            }
+
+            .single-candidate-head-left {
+                padding-left: 0;
+                order: 1
+            }
+
+            .single-candidate-head-right {
+                padding-right: 0;
+            }
+        }
+    }
+
+    .single-resume__sidebar-area {
+        .contact-candidate {
+            padding-right: 0;
+        }
+
+        * + .contact-candidate {
+            margin-top: 34px;
+        }
+
+        .contact-form-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: $td;
+        }
+
+        .contact-candidate-inner {
+            padding: 30px 30px 20px;
+            border: 2px solid $e6;
+            border-radius: 8px;
+
+            label {
+                display: inline-block;
+            }
+
+            input {
+                margin-bottom: 6px;
+                width: 100%;
+            }
+
+            .wpcf7-form-control:not(.wpcf7-submit) {
+                background-color: $white;
+                width: 100%;
+                max-width: 100%;
+            }
+
+            div.wpcf7 .ajax-loader {
+                position: absolute;
+            }
+
+            span.wpcf7-not-valid-tip {
+                font-size: 12px;
+            }
+
+            div.wpcf7-response-output {
+                margin: 0;
+            }
+        }
+    }
+
+    .single-candidate-details {
+        .candidate-image {
+            width: fit-content;
+            margin: auto;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            padding: 15px;
+
+            img {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                object-fit: cover;
+
+                @include media-breakpoint-up(md) {
+                    width: 145px;
+                    height: 145px;
+                }
+            }
+        }
+
+        .candidate-name {
+            font-size: 20px;
+        }
+
+        .job-title {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .candidate-e-mail,
+        .resume-links {
+            font-size: 13px;
+            margin-bottom: 5px;
+            color: $e8;
+            line-height: 2;
+
+            i {
+                font-size: 16px;
+                padding-right: 4px;
+            }
+
+            a {
+                color: $e8;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: fit-content;
+                margin: auto;
+            }
+        }
+
+        .resume-links {
+            a {
+                &::before {
+                    @include la-font( "\f0c1" );
+                    font-size: 16px;
+                    padding-right: 4px;
+                }
+            }
+        }
+
+        @include media-breakpoint-up(xl) {
+            .job-title,
+            .candidate-e-mail,
+            .resume-links {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .single-candidate-head-left,
+    .single-candidate-head-right {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .single-candidate-head-right {
+        padding: 0 10px 15px;
+
+        .location,
+        .published-date {
+            display: flex;
+            align-items: center;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+
+        .location a,
+        .location,
+        .published-date {
+            font-size: 13px;
+            color: $e8;
+
+            i {
+                font-size: 20px;
+                padding-right: 6px;
+            }
+        }
+
+        @include media-breakpoint-up(xl) {
+            justify-content: flex-end;
+            padding: 44px 15px 55px;
+
+            .location,
+            .published-date {
+                align-self: baseline;
+                margin-bottom: 0;
+            }
+
+            .location {
+                padding-right: 28px;
+            }
+        }
+
+        @include media-breakpoint-up(xl) {
+            .location a,
+            .location,
+            .published-date {
+                color: $white;
+            }
+        }
+    }
+
+    .single-candidate-head-left {
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0 30px;
+
+        .categories {
+            display: flex;
+            font-size: 13px;
+            flex-wrap: wrap;
+            margin-bottom: 0;
+
+            li {
+                height: 30px;
+                margin-bottom: 22px;
+                padding-right: 20px;
+
+                a {
+                    @include make-new-button(500);
+                    @include button-size( 0px, 16px, 13px, 1, 4px );
+                    height: inherit;
+                    display: flex;
+                    align-items: center;
+                }
+
+                &:nth-child(n+4) {
+                    a {
+                        @include button-outline-variant( $z7, $white );
+                    }
+                }
+            }
+        }
+
+        @include media-breakpoint-up(xl) {
+            padding: 44px 15px 40px;
+        }
+    }
+}
+
+.single-resume__overview {
+    .single-resume__widget--title {
+        font-size: 16px;
+        font-weight: 500;
+        color: $td;
+    }
+
+    .single-resume__widget--content {
+        @include list-unstyled;
+
+        > li {
+            .single-resume-overview__detail {
+                display: flex;
+            }
+
+            & + li {
+                margin-top: 30px;
+            }
+
+            h6 {
+                font-size: 14px;
+                color: $td;
+                margin: 4px 0;
+            }
+
+            i {
+                font-size: 30px;
+                margin-right: 16px;
+            }
+
+            ul {
+                @include list-unstyled;
+                margin-bottom: 0;
+            }
+
+            .single-resume-overview__detail-content--value {
+                color: $e8;
+
+                li {
+                    display: inline-block;
+                }
+
+                a {
+                    color: $e8;
+                }
+            }
+        }
+    }
+}
+
+.single-resume-content {
+    @include make-row;
+
+    .navbar-links,
+    .job-overview-inner ul {
+        @include list-unstyled;
+    }
+
+    .single-resume-content-navbar,
+    .single-resume-content_inner {
+        @include make-col-ready;
+    }
+
+    @include media-breakpoint-up(lg) {
+        .single-resume-content_inner {
+            @include make-row;
+            padding-right: 0;
+
+            .single-resume__content-area {
+                @include make-col(8);
+                @include make-col-ready;
+            }
+
+            .single-resume__sidebar-area {
+                @include make-col(4);
+                @include make-col-ready;
+                padding-right: 0;
+            }
+        }
+    }
+
+    .single-resume__content-area {
+        h2 {
+            margin-top: 0;
+            font-size: 20px;
+            color: $td;
+            margin-bottom: 16px;
+        }
+
+        p {
+            color: $e8;
+            font-size: 14px;
+        }
+
+        .resume-manager-education {
+            dt {
+                &::before {
+                    @include la-font( "\f19d" );
+                    font-size: 48px;
+                    left: 0;
+                    top: 6px;
+                }
+            }
+
+            dt,dd {
+                border-width: 0;
+                padding-left: 68px;
+            }
+        }
+
+        .resume-manager-experience,
+        .resume-manager-awards {
+            dt {
+                position: inherit;
+                &::before {
+                    @include fa-font( "\f111", 400 );
+                    font-size: 17px;
+                    left: 28px;
+                    box-shadow: 0px 0px 0px 2px rgba(255,255,255,1);
+                    background-color: $white;
+                }
+            }
+
+            dt,dd {
+                border-left: 2px solid $e6;
+                border-right-width: 0;
+                padding-left: 48px;
+                margin-left: 20px;
+                margin-bottom: 0;
+                overflow: hidden;
+            }
+
+            dd:nth-last-child(1) {
+                border-width: 0;
+            }
+        }
+
+        .resume-manager-experience > dt:nth-last-child(2),
+        .resume-manager-awards > dt:nth-last-child(2){
+            border-width: 0;
+        }
+
+        .resume-manager-education,
+        .resume-manager-experience,
+        .resume-manager-awards {
+            border: 0;
+            margin: 0;
+            padding: 0;
+
+            dt {
+                &::before {
+                    position: absolute;
+                }
+            }
+
+            dt,dd {
+                padding-top: 0;
+            }
+
+            .timeline-title,
+            h3 {
+                margin: 0;
+
+                &::before {
+                    display: none;
+                }
+            }
+
+            .location,
+            .job_title,
+            .award-title {
+                font-size: 16px;
+                padding-right: 6px;
+            }
+
+            .qualification,.date,.employer {
+                color: $e8;
+                font-size: 14px;
+                font-weight: 500;
+            }
+
+            .employer {
+                font-size: 16px;
+            }
+
+            dt + dd p{
+                margin-bottom: 20px;
+            }
+        }
+
+        .candidate-skills {
+            //margin-bottom: 30px;
+        }
+
+        .candidate-experience,
+        .candidate-qualification {
+            margin-bottom: 20px;
+        }
+
+        .resume-manager-skills {
+            display: flex;
+            flex-wrap: wrap;
+
+            li {
+                width: fit-content;
+                padding-left: 0;
+                padding-right: 25px;
+
+                &::before {
+                    @include la-font( "\f0eb" );
+                    padding-right: 6px;
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .candidate-video {
+            @include media-breakpoint-down(sm) {
+                iframe {
+                    max-height: 200px;
+                }
+            }
+        }
+    }
+}
+
+.resume-single-type-v1 {
+    .single-resume-inner {
+        .single-candidate-head-left {
+            .categories {
+                justify-content: center;
+
+                @include media-breakpoint-up(xl) {
+                    justify-content: flex-start;
+                }
+            }
+        }
+
+        .social-network-pages {
+            font-size: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 5px;
+
+            a {
+                @include make-new-button(500);
+                @include button-size( 0px, 0px, 16px, 1, 50px );
+                width: 30px;
+                height: 30px;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 7px;
+                margin-right: 7px;
+
+                &.candidate-twitter {
+                    @include button-outline-variant( $twitter, $white );
+                }
+
+                &.candidate-facebook {
+                    @include button-outline-variant( $facebook, $white );
+                }
+
+                &.candidate-google-plus {
+                    @include button-outline-variant( $google, $white );
+                }
+
+                &.candidate-linkedin {
+                    @include button-outline-variant( $linkedin, $white );
+                }
+
+                &.candidate-instagram {
+                    @include button-outline-variant( $instagram, $white );
+                }
+
+                &.candidate-youtube {
+                    @include button-outline-variant( $youtube, $white );
+                }
+
+                &.candidate-behance {
+                    @include button-outline-variant( $behance, $white );
+                }
+
+                &.candidate-pinterest {
+                    @include button-outline-variant( $pinterest, $white );
+                }
+
+                &.candidate-github {
+                    @include button-outline-variant( $github, $white );
+                }
+            }
+
+            @include media-breakpoint-up(xl) {
+                justify-content: flex-start;
+                margin-bottom: 0;
+
+                a {
+                    width: 45px;
+                    height: 45px;
+                    margin-bottom: 16px;
+                    margin-right: 16px;
+                }
+            }
+        }
+
+         @include media-breakpoint-up(xl) {
+            .single-resume-head-inner > div.single-candidate-head-left {
+                padding-left: 15px;
+            }
+        }
+    }
+
+    .single-candidate-head-left {
+        .categories {
+            margin-bottom: 16px;
+
+            li a {
+                color: $e8;
+                background-color: $ed;
+
+                @include hover-focus {
+                    color: $white;
+                }
+            }
+        }
+
+        .social-network-pages {
+            margin-bottom: 23px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            .categories {
+                margin-bottom: 0;
+            }
+
+            .social-network-pages {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .single-candidate-head-right {
+        align-items: center;
+        flex-direction: column;
+
+        .candidate-location-published {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .candidate-resume {
+            align-self: center;
+
+            a {
+                @include make-new-button(700);
+                @include button-size( 8px, 41px, 15px, 2, 4px );
+                display: flex;
+                align-items: center;
+
+                i {
+                    padding-left: 8px;
+                    font-size: 20px;
+                    color: #1da1f2;
+                }
+
+                &:hover {
+                    i {
+                        color: $white;
+                    }
+                }
+
+                &:focus {
+                    i {
+                        color: inherit;
+                    }
+                }
+
+                &:active {
+                    color: $white !important;
+                }
+            }
+        }
+
+        @include media-breakpoint-up(xl) {
+            flex-direction: row;
+            padding: 48px 15px 55px;
+
+            .candidate-location-published {
+                flex-direction: row;
+                align-items: normal;
+                align-self: flex-start;
+                margin-bottom: 0;
+            }
+
+            .location {
+                margin-bottom: 0;
+            }
+
+            .candidate-resume {
+                align-self: flex-end;
+            }
+        }
+    }
+
+    .single-candidate-details {
+        margin-bottom: 30px;
+
+        @include media-breakpoint-up(xl) {
+            margin-bottom: 0;
+        }
+    }
+
+    .single-resume-content-navbar {
+        margin-bottom: 30px;
+
+        ul {
+            border: 2px solid $e6;
+            margin-bottom: 0;
+            display: flex;
+            height: 60px;
+            align-items: center;
+            border-radius: 8px;
+            flex-wrap: nowrap;
+            overflow-x: scroll;
+            overflow-y: hidden;
+
+            li {
+                height: inherit;
+
+                a {
+                    height: inherit;
+                    -moz-height: 58px;
+                    display: flex;
+                    align-items: center;
+                    font-size: 13px;
+                    color: $e8;
+                    padding: 2px 10px 0;
+                    width: max-content;
+                    border-bottom: 2px solid transparent;
+
+                    i {
+                        display: none;
+                    }
+
+                    &.active {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        @include media-breakpoint-up(md) {
+            ul {
+                justify-content: center;
+
+                li {
+                    text-align: center;
+
+                    a {
+                        width: fit-content;
+                    }
+                }
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            ul {
+                overflow-x: inherit;
+                overflow-y: inherit;
+
+                li a.active{
+                    font-weight: 400;
+                }
+            }
+        }
+
+        @include media-breakpoint-up(xl) {
+            margin-bottom: 30px;
+
+            ul {
+                li {
+                    a {
+                        font-size: 15px;
+                    }
+
+                    & + li {
+                        margin-left: 22px;
+                    }
+                }
+            }
+        }
+    }
+
+    .single-resume-content-navbar-inner {
+        &.stuck {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: $white;
+            z-index: 2;
+            left: 0;
+
+            ul {
+                @include stretch-full-width;
+                border-width: 2px 0;
+                border-top-color: transparent;
+                border-radius: 0;
+                background-color: $white;
+            }
+        }
+    }
+
+    .single-resume__widget--content {
+        padding: 24px 20px;
+        border: 2px solid $e6;
+        border-radius: 8px;
+    }
+
+    @include media-breakpoint-only(md) {
+        .single-resume-content_inner {
+            .single-resume__sidebar-area {
+                @include make-row();
+
+                .single-resume__overview,
+                .contact-candidate {
+                    @include make-col-ready();
+                    @include make-col(6);
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    &.admin-bar .single-resume-content-navbar-inner.stuck {
+        top: 32px;
+    }
+}
+
+.resume-single-type-v2 {
+    .single-resume-inner {
+        .single-candidate-head-right {
+            flex-direction: column;
+            align-items: center;
+
+            @include media-breakpoint-up(xl) {
+                padding: 35px 15px 55px;
+                flex-direction: row;
+                align-items: baseline;
+                flex-wrap: nowrap;
+            }
+        }
+
+        .single-candidate-head-left {
+            @include media-breakpoint-up(xl) {
+                padding: 57px 15px 55px;
+            }
+        }
+
+        .social-network-pages {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 30px;
+
+            a {
+                font-size: 15px;
+                color: $e8;
+                width: 32px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &.candidate-twitter {
+                    @include hover-focus {
+                        color:$twitter;
+                    }
+                }
+
+                &.candidate-facebook {
+                    @include hover-focus {
+                        color:$facebook;
+                    }
+                }
+
+                &.candidate-google-plus {
+                    @include hover-focus {
+                        color:$google;
+                    }
+                }
+
+                &.candidate-linkedin {
+                    @include hover-focus {
+                        color:$linkedin;
+                    }
+                }
+
+                &.candidate-instagram {
+                    @include hover-focus {
+                        color:$instagram;
+                    }
+                }
+
+                &.candidate-youtube {
+                    @include hover-focus {
+                        color:$youtube;
+                    }
+                }
+
+                &.candidate-behance {
+                    @include hover-focus {
+                        color:$behance;
+                    }
+                }
+
+                &.candidate-pinterest {
+                    @include hover-focus {
+                        color:$pinterest;
+                    }
+                }
+
+                &.candidate-github {
+                    @include hover-focus {
+                        color:$github;
+                    }
+                }
+            }
+
+            @include media-breakpoint-up(xl) {
+                justify-content: flex-start;
+                margin-bottom: 0;
+
+                a {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    .single-candidate-details {
+        .candidate-info {
+            margin-bottom: 15px;
+        }
+
+        .published-date {
+            font-size: 13px;
+            color: $e8;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            i {
+                font-size: 16px;
+                padding-right: 6px;
+            }
+        }
+
+        .categories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            li {
+                margin-bottom: 14px;
+                margin-right: 20px;
+
+                a {
+                    font-size: 13px;
+                    color: $e8;
+                    padding: 4px 18px;
+                    background-color: $ed;
+                    border-radius: 4px;
+                    display: flex;
+
+                    @include hover-focus {
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        @include media-breakpoint-up(xl) {
+            .candidate-info {
+                margin-bottom: 0;
+            }
+
+            .published-date {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .single-candidate-head-right {
+        .location {
+            margin-bottom: 20px;
+        }
+
+        .candidate-resume {
+            a {
+                @include make-new-button(700);
+                @include button-size( 4.5px, 38px, 14px, 2, 4px );
+                display: flex;
+                align-items: center;
+
+                i {
+                    padding-left: 8px;
+                    font-size: 20px;
+                }
+            }
+        }
+
+        @include media-breakpoint-up(xl) {
+            .location {
+               margin-bottom: 0;
+            }
+        }
+    }
+
+    .single-resume-content {
+        .single-resume-content_inner {
+            display: flex;
+            flex-wrap: wrap;
+
+            .single-resume__sidebar-area,
+            .single-resume__content-area {
+                @include make-col(12);
+            }
+
+            .single-resume__content-area {
+                order: 2;
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            .single-resume-content-navbar {
+                @include make-col(3);
+                order: 2;
+            }
+
+            .single-resume-content_inner {
+                @include make-col(9);
+            }
+        }
+    }
+
+    .site-content {
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 0;
+        }
+    }
+
+    .site-footer {
+        position: relative;
+        z-index: 2;
+    }
+
+    .single-resume-content_inner {
+        padding: 0;
+        margin-right: 0;
+    }
+
+    .single-resume-content {
+        margin: 0;
+
+        @include media-breakpoint-up(lg) {
+            border-top: 1px solid $ed;
+        }
+    }
+
+
+    .single-resume__content-area {
+        @include media-breakpoint-up(lg) {
+            padding-right: 30px;
+            padding-bottom: 30px;
+        }
+
+        .resume-manager-experience,
+        .resume-manager-awards {
+            dt,dd {
+                margin-left: 35px;
+                padding-left: 33px;
+
+                @include media-breakpoint-up(lg) {
+                    margin-left: 20px;
+                    padding-left: 48px;
+                }
+            }
+        }
+    }
+
+    .single-resume-content-navbar {
+        padding: 0;
+
+        @include media-breakpoint-up(lg) {
+            padding-left: 15px;
+            border-left: 1px solid $ed;
+        }
+
+        .navbar-links {
+            flex-wrap: nowrap;
+            overflow-x: scroll;
+
+            li {
+                width: max-content;
+                padding: 15px 0;
+
+                i {
+                    font-size: 26px;
+                    padding-right: 15px;
+                }
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    width: max-content;
+                    color: $e8;
+                    font-size: 15px;
+                }
+            }
+
+            @include media-breakpoint-up(lg) {
+                padding: 28px 0 0 8px;
+                flex-direction: column;
+                overflow-x: inherit;
+
+                li {
+                    padding: 0;
+
+                    & + li {
+                        margin-top: 24px;
+                    }
+
+                    a {
+                        width: fit-content;
+                    }
+                }
+            }
+        }
+
+        .contact-candidate-email {
+            margin-top: 0;
+            margin-bottom: 30px;
+
+            a {
+                @include make-new-button(700);
+                @include button-size( 9px, 18px, 14px, 2, 4px );
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: fit-content;
+                margin: auto;
+
+                i {
+                    font-size: 22px;
+                    margin-right: 10px;
+                }
+
+                @include media-breakpoint-only(lg) {
+                    font-size: 13px;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    margin-top: 30px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .single-resume-content-navbar-inner {
+            display: flex;
+            flex-direction: column;
+
+            .navbar-links {
+                order: 1;
+            }
+
+            &.stuck {
+                position: fixed;
+                top: 0;
+                z-index: 1;
+                left: 0;
+                width: 100%;
+                background-color: $white;
+                border-bottom: 2px solid $ed;
+
+                .contact-candidate-email,
+                .job-manager-form.wp-job-manager-bookmarks-form {
+                    display: none;
+                }
+            }
+
+            @include media-breakpoint-up(lg) {
+                display: block;
+
+                &.stuck {
+                    left: auto;
+                    width: auto;
+                    border-bottom: none;
+
+                    .contact-candidate-email {
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+
+    .single-resume__sidebar-area {
+        padding-right: 0;
+    }
+
+    .single-resume__overview {
+        margin-bottom: 26px;
+
+        @include media-breakpoint-up(lg) {
+            border-bottom: 1px solid $ed;
+        }
+
+        .single-resume__widget--content {
+            padding: 24px 20px;
+
+            @include media-breakpoint-up(md) {
+                @include make-row;
+                padding: 24px 0 0;
+                margin-bottom: 0;
+
+                > li {
+                    @include make-col-ready;
+                    @include make-col(4);
+                    margin-bottom: 24px;
+
+                    & + li {
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            @include media-breakpoint-down(md) {
+                border: 2px solid $e6;
+                border-radius: 8px;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+
+        .single-resume__widget--title {
+            font-size: 20px;
+            font-weight: 600;
+
+            @include media-breakpoint-up(lg) {
+                display: none;
+            }
+        }
+    }
+}
+
+#resume_preview {
+    .resume_preview_title,
+    .job_listing_preview_title {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: transparent;
+        flex-direction: column;
+        padding: 10px 0;
+
+        #resume_preview_submit_button {
+            margin-bottom: 15px;
+        }
+
+        @include media-breakpoint-up(md) {
+            justify-content: space-between;
+            flex-direction: row;
+            top: 110px;
+            position: absolute;
+
+            #resume_preview_submit_button {
+                order: 3;
+                margin-bottom: 0;
+            }
+        }
+
+        h2 {
+            color: $white;
+            order: -1;
+            margin-bottom: 14px;
+
+            @include media-breakpoint-up(md){
+                order: 1;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .single-resume-head {
+        margin-top: -217px;
+        padding-top: 240px;
+
+        &::after {
+            top: 310px;
+        }
+
+        @include media-breakpoint-up(md) {
+            margin-top: -71px;
+            padding-top: 210px;
+
+            &::after {
+                top: 300px;
+            }
+        }
+    }
+
+    input.button {
+        border-width: 0;
+        margin: 0;
+    }
+
+    .resume_preview.single-resume {
+        border-width: 0;
+        padding-bottom: 0;
+
+        h1 {
+            display: none;
+        }
+    }
+}
+
+.jobhunt-sticky-header-enabled.resume-single-type-v2 .single-resume-content-navbar .single-resume-content-navbar-inner.stuck,
+.jobhunt-sticky-header-enabled.resume-single-type-v1 .single-resume-content-navbar-inner.stuck {
+    top: 70px;
+}
+
+.admin-bar.jobhunt-sticky-header-enabled.resume-single-type-v2 .single-resume-content-navbar .single-resume-content-navbar-inner.stuck,
+.admin-bar.jobhunt-sticky-header-enabled.resume-single-type-v1 .single-resume-content-navbar-inner.stuck {
+    top: 102px;
+}

@@ -1,0 +1,1181 @@
+.job-search-block,
+.resume-search-block {
+    position: relative;
+    z-index: 1;
+
+    .section-title {
+        @include media-breakpoint-down(sm) {
+            font-size: 26px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            font-size: 50px;
+        }
+    }
+
+    .section-sub-title {
+        @include media-breakpoint-down(sm) {
+            font-size: 14px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            font-size: 18px;
+        }
+    }
+
+    .section-title,
+    .section-sub-title {
+        color: $white;
+    }
+
+    input[type="text"],
+    #search_category {
+        border-width: 0;
+    }
+
+    .browse-jobs-by-category,
+    .browse-resumes-by-category {
+        margin-top: 22px;
+
+        a {
+            @include make-button(7px, 15.2px, 13px, 1em, 4px);
+            @include button-outline-variant( $white, $o4, $white, $white );
+            margin-left: 10px;
+        }
+    }
+
+    .job-search-submit,
+    .resume-search-submit {
+        button {
+            cursor: pointer;
+        }
+    }
+
+    .job-search-location.region-location {
+        height: 60px;
+
+        .jobhunt-job-region-select {
+            font-size: 14px;
+            color: #a7a7a7;
+            padding: 14px 60px 14px 30px;
+        }
+
+        @include media-breakpoint-up(md) {
+            min-width: 240px;
+            max-width: 240px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            max-width: 300px;
+        }
+
+        &:after {
+            content: none !important;
+        }
+    }
+
+    .jobhunt-job-region-select {
+        height: 100%;
+    }
+}
+
+.page-template-template-homepage-v1,
+.header-search-icon {
+    .site-content-page-header {
+        margin-bottom: 84px;
+    }
+
+    .site-content-page-header-inner {
+        position: relative;
+
+        @include media-breakpoint-up(xl) {
+            padding-top: 200px;
+            padding-bottom: 270px;
+        }
+
+        @include media-breakpoint-down(md) {
+            padding-top: 80px;
+            padding-bottom: 140px;
+        }
+
+        @include media-breakpoint-between(lg, lg) {
+            padding-top: 120px;
+            padding-bottom: 170px;
+        }
+    }
+
+    .jh-scroll-to {
+        position: absolute;
+        left: 50%;
+        border-radius: 500px;
+        transform: translate(-50%, -50%);
+        top: 100%;
+        z-index: 2;
+
+        a {
+            width: 130px;
+            height: 130px;
+            border: 2px solid $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 500px;
+            transition: all 0.3s ease 0s;
+
+            @include hover-focus {
+                i {color: $white;}
+            }
+
+            i {
+                font-size: 30px;
+                padding: 15px;
+                border-radius: 500px;
+                background-color: $white;
+                box-shadow: 0px 0px 50px 0px rgba(32, 32, 32, 0.15);
+            }
+        }
+    }
+
+    .job-search-block,
+    .resume-search-block {
+        @include media-breakpoint-up(md) {
+            @include make-row;
+        }
+
+        @include media-breakpoint-up(xl) {
+            justify-content: center;
+        }
+
+        > div {
+            @include make-col(12);
+        }
+
+        .job-search-form,
+        .resume-search-form {
+            @include media-breakpoint-up(xl) {
+                //@include make-col(9.8);
+                @include make-auto-width-col();
+                //margin: auto;
+            }
+        }
+
+        .browse-jobs-by-category,
+        .browse-resumes-by-category {
+            margin-top: 22px;
+        }
+
+        .section-title {
+            @include media-breakpoint-up(xl) {
+                margin: 0;
+            }
+        }
+
+        .section-header {
+            margin-bottom: 30px;
+        }
+
+        form {
+            @include make-row;
+
+            @include media-breakpoint-up(lg) {
+                justify-content: center;
+            }
+
+            > div {
+                @include make-col-ready;
+                @include media-breakpoint-up(lg) {
+                    @include make-auto-width-col();
+                }
+            }
+
+            input[type="text"],
+            #search_category {
+                height: 60px;
+                padding: 14px 60px 14px 30px;
+            }
+
+            #search_keywords {
+                @include media-breakpoint-up(xl) {
+                    min-width: 510px;
+                }
+            }
+
+            .job-search-location input[type="text"],
+            .resume-search-location input[type="text"] {
+                @include media-breakpoint-up(xl) {
+                    min-width: 330px;
+                }
+            }
+
+            input[type="text"]::placeholder,
+            #search_category {
+                font-size: 14px;
+                color: $as;
+            }
+        }
+
+        .job-search-keywords,
+        .resume-search-keywords {
+            @include media-breakpoint-up(lg) {
+                @include make-auto-col();
+            }
+
+            &::after {
+                @include la-font( "\f11c" );
+            }
+        }
+
+        .job-search-location,
+        .resume-search-location {
+            &::after {
+                @include la-font( "\f041" );
+            }
+        }
+
+        .job-search-keywords,
+        .resume-search-keywords,
+        .job-search-location,
+        .resume-search-location {
+            @include media-breakpoint-down(md) {
+                margin-bottom: 20px;
+            }
+
+            &::after {
+                position: absolute;
+                transform: translate(-50%, -50%);
+                top: 50%;
+                right: 20px;
+                font-size: 30px;
+            }
+        }
+
+        .job-search-category,
+        .resume-search-category {
+            @include media-breakpoint-down(md) {
+                margin-bottom: 20px;
+            }
+
+            @include media-breakpoint-up(xl) {
+                #search_category {
+                    &:focus {
+                        background-color: $treehouse-input-bg;
+                    }
+                }
+            }
+        }
+
+        .job-search-submit,
+        .resume-search-submit {
+            cursor: pointer;
+
+            @include media-breakpoint-up(lg) {
+                @include make-auto-width-col();
+            }
+
+            button {
+                border-radius: 4px;
+                width: 65px;
+                height: 60px;
+                border-width: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+
+                @include media-breakpoint-down(md) {
+                    width: 100%;
+                }
+
+                @include hover-focus-active {
+                    box-shadow: none !important;
+                    outline: none;
+                    border-width: 0;
+                }
+            }
+
+            i {
+                color: $white;
+                font-size: 30px;
+                line-height: 1;
+            }
+
+            .job-search-text,
+            .resume-search-text {
+                @include media-breakpoint-down(md) {
+                    order: -1;
+                    color: $white;
+                    font-size: 20px;
+                    margin-right: 10px;
+                }
+
+                @include media-breakpoint-up (lg) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.page-template-template-homepage-v2 {
+    .site-content-page-header-inner {
+        padding: 70px 0 40px;
+
+        @include media-breakpoint-up (md) {
+            padding: 150px 0 70px;
+        }
+
+        @include media-breakpoint-between(md, md) {
+            max-width: 740px;
+        }
+    }
+
+    .header-bg-default + .site-content-page-header:after {
+        background-color:rgba(0,0,0,0.9);
+    }
+
+    .job-search-block,
+    .resume-search-block {
+        .job-search-form,
+        .resume-search-form {
+            background-color:rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            margin: 0 16px 40px;
+            border-radius: 10px;
+
+            @include media-breakpoint-up(md) {
+                margin: 0 0 70px;
+                height: 80px;
+                border-radius: 50px;
+                display: inline-flex;
+            }
+        }
+
+        @include media-breakpoint-up(md) {
+            text-align: center;
+        }
+
+        .job-categories-section,
+        .job-categories-section .job-categories {
+            margin-bottom: 0;
+        }
+
+        .section-header {
+            margin-bottom: 30px;
+
+            @include media-breakpoint-down(sm) {
+                padding: 0 30px;
+            }
+        }
+
+        .section-title {
+            margin: 0;
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 14px;
+            }
+        }
+
+        form {
+            @include make-row;
+            margin: 0;
+            align-items: stretch;
+            @include media-breakpoint-up(md) {
+                height: 60px;
+            }
+
+            > div {
+                display: flex;
+                @include make-col-ready;
+                padding: 0;
+                margin-bottom: 10px;
+
+                @include media-breakpoint-up(md) {
+                    margin-bottom: 0;
+                    @include make-auto-width-col();
+                }
+            }
+
+            input[type="text"]::placeholder,
+            #search_category {
+                font-size: 14px;
+                color: $f6;
+            }
+
+            .job-search-keywords,
+            .resume-search-keywords,
+            .job-search-location,
+            .resume-search-location {
+                position: relative;
+
+                &::after {
+                    width: 1px;
+                    height: 33px;
+                    background-color: $eb;
+                    content: " ";
+                    position: absolute;
+                    transform: translate(-50%, -50%);
+                    top: 50%;
+                    right: 0;
+                }
+            }
+
+            .job-search-keywords,
+            .resume-search-keywords {
+                input[type="text"] {
+                    @include media-breakpoint-down(sm) {
+                        border-radius: 6px;
+                    }
+
+                    @include media-breakpoint-up(md) {
+                        border-radius: 50px 0 0 50px;
+                        padding-left: 42px;
+                    }
+
+                    @include media-breakpoint-up(xl) {
+                        min-width: 370px;
+                    }
+                }
+            }
+
+            .job-search-locatio,
+            .resume-search-locationn,
+            .job-search-category,
+            .resume-search-category {
+                @include media-breakpoint-up(xl) {
+                    input[type="text"],
+                    #search_category {
+                        min-width: 300px;
+                    }
+                }
+            }
+
+            .job-search-submit,
+            .resume-search-submit {
+
+                @include media-breakpoint-down(sm) {
+                    margin-bottom: 0;
+                }
+
+                .job-search-text,
+                .resume-search-text {
+                    @include media-breakpoint-up(md) {
+                        display: none;
+                    }
+
+                    @include media-breakpoint-up(xl) {
+                        display: block;
+                    }
+                }
+
+                i {
+                    line-height: 34px;
+                    order: 2;
+                    font-size: 20px;
+                    padding-left: 10px;
+
+                    @include media-breakpoint-up(md) {
+                        font-size: 34px;
+                        padding-left: 0;
+                    }
+
+                    @include media-breakpoint-up(xl) {
+                        padding-left: 20px;
+                    }
+                }
+
+                button {
+                    color: $white;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    font-size: 17px;
+                    width: 100%;
+                    border-width: 0;
+                    padding: 6px;
+                    background-color: transparent;
+                    font-family: $jobhunt-title-font-family;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    @include media-breakpoint-down(sm) {
+                        border-radius: 4px;
+                    }
+
+                    @include media-breakpoint-up(md) {
+                        border-radius: 0 50px 50px 0;
+                        padding: 0 30px;
+                    }
+
+                    &:focus {
+                        box-shadow: none !important;
+                        outline: none;
+                    }
+                }
+            }
+
+            #search_category {
+                background: #f9fafa url('data:image/svg+xml;utf8,<svg fill="%23343a40" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><defs><style>.arrow-clr{}</style></defs><path class="arrow-clr" d="M18.7 8.3c-.4-.4-1-.4-1.4 0L12 13.6 6.7 8.3c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l6 6c.2.2.5.3.7.3s.5-.1.7-.3l6-6c.4-.4.4-1 0-1.4z"/></svg>') no-repeat right 0.85rem center;
+                background-size: 15px;
+            }
+
+            input[type="text"],
+            #search_category {
+                background-color: $white;
+                height: 100%;
+                border-radius: 0;
+
+                @include media-breakpoint-down(sm) {
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+}
+
+.page-template-template-homepage-v3 {
+    .site-content-page-header {
+        margin-bottom: 86px;
+    }
+
+    .site-content-page-header-inner {
+        padding: 80px 15px 100px 15px;
+        position: relative;
+
+        @include media-breakpoint-up(md) {
+            padding: 204px 0 188px 0;
+        }
+
+        .jh-scroll-to {
+           position: absolute;
+           left: 50%;
+           border-radius: 50%;
+           transform: translate(-50%, -50%);
+           top: 100%;
+           z-index: 2;
+
+           a {
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               transition: all 0.3s ease 0s;
+
+               @include hover-focus {
+                   i {color: $white;}
+               }
+
+               i {
+                   font-size: 30px;
+                   padding: 15px;
+                   border-radius: 500px;
+                   background-color: $white;
+                   box-shadow: 0px 0px 50px 0px rgba(32, 32, 32, 0.15);
+               }
+           }
+       }
+    }
+
+    .job-search-block,
+    .resume-search-block {
+        text-align: center;
+
+        @include media-breakpoint-up(xl) {
+            text-align: left;
+        }
+
+        .section-header {
+            margin-bottom: 36px;
+
+            @include media-breakpoint-up(xl) {
+                text-align: left;
+            }
+        }
+
+        .section-title {
+            margin: 0;
+        }
+
+        .section-sub-title {
+            color: $z7;
+            font-size: 16px;
+        }
+
+        .job-search-category,
+        .resume-search-category {
+            #search_category {
+                color: $as;
+                height: auto;
+            }
+        }
+
+        form {
+            align-items: center;
+
+            @include media-breakpoint-up(lg) {
+                margin: auto;
+                display: inline-flex;
+                border-radius: 50px;
+                box-shadow: 0px 20px 50px 0px rgba(32, 32, 32, 0.1);
+            }
+
+            > div {
+                @include make-col-ready;
+                background-color: $white;
+                border-radius: 8px;
+                box-shadow: 0px 20px 50px 0px rgba(32, 32, 32, 0.1);
+                margin-bottom: 15px;
+                padding: 10px;
+                height: 70px;
+                display: flex;
+                background-color: $white;
+
+                @include media-breakpoint-up(lg) {
+                    @include make-auto-width-col();
+                    border-radius: 0;
+                    box-shadow: none;
+                    margin-bottom: 0;
+                    padding: 0 15px;
+
+                    #search_location,
+                    #search_keywords {
+                        min-width: 300px;
+                    }
+                }
+
+                @include media-breakpoint-up(xl) {
+                    #search_location,
+                    #search_keywords {
+                        min-width: 360px;
+                    }
+                }
+            }
+        }
+
+        input[type="text"], #search_category {
+            background-color: transparent;
+        }
+
+        input[type="text"]::placeholder {
+            font-size: 14px;
+            color: $as;
+        }
+
+        .job-search-keywords,
+        .resume-search-keywords {
+            @include media-breakpoint-up(lg) {
+                border-radius: 50px 0 0 50px;
+                &::after {
+                    right: 0;
+                }
+            }
+        }
+
+        .job-search-category::before,
+        .resume-search-category::before {
+            @include media-breakpoint-up(lg) {
+                left: 0;
+            }
+        }
+
+        .job-search-keywords::after,
+        .resume-search-keywords::after,
+        .job-search-category::before,
+        .resume-search-category::before {
+            @include media-breakpoint-up(lg) {
+                width: 1px;
+                height: 37px;
+                background-color: $eb;
+                content: " ";
+                position: absolute;
+                transform: translate(-50%, -50%);
+                top: 50%;
+            }
+        }
+
+        .job-search-submit,
+        .resume-search-submit {
+            padding: 0;
+            border-radius: 0 50px 50px 0;
+
+            @include media-breakpoint-up(lg) {
+                padding-right: 10px;
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            button {
+                border-width: 0;
+                width: 100%;
+                padding: 0;
+                height: 70px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                align-self: center;
+
+                @include media-breakpoint-up(lg) {
+                    width: 53px;
+                    height: 53px;
+                    border-radius: 50px;
+                }
+
+                @include hover-focus-active {
+                    box-shadow: none !important;
+                    outline: none;
+                }
+            }
+
+            .job-search-text,
+            .resume-search-text {
+                order: -1;
+                font-size: 18px;
+                margin-right: 10px;
+
+                @include media-breakpoint-up(lg) {
+                    display: none;
+                }
+            }
+
+            i {
+                font-size: 24px;
+                color: $white;
+                line-height: .8;
+
+                @include media-breakpoint-up(lg) {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+
+.page-template-template-homepage-v4,
+.page-template-template-homepage-v5 {
+    .site-content-page-header {
+        position: relative;
+        border-width: 0;
+
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.8;
+            content: '';
+            z-index: 0;
+        }
+    }
+}
+
+.page-template-template-homepage-v4 {
+    .site-content-page-header {
+        &::after {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+    }
+
+    .site-content-page-header-inner {
+        display: flex;
+        align-items: center;
+        padding: 70px 0 30px;
+
+        @include media-breakpoint-up(lg) {
+            height: 376px;
+            padding: 0;
+        }
+
+        @include media-breakpoint-up(xl) {
+            height: 576px;
+        }
+    }
+
+    .job-search-block,
+    .resume-search-block {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        input[type="text"], #search_category {
+            background-color: transparent;
+        }
+
+        input[type="text"]::placeholder,
+        #search_category {
+            font-size: 15px;
+            color: $td;
+        }
+
+        .job-search-location,
+        .resume-search-location {
+            order: 3;
+        }
+
+        .job-search-submit,
+        .resume-search-submit {
+            order: 5;
+        }
+
+        .job-search-form,
+        .resume-search-form {
+            @include media-breakpoint-up(lg) {
+                width: 100%;
+                height: 100px;
+                border-radius: 4px;
+                position: absolute;
+                bottom: -50px;
+                text-align: center;
+
+            }
+        }
+
+        form {
+            @include make-row;
+            align-items: center;
+            height: inherit;
+            margin: 0;
+            padding: 0 15px;
+
+            @include media-breakpoint-up(lg) {
+                flex-wrap: nowrap;
+                background-color: $white;
+                border-radius: 4px;
+                justify-content: space-between;
+            }
+
+            > div {
+                @include make-col-ready;
+                background-color: $white;
+                padding: 10px;
+                margin-bottom: 15px;
+                border-radius: 4px;
+
+                @include media-breakpoint-up(lg) {
+                    border-radius: 0;
+                    margin-bottom: 0;
+                    background-color: transparent;
+                    @include make-auto-width-col();
+                }
+            }
+
+            .job-search-keywords,
+            .resume-search-keywords {
+                @include media-breakpoint-up(lg) {
+                    @include make-auto-col;
+                }
+            }
+
+            .job-search-keywords,
+            .resume-search-keywords,
+            .job-search-category,
+            .resume-search-category {
+                @include media-breakpoint-up(lg) {
+                    &::after {
+                        width: 1px;
+                        height: 66px;
+                        background-color: $eb;
+                        content: " ";
+                        position: absolute;
+                        transform: translate(-50%, -50%);
+                        top: 50%;
+                        right: 0;
+                    }
+                }
+
+                @include media-breakpoint-up(xl) {
+                    input[type="text"], #search_category {
+                        min-width: 330px;
+                    }
+                }
+            }
+
+            .job-search-location,
+            .resume-search-location {
+                @include media-breakpoint-up(xl) {
+                    input[type="text"] {
+                        min-width: 240px;
+                    }
+                }
+            }
+
+            .job-search-submit,
+            .resume-search-submit {
+                background-color: transparent;
+                padding: 0;
+            }
+
+            i {
+                color: #fff;
+                font-size: 30px;
+                line-height: .8;
+                padding-right: 10px;
+            }
+
+            button {
+                border-width: 0;
+                height: 60px;
+                padding: 0 15px;
+                border-radius: 4px;
+                font-size: 17px;
+                font-weight: 600;
+                text-transform: uppercase;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                width: inherit;
+
+                @include media-breakpoint-up(lg) {
+                    min-width: 175px;
+                    width: auto;
+                }
+
+                @include media-breakpoint-up(xl) {
+                    margin-left: auto;
+                }
+
+                @include hover-focus-active {
+                    outline: none;
+                }
+            }
+        }
+
+        .section-header {
+            margin-bottom: 0;
+            align-self: center;
+            width: 100%;
+            margin-bottom: 70px;
+
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 0;
+            }
+        }
+
+        .section-title {
+            margin: 0;
+            font-weight: 400;
+        }
+    }
+}
+
+.page-template-template-homepage-v5 {
+    .site-content-page-header {
+        &::after {
+            background-color: rgba(0, 0, 0, 0.75);
+        }
+    }
+
+    .site-content-page-header-inner {
+        padding: 100px 15px 80px;
+        position: relative;
+
+        @include media-breakpoint-up(md) {
+            padding: 166px 0 200px;
+            max-width: 800px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            max-width: 960px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            max-width: 1170px;
+        }
+
+        .jh-scroll-to {
+            font-size: 30px;
+            position: absolute;
+            left: 50%;
+            border-radius: 500px;
+            transform: translate(-50%, 0);
+            z-index: 1;
+            bottom: 14px;
+
+            @include media-breakpoint-up(md) {
+                bottom: 40px;
+            }
+
+            a {
+                color: $white;
+            }
+        }
+    }
+
+    .job-search-block,
+    .resume-search-block {
+        .section-header {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            margin: 0;
+            font-weight: 600;
+            line-height: 1.2;
+            font-size: 30px;
+            margin-bottom: 20px;
+
+            @include media-breakpoint-up(md) {
+                margin-bottom: 0;
+            }
+        }
+
+        .section-sub-title {
+            font-weight: 400;
+            line-height: 1.2;
+            font-family: $jobhunt-title-font-family;
+            font-size: 20px;
+        }
+
+        .section-sub-title,
+        .section-title {
+            @include media-breakpoint-up(lg) {
+                font-size: 36px;
+            }
+
+            @include media-breakpoint-up(xl) {
+                font-size: 60px;
+            }
+        }
+
+        .job-search-form,
+        .resume-search-form {
+            form {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                > div {
+                    width: 100%;
+                    margin-bottom: 10px;
+
+                    @include media-breakpoint-up(md) {
+                        margin-right: 2px;
+                        width: auto;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            #search_keywords {
+                @include media-breakpoint-up(xl) {
+                    min-width: 364px;
+                }
+            }
+
+            input[type="text"]::placeholder,
+            #search_category {
+                font-size: 14px;
+                color: $n6;
+            }
+
+            input[type="text"],
+            #search_category {
+                background-color: $white;
+                height: 60px;
+                border-radius: 0;
+                padding: 0 20px;
+            }
+        }
+
+        .job-search-category,
+        .resume-search-category {
+            //display: none;
+            @include make-auto-width-col();
+        }
+
+        .job-search-keywords,
+        .resume-search-keywords {
+            @include media-breakpoint-up (md) {
+                //@include make-auto-col();
+                @include make-auto-width-col();
+                //@include make-col-offset(1.5);
+            }
+
+            @include media-breakpoint-up (xl) {
+                //@include make-col(3.8);
+                //@include make-col-offset(2.5);
+            }
+        }
+
+        .job-search-location,
+        .resume-search-location {
+            position: relative;
+
+            @include media-breakpoint-up (md) {
+                //@include make-col(4);
+                @include make-auto-width-col();
+            }
+
+            @include media-breakpoint-up (xl) {
+                //@include make-col(2.5);
+            }
+
+
+            &::after {
+                @include la-font( "\f05b" );
+                position: absolute;
+                transform: translate(-50%, -50%);
+                top: 50%;
+                right: 0;
+                font-size: 30px;
+            }
+
+            input[type="text"] {
+                padding: 0 50px 0 20px;
+            }
+        }
+
+        .job-search-submit,
+        .resume-search-submit {
+            @include media-breakpoint-up (md) {
+                //@include make-col(1.2);
+                @include make-auto-width-col();
+            }
+
+            @include media-breakpoint-up (xl) {
+                //@include make-col(1);
+            }
+
+            button {
+                height: 60px;
+                padding: 0;
+                border-width: 0;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @include media-breakpoint-up(md) {
+                    width: 70px;
+                    display: block;
+                }
+
+                @include hover-focus-active {
+                    outline: none;
+                }
+            }
+
+            i {
+                font-size: 24px;
+
+                @include media-breakpoint-up(md) {
+                    font-size: 30px;
+                }
+            }
+
+            .job-search-text,
+            .resume-search-text {
+                font-size: 20px;
+                order: -1;
+                margin-right: 10px;
+
+                @include media-breakpoint-up(md) {
+                    display: none;
+                }
+            }
+        }
+    }
+}

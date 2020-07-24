@@ -1,0 +1,37 @@
+.account-sign-in,
+.job-manager-message {
+    @include make-alert();
+    @include alert-variant( theme-color-level( "primary", $alert-bg-level), theme-color-level( "primary", $alert-border-level), theme-color-level( "primary", $alert-color-level) );
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    strong {
+        display: inline-block;
+        border-bottom: 1px solid theme-color-level( "primary", $alert-color-level);
+        color: theme-color-level( "primary", $alert-color-level);
+        margin-left: 5px;
+    }
+
+    a {
+        @include make-new-button();
+        @include button-size( 0.75em, 2em, 14px, normal, 4px );
+    }
+
+    .button,a {
+        @include button-variant( $primary, $primary );
+        width: 100%;
+        order: 1;
+        margin-top: 14px;
+
+        @include media-breakpoint-up(md) {
+            width: auto;
+            margin-left: auto;
+            margin-top: 0;
+        }
+    }
+}
+
+.account-sign-in {
+    margin-bottom: 0;
+}

@@ -1,0 +1,80 @@
+.cart_totals {
+    color: $treehouse-body-color;
+
+    thead, tbody {
+        tr {
+            align-items: center;
+            justify-content: space-between;
+
+            th, td {
+                padding: 0;
+            }
+            
+
+            th {
+                border-width: 0;
+                font-size: 16px;
+            }
+
+             &.shipping {
+                td {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: wrap;
+
+                    .woocommerce-shipping-calculator {
+                        flex: 0 0 100%;
+                        max-width: 100%;
+
+                        @include media-breakpoint-down(sm) {
+                            text-align: left;
+                        }
+
+                        .select2-container .select2-selection--single {
+                            height: 42px;
+                            align-items: center;
+                            justify-content: space-between;
+                            display: flex;
+                            border: 2px solid $treehouse-input-border-color;
+                            background-color: $treehouse-input-bg;
+
+                            @include hover-focus {
+                                border-color: $treehouse-input-border-hover-color;
+                            }
+
+                            &:focus,
+                            &:active {
+                                background-color: $treehouse-input-bg-focus-color;
+                            }
+                        }
+
+                        .select2-container--default .select2-selection--single .select2-selection__arrow {
+                            position: relative;
+                            top: 0;
+                            right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+tr.shipping {
+    flex-wrap: wrap;
+
+    th, td {
+        flex: 0 0 100%;
+    }
+
+    th {
+        padding-bottom: 0;
+    }
+
+    td {
+        .woocommerce-Price-amount {
+            float: right;
+        }
+    }
+}

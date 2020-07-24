@@ -1,0 +1,21 @@
+.job-categories-section {
+    .job-categories {
+        @include make-row;
+    }
+
+    .job-category {
+        @include make-col-ready;
+
+        @include media-breakpoint-up(md) {
+            @include make-col(6);
+        }
+
+        @include media-breakpoint-up(lg) {
+            @include make-col(4);
+        }
+
+        @include media-breakpoint-up(xl) {
+            @include make-col(3);
+        }
+    }
+}

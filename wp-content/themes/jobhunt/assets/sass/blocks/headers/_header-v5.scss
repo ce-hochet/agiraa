@@ -1,0 +1,43 @@
+.header-v5 {
+    .site-header-inner {
+        padding: 0 70px;
+
+        @media (max-width: 1450px) {
+            padding: 0 30px;
+        }
+
+        .primary-nav {
+            @include make-col(5.3);
+        }
+
+        .primary-nav .header-menu > .menu-item > a,
+        & > .header-menu > .menu-item > a {
+            color: $white;
+        }
+
+        & > .header-menu > .menu-item > a i {
+            display: none;
+        }
+
+        .site-branding {
+            @include make-auto-col;
+            text-align: left;
+
+            .custom-logo-link,
+            .site-title {
+                color: $white;
+            }
+        }
+
+        .primary-nav .header-menu {
+            justify-content: flex-start;
+        }
+    }
+
+    .handheld-header {
+        & > .header-menu > .menu-item > a,
+        .off-canvas-navbar-toggle-buttons .navbar-toggler {
+            color: $white;
+        }
+    }
+}

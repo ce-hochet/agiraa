@@ -1,0 +1,125 @@
+// Some common variables and mixins to get you started.
+// Variables allow you to re-use colors, sizes, and other values without repeating
+// yourself. This means that changes that should be small, such as tweaking the
+// coloring or the sizing, can be done in one place, not all over the stylesheet.
+
+$jobhunt-container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1170px
+) !default;
+
+
+$base-font:         'Source Sans Pro', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+$header-font:       $base-font;
+$ms-base:           1em, 0.875em;
+$ms-ratio:          1.618;
+
+// base color scheme
+$body-background:   #ffffff;
+$color_body:        #43454b;
+$color_links:       #2c2d33;
+$color_border:      rgba( 0, 0, 0, 0.05 );
+$color_woocommerce: #96588a;
+$error:             #e2401c;
+$success:           #0f834d;
+$info:              #3d9cd2;
+
+// Colors
+$t0:        #202020 !default;
+$td:        #202020;
+$white:     #fff;
+$black:     #000;
+$t4:        #24324a;
+$f4:        #f4f5fa;
+$od:        #1d293e;
+$ee:        #eaeeee;
+$z9:        #091256;
+$o2:        #12171e;
+$dg:        #101010;
+$tt:        #222b38;
+$sa:        #7a8493;
+$ea:        #8a99b3;
+$s4:        #647585;
+$e8:        #888;
+$n9:        #999;
+$n6:        #666;
+$n2:        #929393;
+$c6:        #c6cdd7;
+$fc:        #fcfcfc;
+$bs:        #b7bac6;
+$o4:        #141f71;
+$f9:        #f9f9f9;
+$b1:        #b1b1b1;
+$e7:        #e7e7e7;
+$fd:        #fbfbfd;
+$n5:        #959595;
+$ed:        #edeff7;
+$e6:        #e6e7ef;
+$as:        #a7a7a7;
+$f6:        #868686;
+$eb:        #ebebeb;
+$z7:        #070d37;
+$be:        #bec2c2;
+$twitter:   #55acee;
+$facebook:  #3b5999;
+$linkedin:  #0077B5;
+$google:    #dd4b39;
+$instagram: #e4405f;
+$youtube:   #cd201f;
+$behance:   #131418;
+$pinterest: #bd081c;
+$github:    #1F1F1F;
+$scrollup:  #5d6d88;
+$checkbox-active:    #2c7dfa;
+
+// layout sizes
+$desktop:           768px;
+$handheld:          568px;
+$container-width:   ms(18);
+
+// fontawesome
+// $fa-font-path:      'assets/fonts/fontawesome';
+$fa-font-family: 'Font Awesome 5 Free';
+$fab-font-family: 'Font Awesome 5 Brands';
+
+// Lineawesome
+$la-font-family: 'Line Awesome Free';
+$lab-font-family: 'Line Awesome Brands';
+
+$font-family-quicksand: 'Quicksand', sans-serif;
+$jobhunt-body-font-family: 'Varela Round', 'Montserrat', 'Quicksand', sans-serif;
+$jobhunt-title-font-family: 'Quicksand', sans-serif;
+
+$jobhunt-dropdown-box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 0.1);
+
+$treehouse-body-color: #576366;
+$treehouse-nav-link-color: #7b8b8e;
+$treehouse-nav-link-focus-color: #4b5658;
+$treehouse-title-color: #384047;
+$treehouse-page-item-border-color: #d3d9dd;
+$treehouse-input-border-color: #d4d9dd;
+$treehouse-input-color: #40484a;
+$treehouse-input-bg: #f9fafa;
+$treehouse-input-border-hover-color: #8c9aa6;
+$treehouse-input-bg-focus-color: #fff;
+$treehouse-error-bg: #ed5a5a;
+$treehouse-info-bg: #3f8abf;
+$treehouse-info-border: #3f8abf;
+$treehouse-error-border: #ed5a5a;
+$treehouse-error-color: #fff;
+$treehouse-comment-reply-color: #aaa;
+$treehouse-comment-reply-bg: #eee;
+$treehouse-bg-gray-light: #edeff0;
+
+$treehouse-success-bg: #5fcf80;
+$treehouse-success-border: #5fcf80;
+$treehouse-success-color: #fff;
+
+$page-header-bg: #f6f9fa;
+$custom-select-indicator-color : #343a40;
+
+$t0: $treehouse-title-color;
+$ee8: $treehouse-nav-link-color;
+$jh-select-indicator: str-replace(url('data:image/svg+xml;utf8,<svg fill="#{$custom-select-indicator-color}" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><defs><style>.arrow-clr{}</style></defs><path class="arrow-clr" d="M18.7 8.3c-.4-.4-1-.4-1.4 0L12 13.6 6.7 8.3c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l6 6c.2.2.5.3.7.3s.5-.1.7-.3l6-6c.4-.4.4-1 0-1.4z"/></svg>'), "#", "%23") !default;

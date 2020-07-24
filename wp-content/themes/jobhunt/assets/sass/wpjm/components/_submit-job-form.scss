@@ -1,0 +1,108 @@
+.job-manager-form {
+    .chosen-container {
+        width: 100% !important;
+    }
+
+    .chosen-container-multi .chosen-choices li.search-field input[type="text"] {
+        width: 100% !important;
+    }
+
+    .chosen-container-multi .chosen-choices {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    fieldset {
+        margin-bottom: 1.5em;
+        .resume-manager-data-row {
+            .resume-manager-remove-row {
+                height: auto;
+                margin: 0;
+                width: auto;
+                align-items: center;
+                @include make-new-button(500);
+                @include button-size( 6px, 14px, 13px, 1, 4px );
+                cursor: pointer;
+                display: flex;
+                z-index: 1;
+                color: $white !important;
+                right: 15px;
+                top: -8px;
+                left: auto;
+
+                &::before {
+                    position: relative;
+                    order: 2;
+                    margin-left: 4px;
+                }
+            }
+        }
+    }
+
+    input[type="button"] {
+        @include make-new-button();
+        @include button-size( 5px, 25px, 14px, $btn-line-height, 5px );
+    }
+
+    input[type="text"],
+    select {
+        height: 44px;
+    }
+}
+
+.job-manager-error {
+    @include make-alert();
+    @include alert-variant( $treehouse-error-bg, $treehouse-error-border, $treehouse-error-color );
+
+    a, strong {
+        color: $treehouse-error-color;
+    }
+}
+
+.job-single-type-v2 .job-manager-error {
+    margin-top: 30px;
+}
+
+.job-single-type-v2 .job-manager-error + #submit-job-form {
+    padding-top: 10px;
+}
+
+#submit-job-form {
+    > p {
+        a {
+            @include make-new-button(500);
+            @include button-size( 6px, 14px, 13px, 1, 4px );
+            color:$white !important;
+        }
+    }
+
+    .job-manager-uploaded-file-preview {
+        display: inline-flex;
+        align-items: center;
+        position: relative;
+        margin: 26px 0;
+
+        .job-manager-remove-uploaded-file {
+            text-indent: -9999px;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: -6px;
+            right: -16px;
+            color: $white;
+
+            &:hover {
+                color: $white;
+            }
+
+            &::before {
+                @include la-font( "\f00d" );
+                font-size: 14px;
+                text-indent: 0;
+                float: left;
+                border-radius: 50px;
+                padding: 3px;
+            }
+        }
+    }
+}

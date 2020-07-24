@@ -1,0 +1,69 @@
+#submit-resume-form {
+    [class^=fieldset-] {
+        margin-bottom: 2em;
+        @include media-breakpoint-up(md) {
+            @include make-col(6);
+        }
+    }
+
+    .fieldset-resume_content,
+    .fieldset-resume_file,
+    .fieldset-links,
+    .fieldset-candidate_education,
+    .fieldset-candidate_experience,
+    .fieldset-candidate_awards,
+    .fieldset-candidate_photo,
+    .fieldset-resume_skills,
+    .fieldset-resume_file,
+    .applying_for,
+    .applying_for + fieldset,
+    fieldset:first-child,
+    .fieldset-logged_in,
+    .fieldset-login_required,
+    .fieldset-create_account_username {
+        @include make-col(12);
+    }
+
+    .fieldset-candidate_name,
+    .fieldset-candidate_email,
+    .fieldset-candidate_title,
+    .fieldset-candidate_location,
+    .fieldset-resume_gender,
+    .fieldset-resume_age,
+    .applying_for,
+    .applying_for + fieldset,
+    fieldset:first-child,
+    .fieldset-resume_skills,
+    .fieldset-resume_language,
+    .fieldset-resume_current_salary,
+    .fieldset-resume_category,
+    .fieldset-resume_education_level,
+    .fieldset-resume_expected_salary,
+    .fieldset-resume_experience,
+    .fieldset-resume_file,
+    .fieldset-logged_in,
+    .fieldset-login_required,
+    .fieldset-create_account_username,
+    .fieldset-login_required,
+    .fieldset-create_account_username,
+    .fieldset-create_account_password,
+    .fieldset-create_account_password_verify {
+        order: -1;
+    }
+
+    .ui-sortable,
+    .field {
+        .resume-manager-data-row {
+            @include make-row;
+
+            fieldset {
+                @include make-col-ready;
+            }
+        }
+    }
+
+    .select2 .select2-selection.select2-selection--single,
+    .select2 .select2-selection.select2-selection--multiple {
+        min-height: 44px;
+    }
+}

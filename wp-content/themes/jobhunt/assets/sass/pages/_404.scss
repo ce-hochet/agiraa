@@ -1,0 +1,118 @@
+.error404 {
+    .site-content {
+        margin-bottom: 0;
+    }
+}
+
+.error-404 {
+    .content-404 {
+        @include stretch-full-width();
+        background-position: center center;
+        background-size: cover;
+
+
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            content: " ";
+            opacity: .86;
+        }
+    }
+
+    .content-404-inner {
+        @include make-container();
+        @include make-container-max-widths();
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        padding: 100px 15px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include media-breakpoint-up(md){
+            padding: 0 150px;
+        }
+    }
+
+    .header-image {
+        margin-bottom: 55px;
+    }
+
+    h4 {
+        font-size: 24px;
+        color: #d5d8f3;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    p {
+        color: #fff;
+        margin-bottom: 40px;
+    }
+
+    .search-form {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+
+        label {
+            margin-bottom: 0;
+
+            @include media-breakpoint-up(md) {
+                margin-right: 12px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+            }
+        }
+
+        @include media-breakpoint-down(sm){
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .search-field {
+        width: 500px;
+        padding: 21px 30px;
+        font-weight: 500;
+        border: none;
+
+        @include media-breakpoint-down(sm){
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+
+    .search-submit {
+        @include button-size( 10px, 20px, 16px, $btn-line-height, 4px);
+        color: $white;
+
+        @include media-breakpoint-down(sm){
+            @include button-size( 7px, 20px, 14px, $btn-line-height, 4px);
+            width: 100%;
+        }
+
+        @include media-breakpoint-up(md){
+           min-width: 180px;
+        }
+    }
+
+    .home-button a {
+        @include make-new-button();
+        @include button-size( 7px, 25px, 14px, $btn-line-height, 4px );
+        background-color: #0f36a5;
+        color: $white;
+
+        @include media-breakpoint-down(sm){
+            @include button-size( 12px, 25px, 16px, $btn-line-height, 4px );
+            width: 100%;
+        }
+    }
+}

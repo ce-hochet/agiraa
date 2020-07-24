@@ -1,0 +1,314 @@
+.shop_table:not(.subscription_details) {
+    display: block;
+    border-width: 0;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 16px;
+        line-height: 25px;
+
+        thead {
+            display: none;
+        }
+
+        tbody {
+            display: flex;
+            flex-wrap: wrap;
+
+            th {
+                display: none;
+            }
+        }
+
+        tr {
+            width: 100%;
+
+            td {
+                display: block;
+                text-align: right;
+                clear: both;
+                padding: .75rem;
+                width: 100%;
+
+                &:before {
+                    content: attr(data-title) ': ';
+                    font-weight: 500;
+                    float: left;
+                }
+            }
+
+            &.woocommerce-cart-form__cart-item.cart_item {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+
+                td {
+                    &:last-child {
+                        border-bottom: 1px solid #dee2e6;
+                    }
+                }
+            }
+        }
+
+        .product-thumbnail {
+            display: none;
+        }
+
+        .product-remove,
+        .actions {
+            &:before {
+                content: none;
+            }
+        }
+
+        .actions {
+            padding-top: 30px;
+        }
+
+        .product-quantity {
+            .quantity {
+                input[type="number"],
+                .input-text {
+                    max-width: 5em;
+                    display: inline-block;
+                }
+
+            }
+        }
+
+        .product-price,
+        .product-subtotal {
+            .woocommerce-Price-amount {
+                margin: 0;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        thead, tbody, tfoot {
+            display: block;
+
+            tr {
+                display: flex;
+            }
+        }
+
+        tbody tr {
+            align-items: center;
+        }
+
+        .product-remove {
+            order: 9;
+        }
+
+        .product-price, .product-subtotal {
+            color: #40484a;
+        }
+
+        .product-name {
+            @include make-auto-col();
+        }
+    }
+
+    @include media-breakpoint-only(md) {
+        .product-thumbnail {
+            flex: 0 0 100px;
+            max-width: 100px;
+        }
+
+        .product-quantity {
+            flex: 0 0 100px;
+            max-width: 100px;
+
+            .quantity {
+                max-width: 100px;
+            }
+        }
+
+        .product-price, .product-subtotal {
+            flex: 0 0 130px;
+            max-width: 130px;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+
+        .product-thumbnail {
+            flex: 0 0 150px;
+            max-width: 150px;
+        }
+
+        .product-quantity {
+            flex: 0 0 150px;
+            max-width: 150px;
+
+            .quantity {
+                max-width: 100px;
+            }
+        }
+
+        .product-price, .product-subtotal {
+            flex: 0 0 150px;
+            max-width: 150px;
+        }
+
+        .product-name {
+            a {
+                font-size: 18px;
+            }
+        }
+    }
+
+    thead, tbody, tfoot {
+        tr {
+
+            td {
+                border-width: 0;
+            }
+
+            th {
+                border-left-width: 0;
+                border-right-width: 0;
+            }
+        }
+    }
+
+    tbody {
+        padding: 10px 0;
+
+        td.woocommerce-orders-table__cell-order-actions {
+            a {
+                margin-right: 10px;
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    .product-name {
+        a {
+            font-size: 16px;
+            font-weight: 600;
+            font-family: $jobhunt-title-font-family;
+        }
+    }
+
+    .actions {
+        flex: 0 0 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        @include media-breakpoint-up(md) {
+            flex-direction: row;
+        }
+    }
+}
+
+.woocommerce-checkout .shop_table:not(.woocommerce-table--order-downloads):not(.my_account_orders) {
+    font-size: 14px;
+
+    .woocommerce-Price-amount {
+        font-size: 14px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        display: flex;
+        flex-direction: column;
+
+        thead {
+            display: block;
+
+            tr {
+                border-top: 1px solid #dee2e6;
+                border-bottom: 2px solid #dee2e6;
+            }
+
+            th {
+                padding: 5px;
+                border: none;
+            }
+        }
+
+        tbody {
+            th {
+                display: none;
+            }
+        }
+
+        tr {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            td {
+                width: auto;
+                clear: both;
+                padding: .75rem;
+
+                &:before {
+                    content : none;
+                }
+
+                &.product-total:before {
+                    content: none;
+                }
+
+                &.product-total {
+                    text-align: right;
+                    padding-right: 0;
+                }
+
+                &.product-name {
+                    padding-left: 0;
+                    text-align: left;
+                }
+            }
+        }
+
+        tfoot tr {
+            th,td {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            &.cart-subtotal {
+                td > span:before {
+                    content: none;
+                }
+            }
+
+            &.shipping {
+                td {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+}
+
+tbody {
+ tr.shipping td p {
+        padding-top: 10px;
+    }
+}
+
+tfoot,
+tbody {
+ tr.shipping td p {
+        text-align: initial;
+    }
+}
+
+.subscription_details {
+    tbody {
+        td:first-child {
+            font-family: $font-family-quicksand;
+            color: $treehouse-title-color;
+            font-weight: bold;
+        }
+    }
+}

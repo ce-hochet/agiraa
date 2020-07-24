@@ -1,0 +1,25 @@
+#shipping_method {
+    @include list-unstyled();
+    margin-top: 1rem;
+
+    > li {
+        display: flex;
+        align-items: center;
+        margin: 15px 0;
+    }
+
+    label {
+        @include make-auto-col();
+        display: block;
+        margin-left: 10px;
+        font-family: $jobhunt-body-font-family;
+        color: $treehouse-body-color;
+        font-weight: normal;
+        margin-bottom: 0;
+        line-height: 22.5px; // Same line height as .woocommerce-Price-amount
+
+        .woocommerce-Price-amount {
+            margin: 0;
+        }
+    }
+}

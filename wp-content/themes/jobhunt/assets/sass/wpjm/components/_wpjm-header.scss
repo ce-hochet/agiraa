@@ -1,0 +1,40 @@
+.post-type-archive-resume,
+.post-type-archive-company,
+.post-type-archive-job_listing.type-list {
+    .site-content-page-header-inner {
+        height: 200px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        padding: 20px 0 0 0;
+        position: relative;
+        z-index: 1;
+
+        .site-content-page-title,
+        .page-header-aside {
+            color: $white;
+        }
+
+        .site-content-page-title {
+            font-size: 28px;
+        }
+
+        .page-header-aside {
+            display: block;
+        }
+
+        .page-title-area {
+            display: block;
+            text-align: center;
+        }
+
+        @include media-breakpoint-up(lg) {
+            height: 280px;
+            padding: 40px 0 0 0;
+
+            .site-content-page-title {
+                font-size: 36px;
+            }
+        }
+    }
+}

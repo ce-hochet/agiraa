@@ -1,0 +1,10 @@
+.header-v2 {
+    .site-header-inner {
+        @include stretch-full-width;
+        padding: 0 80px;
+
+        .header-menu {
+            justify-content: center;
+        }
+    }
+}

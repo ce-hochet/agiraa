@@ -1,0 +1,72 @@
+.woocommerce-loop-product__link {
+    color: rgba(26,26,26,.7);
+    display: block;
+}
+
+.woocommerce-loop-product__title {
+    font-size: 18px;
+    line-height: 1.25em;
+    margin-bottom: .75em;
+    margin-top: 1em;
+}
+
+.woocommerce-Price-amount {
+    font-size: 18px;
+    line-height: 1.25em;
+    margin-top: .5em;
+    margin-bottom: .75em;
+    display: inline-block;
+}
+
+.onsale {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    @include make-new-button();
+    @include button-size( 0.25em, 1em, 13px, 1.25, 0 );
+    //@include button-outline-variant( $treehouse-title-color, #fff );
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    ins {
+        text-decoration: none;
+        order: 1;
+    }
+
+    del {
+        order: 2;
+
+        .woocommerce-Price-amount {
+            font-size: 14px;
+            text-decoration: line-through;
+            margin-left: 5px;
+            color: #999;;
+        }
+    }
+}
+
+.product .button,
+.product .added_to_cart {
+    @include make-new-button();
+    @include button-size( 0.75em, 2em, 14px, 1.25, 4px );
+    @include button-variant( $treehouse-body-color, $treehouse-body-color );
+    white-space: normal;
+}
+
+.product .button.added {
+    display: none;
+}
+
+.added_to_cart {
+    margin-left: 15px;
+    border-bottom: 1px solid;
+    padding-bottom: 2px;
+}
+
+li.product .star-rating {
+    margin: auto;
+}

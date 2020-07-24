@@ -1,0 +1,124 @@
+.footer-widget {
+    .social-menu-widget {
+        .menu-item, li {
+            i {
+                width: 16px;
+                font-size: 16px;
+                text-align: center;
+                margin-right: 15px;
+            }
+
+            &:before {
+                content: none !important;
+            }
+        }
+    }
+}
+
+.footer-v1,
+.footer-v3,
+.footer-v4,
+.footer-v5 {
+    .footer-widget-1 {
+        .social-menu-widget {
+            .menu {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                @include media-breakpoint-up(md) {
+                    justify-content: flex-start;
+                }
+            }
+
+            .menu-item {
+                margin-bottom: 0;
+                margin-right: 20px;
+
+                i {
+                    margin-right: 0;
+                }
+
+                i + .menu-text {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .footer-widget-2,
+    .footer-widget-3,
+    .footer-widget-4 {
+        .social-menu-widget {
+            .menu-item, li {
+                a {
+                    display: inline-flex;
+                    align-items: center;
+                }
+
+                i {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+.footer-v2 {
+    .social-menu-widget {
+        padding: 0;
+
+        .widget-title {
+            display: none;
+        }
+
+        .menu, ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 0;
+
+            .menu-item, li {
+                & + .menu-item,
+                & + li {
+                    margin-left: 8px;
+                    list-style: none;
+                }
+            }
+        }
+
+        .menu-item, li {
+            margin-bottom: 0;
+
+            a {
+                display: flex;
+                align-items: center;
+                width: 24px;
+                height: 24px;
+                line-height: 24px;
+                border-radius: 50%;
+                background-color: $treehouse-page-item-border-color;
+                justify-content: center;
+            }
+
+            i {
+                width: auto;
+                color: $white;
+                margin-right: 0;
+
+                & + .menu-text {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.footer-v4 {
+    .social-menu-widget {
+        @include media-breakpoint-down(sm) {
+            text-align: left;
+        }
+    }
+}

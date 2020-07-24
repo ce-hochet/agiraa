@@ -1,0 +1,63 @@
+.job-list-section {
+    @include stretch-full-width;
+
+    .action {
+        text-align: center;
+    }
+
+    .showing_jobs {display: none;}
+
+    .job_listings + .load_more_jobs {
+        margin: auto;
+    }
+
+    div.job_listings {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .list .job_listing > a {
+        align-items: center;
+    }
+
+    .load_more_jobs {
+        @include make-new-button(700);
+        @include button-size( 15px, 36px, 16px, 1, 8px );
+        width: fit-content;
+        margin: auto;
+
+        strong {
+            font-weight: 500;
+            font-size: 15px;
+        }
+
+        &:hover {
+            strong {color: $white;}
+        }
+    }
+
+    &.grid-view {
+        background-color: $f4;
+        padding: 42px 0 50px;
+
+        .job_listings.grid {
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 40px;
+            }
+        }
+
+        .job_listing {
+            @include media-breakpoint-up(md) {
+                @include make-col(6);
+            }
+
+            @include media-breakpoint-up(lg) {
+                @include make-col(4);
+            }
+
+            > a {
+                background-color: $white;
+            }
+        }
+    }
+}

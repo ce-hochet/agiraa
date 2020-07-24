@@ -1,0 +1,76 @@
+/**
+ * Jetpack
+ */
+
+/**
+ * Widgets
+ */
+
+// Subscription widget
+.jetpack_subscription_widget {
+	#subscribe-email {
+		input {
+			padding: 20px !important;
+			width: 100% !important;
+		}
+	}
+}
+
+// Google Translate widget
+.widget_google_translate_widget {
+	img {
+		display: inline;
+	}
+
+	a {
+		text-decoration: none !important;
+	}
+}
+
+/**
+ * Infinite Scroll
+ */
+
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .paging-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll .pagination,
+.infinite-scroll .woocommerce-pagination,
+.infinite-scroll ul.products + .jobhunt-sorting,
+.infinite-scroll .woocommerce-result-count,
+.infinite-scroll.neverending .site-footer,
+.infinite-scroll .jobhunt-sorting { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/**
+ * Sharing
+ */
+.sd-block {
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;
+ 	padding-bottom: 18px;
+ 	border-bottom: 1px solid #e8ecec;
+
+	.sd-content ul {
+		margin-bottom: 0 !important;
+
+		li {
+			margin: 0 5px !important;
+		}
+	}
+}
+
+div.sharedaddy h3.sd-title {
+	font-size: 16px !important;
+	margin: 0 10px 0 0 !important;
+
+	&:before {
+		content: none !important;
+	}
+}

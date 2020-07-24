@@ -1,0 +1,140 @@
+.woocommerce-orders-table,
+.my_account_job_packages,
+.woocommerce-checkout .my_account_orders,
+.woocommerce-view-subscription .my_account_orders,
+.woocommerce-subscriptions .my_account_orders,
+.woocommerce-view-order .my_account_orders {
+    thead,
+    tbody,
+    tfoot {
+        tr th,
+        tr td {
+            width: 100%;
+        }
+    }
+
+    .woocommerce-Price-amount {
+        margin: 0;
+    }
+}
+
+.woocommerce-table--order-details,
+.woocommerce-view-subscription .order_details {
+    tfoot {
+        tr {
+            justify-content: space-between;
+            align-items: center;
+
+            &:last-child {
+                border-top: 1px solid #dee2e6;
+                border-bottom: 1px solid #dee2e6;
+
+                th { font-size: 18px; }
+            }
+        }
+
+        th {
+            border: none;
+        }
+    }
+
+    .woocommerce-Price-amount {
+        margin: 0;
+    }
+
+    .woocommerce-table__line-item {
+        align-items: center;
+
+        .woocommerce-Price-amount {
+            vertical-align: middle;
+        }
+    }
+    @include media-breakpoint-down(sm) {
+        &.shop_table {
+            tr {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                td {
+                    width: auto;
+
+                    &:before {
+                        content: none;
+                        
+                    }
+                }
+            }
+            tfoot {
+                display: block;
+            }
+        }
+    }
+}
+
+.woocommerce-table--order-downloads {
+    @include media-breakpoint-up(md) {
+        .download-product {
+            width: 35%;
+        }
+
+        .download-remaining {
+            width: 15%;
+
+            span {
+                white-space: inherit;
+            }
+        }
+
+        .download-expires {
+            width: 25%;
+        }
+
+        .download-file {
+            width: 25%;
+            text-align: center;
+
+            a {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.woocommerce-checkout .my_account_orders,
+.woocommerce-view-subscription .my_account_orders,
+.woocommerce-subscriptions .my_account_orders,
+.woocommerce-view-order .my_account_orders {
+    td.order-actions {
+        a {
+            margin-right: 10px;
+            margin-bottom: 10px;
+            
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        td.order-actions:before {
+            content: "Action: ";
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        th.order-actions:before {
+            content: 'Actions';
+        }
+    }
+}
+
+.shop_table + header {
+    margin-top: 2.5em;
+}
+
+.subscription_details {
+    margin-bottom: 2.5em;
+}

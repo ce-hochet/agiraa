@@ -1,0 +1,166 @@
+.jh-resumes {
+    @include list-unstyled;
+
+    .resume-inner {
+        display: flex;
+        align-items: center;
+        padding: 30px;
+        width: 100%;
+
+        @include media-breakpoint-only(md) {
+            padding: 16px 0;
+        }
+    }
+
+    .candidate-details {
+        flex: 0 1 100%;
+        align-self: flex-start;
+
+        a {
+            display: inline-block;
+
+            h3 {
+                margin: 0;
+                font-size: 16px;
+                color: $td;
+            }
+        }
+    }
+
+    .candidate-title {
+        strong {
+            font-weight: 500;
+        }
+    }
+
+    .candidate-image {
+        margin-right: 30px;
+
+        a {
+            display: block;
+        }
+    }
+
+    .location {
+        display: flex;
+        align-items: center;
+
+        > a {
+            color: $e8;
+            margin-top: 4px;
+        }
+
+        i {
+            display: block;
+            font-size: 22px;
+            color: $e8;
+        }
+    }
+
+    .candidate_photo {
+        max-width: 100px;
+        height: 86px;
+        border-radius: 8px;
+        width: 100px;
+        object-fit: cover;
+    }
+
+    .resume {
+        display: flex;
+        align-items: center;
+
+        & + .resume {
+            border-top: 1px solid $ed;
+        }
+
+        @include hover-focus {
+            box-shadow: 0px 0px 30px 0px rgba(32, 32, 32, 0.15);
+        }
+    }
+
+    .view-resume-action {
+        a {
+            @include make-new-button();
+            @include button-size( 10px, 18px, 14px, 16px, 4px );
+            min-width: 150px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            i {
+                font-size: 16px;
+                margin-left: 12px;
+            }
+
+            &:active {
+                color: $white !important;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        .resume-inner {
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 10px;
+        }
+
+        .candidate-image {
+            margin-right: 0;
+        }
+
+        .candidate_photo {
+            max-width: 120px;
+            width: 120px;
+            height: 96px;
+            margin-bottom: 25px;
+        }
+
+        .candidate-details {
+            margin-bottom: 25px;
+            align-self: center;
+            text-align: center;
+        }
+
+        .location {
+            justify-content: center;
+        }
+    }
+}
+
+.resume-type-v2,
+.resume-type-v3 {
+    .jh-resumes {
+        .resume {
+            @include hover-focus {
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+.resume-type-v3 {
+    .jh-resumes {
+        .resume {
+            & + .resume {
+                border-top: 2px solid transparent;
+            }
+
+            border: 2px solid transparent;
+
+            @include hover-focus {
+                border-color: $e6;
+                border-radius: 4px;
+            }
+        }
+    }
+}
+
+.no-resumes-found {
+    @include make-alert();
+    @include alert-variant( $treehouse-error-bg, $treehouse-error-border, $treehouse-error-color );
+
+    a, strong {
+        color: $treehouse-error-color;
+    }
+}

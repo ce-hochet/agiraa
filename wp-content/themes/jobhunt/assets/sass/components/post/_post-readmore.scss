@@ -1,0 +1,6 @@
+.post-readmore {
+    a {
+        @include make-new-button();
+        @include button-size( 10px, 26px, 14px, $btn-line-height, 4px );
+    }
+}

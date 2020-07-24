@@ -1,0 +1,30 @@
+.remove {
+    font-family: sans-serif;
+    color: #e00;
+    font-weight: bold;
+}
+
+form.woocommerce-cart-form {
+    button[name="update_cart"] {
+        @include button-outline-variant( $treehouse-title-color, #fff );
+    }
+
+    & + .cart-collaterals {
+        .checkout-button {
+            width: 100%;
+            font-family: $jobhunt-title-font-family;
+            font-weight: 600;
+            @include button-size( $btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $btn-line-height-lg, $btn-border-radius-lg );
+        }
+
+        strong {
+            font-family: $jobhunt-body-font-family;
+        }
+    }
+}
+
+.woocommerce-cart {
+    .woocommerce-Price-amount {
+        font-size: 16px;
+    }
+}

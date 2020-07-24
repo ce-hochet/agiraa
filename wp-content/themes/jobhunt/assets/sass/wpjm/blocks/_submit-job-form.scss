@@ -1,0 +1,62 @@
+.job-manager-form {
+    @include make-row();
+
+    > * {
+        @include make-col-ready();
+        @include make-col(12);
+
+        &.fieldset-job_location,
+        &.fieldset-job_type,
+        &.fieldset-job_category,
+        &.fieldset-company_website,
+        &.fieldset-company_tagline,
+        &.fieldset-company_twitter,
+        &.fieldset-job_listing_salary,
+        &.fieldset-job_listing_career_level,
+        &.fieldset-job_listing_experience,
+        &.fieldset-job_listing_gender,
+        &.fieldset-job_listing_industry,
+        &.fieldset-job_listing_qualification {
+            @include media-breakpoint-up(md) {
+                @include make-col(4);
+            }
+        }
+    }
+}
+
+#submit-job-form {
+    padding-top: 30px;
+
+    .fieldset-company_team_size,
+    .fieldset-company_category,
+    .fieldset-company_location,
+    .fieldset-company_email,
+    .fieldset-company_phone,
+    .fieldset-company_facebook,
+    .fieldset-company_googleplus,
+    .fieldset-company_linkedin {
+        @include media-breakpoint-up(md) {
+            @include make-col(6);
+        }
+    }
+
+    .fieldset-company_video {
+        order: 1;
+    }
+
+    > h2,
+    > p,
+    fieldset:first-child,
+    > p + fieldset{
+        @include make-col(12);
+    }
+
+    > p:last-child {
+        order: 2;
+    }
+
+    .select2 .select2-selection.select2-selection--single,
+    .select2 .select2-selection.select2-selection--multiple {
+        min-height: 44px;
+    }
+}

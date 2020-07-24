@@ -1,0 +1,81 @@
+#submit-resume-form {
+    .applying_for {
+        font-weight: 500;
+
+        a {
+            font-weight: 700;
+        }
+    }
+
+    label {
+        margin-bottom: 1em;
+    }
+
+    .resume_file {
+        margin-bottom: 10px;
+    }
+
+    .ui-sortable,
+    .field {
+        .resume-manager-add-row {
+            @include make-new-button(500);
+            @include button-size( 8px, 18px, 14px, 1, 4px );
+            color: $white !important;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            display: block;
+        }
+
+        .resume-manager-data-row {
+            fieldset:last-child {
+                border-width: 0;
+            }
+        }
+    }
+}
+
+.single-resume-preview.single-resume .site-content-page-header {
+    .site-content-page-header-inner {
+        position: relative;
+        z-index: 1;
+    }
+
+    .site-content-page-title {
+        color: $white;
+        margin-bottom: 0;
+    }
+
+    .page-title-area {
+        justify-content: center;
+    }
+
+    &::after {
+        background-color: #fff;
+    }
+}
+
+p.resume-submitted,
+.job-submitted {
+    padding: 80px 0;
+    text-align: center;
+    font-size: 20px;
+
+    @include media-breakpoint-up(md) {
+        font-size: 26px;
+        padding: 100px 0;
+    }
+
+    &::before {
+        @include la-font( "\f058" );
+        font-size: 80px;
+        display: block;
+        margin-bottom: 40px;
+        color: $treehouse-success-bg;
+
+        @include media-breakpoint-up(md) {
+            font-size: 100px;
+        }
+    }
+}

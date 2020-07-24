@@ -1,0 +1,214 @@
+.woocommerce-active.logged-in {
+    .job-manager-job-dashboard-inner,
+    #resume-manager-candidate-dashboard,
+    #job-manager-job-applications {
+        @include make-row;
+    }
+
+    .job-manager-job-dashboard-content,
+    .resume-manager-candidate-dashboard,
+    .job-manager-job-applications {
+        @include make-col-ready;
+        @include make-col(12);
+    }
+
+    .job-manager-job-dashboard-content,
+    .resume-manager-candidate-dashboard,
+    .job-manager-job-applications {
+        @include media-breakpoint-up(lg) {
+            @include make-col(9);
+        }
+    }
+}
+
+.wpjm-activated {
+    .woocommerce-MyAccount-navigation-link {
+        background-color: transparent;
+
+        &.is-active {
+            background-color: transparent;
+        }
+
+        a {
+            color: $e8;
+            font-weight: 500;
+
+            &:before {
+                @include la-font();
+                font-size: 28px;
+                width: 30px;
+                margin-right: 15px;
+            }
+        }
+
+        &.woocommerce-MyAccount-navigation-link--dashboard {
+            a:before {
+                content: "\f187";
+            }
+        }
+
+        &.woocommerce-MyAccount-navigation-link--orders {
+            a:before {
+                content: "\f022";
+            }
+        }
+
+        &.woocommerce-MyAccount-navigation-link--downloads {
+            a:before {
+                content: "\f019";
+            }
+        }
+
+        &.woocommerce-MyAccount-navigation-link--edit-address {
+            a:before {
+                content: "\f59f";
+            }
+        }
+
+        &.woocommerce-MyAccount-navigation-link--edit-account {
+            a:before {
+                content: "\f4ff";
+            }
+        }
+
+        &.woocommerce-MyAccount-navigation-link--customer-logout {
+            a:before {
+                content: "\f2f5";
+            }
+        }
+
+        &.woocommerce-MyAccount-navigation-link--subscriptions {
+            a:before {
+                content: "\f09d";
+            }
+        }
+    }
+}
+
+#resume-manager-candidate-dashboard table.resume-manager-resumes,
+#job-manager-job-dashboard table.job-manager-jobs {
+    ul.candidate-dashboard-actions,
+    ul.job-dashboard-actions {
+        visibility: visible;
+
+        @include media-breakpoint-up(xl) {
+            visibility: hidden;
+        }
+    }
+
+    tfoot {
+        a {
+            @include make-new-button(500);
+            @include button-size( 8px, 18px, 14px, 1, 4px );
+
+            &::before {
+                @include la-font( "\f067" );
+                font-size: 14px;
+                padding-right: 4px;
+            }
+        }
+    }
+
+    tr {
+        @include media-breakpoint-up(xl) {
+            @include hover-focus() {
+                ul.job-dashboard-actions,
+                ul.candidate-dashboard-actions {
+                    visibility: visible;
+                }
+            }
+        }
+    }
+
+    .candidate-dashboard-actions,
+    .job-dashboard-actions {
+        margin-top: 6px;
+
+        a {
+            &::before {
+                @include la-font();
+                font-size: 14px;
+                padding-right: 2px;
+            }
+        }
+    }
+
+    .job-dashboard-action-mark_not_filled {
+        &::before {
+            content: "\f057";
+        }
+    }
+
+    .job-dashboard-action-mark_filled {
+        &::before {
+            content: "\f058";
+        }
+    }
+
+    .job-dashboard-action-duplicate {
+        &::before {
+            content: "\f0c5";
+        }
+    }
+
+    .job-dashboard-action-relist {
+        &::before {
+            content: "\f2f9";
+        }
+    }
+
+    .candidate-dashboard-action-edit,
+    .job-dashboard-action-edit {
+        &::before {
+            content: "\f044";
+        }
+    }
+
+    .candidate-dashboard-action-delete,
+    .job-dashboard-action-delete {
+        &::before {
+            content: "\f2ed";
+        }
+    }
+
+    .candidate-dashboard-action-hide {
+        &::before {
+            content: "\f070";
+        }
+    }
+
+    .candidate-dashboard-action-publish {
+        &::before {
+            content: "\f06e";
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        border: none;
+
+        thead {
+            display: none;
+        }
+
+        tbody {
+            th {
+                display: none;
+            }
+        }
+
+        tr {
+            td {
+                display: block;
+                clear: both;
+                padding: .75rem;
+                width: 100%;
+                border-bottom: none;
+
+                &:last-child {
+                    margin-bottom: 30px;
+                    border-bottom: 1px solid #dee2e6;
+                }
+            }
+        }
+    }
+}

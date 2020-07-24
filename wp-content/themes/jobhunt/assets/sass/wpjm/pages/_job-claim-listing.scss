@@ -1,0 +1,25 @@
+.wpjmcl_form_claim_listing,
+.wpjmcl_form_claim_detail {
+    .fieldset-wpjmcl_listing {
+        label {
+            @include sr-only();
+        }
+
+        .field {
+            font-size: 24px;
+
+            strong {
+                color: inherit;
+            }
+        }
+    }
+
+    input[type="submit"] {
+        padding: 10px 20px;
+    }
+}
+
+.job-manager-message + .wpjmcl_form_claim_listing,
+.job-manager-message + .wpjmcl_form_claim_detail {
+    margin-top: 1.5em;
+}

@@ -1,0 +1,39 @@
+.header-v4 {
+    .site-header-inner {
+        & > .header-menu .menu li a  {
+            @include hover-focus {
+                color: $white;
+            }
+        }
+    }
+
+    &.site-header .site-header-inner > .header-menu {
+        padding: 0 15px;
+    }
+
+    .site-header-inner > .header-menu {
+        .menu > .menu-item {
+            margin-left: 20px;
+
+            > a {
+                font-size: 14px;
+            }
+        }
+
+        li {
+            a {
+                @include make-button(9px, 15px, 13px, 1.45, 5px);
+                @include button-outline-variant($tt);
+                min-width: 82px;
+                display: flex;
+                justify-content: center;
+
+                i {display: none !important;}
+            }
+
+            & + li {
+                margin-left: 20px;
+            }
+        }
+    }
+}

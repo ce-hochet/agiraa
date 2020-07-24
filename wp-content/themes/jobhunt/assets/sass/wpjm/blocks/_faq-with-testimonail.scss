@@ -1,0 +1,28 @@
+.faq-with-testimonail-section {
+    @include make-row;
+
+    .jobhunt-faq-section,
+    .testimonial-block {
+        @include make-col-ready;
+    }
+
+    .jobhunt-faq-section {
+        @include media-breakpoint-up(md) {
+            @include make-col(7.5);
+        }
+
+        @include media-breakpoint-up(lg) {
+            @include make-col(8);
+        }
+    }
+
+    .testimonial-block {
+        @include media-breakpoint-up(md) {
+            @include make-col(4.5);
+        }
+
+        @include media-breakpoint-up(lg) {
+            @include make-col(4);
+        }
+    }
+}

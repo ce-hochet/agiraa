@@ -1,0 +1,77 @@
+.job-manager-job-applications div.job-applications ul.job-applications li.job-application {
+    header {
+        .job-application-rating {
+            &:before {
+                @include lar-font("\f005\f005\f005\f005\f005");
+                letter-spacing: 0;
+            }
+
+            span:before {
+                @include la-font("\f005\f005\f005\f005\f005");
+                color: $warning;
+                letter-spacing: 0;
+            }
+        }
+    }
+
+    section.job-application-content,
+    section.job-application-edit,
+    section.job-application-notes {
+        a.hide_section {
+            color: initial;
+
+            @include hover-focus {
+                color: $danger;
+            }
+
+            &:before {
+                content: "\f057";
+                font-family: $la-font-family;
+            }
+        }
+    }
+
+    footer ul.actions {
+        margin: 0;
+
+        li {
+            a {
+                padding: 0;
+                width: 42px;
+                height: 42px;
+                text-indent: -9999px;
+
+                &:before {
+                    @include la-font();
+                    font-size: 16px;
+                    padding: 14px;
+                    text-indent: 0;
+                }
+            }
+
+            &.edit a:before {
+                content: "\f044";
+            }
+
+            &.notes a:before {
+                content: "\f075";
+            }
+
+            &.email a:before {
+                content: "\f0e0";
+            }
+
+            &.resume a:before {
+                content: "\f007";
+            }
+
+            &.content a:before {
+                content: "\f15c";
+            }
+
+            &.attachment a:before {
+                content: "\f0c6";
+            }
+        }
+    }
+}

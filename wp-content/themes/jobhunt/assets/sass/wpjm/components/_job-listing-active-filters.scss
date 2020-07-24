@@ -1,0 +1,70 @@
+.jobhunt-wpjm-active-filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #e8ecec;
+    padding: 0 10px;
+    border-radius: 4px;
+    margin-bottom: 27px;
+
+    > ul {
+        @include list-unstyled();
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 0;
+        padding-top: 10px;
+
+        .chosen {
+            display: flex;
+            margin-right: 18px;
+            margin-bottom: 10px;
+
+            span {
+                @include make-new-button();
+                @include button-size( 5px, 17px, 13px, 16px, 4px );
+                background-color: $f4;
+                color: $e8;
+
+                @include hover-focus {
+                    background-color: darken( $f4, 4% );
+                }
+            }
+
+            a {
+                align-self: baseline;
+                line-height: 1;
+                width: 16px;
+                height: 16px;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 500px;
+                font-size: 10px;
+                margin-left: -10px;
+                margin-top: -4px;
+
+                i {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .clear-all {
+        margin: 0 5px;
+
+        a {
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+
+            &:before {
+                @include la-font( "\f2ed" );
+                font-size: 22px;
+                padding-bottom: 4px;
+                margin-right: 5px;
+            }
+        }
+    }
+}

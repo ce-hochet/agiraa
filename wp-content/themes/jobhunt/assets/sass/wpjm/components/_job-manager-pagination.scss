@@ -1,0 +1,7 @@
+.job-manager-pagination {
+    margin-bottom: 60px;
+
+    ul {
+        @include make-jobhunt-pagination();
+    }
+}

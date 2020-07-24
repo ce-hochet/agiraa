@@ -1,0 +1,49 @@
+.features {
+    @include list-unstyled;
+    @include make-row;
+
+    .feature {
+        @include make-col-ready;
+        margin-bottom: 50px;
+
+        @include media-breakpoint-up(lg) {
+            @include make-col(4);
+        }
+
+        @include media-breakpoint-between(md, md) {
+            @include make-col(6);
+        }
+    }
+}
+
+.feature-thumbnail {
+    i {
+        font-size: 40px;
+        padding: 20px;
+        margin-right: 20px;
+        border: 2px solid $e6;
+        border-radius: 50px;
+        color: $s4;
+    }
+}
+
+.feature-inner {
+    display: flex;
+
+    @include hover-focus {
+        .feature-thumbnail i {
+            color: $white;
+        }
+    }
+}
+
+.feature-title {
+    font-size: 16px;
+    color: $td;
+    font-weight: 500;
+    margin-top: 0;
+}
+
+.feature-desc {
+    color: $e8;
+}

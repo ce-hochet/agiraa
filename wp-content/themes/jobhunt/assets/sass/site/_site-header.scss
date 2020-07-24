@@ -1,0 +1,68 @@
+@import "header/post-a-job";
+@import "header/site-branding";
+@import "header/header-menu";
+@import "header/off-canvas-navigation";
+@import "header/page-header";
+@import "header/mobile-header";
+@import "header/header-icon-search";
+
+.site-header {
+    position: relative;
+    z-index: 3;
+
+    &:not(.header-transparent) {
+        box-shadow: 0 0 1px rgba(0,65,94,0.2);
+    }
+
+    .jh-svg-logo {
+        @include media-breakpoint-up(xl) {
+            margin-bottom: 8px;
+        }
+    }
+}
+
+.site-header-inner {
+    @include make-row();
+    align-items: center;
+    position: relative;
+    height: 70px;
+
+    .primary-nav,
+    .site-branding,
+    .post-a-job,
+    & > .header-menu {
+        @include make-col-ready();
+    }
+
+    .site-branding + ul.header-menu,
+    .site-branding + .post-a-job {
+        margin-left: auto;
+    }
+
+    .site-branding {
+        @include make-auto-width-col();
+    }
+
+    .primary-nav {
+        @include make-auto-col();
+    }
+
+    & > .header-menu {
+        @include make-auto-width-col();
+        width: auto;
+
+        > li > a {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .site-branding {
+        padding-right: 0;
+    }
+
+    .post-a-job {
+        @include make-auto-width-col();
+        padding: 0;
+    }
+}

@@ -1,0 +1,30 @@
+.footer-v3 {
+    .footer-logo-widget .site-title {
+        color: $td;
+    }
+
+    .footer-widgets {
+        background-color: $white;
+        border-top: 1px solid $ee;
+        color: $s4;
+
+        .widget-title,
+        .jobhunt_footer_logo_widget .site-title{
+            color: $td;
+        }
+
+        a,
+        address,
+        address a,
+        .textwidget,
+        .textwidget p,
+        .textwidget a,
+        .widget-description,
+        .widget_nav_menu .menu-item,
+        .widget_nav_menu .menu-item a,
+        .widget ul li,
+        .widget ul li a {
+            color: $s4;
+        }
+    }
+}

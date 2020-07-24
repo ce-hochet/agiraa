@@ -1,0 +1,148 @@
+.footer-logo-widget {
+    .site-title {
+        font-size: 34px;
+        line-height: 1.2;
+        margin-bottom: 0;
+        text-transform: capitalize;
+        color: $white;
+    }
+
+    .site-description {
+        display: none;
+    }
+}
+
+.footer-widgets {
+    span.widget-title {
+        color: $white;
+    }
+
+    address {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    .menu-item {
+        flex-wrap: wrap;
+
+        &.menu-item-has-children {
+            .menu-item-has-children {
+                margin-bottom: 0;
+            }
+
+            .menu-item-inner {
+                flex-grow: 1;
+                display: flex;
+                justify-content: space-between;
+
+                .child-indicator:not(.collapsed) i::before {
+                    content: "\f146";
+                }
+            }
+
+            .children {
+                width: 100%;
+                padding-left: 0px;
+            }
+        }
+    }
+
+    .job_manager {
+        .job_listing h3 {
+            color: $white;
+        }
+    }
+}
+
+.footer-v1,
+.footer-v3 {
+    .footer-widgets {
+        .widget_nav_menu {
+            .menu-item {
+                display: flex;
+                align-items: center;
+                margin-bottom: 11px;
+
+                &::before {
+                    @include la-icon-font("\f068");
+                    font-size: 20px;
+                    margin-right: 6px;
+                }
+            }
+        }
+    }
+}
+
+.footer-v1,
+.footer-v3,
+.footer-v4,
+.footer-v5 {
+    .footer-widgets {
+        .widget_categories > ul,
+        .widget_pages > ul,
+        .widget_nav_menu ul.menu {
+            > li {
+                &.cat-parent,
+                &.menu-item-has-children,
+                &.page_item_has_children {
+                    li {
+                        margin-bottom: 0;
+                        margin-top: 10px;
+                    }
+                }
+
+                .children {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+.footer-v1,
+.footer-v3,
+.footer-v5 {
+    .footer-widget-2 {
+        .menu {
+            @include media-breakpoint-up(md) {
+                column-count: 2;
+                column-gap: 40px;
+            }
+        }
+    }
+}
+
+.footer-v2 {
+    .footer-widget {
+        padding: 34px 15px 16px;
+
+        text-align: center;
+
+        address {
+            line-height: 32px;
+        }
+
+        .widget-title,
+        .menu .sub-menu,
+        .menu .children,
+        .menu .child-indicator {
+            display: none;
+        }
+
+        .menu,ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .menu-item,li {
+                margin-bottom: 0;
+
+                & + .menu-item,
+                & + li {
+                    margin-left: 24px;
+                    list-style: disc;
+                }
+            }
+        }
+    }
+}

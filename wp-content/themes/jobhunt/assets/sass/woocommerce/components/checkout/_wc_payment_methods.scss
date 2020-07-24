@@ -1,0 +1,57 @@
+.woocommerce-checkout-payment {
+    @include media-breakpoint-up(lg) {
+        padding: 0 0.75em;
+    }
+}
+
+.wc_payment_methods {
+    @include list-unstyled();
+    margin-top: 1.5rem;
+}
+
+.wc_payment_method {
+    margin-bottom: 0.5rem;
+
+    > label {
+        margin-left: 10px;
+    }
+}
+
+label[for="payment_method_paypal"] {
+    @include media-breakpoint-down(md) {
+        flex-grow: 1;
+    }
+
+    & + .payment_box {
+        margin-top: 6px;
+    }
+
+    img {
+        max-width: 150px;
+        display: block;
+        margin-top: 4px;
+        
+        @include media-breakpoint-down(md) {
+            max-height: 32px;
+            margin-top: 0;
+        }
+    }
+
+    .about_paypal {
+        font-size: 13px;
+        font-weight: 500;
+    }
+}
+
+.wc_payment_method.payment_method_paypal {
+    display: flex;
+    flex-wrap: wrap;
+
+    .payment_box p {
+        margin-bottom: 0;
+    }
+}
+
+label[for="payment_method_ppec_paypal"] {
+    margin-left: 0;
+}

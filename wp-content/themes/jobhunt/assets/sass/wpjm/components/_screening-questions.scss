@@ -1,0 +1,23 @@
+.job-manager-form {
+    .wpjmsq-new-question-trigger-wrapper {
+        .add_screening_question_button_options {
+            z-index: 2;
+        }
+    }
+
+    .wpjmsq-job-questions-wrapper {
+        .remove_question_item {
+            border-radius: 50%;
+        }
+    }
+
+    #wpjmsq-popup {
+        .modal-content {
+            border-width: 0;
+        }
+
+        .wpjmsq-modal-close-btn {
+            z-index: 2;
+        }
+    }
+}

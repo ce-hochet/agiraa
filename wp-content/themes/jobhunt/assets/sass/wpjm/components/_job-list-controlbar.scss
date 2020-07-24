@@ -1,0 +1,81 @@
+.jh-jobs-control-bar {
+    @include make-row;
+    align-items: center;
+    margin-bottom: 32px;
+
+    .showing_jobs,
+    .jobs-sorting{
+        @include make-col-ready;
+        @include media-breakpoint-only(lg) {
+            padding: 0;
+        }
+    }
+
+    .showing_jobs {
+        @include media-breakpoint-up(xl) {
+            margin: 0;
+        }
+
+        span {
+            font-size: 16px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            @include make-col(5);
+        }
+    }
+
+    .jobs-sorting {
+        display: flex;
+        flex-direction: column;
+
+        @include media-breakpoint-up(md) {
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            @include make-col(7);
+            justify-content: flex-end;
+            margin-bottom: 0;
+        }
+
+        label {
+            font-size: 13px;
+            font-weight: 500;
+            color: $e8;
+
+            @include media-breakpoint-up(md) {
+                margin-right: 20px;
+                margin-bottom: 0;
+            }
+        }
+
+        form + form {
+            margin: 15px 0 0;
+
+            @include media-breakpoint-up(md) {
+                margin: 0 0 0 10px;
+            }
+        }
+
+        select {
+            width: 100%;
+            font-size: 13px;
+            color: $e8;
+            border-width: 0;
+            height: 35px;
+            background-color: $f4;
+
+            @include media-breakpoint-up(md) {
+                min-width: 160px;
+                width: auto;
+            }
+
+            @include hover-focus {
+                background-color: $f4;
+            }
+        }
+    }
+}

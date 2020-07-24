@@ -1,0 +1,258 @@
+/* @group Base */
+.chosen-container {
+    /*position: relative;
+    display: inline-block;
+    vertical-align: middle;*/
+    font-size: 14px;
+    /*user-select: none;
+    * {
+        box-sizing: border-box;
+    }*/
+    .chosen-drop {
+        width: 100%;
+        border: 2px solid $treehouse-input-border-hover-color;
+        box-shadow: none;
+        border-top: 0;
+    }
+    /*&.chosen-with-drop .chosen-drop {
+        clip: auto;
+        clip-path: none;
+    }
+    a{
+        cursor: pointer;
+    }
+
+    .search-choice, .chosen-single{
+        .group-name{
+            margin-right: 4px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-weight: normal;
+            color: #999999;
+            &:after {
+                content: ":";
+                padding-left: 2px;
+                vertical-align: top;
+            }
+        }
+    }*/
+}
+/* @end */
+/* @group Results */
+.chosen-container .chosen-results {
+    color: $treehouse-nav-link-color;
+    
+    li {
+        padding: 4px 15px;
+        line-height: 24px;
+        
+        &.highlighted {
+            background-color: $treehouse-input-bg;
+            background-image: none;
+            color: $treehouse-input-color;
+        }
+    }
+}
+/* @end */
+/* @group Single Chosen */
+.chosen-container-single {
+    .chosen-single {
+        padding: 0.75em 1em;
+        height: 42px;
+        border: 2px solid $treehouse-input-border-color;
+        border-radius: 5px;
+        background: none;
+        background-color: $treehouse-input-bg;
+        background-clip: padding-box;
+        box-shadow: none;
+        color: $treehouse-input-color;
+        line-height: normal;
+    }
+
+    .chosen-search {
+        /*position: relative;
+        z-index: 1010;
+        margin: 0;
+        padding: 3px 4px;
+        white-space: nowrap;*/
+
+        input[type="text"] {
+            background: none;
+            font-family: $jobhunt-body-font-family;
+
+            /*margin: 1px 0;
+            padding: 4px 20px 4px 5px;
+            width: 100%;
+            height: auto;
+            outline: 0;
+            border: 1px solid #aaa;
+            font-size: 1em;
+            line-height: normal;
+            border-radius: 0;*/
+        }
+    }
+    /*.chosen-default {
+        color: #999;
+    }
+    .chosen-single span {
+        display: block;
+        overflow: hidden;
+        margin-right: 26px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .chosen-single-with-deselect span {
+        margin-right: 38px;
+    }
+    .chosen-single abbr {
+        position: absolute;
+        top: 6px;
+        right: 26px;
+        display: block;
+        width: 12px;
+        height: 12px;
+        background: $chosen-sprite -42px 1px no-repeat;
+        font-size: 1px;
+        &:hover {
+            background-position: -42px -10px;
+        }
+    }
+    &.chosen-disabled .chosen-single abbr:hover {
+        background-position: -42px -10px;
+    }*/
+    
+    .chosen-single div {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: none;
+        width: 18px;
+        height: 100%;
+        /*b {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: $chosen-sprite no-repeat 0px 2px;
+        }*/
+    }
+    /*.chosen-drop {
+        margin-top: -1px;
+        border-radius: 0 0 4px 4px;
+        background-clip: padding-box;
+    }
+    &.chosen-container-single-nosearch .chosen-search {
+        position: absolute;
+        clip: rect(0,0,0,0);
+        clip-path: inset(100% 100%);
+    }*/
+    &:hover {
+        .chosen-single {
+            border-color: $treehouse-input-border-hover-color;
+        }
+    }
+}
+
+/* @end */
+
+.chosen-container-multi{
+    .chosen-choices {
+        background-image: none;
+        border-width: 2px;
+        border-color: $treehouse-input-border-color;
+        background-color: $treehouse-input-bg;
+        border-radius: 5px;
+    }
+    .chosen-choices li {
+        
+        &.search-field {
+            input[type="text"] {
+                font-family: $jobhunt-body-font-family;
+                color: $treehouse-input-color;
+                padding: 0.75em 1em;
+            }
+        }
+        
+        &.search-choice {
+            background-image: none;
+            background-color: #fff;
+            border-radius: 4px;
+            color: $treehouse-input-color;
+            border-width: 2px;
+            border-color: #d4d9dd;
+            padding: 8px 20px 8px 12px;
+            
+            .search-choice-close {
+                top: 9px;
+                right: 4px;
+            }
+        }
+        
+        /*&.search-choice-disabled {
+            padding-right: 5px;
+            border: 1px solid #ccc;
+            background-color: #e4e4e4;
+            background-image: linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eee 100%);
+            color: #666;
+        }
+        
+        &.search-choice-focus {
+            background: #d4d4d4;
+            .search-choice-close {
+                background-position: -42px -10px;
+            }
+        }*/
+    }
+
+     &:hover {
+        .chosen-choices {
+            border-color: $treehouse-input-border-hover-color;
+        }
+    }
+}
+
+/* @group Active  */
+.chosen-container-active{
+    .chosen-single {
+        box-shadow: none;
+        /*border: 1px solid #5897fb;
+        box-shadow: 0 0 5px rgba(#000,.3);*/
+    }
+    &.chosen-with-drop{
+        .chosen-single {
+            box-shadow: none;
+            background-color: #fff;
+            border-color: $treehouse-input-border-hover-color;
+            background-image: none;
+            border-width: 2px;
+            /*border: 1px solid #aaa;
+            -moz-border-radius-bottomright: 0;
+            border-bottom-right-radius: 0;
+            -moz-border-radius-bottomleft: 0;
+            border-bottom-left-radius: 0;
+            background-image: linear-gradient(#eee 20%, #fff 80%);
+            box-shadow: 0 1px 0 #fff inset;*/
+        }
+        .chosen-single div {
+            /*border-left: none;
+            background: transparent;
+            b {
+                background-position: -18px 2px;
+            }*/
+        }
+    }
+    .chosen-choices {
+        box-shadow: none;
+        background-color: #fff;
+        border-color: $treehouse-input-border-hover-color;
+        
+        /*li.search-field input[type="text"] {
+            color: #222 !important;
+        }*/
+    }
+}
+/* @end */
+
+.chosen-container-active .chosen-choices li.search-choice {
+    background-color: $treehouse-input-bg;
+}

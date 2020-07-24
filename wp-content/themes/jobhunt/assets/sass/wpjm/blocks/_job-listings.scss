@@ -1,0 +1,48 @@
+.job_listings {
+    @include list-unstyled();
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: 50px;
+    }
+
+    & + .load_more_jobs {
+        margin-bottom: 50px;
+    }
+}
+
+.job_listings.grid {
+    @include make-row();
+
+    > li {
+        @include make-col-ready();
+
+        @include media-breakpoint-up(md) {
+            @include make-col(6);
+        }
+    }
+}
+
+.no-jobs-found {
+    @include make-alert();
+    @include alert-variant( $treehouse-info-bg, $treehouse-info-border, $treehouse-error-color );
+
+    a, strong {
+        color: $treehouse-error-color;
+    }
+}
+
+.load_more_jobs {
+    @include make-new-button();
+    @include button-outline-variant( $treehouse-page-item-border-color, $treehouse-page-item-border-color );
+    color: $treehouse-nav-link-focus-color;
+    border-width: 2px;
+    @include button-size($btn-padding-y, $btn-padding-x, 14px, $btn-line-height, 5px);
+    display: block;
+    width: 100%;
+    font-family: $jobhunt-title-font-family;
+    margin-bottom: 20px;
+
+    @include hover-focus() {
+        color: $treehouse-nav-link-focus-color
+    }
+}

@@ -1,0 +1,38 @@
+.star-rating {
+    @include lar-icon-font();
+    overflow: hidden;
+    position: relative;
+    height: 1.618em;
+    line-height: 1.618;
+    font-size: 1em;
+    width: 5em;
+
+    &::before {
+        content: '\f005\f005\f005\f005\f005';
+        opacity: 0.25;
+        float: left;
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+
+    span {
+        text-indent: -9999px;
+        overflow: hidden;
+        float: left;
+        top: 0;
+        left: 0;
+        position: absolute;
+        padding-top: 1.5em;
+    }
+
+    span::before {
+        text-indent: 0;
+        content: '\f005\f005\f005\f005\f005';
+        font-weight: 900;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #efc609;
+    }
+}

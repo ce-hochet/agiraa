@@ -1,0 +1,225 @@
+.testimonial-block {
+    &.v1 {
+        @include stretch-full-width();
+        padding: 46px 0 0;
+
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            content: " ";
+            opacity: .8;
+        }
+
+        .testimonial-block-inner {
+            position: relative;
+            z-index: 2;
+        }
+    }
+}
+
+.testimonials {
+    list-style: none;
+    padding: 0;
+
+    .testimonial {
+        text-align: center;
+
+        @include hover-focus {
+            outline: none;
+        }
+    }
+
+    .placeholder {
+        background-color: #d8d8d8;
+    }
+
+    img {
+        border-radius: 50%;
+        width: 100px;
+        margin: auto;
+    }
+
+    .testimonial-inner {
+        @include media-breakpoint-up(lg) {
+            padding: 0 210px;
+        }
+
+        .customer-info {
+            margin-bottom: 16px;
+        }
+    }
+}
+
+.elementor .testimonials img {
+    border-radius: 50%;
+}
+
+.v1 {
+    .testimonial {
+        margin-top: 50px;
+        text-align: left;
+
+        @include media-breakpoint-down(sm) {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        @include media-breakpoint-up (md) {
+            padding: 0 15px;
+        }
+    }
+
+    .testimonial-block-inner {
+        .section-title,
+        .section-sub-title {
+            color: $white;
+        }
+
+        .slick-dots li button::before {
+            color: $white;
+        }
+    }
+
+    .testimonial-inner {
+        min-height: 240px;
+        border-radius: 8px;
+        padding: 34px 22px 28px 34px;
+        background-color: $white;
+        position: relative;
+
+        &::before {
+            @include fa-icon;
+            @include fa-font("\f10e", 900);
+            font-size: 34px;
+            position: absolute;
+            top: 40px;
+            right: 40px;
+        }
+
+        .customer-info {
+            position: relative;
+        }
+
+        .customer-info-inner {
+            display: inline-flex;
+            align-items: baseline;
+            margin-top: 50px;
+
+            @include media-breakpoint-down(sm) {
+                flex-direction: column;
+            }
+        }
+
+        .customer-name {
+            color: $td;
+        }
+
+        .customer-profile-image {
+            position: absolute;
+            top: -82px;
+        }
+
+        .customer-designation {
+            color: $e8;
+
+            @include media-breakpoint-up (md) {
+                margin-left: 14px;
+            }
+        }
+
+        .customer-feedback {
+            color: $e8;
+        }
+    }
+}
+
+.v2 {
+    .testimonials {
+        img {
+            padding: 5px;
+            width: 106px;
+            height: 106px;
+            border: 2px dashed transparent;
+        }
+    }
+
+    .customer-name {
+        margin-bottom: 4px;
+    }
+
+    .testimonial-inner {
+        .customer-info {
+            margin-bottom: 26px;
+        }
+    }
+}
+
+.v2,.v3 {
+    .testimonials {
+        overflow: hidden;
+
+        .slick-list {
+            overflow: visible;
+        }
+    }
+
+    .testimonial {
+        .customer-feedback {
+            position: relative;
+            @include media-breakpoint-up(lg) {
+                &::before,
+                &::after {
+                    content: "";
+                    width: 84px;
+                    height: 60px;
+                    display: block;
+                    background: transparent url(assets/images/blockquote-icon.svg) center center no-repeat;
+                    background-size: contain;
+                    position: absolute;
+                }
+
+                &::before {
+                    top: -100%;
+                    left: -28%;
+                }
+
+                &::after {
+                    bottom: -50%;
+                    right: -28%;
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+}
+
+.v3 {
+    .testimonials img {
+        border: 1px solid transparent;
+    }
+
+    .customer-profile-image {
+        display: inline-block;
+        box-shadow: 0px 0px 30px 0px rgba(32, 32, 32, 0.6);
+        border-radius: 50%;
+
+        img {
+            box-shadow: 0px 0px 0px 10px rgba(255,255,255,1);
+        }
+    }
+
+    .testimonials .testimonial-inner {
+        padding: 20px 10px 0;
+
+        @include media-breakpoint-up(md) {
+            padding: 20px 100px 0;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding: 20px 210px 0;
+        }
+    }
+}

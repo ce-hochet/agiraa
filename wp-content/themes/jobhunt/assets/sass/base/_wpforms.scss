@@ -1,0 +1,139 @@
+.wpforms-container {
+    &.contact-form {
+        margin-bottom: 0 !important;
+
+        @include media-breakpoint-up(lg) {
+            padding-right: 82px !important;
+        }
+
+        .wpforms-form {
+            .wpforms-field {
+                padding: 0;
+                margin-bottom: 1rem;
+
+                input,
+                select,
+                textarea {
+                    margin-bottom: 6px;
+                }
+
+                input,
+                textarea {
+                    @include make-new-form-control( $treehouse-input-color, $treehouse-input-bg, 2px, $treehouse-input-border-color );
+                    @include form-control-size( 0.75em, 1em, 14px, normal, 4px );
+
+                    @include hover-focus() {
+                        border-color: $treehouse-input-border-hover-color;
+                    }
+
+                    &:focus {
+                        background-color: $treehouse-input-bg-focus-color;
+                        outline: none;
+                    }
+                }
+
+                input {
+                    height: auto;
+
+                    &.wpforms-error {
+                        border-width: 2px;
+                    }
+                }
+            }
+
+            .wpforms-field-label {
+                display: inline-block;
+                font-size: 14px;
+                font-weight: 600;
+                margin-bottom: .5em;
+            }
+
+            .wpforms-submit-container {
+                padding-top: 0;
+                margin-bottom: 1rem;
+
+                .wpforms-submit {
+                    @include make-new-button();
+                    @include button-size( 15px, 18px, 15px, 16px, 4px );
+                    min-width: 164px;
+                    box-shadow: none !important;
+                }
+            }
+        }
+    }
+
+    &.newsletter-form {
+        .wpforms-form {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            width: 100%;
+
+            .wpforms-field-container {
+                position: relative;
+                -ms-flex: 1 1 auto;
+                flex: 1 1 auto;
+                width: 1%;
+                margin-bottom: 0;
+            }
+
+            .wpforms-field {
+                padding: 0;
+
+                input {
+                    @include make-new-form-control( $white, transparent, 1px, $ea );
+                    @include form-control-size( 0.75em, 1em, 14px, normal, 4px );
+                    border-radius: 6px;
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                    border-right: none;
+                    height: 50px;
+
+                    &:focus {
+                        outline: none;
+                    }
+
+                    &.wpforms-error {
+                        border-color: $ea;
+                        border-radius: 6px;
+                        border-top-right-radius: 0;
+                        border-bottom-right-radius: 0;
+                        border-right: none;
+                    }
+                }
+
+                label.wpforms-error {
+                    margin-top: 6px;
+                }
+            }
+
+            .wpforms-submit-container {
+                padding-top: 0;
+
+                .wpforms-submit {
+                    font-weight: $btn-font-weight;
+                    text-align: center;
+                    white-space: nowrap;
+                    vertical-align: middle;
+                    user-select: none;
+                    border: 1px solid transparent;
+                    height: 50px;
+
+                    &:focus {
+                        outline: none;
+                        box-shadow: $btn-focus-box-shadow;
+                    }
+
+                    &[class*="la-"] {
+                        font-size: 0;
+                        &:before {
+                            font-size: 28px;
+                            transform: rotate(-40deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

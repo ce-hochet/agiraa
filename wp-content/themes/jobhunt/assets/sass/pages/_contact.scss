@@ -1,0 +1,117 @@
+.jh-contact {
+    h2 {
+        margin-bottom: 23px;
+        font-size: 20px;
+        font-weight: 500;
+        margin-top: 0;
+    }
+
+    iframe {
+        border-radius: 8px;
+    }
+
+    .location-map {
+        .wpb_gmaps_widget .wpb_wrapper {
+            background-color: transparent;
+            padding: 0;
+        }
+    }
+
+    .contact-form input[type=email], .contact-form input[type=text], .contact-form input[type=url],
+    .contact-form textarea {
+        width: 100%;
+    }
+}
+
+.contact-form {
+    @include media-breakpoint-up(lg) {
+        padding-right: 82px;
+    }
+
+    input,
+    select,
+    textarea {
+        margin-bottom: 6px;
+    }
+
+    .wpcf7-form-control-wrap.your-message {
+        margin-bottom: 30px;
+        display: block;
+    }
+
+    .wpcf7-validation-errors,
+    .wpcf7-mail-sent-ok {
+        @include make-alert();
+        margin: 0 0 1rem 0;
+    }
+
+    .wpcf7-validation-errors {
+        @include alert-variant( $treehouse-error-bg , $treehouse-error-border, $treehouse-success-color );
+    }
+
+    .wpcf7-mail-sent-ok {
+        @include alert-variant( $treehouse-success-bg , $treehouse-success-border, $treehouse-success-color );
+    }
+
+    input[type="submit"] {
+        @include make-new-button();
+        @include button-size( 15px, 18px, 15px, 16px, 4px );
+        min-width: 164px;
+        box-shadow: none !important;
+    }
+
+    .invalid input[type="submit"] {
+        @include button-variant( $n6, $n6, $n6, $n6 );
+        cursor: not-allowed;
+    }
+}
+
+.contact-address {
+
+    h2 {
+        margin-bottom: 40px;
+    }
+
+    @include media-breakpoint-up(md) {
+        h2 {
+            margin-bottom: 50px;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        h2 {
+            text-align: center;
+        }
+    }
+
+    &.v2 {
+        background-color: $ed;
+        border-radius: 8px;
+        padding: 30px 20px 12px;
+
+        @include media-breakpoint-up(lg) {
+            padding: 40px 42px 12px;
+        }
+    }
+
+    ul {
+        @include list-unstyled;
+
+        li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 34px;
+            color: $e8;
+
+            address {
+                margin-bottom: 0;
+            }
+
+            i {
+                font-size: 40px;
+                width: 40px;
+                margin-right: 24px;
+            }
+        }
+    }
+}

@@ -1,0 +1,94 @@
+.job_listing-single-job-info {
+    border-bottom: 1px solid #e8ecec;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+
+    .job-listing-single-job__title-type {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .job-listing-single-job__title {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    .job-types,
+    .claim-link {
+        margin-bottom: 0;
+
+        @include media-breakpoint-up(md) {
+            padding-left: 20px;
+        }
+    }
+
+    .job-listing-single-location-salary-posted {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+        > div + div {
+            @include media-breakpoint-up(md) {
+                margin-left: 40px;
+            }
+        }
+    }
+
+    .location,
+    .job-listing_single_job__salary,
+    .date-posted {
+        display: flex;
+        align-items: center;
+
+        > i {
+            font-size: 24px;
+            margin-right: 5px;
+            padding-bottom: 4px;
+        }
+
+        a, time {
+            color: $treehouse-body-color;
+        }
+    }
+
+    .job-listing_single_job__salary,
+    .job-listing_single_job__category {
+        > ul {
+            @include list-unstyled;
+            margin-bottom: 0;
+            margin-left: 5px;
+
+            > li {
+                display: inline-block;
+            }
+        }
+
+        span {
+            color: $treehouse-body-color;
+        }
+    }
+
+    .job-listing_single_job__category {
+        display: flex;
+        align-items: baseline;
+        margin-bottom: 20px;
+
+        label {
+            margin-bottom: 0;
+        }
+
+        a {
+            color: $treehouse-body-color;
+        }
+    }
+}
+
+.job_tags {
+    padding: 20px 0;
+
+    a {
+        @include make-button(7px, 14px, 13px, 1em, 4px);
+        margin: 0 4px;
+    }
+}
