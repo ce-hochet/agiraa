@@ -454,3 +454,9 @@ add_action( 'resume_manager_update_resume_data', function( $resume_id ) {
 		wp_update_post( $update_resume );
 	}
 } );
+
+/* AJOUT SCRIPT JS CHILD EXTERNE */
+add_action( 'wp_enqueue_scripts', 'enqueue_mon_script' );
+function enqueue_mon_script() {
+    wp_enqueue_script( 'script-perso', get_stylesheet_directory_uri() . '/custom-js/jobhunt-child.js', array( 'jquery' ) );
+}
