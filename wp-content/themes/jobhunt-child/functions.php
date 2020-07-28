@@ -454,3 +454,53 @@ add_action( 'resume_manager_update_resume_data', function( $resume_id ) {
 		wp_update_post( $update_resume );
 	}
 } );
+
+
+if ( ! function_exists( 'jobhunt_register_login_form' ) ) {
+    function jobhunt_register_login_form() {
+
+        $output = '';
+
+        if( ! is_user_logged_in() ) {
+            ob_start();
+            ?>
+            <div class="jobhunt-register-login-form">
+                <div class="jobhunt-register-login-form-inner">
+                    <ul class="nav" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link" id="jh-register-tab" data-toggle="pill" href="#jh-register-tab-content" role="tab" aria-controls="jh-register-tab-content" aria-selected="false"><?php echo apply_filters( 'jobhunt_register_form_tab_title', esc_html__( 'S\'inscrire', 'jobhunt-extensions') ); ?></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" id="jh-login-tab" data-toggle="pill" href="#jh-login-tab-content" role="tab" aria-controls="jh-login-tab-content" aria-selected="true"><?php echo apply_filters( 'jobhunt_login_form_tab_title', esc_html__( 'Se connecter', 'jobhunt-extensions') ); ?></a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade" id="jh-register-tab-content" role="tabpanel" aria-labelledby="jh-register-tab"><?php echo jobhunt_registration_form(); ?></div>
+                        <div class="tab-pane fade show active" id="jh-login-tab-content" role="tabpanel" aria-labelledby="jh-login-tab"><?php echo jobhunt_login_form(); ?></div>
+                    </div>
+                </div>
+            </div>
+            <?php
+            $output = ob_get_clean();
+        } elseif( function_exists( 'jobhunt_wpjm_wc_account_dashboard' ) ) {
+            ob_start();
+            jobhunt_wpjm_wc_account_dashboard();
+            $output = ob_get_clean();
+        }
+
+        return $output;
+    }
+}
+
+if ( ! function_exists ( 'jh_child_custom_header_register_page_url' ) ) {
+    function jh_child_custom_header_register_page_url( $url ) {
+        $custom_userpage = jobhunt_get_register_login_form_page();
+
+        if( !empty( $custom_userpage ) ) {
+            $url = get_permalink( $custom_userpage ) . '#jh-register-tab-content';
+        }
+
+        return $url;
+    }
+}
+add_filter( 'jobhunt_header_register_page_url', 'jh_child_custom_header_register_page_url' );
