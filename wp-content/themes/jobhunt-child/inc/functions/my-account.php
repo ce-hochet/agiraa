@@ -61,7 +61,7 @@ if ( ! function_exists( 'jobhunt_registration_form_fields' ) ) {
                     <?php endif; ?>
                         <p id="jobhunt_register_user_rna_block">
                             <label for="jobhunt_register_user_rna"><?php echo esc_html__('RNA', 'jobhunt'); ?>
-                                <input name="jobhunt_register_user_rna" id="jobhunt_register_user_rna" minlength="10" maxlength="10" required class="required" type="text"/>
+                                <input name="jobhunt_user_rna" id="jobhunt_register_user_rna" minlength="10" maxlength="10" required class="required" type="text"/>
                             </label>
                             <span id="jobhunt_register_user_rna_error" style="color: #F75959">
                                 
@@ -174,6 +174,11 @@ if ( ! function_exists( 'jobhunt_add_new_member' ) ) {
                 }
             }
 
+            // Ajout de la partie RNA. 
+            if($user_role === "employer") {
+                $rna_code = $_POST["jobhunt_user_rna"];
+            }
+
             if( username_exists( $user_login ) && apply_filters( 'jobhunt_register_user_login_enabled', true ) ) {
                 // Username already registered
                 jobhunt_form_errors()->add('username_unavailable', esc_html__('Username already taken','jobhunt'));
@@ -194,7 +199,11 @@ if ( ! function_exists( 'jobhunt_add_new_member' ) ) {
                 //Email address already registered
                 jobhunt_form_errors()->add('email_used', esc_html__('Email already registered','jobhunt'));
             }
-
+            //Check si RNA non vide et OK.
+            if($rna_code == ''){
+                jobhunt_form_errors()->add('rna_empty', esc_html__('Please enter your RNA code', 'jobhunt')); 
+            }
+            
             $password = wp_generate_password();
             $password_generated = true;
 
@@ -226,7 +235,8 @@ if ( ! function_exists( 'jobhunt_add_new_member' ) ) {
                     } else {
                         wp_new_user_notification( $new_user_id, null, 'both' );
                     }
-
+                    //Insertion du code RNA en BDD.
+                    add_user_meta($new_user_id, 'rna', $rna_code);
                     // log the new user in
                     $creds = array();
                     $creds['user_login'] = $user_login;

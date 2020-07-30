@@ -26,6 +26,7 @@ jQuery(document).ready(function( $ ){
         $("#register_b").prop('disabled', true);
     }
 
+    deactivateRNAField();
     // Vérification du role choisie. Affichage & obligation du champ en fonction.
     $("#jobhunt_register_user_role").change(() => 
         $( "#jobhunt_register_user_role" ).val() === "employer" ? 
