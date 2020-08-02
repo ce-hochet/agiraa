@@ -63,7 +63,7 @@ if ( ! function_exists( 'jobhunt_registration_form_fields' ) ) {
                             <label for="jobhunt_register_user_rna"><?php echo esc_html__('RNA', 'jobhunt'); ?>
                                 <input name="jobhunt_user_rna" id="jobhunt_register_user_rna" minlength="10" maxlength="10" required class="required" type="text"/>
                             </label>
-                            <span id="jobhunt_register_user_rna_error" style="color: #F75959">
+                            <span id="jobhunt_register_user_rna_error">
                                 
                             </span> 
                         </p>

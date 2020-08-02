@@ -466,3 +466,75 @@ function enqueue_mon_script() {
 }
 
 require_once get_stylesheet_directory() . '/inc/functions/my-account.php';
+
+/* 
+ * 31/07/2020
+ * BNORMAND
+ * EDITION DU CHAMPS RNA USER PROFILE 
+ * */
+add_action( 'show_user_profile', 'show_extra_profile_fields' );
+add_action( 'edit_user_profile', 'show_extra_profile_fields' );
+
+function show_extra_profile_fields( $user ) {
+    if($user->roles[0] === "employer"){
+        $rna = empty(get_user_meta( $user->ID, 'rna')) ? "" : get_user_meta( $user->ID, 'rna')[0];
+        $declaration = empty(get_user_meta($user->ID, 'declaration_file_path')) ? "" : get_user_meta($user->ID, 'declaration_file_path')[0];
+        ?>
+        <h3><?php esc_html_e( 'Association Information', 'jobhunt' ); ?></h3>
+
+        <table class="form-table">
+            <tr>
+                <th><label for="rna"><?php esc_html_e( 'RNA Code', 'jobhunt' ); ?></label></th>
+                <td>
+                    <input type="text"
+                    disabled
+                    minlength="10" 
+                    maxlength="10"
+                    id="rna"
+                    name="rna"
+                    value="<?php echo $rna; ?>"
+                    class="regular-text"
+                    />
+                </td>
+            </tr>
+            <tr>
+                <th><label for="rna"><?php esc_html_e( 'Declaration', 'jobhunt' ); ?></label></th>
+                <td>
+                    <br><span>
+                    <?php if($declaration !== "") {?> 
+                        <a style="color: #b4c408;" target="_blank" href="<?php echo "http://" . $_SERVER['HTTP_HOST'] . $declaration; ?>"> Consulter la déclaration enregistrée. </a></span><br>
+                    <?php } else { ?>
+                        <p style="color: #DF3F52;"> Aucune déclaration n'a été mise en ligne par l'association.</p>
+                    <?php } ?>
+                </td>
+            </tr>
+        </table>
+        <?php
+    }
+}
+
+/* 
+ * 01/08/2020
+ * BNORMAND
+ * EDITION DU CHAMPS RNA USER PROFILE 
+ * */
+add_action( 'woocommerce_save_account_details', 'save_declaration_file_account_details', 12, 1 );
+function save_declaration_file_account_details( $user_id ) {
+    $declaration_file = $_FILES['declaration_file'];
+    $target_file =  "/wp-content/uploads/declaration_file/" . $user_id . "_declaration_file.pdf";
+    $target_full_path = $_SERVER['DOCUMENT_ROOT'] . $target_file;
+    if(isset($declaration_file) && $declaration_file["type"] === "application/pdf"){
+        empty(get_user_meta($user_id, 'declaration_file_path')) ? "" : delete_user_meta($user_id, 'declaration_file_path');
+        if(file_exists($target_full_path)) {
+            unlink($target_full_path);
+        }
+
+        if (move_uploaded_file($declaration_file["tmp_name"], $target_full_path)) {
+            add_user_meta($user_id, 'declaration_file_path', $target_file);
+        } else {
+            jobhunt_form_errors()->add('error', esc_html__('Error while uploading file. Please try again.', 'jobhunt'));
+        }
+    } else {
+        jobhunt_form_errors()->add('rna_empty', esc_html__('Declaration file must be a PDF file.', 'jobhunt'));
+    }
+}
