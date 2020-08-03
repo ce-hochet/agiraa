@@ -60,7 +60,12 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
             </p>
             <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
                 <label for="declaration_file"><?php _e( 'Declaration file', 'jobhunt' ); ?></label>
-                <br><span> <a style="color: #b4c408;" target="_blank" href="<?php echo "http://" . $_SERVER['HTTP_HOST'] . $declaration; ?>"> Consulter la déclaration enregistrée. </a></span><br>
+                <br><span>
+                <?php if($declaration !== "") {?> 
+                    <a style="color: #b4c408;" target="_blank" href="<?php echo "http://" . $_SERVER['HTTP_HOST'] . $declaration; ?>"> Consulter la déclaration enregistrée. </a></span><br>
+                <?php } else { ?>
+                    <p style="color: #DF3F52;"> Aucune déclaration n'a été mise en ligne par l'association.</p>
+                <?php } ?>
                 <input type="file" class="woocommerce-Input woocommerce-Input--text input-text" name="declaration_file" id="declaration_file"/>
                 <span> <em> Veuillez charger le "Récépissé de déclaration" de votre association pour obtenir le statut "Compte certifié" et attesté de la bonne existence de votre association. </em> </span>
             </p>

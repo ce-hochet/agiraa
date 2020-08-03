@@ -200,7 +200,7 @@ if ( ! function_exists( 'jobhunt_add_new_member' ) ) {
                 jobhunt_form_errors()->add('email_used', esc_html__('Email already registered','jobhunt'));
             }
             //Check si RNA non vide et OK.
-            if($rna_code == ''){
+            if($user_role === "employer" && $rna_code == ''){
                 jobhunt_form_errors()->add('rna_empty', esc_html__('Please enter your RNA code', 'jobhunt')); 
             }
             
