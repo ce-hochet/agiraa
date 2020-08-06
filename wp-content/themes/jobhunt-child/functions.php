@@ -470,7 +470,7 @@ require_once get_stylesheet_directory() . '/inc/functions/my-account.php';
 /* 
  * 31/07/2020
  * BNORMAND
- * EDITION DU CHAMPS RNA USER PROFILE 
+ * EDITION DU CHAMPS RNA / DOCUMENT / Certified Label pour USER PROFILE 
  * */
 add_action( 'show_user_profile', 'show_extra_profile_fields' );
 add_action( 'edit_user_profile', 'show_extra_profile_fields' );
@@ -479,6 +479,7 @@ function show_extra_profile_fields( $user ) {
     if($user->roles[0] === "employer"){
         $rna = empty(get_user_meta( $user->ID, 'rna')) ? "" : get_user_meta( $user->ID, 'rna')[0];
         $declaration = empty(get_user_meta($user->ID, 'declaration_file_path')) ? "" : get_user_meta($user->ID, 'declaration_file_path')[0];
+        $certified_label = empty(get_user_meta($user->ID, 'certified_label')) ? "0" : get_user_meta($user->ID, 'certified_label')[0];
         ?>
         <h3><?php esc_html_e( 'Association Information', 'jobhunt' ); ?></h3>
 
@@ -500,7 +501,6 @@ function show_extra_profile_fields( $user ) {
             <tr>
                 <th><label for="rna"><?php esc_html_e( 'Declaration', 'jobhunt' ); ?></label></th>
                 <td>
-                    <br><span>
                     <?php if($declaration !== "") {?> 
                         <a style="color: #b4c408;" target="_blank" href="<?php echo "http://" . $_SERVER['HTTP_HOST'] . $declaration; ?>"> Consulter la déclaration enregistrée. </a></span><br>
                     <?php } else { ?>
@@ -508,9 +508,29 @@ function show_extra_profile_fields( $user ) {
                     <?php } ?>
                 </td>
             </tr>
+            <tr>
+                <th><label for="certified_label"><?php esc_html_e( 'Certified Label ?', 'jobhunt' ); ?></label></th>
+                <td>
+                <label for="certified_label">
+                <input name="certified_label" type="checkbox" id="certified_label" value="1" <?php echo $certified_label === "1" ? "checked" : "" ?>>
+                    <?php esc_html_e( 'This association have the certified label', 'jobhunt' ); ?></label>
+                </td>
+            </tr>
         </table>
         <?php
     }
+}
+
+
+add_action( 'personal_options_update', 'save_extra_profile_fields' );
+add_action( 'edit_user_profile_update', 'save_extra_profile_fields' );
+
+function save_extra_profile_fields($user_id) {
+    if ( !current_user_can( 'edit_user', $user_id ) ) {
+        return false;
+    }
+    $value = !isset($_POST['certified_label']) ? "0" : isset($_POST['certified_label']);
+    update_user_meta( $user_id, 'certified_label',$value);
 }
 
 /* 
@@ -536,5 +556,35 @@ function save_declaration_file_account_details( $user_id ) {
         }
     } else {
         jobhunt_form_errors()->add('rna_empty', esc_html__('Declaration file must be a PDF file.', 'jobhunt'));
+    }
+}
+
+/* 
+ * 06/08/2020
+ * BNORMAND
+ * AJOUT DU LOGO PROFIL CERTIFIE DANS LES BONNES CONDITIONS
+ * */
+
+if ( ! function_exists( 'jobhunt_template_job_listing_company_details' ) ) {
+    function jobhunt_template_job_listing_company_details() {
+        $job_id = get_the_ID();
+        $company = '';
+
+        if( $job_id ) {
+            $post_title = get_post_meta( $job_id, '_company_name', true );
+            if( ! empty( $post_title ) ) {
+                $company = get_page_by_title( $post_title, OBJECT, 'company' );
+            }
+        }
+        $certified_label = empty(get_user_meta($company->post_author, 'certified_label')) ? false : get_user_meta($company->post_author, 'certified_label')[0];
+        ?><div class="job-listing-company company">
+            <?php the_company_name( '<strong>', '</strong> ' ); 
+            if($certified_label) {
+            ?> 
+                <i class="lar la-check-circle"></i>
+            <?php
+            }
+            the_company_tagline( '<span class="tagline">', '</span>' ); ?>
+        </div><?php
     }
 }
