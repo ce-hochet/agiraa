@@ -536,9 +536,9 @@ function save_extra_profile_fields($user_id) {
 /* 
  * 01/08/2020
  * BNORMAND
- * EDITION DU CHAMPS RNA USER PROFILE 
+ * EDITION DU CHAMPS RNA & Declaration file USER PROFILE 
  * */
-add_action( 'woocommerce_save_account_details', 'save_declaration_file_account_details', 12, 1 );
+add_action( 'woocommerce_save_account_details', 'save_declaration_file_account_details');
 function save_declaration_file_account_details( $user_id ) {
     $declaration_file = $_FILES['declaration_file'];
     $target_file =  "/wp-content/uploads/declaration_file/" . $user_id . "_declaration_file.pdf";
@@ -564,7 +564,6 @@ function save_declaration_file_account_details( $user_id ) {
  * BNORMAND
  * AJOUT DU LOGO PROFIL CERTIFIE DANS LES BONNES CONDITIONS
  * */
-
 if ( ! function_exists( 'jobhunt_template_job_listing_company_details' ) ) {
     function jobhunt_template_job_listing_company_details() {
         $job_id = get_the_ID();
@@ -587,4 +586,19 @@ if ( ! function_exists( 'jobhunt_template_job_listing_company_details' ) ) {
             the_company_tagline( '<span class="tagline">', '</span>' ); ?>
         </div><?php
     }
+}
+
+/* 
+ * 07/08/2020
+ * BNORMAND
+ * Retrait du caractère obligatoire des champs "First Name" & "Last Name" pour les employeurs.
+ * */
+add_filter( 'woocommerce_save_account_details_required_fields','remove_names_fields_for_employers' );
+function remove_names_fields_for_employers( $required_fields ) {
+    $user = wp_get_current_user();
+    if($user->roles[0] === "employer"){
+        unset($required_fields["account_first_name"]);
+        unset($required_fields["account_last_name"]);
+    }
+    return $required_fields;
 }
