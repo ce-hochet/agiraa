@@ -236,7 +236,9 @@ if ( ! function_exists( 'jobhunt_add_new_member' ) ) {
                         wp_new_user_notification( $new_user_id, null, 'both' );
                     }
                     //Insertion du code RNA en BDD.
-                    add_user_meta($new_user_id, 'rna', $rna_code);
+                    if($user_role === "employer") {
+                        add_user_meta($new_user_id, 'rna', $rna_code);
+                    }
                     // log the new user in
                     $creds = array();
                     $creds['user_login'] = $user_login;

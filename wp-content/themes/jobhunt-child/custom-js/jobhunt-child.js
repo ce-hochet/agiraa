@@ -5,8 +5,9 @@ jQuery(document).ready(function( $ ){
      * GEOCOMPLETE sur les champs Job & Company Location
      * History :
      * 07/08/2020 - BNORMAND - Ajout du champs candidate location
+     * 08/08/2020 - BNORMAND - Ajout de "_company_location" Présent dans le tableau admin des assos
      */ 
-    $('#job_location, #company_location, #candidate_location').geocomplete(jobhunt_options.location_geocomplete_options).bind( "geocode:result", function( event, result ) {
+    $('#job_location, #company_location, #candidate_location, #_company_location').geocomplete(jobhunt_options.location_geocomplete_options).bind( "geocode:result", function( event, result ) {
             
     });
 

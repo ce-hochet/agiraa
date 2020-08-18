@@ -602,3 +602,103 @@ function remove_names_fields_for_employers( $required_fields ) {
     }
     return $required_fields;
 }
+
+
+add_filter( 'woocommerce_account_menu_items', function($items) {
+    $my_items = array(
+            'profil-public' => __( 'Mon profil public', 'jobhunt' ),
+        );
+    
+        $my_items = array_slice( $items, 0, 1, true ) +
+            $my_items +
+            array_slice( $items, 1, count( $items ), true );
+    
+        return $my_items;
+}, 99, 1 );
+
+add_action( 'init', function() {
+    add_rewrite_endpoint( 'profil-public', EP_ROOT | EP_PAGES );
+} );
+
+add_action( 'woocommerce_account_profil-public_endpoint', function() {
+    //TODO Get company fields
+    wc_get_template_part('myaccount/profil-public');
+});
+
+add_action( 'template_redirect', 'save_profil_public_details');
+
+function save_profil_public_details() {
+    $nonce_value = wc_get_var( $_REQUEST['save-profil-public-details-nonce'], wc_get_var( $_REQUEST['_wpnonce'], '' ) ); // @codingStandardsIgnoreLine.
+    if ( ! wp_verify_nonce( $nonce_value, 'save_profil_public_details' ) ) {
+        return;
+    }
+
+    if ( empty( $_POST['action'] ) || 'save_profil_public_details' !== $_POST['action'] ) {
+        return;
+    }
+    wc_nocache_headers();
+    $user_id = get_current_user_id();
+
+    if ( $user_id <= 0 ) {
+        return;
+    }
+    $company_infos = [];
+    $required_fields = [];   
+    $jmfe = WP_Job_Manager_Field_Editor_Fields::get_instance();
+    $company_fields = $jmfe->get_fields('company');
+    $current_user       = get_user_by( 'id', $user_id );
+    foreach ( $company_fields as $key => $field ) :
+        $field['required'] ? $required_fields[$key] = $field['label'] : '';
+        $company_infos[$key] = ! empty( $_POST[$key] ) ? wc_clean( wp_unslash( $_POST[$key] ) ) : '';
+    endforeach;    
+
+    //TODO Get old info on DB
+
+    foreach ( $required_fields as $field_key => $field_name ) {
+        if ( empty( $_POST[ $field_key ] ) ) {
+            /* translators: %s: Field name. */
+            wc_add_notice( sprintf( __( '%s is a required field.', 'woocommerce' ), '<strong>' . esc_html( $field_name ) . '</strong>' ), 'error', array( 'id' => $field_key ) );
+        }
+    }
+
+    //TODO Validation du formulaire.
+
+    // Allow plugins to return their own errors.
+    $errors = new WP_Error();
+    do_action_ref_array( 'woocommerce_profil_public_details_errors', array( &$errors, &$user ) );
+
+    if ( $errors->get_error_messages() ) {
+        foreach ( $errors->get_error_messages() as $error ) {
+            wc_add_notice( $error, 'error' );
+        }
+    }
+
+    if ( wc_notice_count( 'error' ) === 0 ) {
+        //Je valide et j'enregistre
+
+        wc_add_notice( __( 'Account details changed successfully.', 'woocommerce' ) );
+
+        do_action( 'woocommerce_profil_public_details', $current_user->ID );
+
+        wp_safe_redirect( wc_get_page_permalink( 'myaccount' ) );
+        exit;
+    }
+}
+
+
+add_filter( 'wp_new_user_notification_email', 'custom_wp_new_user_notification_email', 10, 3 );
+
+function custom_wp_new_user_notification_email( $wp_new_user_notification_email, $user, $blogname ) {
+    $key = get_password_reset_key( $user );
+    $message = sprintf(__('Welcome to the Community,')) . "\r\n\r\n";
+    $message .= 'To set your password, visit the following address:' . "\r\n\r\n";
+    $message .= network_site_url("/mon-compte/mdp-perdu/?action=rp&key=$key&login=" . rawurlencode($user->user_login), 'login') . "\r\n\r\n";
+    $message .= "After this you can enjoy our website!" . "\r\n\r\n";
+    $message .= "Kind regards," . "\r\n";
+    $message .= "Support Office Team" . "\r\n";
+    $wp_new_user_notification_email['message'] = $message;
+
+    $wp_new_user_notification_email['headers'] = 'From: MyName<example@domain.ext>'; // this just changes the sender name and email to whatever you want (instead of the default WordPress <wordpress@domain.ext>
+
+    return $wp_new_user_notification_email;
+}
