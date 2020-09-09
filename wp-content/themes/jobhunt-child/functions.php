@@ -503,7 +503,6 @@ function show_extra_profile_fields( $user ) {
             <tr>
                 <th><label for="rna"><?php esc_html_e( 'Declaration', 'jobhunt' ); ?></label></th>
                 <td>
-                    <?php if($declaration !== "") {?>
                     <?php if($declaration !== "") {?> 
                         <a style="color: #b4c408;" target="_blank" href="<?php echo "http://" . $_SERVER['HTTP_HOST'] . $declaration; ?>"> Consulter la déclaration enregistrée. </a></span><br>
                     <?php } else { ?>
@@ -523,7 +522,6 @@ function show_extra_profile_fields( $user ) {
         <?php
     }
 }
-
 
 add_action( 'personal_options_update', 'save_extra_profile_fields' );
 add_action( 'edit_user_profile_update', 'save_extra_profile_fields' );
@@ -784,4 +782,5 @@ function custom_wp_new_user_notification_email( $wp_new_user_notification_email,
     return $wp_new_user_notification_email;
 
 }
+
 
