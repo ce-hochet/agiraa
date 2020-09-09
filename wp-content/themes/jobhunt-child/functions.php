@@ -455,10 +455,11 @@ add_action( 'resume_manager_update_resume_data', function( $resume_id ) {
 	}
 } );
 
-/*
+
+/* 
  * 27/07/2020
  * BNORMAND
- * AJOUT SCRIPT JS CHILD EXTERNE
+ * AJOUT SCRIPT JS CHILD EXTERNE 
  * */
 add_action( 'wp_enqueue_scripts', 'enqueue_mon_script' );
 function enqueue_mon_script() {
@@ -467,10 +468,11 @@ function enqueue_mon_script() {
 
 require_once get_stylesheet_directory() . '/inc/functions/my-account.php';
 
-/*
+
+/* 
  * 31/07/2020
  * BNORMAND
- * EDITION DU CHAMPS RNA / DOCUMENT / Certified Label pour USER PROFILE
+ * EDITION DU CHAMPS RNA / DOCUMENT / Certified Label pour USER PROFILE 
  * */
 add_action( 'show_user_profile', 'show_extra_profile_fields' );
 add_action( 'edit_user_profile', 'show_extra_profile_fields' );
@@ -502,6 +504,7 @@ function show_extra_profile_fields( $user ) {
                 <th><label for="rna"><?php esc_html_e( 'Declaration', 'jobhunt' ); ?></label></th>
                 <td>
                     <?php if($declaration !== "") {?>
+                    <?php if($declaration !== "") {?> 
                         <a style="color: #b4c408;" target="_blank" href="<?php echo "http://" . $_SERVER['HTTP_HOST'] . $declaration; ?>"> Consulter la déclaration enregistrée. </a></span><br>
                     <?php } else { ?>
                         <p style="color: #DF3F52;"> Aucune déclaration n'a été mise en ligne par l'association.</p>
@@ -588,7 +591,8 @@ if ( ! function_exists( 'jobhunt_template_job_listing_company_details' ) ) {
     }
 }
 
-/*
+
+/* 
  * 07/08/2020
  * BNORMAND
  * Retrait du caractère obligatoire des champs "First Name" & "Last Name" pour les employeurs.
@@ -605,86 +609,163 @@ function remove_names_fields_for_employers( $required_fields ) {
 
 
 add_filter( 'woocommerce_account_menu_items', function($items) {
-    $my_items = array(
-            'profil-public' => __( 'Mon profil public', 'jobhunt' ),
-        );
-
-        $my_items = array_slice( $items, 0, 1, true ) +
-            $my_items +
-            array_slice( $items, 1, count( $items ), true );
-
-        return $my_items;
+    $user_role = wp_get_current_user()->roles[0];
+    if($user_role === "employer" || $user_role === "administrator") {
+        $my_items = array(
+                'profil' => __( 'Mon profil', 'jobhunt' ),
+            );
+            $my_items = array_slice( $items, 0, 1, true ) +
+                $my_items +
+                array_slice( $items, 1, count( $items ), true );
+        
+            return $my_items;
+    }
 }, 99, 1 );
 
 add_action( 'init', function() {
-    add_rewrite_endpoint( 'profil-public', EP_ROOT | EP_PAGES );
+    add_rewrite_endpoint( 'profil', EP_ROOT | EP_PAGES );
 } );
 
-add_action( 'woocommerce_account_profil-public_endpoint', function() {
-    //TODO Get company fields
-    wc_get_template_part('myaccount/profil-public');
+/* 
+ * 16/08/2020
+ * BNORMAND
+ * Solution temporaire afin de pouvoir avoir le CSS du champs multiselect dans le bon ordres. Celui-ci devant être déclaré avant le autres. 
+ * */
+add_action('wp_head', function() {
+    echo '<link rel="stylesheet" href="'. JOB_MANAGER_PLUGIN_URL . '/assets/css/chosen.css" type="text/css" media="all">';
+    return;
+}, 1);
+
+add_action( 'woocommerce_account_profil_endpoint', function() {
+    wp_register_script( 'chosen', JOB_MANAGER_PLUGIN_URL . '/assets/js/jquery-chosen/chosen.jquery.min.js', [ 'jquery' ], '1.1.0', true , 0);
+    wc_get_template_part('myaccount/profil');
 });
 
-add_action( 'template_redirect', 'save_profil_public_details');
 
-function save_profil_public_details() {
-    $nonce_value = wc_get_var( $_REQUEST['save-profil-public-details-nonce'], wc_get_var( $_REQUEST['_wpnonce'], '' ) ); // @codingStandardsIgnoreLine.
-    if ( ! wp_verify_nonce( $nonce_value, 'save_profil_public_details' ) ) {
+
+/* 
+ * 16/08/2020
+ * BNORMAND
+ * Mise en place de la fonction appelé lors de la validation du formulaire du profil publique. .
+ * */
+add_action( 'template_redirect', 'save_profil_details');
+
+function save_profil_details() {
+    $nonce_value = wc_get_var( $_REQUEST['save-profil-details-nonce'], wc_get_var( $_REQUEST['_wpnonce'], '' ) ); // @codingStandardsIgnoreLine.
+    if ( ! wp_verify_nonce( $nonce_value, 'save_profil_details' ) ) {
         return;
     }
 
-    if ( empty( $_POST['action'] ) || 'save_profil_public_details' !== $_POST['action'] ) {
+    if ( empty( $_POST['action'] ) || 'save_profil_details' !== $_POST['action'] ) {
         return;
     }
     wc_nocache_headers();
     $user_id = get_current_user_id();
-
     if ( $user_id <= 0 ) {
         return;
     }
-    $company_infos = [];
-    $required_fields = [];
-    $jmfe = WP_Job_Manager_Field_Editor_Fields::get_instance();
-    $company_fields = $jmfe->get_fields('company');
-    $current_user       = get_user_by( 'id', $user_id );
+
+    include_once JOB_MANAGER_PLUGIN_DIR . "/includes/forms/class-wp-job-manager-form-submit-job.php";
+    
+    $company_infos = [];   
+    $file_fields = [];
+
+    $wjmfsj = WP_Job_Manager_Form_Submit_Job::instance();
+    $wjmfsj->init_fields();
+    $company_fields = array_merge($wjmfsj->get_fields('company'), jobhunt_submit_job_form_fields());
+    
+    //VALIDATION des champs publiques
     foreach ( $company_fields as $key => $field ) :
-        $field['required'] ? $required_fields[$key] = $field['label'] : '';
+        if($field['required']){
+            //DO VERIF REQUIRED
+        }
+        if($field['type'] === 'file') {
+            //DO FILE
+        }
         $company_infos[$key] = ! empty( $_POST[$key] ) ? wc_clean( wp_unslash( $_POST[$key] ) ) : '';
     endforeach;
 
-    //TODO Get old info on DB
-
-    foreach ( $required_fields as $field_key => $field_name ) {
-        if ( empty( $_POST[ $field_key ] ) ) {
-            /* translators: %s: Field name. */
-            wc_add_notice( sprintf( __( '%s is a required field.', 'woocommerce' ), '<strong>' . esc_html( $field_name ) . '</strong>' ), 'error', array( 'id' => $field_key ) );
+    //Validation du fichier de déclaration :
+    $declaration_file = $_FILES['declaration_file'];
+    if($declaration_file['size'] > 0) {
+        if($declaration_file["type"] !== "application/pdf"){
+            wc_add_notice(__( 'Declaration file must be a PDF.', 'woocommerce' ), 'error');
+        } else {
+            $target_file =  "/wp-content/uploads/declaration_file/" . $user_id . "_declaration_file.pdf";
+            $target_full_path = $_SERVER['DOCUMENT_ROOT'] . $target_file;
+            if(file_exists($target_full_path)) {
+                unlink($target_full_path);
+            }
+            update_user_meta($user_id, 'declaration_file_path', $target_file);
+            if (!move_uploaded_file($declaration_file["tmp_name"], $target_full_path)) {
+                wc_add_notice(__( 'Error while uploading file. Please try again.', 'woocommerce' ), 'error');
+            }
         }
     }
 
-    //TODO Validation du formulaire.
-
+    
     // Allow plugins to return their own errors.
     $errors = new WP_Error();
-    do_action_ref_array( 'woocommerce_profil_public_details_errors', array( &$errors, &$user ) );
-
+    do_action_ref_array( 'woocommerce_profil_details_errors', array( &$errors, &$user ) );
     if ( $errors->get_error_messages() ) {
         foreach ( $errors->get_error_messages() as $error ) {
             wc_add_notice( $error, 'error' );
         }
     }
-
     if ( wc_notice_count( 'error' ) === 0 ) {
-        //Je valide et j'enregistre
-
+        //Vérification de l'existence d'une company.
+        $posts = get_posts(array( 'author' => $user_id, 'post_type' => 'company' ));
+        //TODO HANDLE TAXONOMY & FILES
+        if(empty($posts)){
+            //CREATION
+            $company = array(
+                'post_title'    => $company_infos['company_name'],
+                'post_content'  => $company_infos['company_description'],
+                'post_author'   => $user_id,
+                'post_type'     => 'company'
+              );
+            $post_id = wp_insert_post($company);
+            if ( is_array( $company_infos['company_specialite'] ) ) {
+                wp_set_post_terms( $post_id, $company_infos['company_specialite'], 'company_specialite', false );
+            } else {
+                wp_set_post_terms( $post_id, [ $company_infos['company_specialite'] ], 'company_specialite', false );
+            }
+            add_post_meta($post_id, '_company_facebook', $company_infos['company_facebook']);
+            add_post_meta($post_id, '_company_email', $company_infos['company_email']);
+            add_post_meta($post_id, '_company_phone', $company_infos['company_phone']);
+            add_post_meta($post_id, '_company_location', $company_infos['company_location']);
+            add_post_meta($post_id, '_company_website', $company_infos['company_website']);
+        } else {
+            //MISE A JOUR
+            $company = array(
+                'ID'            => $posts[0]->ID,
+                'post_title'    => $company_infos['company_name'],
+                'post_content'  => $company_infos['company_description'],
+              );
+            $post_id = wp_update_post($company);
+            if ( is_array( $company_infos['company_specialite'] ) ) {
+                wp_set_post_terms( $post_id, $company_infos['company_specialite'], 'company_specialite', true );
+            } else {
+                wp_set_post_terms( $post_id, [ $company_infos['company_specialite'] ], 'company_specialite', true );
+            }
+            update_post_meta($post_id, '_company_facebook', $company_infos['company_facebook']);
+            update_post_meta($post_id, '_company_email', $company_infos['company_email']);
+            update_post_meta($post_id, '_company_phone', $company_infos['company_phone']);
+            update_post_meta($post_id, '_company_location', $company_infos['company_location']);
+            update_post_meta($post_id, '_company_website', $company_infos['company_website']);
+        }
         wc_add_notice( __( 'Account details changed successfully.', 'woocommerce' ) );
-
-        do_action( 'woocommerce_profil_public_details', $current_user->ID );
-
+        do_action( 'woocommerce_profil_details', $user_id );
         wp_safe_redirect( wc_get_page_permalink( 'myaccount' ) );
         exit;
     }
 }
 
+/* 
+ * 18/08/2020
+ * BNORMAND
+ * Customisation de l'émail envoyé lors de l'inscription pour créer son mot de passe. La template est créer ici. 
+ * */
 
 add_filter( 'wp_new_user_notification_email', 'custom_wp_new_user_notification_email', 10, 3 );
 
@@ -701,6 +782,6 @@ function custom_wp_new_user_notification_email( $wp_new_user_notification_email,
     $wp_new_user_notification_email['headers'] = 'From: MyName<example@domain.ext>'; // this just changes the sender name and email to whatever you want (instead of the default WordPress <wordpress@domain.ext>
 
     return $wp_new_user_notification_email;
+
 }
 
-//test

@@ -7,8 +7,26 @@ jQuery(document).ready(function( $ ){
      * 07/08/2020 - BNORMAND - Ajout du champs candidate location
      * 08/08/2020 - BNORMAND - Ajout de "_company_location" Présent dans le tableau admin des assos
      */ 
-    $('#job_location, #company_location, #candidate_location, #_company_location').geocomplete(jobhunt_options.location_geocomplete_options).bind( "geocode:result", function( event, result ) {
-            
+
+    jobhunt_options.location_geocomplete_options = {componentRestrictions: {
+        country: "FR",
+    }};
+    var prefix = 'Gironde, ' ;
+	$('#search_location, #job_location, #company_location, #candidate_location, #_company_location').on('input',function(){
+	    var str = this.value;
+	    if(str.indexOf(prefix) == 0) {
+            // string already started with prefix
+            return;
+	    } else {
+            if (prefix.indexOf(str) >= 0) {
+                // string is part of prefix
+                this.value = prefix;
+            } else {
+                this.value = prefix+str;
+            }
+	    }
+	});   
+    $('#search_location, #job_location, #company_location, #candidate_location, #_company_location').geocomplete(jobhunt_options.location_geocomplete_options).bind( "geocode:result", function( event, result ) {
     });
 
 

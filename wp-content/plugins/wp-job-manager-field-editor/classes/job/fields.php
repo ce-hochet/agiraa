@@ -314,7 +314,6 @@ class WP_Job_Manager_Field_Editor_Job_Fields extends WP_Job_Manager_Field_Editor
 	 * @return mixed
 	 */
 	function init_fields( $fields ) {
-
 		if ( ! $this->was_filter_forced() ) {
 
 			$fields = $this->merge_with_custom_fields( $fields );
@@ -367,7 +366,6 @@ class WP_Job_Manager_Field_Editor_Job_Fields extends WP_Job_Manager_Field_Editor
 			if ( $this->force_validate ) {
 				$fields = $this->validation_fields( $fields );
 			}
-
 			$fields = apply_filters( 'job_manager_field_editor_job_init_fields', $fields );
 
 		}

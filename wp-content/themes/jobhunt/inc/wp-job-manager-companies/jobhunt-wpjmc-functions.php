@@ -821,7 +821,6 @@ if ( ! function_exists( 'jobhunt_add_custom_job_company_fields' ) ) {
                 $company_id = isset( $company->ID ) ? $company->ID : 0;
             }
         }
-
         foreach ( $company_fields as $key => $field ) : ?>
             <?php if( $company_id ) {
                 if ( ! isset( $field['value'] ) ) {
