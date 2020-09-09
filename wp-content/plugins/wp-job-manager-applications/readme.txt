@@ -1,8 +1,9 @@
 [=== Job Applications ===
 Contributors: mikejolley, jakeom, panoskountanis, adamkheckler, drawmyface
-Requires at least: 4.7
-Tested up to: 5.2
-Stable tag: 2.5.0
+Requires at least: 5.0
+Tested up to: 5.5
+Stable tag: 2.5.1
+Requires PHP: 7.0
 License: GNU General Public License v3.0
 
 Lets candidates submit applications to jobs which are stored on the employers jobs page, rather than simply emailed.
@@ -28,6 +29,11 @@ If you need help with customisation you will need to find and hire a developer c
 To install this plugin, please refer to the guide here: [http://codex.wordpress.org/Managing_Plugins#Manual_Plugin_Installation](http://codex.wordpress.org/Managing_Plugins#Manual_Plugin_Installation)
 
 == Changelog ==
+
+= 2.5.1 =
+* Fix: Ensure styles are loaded for widgets.
+* Fix: Output field names in application form HTML.
+* Updated Templates: `job-application-footer.php`; `application-form.php`.
 
 = 2.5.0 =
 * Enhancement: Adds the option to have a reCAPTCHA field on the application form. 

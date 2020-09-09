@@ -455,52 +455,252 @@ add_action( 'resume_manager_update_resume_data', function( $resume_id ) {
 	}
 } );
 
+/*
+ * 27/07/2020
+ * BNORMAND
+ * AJOUT SCRIPT JS CHILD EXTERNE
+ * */
+add_action( 'wp_enqueue_scripts', 'enqueue_mon_script' );
+function enqueue_mon_script() {
+    wp_enqueue_script( 'script-perso', get_stylesheet_directory_uri() . '/custom-js/jobhunt-child.js', array( 'jquery' ) );
+}
 
-if ( ! function_exists( 'jobhunt_register_login_form' ) ) {
-    function jobhunt_register_login_form() {
+require_once get_stylesheet_directory() . '/inc/functions/my-account.php';
 
-        $output = '';
+/*
+ * 31/07/2020
+ * BNORMAND
+ * EDITION DU CHAMPS RNA / DOCUMENT / Certified Label pour USER PROFILE
+ * */
+add_action( 'show_user_profile', 'show_extra_profile_fields' );
+add_action( 'edit_user_profile', 'show_extra_profile_fields' );
 
-        if( ! is_user_logged_in() ) {
-            ob_start();
+function show_extra_profile_fields( $user ) {
+    if($user->roles[0] === "employer"){
+        $rna = empty(get_user_meta( $user->ID, 'rna')) ? "" : get_user_meta( $user->ID, 'rna')[0];
+        $declaration = empty(get_user_meta($user->ID, 'declaration_file_path')) ? "" : get_user_meta($user->ID, 'declaration_file_path')[0];
+        $certified_label = empty(get_user_meta($user->ID, 'certified_label')) ? "0" : get_user_meta($user->ID, 'certified_label')[0];
+        ?>
+        <h3><?php esc_html_e( 'Association Information', 'jobhunt' ); ?></h3>
+
+        <table class="form-table">
+            <tr>
+                <th><label for="rna"><?php esc_html_e( 'RNA Code', 'jobhunt' ); ?></label></th>
+                <td>
+                    <input type="text"
+                    disabled
+                    minlength="10"
+                    maxlength="10"
+                    id="rna"
+                    name="rna"
+                    value="<?php echo $rna; ?>"
+                    class="regular-text"
+                    />
+                </td>
+            </tr>
+            <tr>
+                <th><label for="rna"><?php esc_html_e( 'Declaration', 'jobhunt' ); ?></label></th>
+                <td>
+                    <?php if($declaration !== "") {?>
+                        <a style="color: #b4c408;" target="_blank" href="<?php echo "http://" . $_SERVER['HTTP_HOST'] . $declaration; ?>"> Consulter la déclaration enregistrée. </a></span><br>
+                    <?php } else { ?>
+                        <p style="color: #DF3F52;"> Aucune déclaration n'a été mise en ligne par l'association.</p>
+                    <?php } ?>
+                </td>
+            </tr>
+            <tr>
+                <th><label for="certified_label"><?php esc_html_e( 'Certified Label ?', 'jobhunt' ); ?></label></th>
+                <td>
+                <label for="certified_label">
+                <input name="certified_label" type="checkbox" id="certified_label" value="1" <?php echo $certified_label === "1" ? "checked" : "" ?>>
+                    <?php esc_html_e( 'This association have the certified label', 'jobhunt' ); ?></label>
+                </td>
+            </tr>
+        </table>
+        <?php
+    }
+}
+
+
+add_action( 'personal_options_update', 'save_extra_profile_fields' );
+add_action( 'edit_user_profile_update', 'save_extra_profile_fields' );
+
+function save_extra_profile_fields($user_id) {
+    if ( !current_user_can( 'edit_user', $user_id ) ) {
+        return false;
+    }
+    $value = !isset($_POST['certified_label']) ? "0" : isset($_POST['certified_label']);
+    update_user_meta( $user_id, 'certified_label',$value);
+}
+
+/*
+ * 01/08/2020
+ * BNORMAND
+ * EDITION DU CHAMPS RNA & Declaration file USER PROFILE
+ * */
+add_action( 'woocommerce_save_account_details', 'save_declaration_file_account_details');
+function save_declaration_file_account_details( $user_id ) {
+    $declaration_file = $_FILES['declaration_file'];
+    $target_file =  "/wp-content/uploads/declaration_file/" . $user_id . "_declaration_file.pdf";
+    $target_full_path = $_SERVER['DOCUMENT_ROOT'] . $target_file;
+    if(isset($declaration_file) && $declaration_file["type"] === "application/pdf"){
+        empty(get_user_meta($user_id, 'declaration_file_path')) ? "" : delete_user_meta($user_id, 'declaration_file_path');
+        if(file_exists($target_full_path)) {
+            unlink($target_full_path);
+        }
+
+        if (move_uploaded_file($declaration_file["tmp_name"], $target_full_path)) {
+            add_user_meta($user_id, 'declaration_file_path', $target_file);
+        } else {
+            jobhunt_form_errors()->add('error', esc_html__('Error while uploading file. Please try again.', 'jobhunt'));
+        }
+    } else {
+        jobhunt_form_errors()->add('rna_empty', esc_html__('Declaration file must be a PDF file.', 'jobhunt'));
+    }
+}
+
+/*
+ * 06/08/2020
+ * BNORMAND
+ * AJOUT DU LOGO PROFIL CERTIFIE DANS LES BONNES CONDITIONS
+ * */
+if ( ! function_exists( 'jobhunt_template_job_listing_company_details' ) ) {
+    function jobhunt_template_job_listing_company_details() {
+        $job_id = get_the_ID();
+        $company = '';
+
+        if( $job_id ) {
+            $post_title = get_post_meta( $job_id, '_company_name', true );
+            if( ! empty( $post_title ) ) {
+                $company = get_page_by_title( $post_title, OBJECT, 'company' );
+            }
+        }
+        $certified_label = empty(get_user_meta($company->post_author, 'certified_label')) ? false : get_user_meta($company->post_author, 'certified_label')[0];
+        ?><div class="job-listing-company company">
+            <?php the_company_name( '<strong>', '</strong> ' );
+            if($certified_label) {
             ?>
-            <div class="jobhunt-register-login-form">
-                <div class="jobhunt-register-login-form-inner">
-                    <ul class="nav" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link" id="jh-register-tab" data-toggle="pill" href="#jh-register-tab-content" role="tab" aria-controls="jh-register-tab-content" aria-selected="false"><?php echo apply_filters( 'jobhunt_register_form_tab_title', esc_html__( 'S\'inscrire', 'jobhunt-extensions') ); ?></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" id="jh-login-tab" data-toggle="pill" href="#jh-login-tab-content" role="tab" aria-controls="jh-login-tab-content" aria-selected="true"><?php echo apply_filters( 'jobhunt_login_form_tab_title', esc_html__( 'Se connecter', 'jobhunt-extensions') ); ?></a>
-                        </li>
-                    </ul>
-                    <div class="tab-content">
-                        <div class="tab-pane fade" id="jh-register-tab-content" role="tabpanel" aria-labelledby="jh-register-tab"><?php echo jobhunt_registration_form(); ?></div>
-                        <div class="tab-pane fade show active" id="jh-login-tab-content" role="tabpanel" aria-labelledby="jh-login-tab"><?php echo jobhunt_login_form(); ?></div>
-                    </div>
-                </div>
-            </div>
+                <i class="lar la-check-circle"></i>
             <?php
-            $output = ob_get_clean();
-        } elseif( function_exists( 'jobhunt_wpjm_wc_account_dashboard' ) ) {
-            ob_start();
-            jobhunt_wpjm_wc_account_dashboard();
-            $output = ob_get_clean();
-        }
-
-        return $output;
+            }
+            the_company_tagline( '<span class="tagline">', '</span>' ); ?>
+        </div><?php
     }
 }
 
-if ( ! function_exists ( 'jh_child_custom_header_register_page_url' ) ) {
-    function jh_child_custom_header_register_page_url( $url ) {
-        $custom_userpage = jobhunt_get_register_login_form_page();
+/*
+ * 07/08/2020
+ * BNORMAND
+ * Retrait du caractère obligatoire des champs "First Name" & "Last Name" pour les employeurs.
+ * */
+add_filter( 'woocommerce_save_account_details_required_fields','remove_names_fields_for_employers' );
+function remove_names_fields_for_employers( $required_fields ) {
+    $user = wp_get_current_user();
+    if($user->roles[0] === "employer"){
+        unset($required_fields["account_first_name"]);
+        unset($required_fields["account_last_name"]);
+    }
+    return $required_fields;
+}
 
-        if( !empty( $custom_userpage ) ) {
-            $url = get_permalink( $custom_userpage ) . '#jh-register-tab-content';
+
+add_filter( 'woocommerce_account_menu_items', function($items) {
+    $my_items = array(
+            'profil-public' => __( 'Mon profil public', 'jobhunt' ),
+        );
+
+        $my_items = array_slice( $items, 0, 1, true ) +
+            $my_items +
+            array_slice( $items, 1, count( $items ), true );
+
+        return $my_items;
+}, 99, 1 );
+
+add_action( 'init', function() {
+    add_rewrite_endpoint( 'profil-public', EP_ROOT | EP_PAGES );
+} );
+
+add_action( 'woocommerce_account_profil-public_endpoint', function() {
+    //TODO Get company fields
+    wc_get_template_part('myaccount/profil-public');
+});
+
+add_action( 'template_redirect', 'save_profil_public_details');
+
+function save_profil_public_details() {
+    $nonce_value = wc_get_var( $_REQUEST['save-profil-public-details-nonce'], wc_get_var( $_REQUEST['_wpnonce'], '' ) ); // @codingStandardsIgnoreLine.
+    if ( ! wp_verify_nonce( $nonce_value, 'save_profil_public_details' ) ) {
+        return;
+    }
+
+    if ( empty( $_POST['action'] ) || 'save_profil_public_details' !== $_POST['action'] ) {
+        return;
+    }
+    wc_nocache_headers();
+    $user_id = get_current_user_id();
+
+    if ( $user_id <= 0 ) {
+        return;
+    }
+    $company_infos = [];
+    $required_fields = [];
+    $jmfe = WP_Job_Manager_Field_Editor_Fields::get_instance();
+    $company_fields = $jmfe->get_fields('company');
+    $current_user       = get_user_by( 'id', $user_id );
+    foreach ( $company_fields as $key => $field ) :
+        $field['required'] ? $required_fields[$key] = $field['label'] : '';
+        $company_infos[$key] = ! empty( $_POST[$key] ) ? wc_clean( wp_unslash( $_POST[$key] ) ) : '';
+    endforeach;
+
+    //TODO Get old info on DB
+
+    foreach ( $required_fields as $field_key => $field_name ) {
+        if ( empty( $_POST[ $field_key ] ) ) {
+            /* translators: %s: Field name. */
+            wc_add_notice( sprintf( __( '%s is a required field.', 'woocommerce' ), '<strong>' . esc_html( $field_name ) . '</strong>' ), 'error', array( 'id' => $field_key ) );
         }
+    }
 
-        return $url;
+    //TODO Validation du formulaire.
+
+    // Allow plugins to return their own errors.
+    $errors = new WP_Error();
+    do_action_ref_array( 'woocommerce_profil_public_details_errors', array( &$errors, &$user ) );
+
+    if ( $errors->get_error_messages() ) {
+        foreach ( $errors->get_error_messages() as $error ) {
+            wc_add_notice( $error, 'error' );
+        }
+    }
+
+    if ( wc_notice_count( 'error' ) === 0 ) {
+        //Je valide et j'enregistre
+
+        wc_add_notice( __( 'Account details changed successfully.', 'woocommerce' ) );
+
+        do_action( 'woocommerce_profil_public_details', $current_user->ID );
+
+        wp_safe_redirect( wc_get_page_permalink( 'myaccount' ) );
+        exit;
     }
 }
-add_filter( 'jobhunt_header_register_page_url', 'jh_child_custom_header_register_page_url' );
+
+
+add_filter( 'wp_new_user_notification_email', 'custom_wp_new_user_notification_email', 10, 3 );
+
+function custom_wp_new_user_notification_email( $wp_new_user_notification_email, $user, $blogname ) {
+    $key = get_password_reset_key( $user );
+    $message = sprintf(__('Welcome to the Community,')) . "\r\n\r\n";
+    $message .= 'To set your password, visit the following address:' . "\r\n\r\n";
+    $message .= network_site_url("/mon-compte/mdp-perdu/?action=rp&key=$key&login=" . rawurlencode($user->user_login), 'login') . "\r\n\r\n";
+    $message .= "After this you can enjoy our website!" . "\r\n\r\n";
+    $message .= "Kind regards," . "\r\n";
+    $message .= "Support Office Team" . "\r\n";
+    $wp_new_user_notification_email['message'] = $message;
+
+    $wp_new_user_notification_email['headers'] = 'From: MyName<example@domain.ext>'; // this just changes the sender name and email to whatever you want (instead of the default WordPress <wordpress@domain.ext>
+
+    return $wp_new_user_notification_email;
+}
+
+//test

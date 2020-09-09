@@ -152,6 +152,20 @@ class WP_Resume_Manager_Writepanels extends WP_Job_Manager_Writepanels {
 				$field['value'] = '';
 			}
 
+			if ( '_resume_file' === $key ) {
+				if ( is_array( $field['value'] ) ) {
+					$field['download'] = array_map(
+						function( $value, $key ) use ( $thepostid ) {
+							return get_resume_file_download_url( $thepostid, $key, site_url() );
+						},
+						$field['value'],
+						array_keys( $field['value'] )
+					);
+				} else {
+					$field['download'] = get_resume_file_download_url( $thepostid, 0, site_url() );
+				}
+			}
+
 			if ( has_action( 'resume_manager_input_' . $type ) ) {
 				do_action( 'resume_manager_input_' . $type, $key, $field );
 			} elseif ( method_exists( $this, 'input_' . $type ) ) {
