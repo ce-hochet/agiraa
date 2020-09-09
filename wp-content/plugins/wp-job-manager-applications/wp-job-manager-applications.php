@@ -3,16 +3,16 @@
  * Plugin Name: WP Job Manager - Applications
  * Plugin URI: https://wpjobmanager.com/add-ons/applications/
  * Description: Lets candidates submit applications to jobs which are stored on the employers jobs page, rather than simply emailed. Works standalone with it's built in application form.
- * Version: 2.5.0
+ * Version: 2.5.1
  * Author: Automattic
  * Author URI: https://wpjobmanager.com
- * Requires at least: 4.7
- * Tested up to: 5.2
- * Requires PHP: 5.6
+ * Requires at least: 5.0
+ * Tested up to: 5.5
+ * Requires PHP: 7.0
  *
  * WPJM-Product: wp-job-manager-applications
  *
- * Copyright: 2019 Automattic
+ * Copyright: 2020 Automattic
  * License: GNU General Public License v3.0
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  */
@@ -33,7 +33,7 @@ class WP_Job_Manager_Applications {
 	 */
 	public function __construct() {
 		// Define constants
-		define( 'JOB_MANAGER_APPLICATIONS_VERSION', '2.5.0' );
+		define( 'JOB_MANAGER_APPLICATIONS_VERSION', '2.5.1' );
 		define( 'JOB_MANAGER_APPLICATIONS_FILE', __FILE__ );
 		define( 'JOB_MANAGER_APPLICATIONS_PLUGIN_DIR', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
 		define( 'JOB_MANAGER_APPLICATIONS_PLUGIN_URL', untrailingslashit( plugins_url( basename( plugin_dir_path( __FILE__ ) ), basename( __FILE__ ) ) ) );
@@ -81,6 +81,7 @@ class WP_Job_Manager_Applications {
 		add_action( 'init', array( $this, 'load_admin' ), 12 );
 		add_action( 'after_setup_theme', array( $this, 'template_functions' ) );
 		add_action( 'admin_init', array( $this, 'updater' ) );
+		add_filter( 'job_manager_enqueue_frontend_style', array( $this, 'is_frontend_style_required_on_page' ) );
 	}
 
 	/**
@@ -142,6 +143,26 @@ class WP_Job_Manager_Applications {
 		if ( version_compare( JOB_MANAGER_APPLICATIONS_VERSION, get_option( 'wp_job_manager_applications_version' ), '>' ) ) {
 			$this->install();
 		}
+	}
+
+	/**
+	 * Filters if WPJM's front-end styles are needed on this page.
+	 *
+	 * @since 2.6.0
+	 * @access private
+	 *
+	 * @param bool $is_frontend_style_enabled Whether or not to load WPJM's front-end styles.
+	 * @return bool
+	 */
+	public function is_frontend_style_required_on_page( $is_frontend_style_enabled ) {
+		if (
+				is_active_widget( false, false, 'widget_featured_jobs', true ) ||
+				is_active_widget( false, false, 'widget_recent_jobs', true )
+			) {
+				return true;
+			}
+
+			return $is_frontend_style_enabled;
 	}
 
 	/**

@@ -11,10 +11,10 @@ if ( ! function_exists( 'jobhunt_registration_form_fields' ) ) {
 
             <?php
             // show any error messages after form submission
-            jobhunt_show_error_messages();
+            jobhunt_show_error_messages(); 
 
             // show any success messages after form submission
-            jobhunt_show_success_messages();
+            jobhunt_show_success_messages(); 
 
             do_action( 'jobhunt_registration_form_before' ); ?>
 
@@ -85,7 +85,7 @@ if ( ! function_exists( 'jobhunt_login_form_fields' ) ) {
             jobhunt_show_error_messages();
 
             // show any success messages after form submission
-            jobhunt_show_success_messages();
+            jobhunt_show_success_messages(); 
 
             do_action( 'jobhunt_login_form_before' ); ?>
 

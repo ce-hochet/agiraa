@@ -3,16 +3,16 @@
  * Plugin Name: WP Job Manager - Resume Manager
  * Plugin URI: https://wpjobmanager.com/add-ons/resume-manager/
  * Description: Manage candidate resumes from the WordPress admin panel, and allow candidates to post their resumes directly to your site.
- * Version: 1.18.1
+ * Version: 1.18.2
  * Author: Automattic
  * Author URI: https://wpjobmanager.com
- * Requires at least: 4.7
- * Tested up to: 5.3
- * Requires PHP: 5.6
+ * Requires at least: 5.0
+ * Tested up to: 5.5
+ * Requires PHP: 7.0
  *
  * WPJM-Product: wp-job-manager-resumes
  *
- * Copyright: 2019 Automattic
+ * Copyright: 2020 Automattic
  * License: GNU General Public License v3.0
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  *
@@ -35,7 +35,7 @@ class WP_Resume_Manager {
 	 */
 	public function __construct() {
 		// Define constants.
-		define( 'RESUME_MANAGER_VERSION', '1.18.0' );
+		define( 'RESUME_MANAGER_VERSION', '1.18.2' );
 		define( 'RESUME_MANAGER_PLUGIN_DIR', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
 		define( 'RESUME_MANAGER_PLUGIN_URL', untrailingslashit( plugins_url( basename( plugin_dir_path( __FILE__ ) ), basename( __FILE__ ) ) ) );
 
@@ -103,6 +103,8 @@ class WP_Resume_Manager {
 		add_filter( 'job_manager_enhanced_select_enabled', array( $this, 'is_enhanced_select_required_on_page' ) );
 		add_filter( 'job_manager_enqueue_frontend_style', array( $this, 'is_frontend_style_required_on_page' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'frontend_scripts' ) );
+
+		add_action( 'template_redirect', array( $this, 'disable_resume_post_type_page' ) );
 	}
 
 	/**
@@ -274,6 +276,19 @@ class WP_Resume_Manager {
 		if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'submit_resume_form' ) ) {
 			wp_enqueue_style( 'wp-resume-manager-resume-submission', RESUME_MANAGER_PLUGIN_URL . '/assets/css/resume-submission.css', array(), RESUME_MANAGER_VERSION );
 		}
+	}
+
+	public function disable_resume_post_type_page() {
+		if ( empty( $_GET['post_type'] ) || 'resume' !== $_GET['post_type'] ) {
+			return;
+		}
+
+		if ( resume_manager_user_can_browse_resumes() ) {
+			return;
+		}
+
+		wp_safe_redirect( home_url() );
+		exit;
 	}
 }
 
