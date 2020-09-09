@@ -109,7 +109,10 @@ class WP_Job_Manager_Form_Submit_Job extends WP_Job_Manager_Form {
 			$this->step = is_numeric( $_GET['step'] ) ? max( absint( $_GET['step'] ), 0 ) : array_search( sanitize_text_field( $_GET['step'] ), array_keys( $this->steps ), true );
 		}
 
-		$this->job_id = ! empty( $_REQUEST['job_id'] ) ? absint( $_REQUEST['job_id'] ) : 0;
+		$this->job_id = ! empty( $_GET['job_id'] ) ? absint( $_GET['job_id'] ) : 0;
+		if ( 0 === $this->job_id ) {
+			$this->job_id = ! empty( $_POST['job_id'] ) ? absint( $_POST['job_id'] ) : 0;
+		}
 		// phpcs:enable WordPress.Security.NonceVerification.Missing,  WordPress.Security.NonceVerification.Recommended
 
 		if ( ! job_manager_user_can_edit_job( $this->job_id ) ) {
@@ -126,6 +129,7 @@ class WP_Job_Manager_Form_Submit_Job extends WP_Job_Manager_Form {
 			)
 			&& ! empty( $_COOKIE['wp-job-manager-submitting-job-id'] )
 			&& ! empty( $_COOKIE['wp-job-manager-submitting-job-key'] )
+			&& empty( $this->job_id )
 		) {
 			$job_id     = absint( $_COOKIE['wp-job-manager-submitting-job-id'] );
 			$job_status = get_post_status( $job_id );
@@ -379,10 +383,26 @@ class WP_Job_Manager_Form_Submit_Job extends WP_Job_Manager_Form {
 					}
 					if ( ! empty( $check_value ) ) {
 						foreach ( $check_value as $file_url ) {
-							// Check image path.
-							$baseurl = wp_upload_dir()['baseurl'];
-							if ( ! is_numeric( $file_url ) && 0 !== strpos( $file_url, $baseurl ) ) {
-								throw new Exception( __( 'Invalid image path.', 'wp-job-manager' ) );
+
+							if ( ! is_numeric( $file_url ) ) {
+								/**
+								 * Set this flag to true to reject files from external URLs during job submission.
+								 *
+								 * @since 1.34.3
+								 *
+								 * @param bool   $reject_external_files  The flag.
+								 * @param string $key                    The field key.
+								 * @param string $group_key              The group.
+								 * @param array  $field                  An array containing the information for the field.
+								 */
+								$reject_external_files = apply_filters( 'job_manager_submit_job_reject_external_files', false, $key, $group_key, $field );
+
+								// Check image path.
+								$baseurl = wp_upload_dir()['baseurl'];
+
+								if ( $reject_external_files && 0 !== strpos( $file_url, $baseurl ) ) {
+									throw new Exception( __( 'Invalid image path.', 'wp-job-manager' ) );
+								}
 							}
 
 							// Check mime types.

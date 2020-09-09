@@ -1,3 +1,5 @@
+@import "mixins";
+
 .jm_icon() {
 	display:inline-block;
 	width: 1em;
@@ -319,7 +321,6 @@ div.job-applications {
 					padding: 0;
 					list-style: none outside;
 					float: left;
-					max-width: 50%;
 					li {
 						color: #ccc;
 						padding: 1em 0;
@@ -331,31 +332,33 @@ div.job-applications {
 				}
 				ul.actions {
 					float: right;
-					margin: 0 1em 0 0;
+					margin: -1px 0 0;
 					padding: 0;
 					list-style: none outside;
+					border-top: 1px solid #eee;
 					li {
 						border-left: 1px solid #eee;
-						float: right;
+						float: left;
 						padding: 0;
 						margin: 0;
 						list-style: none outside;
 						line-height: 1em;
 						a {
-							height: 0;
-							width: 1em;
 							overflow: hidden;
-							padding: 3em 1em 0;
+							padding: 1em;
 							float: left;
-							position: relative;
+							text-decoration: none;
+							text-align: center;
+							@media (max-width: 430px) {
+								padding: 0.5em;
+							}
 						}
 						a:before {
 							.jm_icon();
-							position: absolute;
-							left: 0;
-							top: 0;
-							padding: 1em;
 							content: "\e81c";
+						}
+						.action-label {
+							.sr-only;
 						}
 					}
 					li.attachment {

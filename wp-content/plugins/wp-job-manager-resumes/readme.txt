@@ -1,8 +1,8 @@
 === Resume Manager ===
 Contributors: mikejolley, kraftbj, tripflex, danjjohnson, aheckler, bryceadams, fitoussi, jakeom, alexsanford1
-Requires at least: 4.7
-Tested up to: 5.3
-Stable tag: 1.18.1
+Requires at least: 5.0
+Tested up to: 5.5
+Stable tag: 1.18.2
 License: GNU General Public License v3.0
 
 Manage candidate resumes from the WordPress admin panel, and allow candidates to post their resumes directly to your site.
@@ -28,6 +28,11 @@ If you need help with customisation you will need to find and hire a developer c
 To install this plugin, please refer to the guide here: [http://codex.wordpress.org/Managing_Plugins#Manual_Plugin_Installation](http://codex.wordpress.org/Managing_Plugins#Manual_Plugin_Installation)
 
 == Changelog ==
+
+= 1.18.2 =
+- Fix: Remove resumes from WordPress 5.5 sitemaps.
+- Change: Redirect if user doesn't have access to resume post type page.
+- Dev: Add filter (`resume_manager_force_shortcode_action_handler`) to force shortcode action handler to run.
 
 = 1.18.1 =
 - Fix: Issue with guests being able to submit resumes.

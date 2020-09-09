@@ -455,6 +455,7 @@ add_action( 'resume_manager_update_resume_data', function( $resume_id ) {
 	}
 } );
 
+
 /* 
  * 27/07/2020
  * BNORMAND
@@ -466,6 +467,7 @@ function enqueue_mon_script() {
 }
 
 require_once get_stylesheet_directory() . '/inc/functions/my-account.php';
+
 
 /* 
  * 31/07/2020
@@ -489,7 +491,7 @@ function show_extra_profile_fields( $user ) {
                 <td>
                     <input type="text"
                     disabled
-                    minlength="10" 
+                    minlength="10"
                     maxlength="10"
                     id="rna"
                     name="rna"
@@ -501,6 +503,7 @@ function show_extra_profile_fields( $user ) {
             <tr>
                 <th><label for="rna"><?php esc_html_e( 'Declaration', 'jobhunt' ); ?></label></th>
                 <td>
+                    <?php if($declaration !== "") {?>
                     <?php if($declaration !== "") {?> 
                         <a style="color: #b4c408;" target="_blank" href="<?php echo "http://" . $_SERVER['HTTP_HOST'] . $declaration; ?>"> Consulter la déclaration enregistrée. </a></span><br>
                     <?php } else { ?>
@@ -533,8 +536,33 @@ function save_extra_profile_fields($user_id) {
     update_user_meta( $user_id, 'certified_label',$value);
 }
 
+/*
+ * 01/08/2020
+ * BNORMAND
+ * EDITION DU CHAMPS RNA & Declaration file USER PROFILE
+ * */
+add_action( 'woocommerce_save_account_details', 'save_declaration_file_account_details');
+function save_declaration_file_account_details( $user_id ) {
+    $declaration_file = $_FILES['declaration_file'];
+    $target_file =  "/wp-content/uploads/declaration_file/" . $user_id . "_declaration_file.pdf";
+    $target_full_path = $_SERVER['DOCUMENT_ROOT'] . $target_file;
+    if(isset($declaration_file) && $declaration_file["type"] === "application/pdf"){
+        empty(get_user_meta($user_id, 'declaration_file_path')) ? "" : delete_user_meta($user_id, 'declaration_file_path');
+        if(file_exists($target_full_path)) {
+            unlink($target_full_path);
+        }
 
-/* 
+        if (move_uploaded_file($declaration_file["tmp_name"], $target_full_path)) {
+            add_user_meta($user_id, 'declaration_file_path', $target_file);
+        } else {
+            jobhunt_form_errors()->add('error', esc_html__('Error while uploading file. Please try again.', 'jobhunt'));
+        }
+    } else {
+        jobhunt_form_errors()->add('rna_empty', esc_html__('Declaration file must be a PDF file.', 'jobhunt'));
+    }
+}
+
+/*
  * 06/08/2020
  * BNORMAND
  * AJOUT DU LOGO PROFIL CERTIFIE DANS LES BONNES CONDITIONS
@@ -552,9 +580,9 @@ if ( ! function_exists( 'jobhunt_template_job_listing_company_details' ) ) {
         }
         $certified_label = empty(get_user_meta($company->post_author, 'certified_label')) ? false : get_user_meta($company->post_author, 'certified_label')[0];
         ?><div class="job-listing-company company">
-            <?php the_company_name( '<strong>', '</strong> ' ); 
+            <?php the_company_name( '<strong>', '</strong> ' );
             if($certified_label) {
-            ?> 
+            ?>
                 <i class="lar la-check-circle"></i>
             <?php
             }
@@ -562,6 +590,7 @@ if ( ! function_exists( 'jobhunt_template_job_listing_company_details' ) ) {
         </div><?php
     }
 }
+
 
 /* 
  * 07/08/2020
@@ -753,4 +782,6 @@ function custom_wp_new_user_notification_email( $wp_new_user_notification_email,
     $wp_new_user_notification_email['headers'] = 'From: MyName<example@domain.ext>'; // this just changes the sender name and email to whatever you want (instead of the default WordPress <wordpress@domain.ext>
 
     return $wp_new_user_notification_email;
+
 }
+

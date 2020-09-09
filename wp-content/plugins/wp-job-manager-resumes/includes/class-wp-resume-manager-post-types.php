@@ -265,6 +265,8 @@ class WP_Resume_Manager_Post_Types {
 			)
 		);
 
+		add_filter( 'wp_sitemaps_post_types', [ $this, 'disable_sitemap' ] );
+
 		register_post_status(
 			'hidden',
 			[
@@ -276,6 +278,21 @@ class WP_Resume_Manager_Post_Types {
 				'label_count'               => _n_noop( 'Hidden <span class="count">(%s)</span>', 'Hidden <span class="count">(%s)</span>', 'wp-job-manager-resumes' ),
 			]
 		);
+	}
+
+	/**
+	 * Filters the resume post type from sitemap.
+	 *
+	 * @since 1.18.2
+	 * @access private
+	 *
+	 * @param array $post_types  The public post types.
+	 *
+	 * @return array The filtered post types.
+	 */
+	public function disable_sitemap( $post_types ) {
+		unset( $post_types['resume'] );
+		return $post_types;
 	}
 
 	public function download_resume_handler() {

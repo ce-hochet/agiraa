@@ -7,6 +7,7 @@ jQuery(document).ready(function( $ ){
      * 07/08/2020 - BNORMAND - Ajout du champs candidate location
      * 08/08/2020 - BNORMAND - Ajout de "_company_location" Présent dans le tableau admin des assos
      */ 
+
     jobhunt_options.location_geocomplete_options = {componentRestrictions: {
         country: "FR",
     }};

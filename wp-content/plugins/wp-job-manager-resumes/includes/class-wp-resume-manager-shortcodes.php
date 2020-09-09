@@ -84,7 +84,14 @@ class WP_Resume_Manager_Shortcodes {
 	public function shortcode_action_handler() {
 		global $post;
 
-		if ( is_page() && strstr( $post->post_content, '[candidate_dashboard' ) ) {
+		/**
+		 * Force the shortcode handler to run.
+		 *
+		 * @param bool $force_shortcode_action_handler Whether it should be forced to run.
+		 */
+		$force_shortcode_action_handler = apply_filters( 'resume_manager_force_shortcode_action_handler', false );
+
+		if ( is_page() && strstr( $post->post_content, '[candidate_dashboard' ) || $force_shortcode_action_handler ) {
 			$this->candidate_dashboard_handler();
 		}
 	}
