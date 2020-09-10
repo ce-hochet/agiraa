@@ -759,28 +759,5 @@ function save_profil_details() {
     }
 }
 
-/* 
- * 18/08/2020
- * BNORMAND
- * Customisation de l'émail envoyé lors de l'inscription pour créer son mot de passe. La template est créer ici. 
- * */
-
-add_filter( 'wp_new_user_notification_email', 'custom_wp_new_user_notification_email', 10, 3 );
-
-function custom_wp_new_user_notification_email( $wp_new_user_notification_email, $user, $blogname ) {
-    $key = get_password_reset_key( $user );
-    $message = sprintf(__('Welcome to the Community,')) . "\r\n\r\n";
-    $message .= 'To set your password, visit the following address:' . "\r\n\r\n";
-    $message .= network_site_url("/mon-compte/mdp-perdu/?action=rp&key=$key&login=" . rawurlencode($user->user_login), 'login') . "\r\n\r\n";
-    $message .= "After this you can enjoy our website!" . "\r\n\r\n";
-    $message .= "Kind regards," . "\r\n";
-    $message .= "Support Office Team" . "\r\n";
-    $wp_new_user_notification_email['message'] = $message;
-
-    $wp_new_user_notification_email['headers'] = 'From: MyName<example@domain.ext>'; // this just changes the sender name and email to whatever you want (instead of the default WordPress <wordpress@domain.ext>
-
-    return $wp_new_user_notification_email;
-
-}
 
 
