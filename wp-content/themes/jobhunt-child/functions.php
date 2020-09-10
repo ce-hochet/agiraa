@@ -456,10 +456,10 @@ add_action( 'resume_manager_update_resume_data', function( $resume_id ) {
 } );
 
 
-/* 
+/*
  * 27/07/2020
  * BNORMAND
- * AJOUT SCRIPT JS CHILD EXTERNE 
+ * AJOUT SCRIPT JS CHILD EXTERNE
  * */
 add_action( 'wp_enqueue_scripts', 'enqueue_mon_script' );
 function enqueue_mon_script() {
@@ -469,10 +469,10 @@ function enqueue_mon_script() {
 require_once get_stylesheet_directory() . '/inc/functions/my-account.php';
 
 
-/* 
+/*
  * 31/07/2020
  * BNORMAND
- * EDITION DU CHAMPS RNA / DOCUMENT / Certified Label pour USER PROFILE 
+ * EDITION DU CHAMPS RNA / DOCUMENT / Certified Label pour USER PROFILE
  * */
 add_action( 'show_user_profile', 'show_extra_profile_fields' );
 add_action( 'edit_user_profile', 'show_extra_profile_fields' );
@@ -503,7 +503,7 @@ function show_extra_profile_fields( $user ) {
             <tr>
                 <th><label for="rna"><?php esc_html_e( 'Declaration', 'jobhunt' ); ?></label></th>
                 <td>
-                    <?php if($declaration !== "") {?> 
+                    <?php if($declaration !== "") {?>
                         <a style="color: #b4c408;" target="_blank" href="<?php echo "http://" . $_SERVER['HTTP_HOST'] . $declaration; ?>"> Consulter la déclaration enregistrée. </a></span><br>
                     <?php } else { ?>
                         <p style="color: #DF3F52;"> Aucune déclaration n'a été mise en ligne par l'association.</p>
@@ -590,7 +590,7 @@ if ( ! function_exists( 'jobhunt_template_job_listing_company_details' ) ) {
 }
 
 
-/* 
+/*
  * 07/08/2020
  * BNORMAND
  * Retrait du caractère obligatoire des champs "First Name" & "Last Name" pour les employeurs.
@@ -615,7 +615,7 @@ add_filter( 'woocommerce_account_menu_items', function($items) {
             $my_items = array_slice( $items, 0, 1, true ) +
                 $my_items +
                 array_slice( $items, 1, count( $items ), true );
-        
+
             return $my_items;
     }
 }, 99, 1 );
@@ -624,10 +624,10 @@ add_action( 'init', function() {
     add_rewrite_endpoint( 'profil', EP_ROOT | EP_PAGES );
 } );
 
-/* 
+/*
  * 16/08/2020
  * BNORMAND
- * Solution temporaire afin de pouvoir avoir le CSS du champs multiselect dans le bon ordres. Celui-ci devant être déclaré avant le autres. 
+ * Solution temporaire afin de pouvoir avoir le CSS du champs multiselect dans le bon ordres. Celui-ci devant être déclaré avant le autres.
  * */
 add_action('wp_head', function() {
     echo '<link rel="stylesheet" href="'. JOB_MANAGER_PLUGIN_URL . '/assets/css/chosen.css" type="text/css" media="all">';
@@ -641,7 +641,7 @@ add_action( 'woocommerce_account_profil_endpoint', function() {
 
 
 
-/* 
+/*
  * 16/08/2020
  * BNORMAND
  * Mise en place de la fonction appelé lors de la validation du formulaire du profil publique. .
@@ -664,14 +664,14 @@ function save_profil_details() {
     }
 
     include_once JOB_MANAGER_PLUGIN_DIR . "/includes/forms/class-wp-job-manager-form-submit-job.php";
-    
-    $company_infos = [];   
+
+    $company_infos = [];
     $file_fields = [];
 
     $wjmfsj = WP_Job_Manager_Form_Submit_Job::instance();
     $wjmfsj->init_fields();
     $company_fields = array_merge($wjmfsj->get_fields('company'), jobhunt_submit_job_form_fields());
-    
+
     //VALIDATION des champs publiques
     foreach ( $company_fields as $key => $field ) :
         if($field['required']){
@@ -701,7 +701,7 @@ function save_profil_details() {
         }
     }
 
-    
+
     // Allow plugins to return their own errors.
     $errors = new WP_Error();
     do_action_ref_array( 'woocommerce_profil_details_errors', array( &$errors, &$user ) );
@@ -759,5 +759,57 @@ function save_profil_details() {
     }
 }
 
+/*
+ * 10/09/2020
+ * CEHOCHET
+ * TRADUCTION REGISTER ET LOGIN
+ * */
 
+if ( ! function_exists( 'jobhunt_register_login_form' ) ) {
+    function jobhunt_register_login_form() {
 
+        $output = '';
+
+        if( ! is_user_logged_in() ) {
+            ob_start();
+            ?>
+            <div class="jobhunt-register-login-form">
+                <div class="jobhunt-register-login-form-inner">
+                    <ul class="nav" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link" id="jh-register-tab" data-toggle="pill" href="#jh-register-tab-content" role="tab" aria-controls="jh-register-tab-content" aria-selected="false"><?php echo apply_filters( 'jobhunt_register_form_tab_title', esc_html__( 'S\'inscrire', 'jobhunt-extensions') ); ?></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" id="jh-login-tab" data-toggle="pill" href="#jh-login-tab-content" role="tab" aria-controls="jh-login-tab-content" aria-selected="true"><?php echo apply_filters( 'jobhunt_login_form_tab_title', esc_html__( 'Se connecter', 'jobhunt-extensions') ); ?></a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade" id="jh-register-tab-content" role="tabpanel" aria-labelledby="jh-register-tab"><?php echo jobhunt_registration_form(); ?></div>
+                        <div class="tab-pane fade show active" id="jh-login-tab-content" role="tabpanel" aria-labelledby="jh-login-tab"><?php echo jobhunt_login_form(); ?></div>
+                    </div>
+                </div>
+            </div>
+            <?php
+            $output = ob_get_clean();
+        } elseif( function_exists( 'jobhunt_wpjm_wc_account_dashboard' ) ) {
+            ob_start();
+            jobhunt_wpjm_wc_account_dashboard();
+            $output = ob_get_clean();
+        }
+
+        return $output;
+    }
+}
+
+if ( ! function_exists ( 'jh_child_custom_header_register_page_url' ) ) {
+    function jh_child_custom_header_register_page_url( $url ) {
+        $custom_userpage = jobhunt_get_register_login_form_page();
+
+        if( !empty( $custom_userpage ) ) {
+            $url = get_permalink( $custom_userpage ) . '#jh-register-tab-content';
+        }
+
+        return $url;
+    }
+}
+add_filter( 'jobhunt_header_register_page_url', 'jh_child_custom_header_register_page_url' );
