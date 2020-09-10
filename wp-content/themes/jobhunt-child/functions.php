@@ -836,7 +836,7 @@ add_filter( 'jobhunt_header_register_page_url', 'jh_child_custom_header_register
 
  	if( $handle === 'wc-password-strength-meter' ) {
  		$params = array_merge( $params, array(
- 			'min_password_strength' => 3,
+ 			'min_password_strength' => 2,
  			'i18n_password_error' => 'Ne veux-tu pas être protégé(e) ? Insère un mot de passe plus fort !',
  			'i18n_password_hint' => 'Pour la sécurité de votre compte, veuillez définir votre mot de passe avec <strong>au moins 7 caractères </strong> et utilisez un mélange de lettres <strong>MAJUSCULE</strong> et <strong>minuscule</strong>, <strong>de nombres </strong>, et <strong> de symboles : </strong> (e.g., <strong> ! " ? $ % ^ & </strong>).'
  		) );
