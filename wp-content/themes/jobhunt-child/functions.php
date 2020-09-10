@@ -813,3 +813,34 @@ if ( ! function_exists ( 'jh_child_custom_header_register_page_url' ) ) {
     }
 }
 add_filter( 'jobhunt_header_register_page_url', 'jh_child_custom_header_register_page_url' );
+
+/*
+ * 10/09/2020
+ * CEHOCHET
+ * EXIGENCE MOT DE PASSE
+ * */
+
+/**
+ * Change the strength requirement on the woocommerce password
+ *
+ * Strength Settings
+ * 4 = Strong
+ * 3 = Medium (default)
+ * 2 = Also Weak but a little stronger
+ * 1 = Password should be at least Weak
+ * 0 = Very Weak / Anything
+ */
+ add_filter( 'woocommerce_get_script_data', 'misha_strength_meter_settings', 20, 2 );
+
+ function misha_strength_meter_settings( $params, $handle  ) {
+
+ 	if( $handle === 'wc-password-strength-meter' ) {
+ 		$params = array_merge( $params, array(
+ 			'min_password_strength' => 3,
+ 			'i18n_password_error' => 'Ne veux-tu pas être protégé(e) ? Insère un mot de passe plus fort !',
+ 			'i18n_password_hint' => 'Pour la sécurité de votre compte, veuillez définir votre mot de passe avec <strong>au moins 7 caractères </strong> et utilisez un mélange de lettres <strong>MAJUSCULE</strong> et <strong>minuscule</strong>, <strong>de nombres </strong>, et <strong> de symboles : </strong> (e.g., <strong> ! " ? $ % ^ & </strong>).'
+ 		) );
+ 	}
+ 	return $params;
+
+ }
