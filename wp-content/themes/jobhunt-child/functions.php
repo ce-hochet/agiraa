@@ -843,4 +843,11 @@ add_filter( 'jobhunt_header_register_page_url', 'jh_child_custom_header_register
  	}
  	return $params;
 
- }
+}
+
+add_action('woocommerce_before_customer_login_form', 'redirect_jobhunt_login_form');
+
+function redirect_jobhunt_login_form(){
+    echo do_shortcode( '[jobhunt_register_login_form]' );
+    exit();
+}
