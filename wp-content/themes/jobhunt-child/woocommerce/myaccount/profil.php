@@ -27,7 +27,6 @@ $user_id = get_current_user_id();
 $wjmfsj = WP_Job_Manager_Form_Submit_Job::instance();
 $wjmfsj->init_fields();
 $company_fields = array_merge($wjmfsj->get_fields('company'), jobhunt_submit_job_form_fields());
-$company_infos = [];
 
 $posts = get_posts(array( 'author' => $user_id, 'post_type' => 'company' ));
 //TODO Taxonomy & Files
@@ -38,6 +37,10 @@ if(!empty($posts)){
             $company_fields[$key]['value'] = $posts[0]->post_title;
         } else if ($key === "company_description"){
             $company_fields[$key]['value'] = $posts[0]->post_content;
+        } else if($key === "company_logo") {
+            $company_fields[$key]['value'] = has_post_thumbnail($post_id) ? get_the_post_thumbnail_url($post_id) : '';
+        } else if($key === "company_specialite") {
+            $company_fields[$key]['value'] = wp_get_post_terms($post_id, 'company_specialite', [ 'fields' => 'ids' ]);
         } else {
             $company_fields[$key]['value'] = empty(get_post_meta( $post_id, '_' . $key)[0]) ? '' : get_post_meta( $post_id, '_' . $key)[0];
         }
@@ -61,8 +64,8 @@ do_action('woocommerce_before_profil_form');
     <?php endforeach; ?>
 
     <?php 
-    $rna = empty(get_user_meta( $user_id, 'rna')) ? "" : get_user_meta( $user_id, 'rna')[0];
-    $declaration = empty(get_user_meta($user_id, 'declaration_file_path')) ? "" : get_user_meta($user_id, 'declaration_file_path')[0];
+    $rna = empty(get_post_meta( $post_id, 'rna_code')) ? "" : get_post_meta( $post_id, 'rna_code')[0];
+    $declaration = empty(get_post_meta($post_id, 'declaration_file')) ? "" : get_post_meta($post_id, 'declaration_file')[0];
     ?>
     
     <h2><?php esc_html_e( 'Informations Privées', 'jobhunt' ); ?></h2>
@@ -75,9 +78,9 @@ do_action('woocommerce_before_profil_form');
             <label for="declaration_file"><?php _e( 'Declaration file', 'jobhunt' ); ?></label>
             <br><span>
             <?php if($declaration !== "") {?> 
-                <a style="color: #b4c408;" target="_blank" href="<?php echo "http://" . $_SERVER['HTTP_HOST'] . $declaration; ?>"> Consulter la déclaration enregistrée. </a></span><br>
+                <a style="color: #b4c408;" target="_blank" href="<?php echo $declaration; ?>"> Consulter la déclaration enregistrée. </a></span><br>
             <?php } else { ?>
-                <p style="color: #DF3F52;"> Aucune déclaration n'a été mise en ligne par l'association.</p>
+                <p style="color: #DF3F52;"> Aucune déclaration n'a été mise en ligne.</p>
             <?php } ?>
             <input type="file" class="woocommerce-Input woocommerce-Input--text input-text" name="declaration_file" id="declaration_file"/>
             <span> <em> Veuillez charger le "Récépissé de déclaration" de votre association pour obtenir le statut "Compte certifié" et attesté de la bonne existence de votre association. </em> </span>

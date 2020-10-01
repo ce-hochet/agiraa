@@ -468,98 +468,6 @@ function enqueue_mon_script() {
 
 require_once get_stylesheet_directory() . '/inc/functions/my-account.php';
 
-
-/*
- * 31/07/2020
- * BNORMAND
- * EDITION DU CHAMPS RNA / DOCUMENT / Certified Label pour USER PROFILE
- * */
-add_action( 'show_user_profile', 'show_extra_profile_fields' );
-add_action( 'edit_user_profile', 'show_extra_profile_fields' );
-
-function show_extra_profile_fields( $user ) {
-    if($user->roles[0] === "employer"){
-        $rna = empty(get_user_meta( $user->ID, 'rna')) ? "" : get_user_meta( $user->ID, 'rna')[0];
-        $declaration = empty(get_user_meta($user->ID, 'declaration_file_path')) ? "" : get_user_meta($user->ID, 'declaration_file_path')[0];
-        $certified_label = empty(get_user_meta($user->ID, 'certified_label')) ? "0" : get_user_meta($user->ID, 'certified_label')[0];
-        ?>
-        <h3><?php esc_html_e( 'Association Information', 'jobhunt' ); ?></h3>
-
-        <table class="form-table">
-            <tr>
-                <th><label for="rna"><?php esc_html_e( 'RNA Code', 'jobhunt' ); ?></label></th>
-                <td>
-                    <input type="text"
-                    disabled
-                    minlength="10"
-                    maxlength="10"
-                    id="rna"
-                    name="rna"
-                    value="<?php echo $rna; ?>"
-                    class="regular-text"
-                    />
-                </td>
-            </tr>
-            <tr>
-                <th><label for="rna"><?php esc_html_e( 'Declaration', 'jobhunt' ); ?></label></th>
-                <td>
-                    <?php if($declaration !== "") {?>
-                        <a style="color: #b4c408;" target="_blank" href="<?php echo "http://" . $_SERVER['HTTP_HOST'] . $declaration; ?>"> Consulter la déclaration enregistrée. </a></span><br>
-                    <?php } else { ?>
-                        <p style="color: #DF3F52;"> Aucune déclaration n'a été mise en ligne par l'association.</p>
-                    <?php } ?>
-                </td>
-            </tr>
-            <tr>
-                <th><label for="certified_label"><?php esc_html_e( 'Certified Label ?', 'jobhunt' ); ?></label></th>
-                <td>
-                <label for="certified_label">
-                <input name="certified_label" type="checkbox" id="certified_label" value="1" <?php echo $certified_label === "1" ? "checked" : "" ?>>
-                    <?php esc_html_e( 'This association have the certified label', 'jobhunt' ); ?></label>
-                </td>
-            </tr>
-        </table>
-        <?php
-    }
-}
-
-add_action( 'personal_options_update', 'save_extra_profile_fields' );
-add_action( 'edit_user_profile_update', 'save_extra_profile_fields' );
-
-function save_extra_profile_fields($user_id) {
-    if ( !current_user_can( 'edit_user', $user_id ) ) {
-        return false;
-    }
-    $value = !isset($_POST['certified_label']) ? "0" : isset($_POST['certified_label']);
-    update_user_meta( $user_id, 'certified_label',$value);
-}
-
-/*
- * 01/08/2020
- * BNORMAND
- * EDITION DU CHAMPS RNA & Declaration file USER PROFILE
- * */
-add_action( 'woocommerce_save_account_details', 'save_declaration_file_account_details');
-function save_declaration_file_account_details( $user_id ) {
-    $declaration_file = $_FILES['declaration_file'];
-    $target_file =  "/wp-content/uploads/declaration_file/" . $user_id . "_declaration_file.pdf";
-    $target_full_path = $_SERVER['DOCUMENT_ROOT'] . $target_file;
-    if(isset($declaration_file) && $declaration_file["type"] === "application/pdf"){
-        empty(get_user_meta($user_id, 'declaration_file_path')) ? "" : delete_user_meta($user_id, 'declaration_file_path');
-        if(file_exists($target_full_path)) {
-            unlink($target_full_path);
-        }
-
-        if (move_uploaded_file($declaration_file["tmp_name"], $target_full_path)) {
-            add_user_meta($user_id, 'declaration_file_path', $target_file);
-        } else {
-            jobhunt_form_errors()->add('error', esc_html__('Error while uploading file. Please try again.', 'jobhunt'));
-        }
-    } else {
-        jobhunt_form_errors()->add('rna_empty', esc_html__('Declaration file must be a PDF file.', 'jobhunt'));
-    }
-}
-
 /*
  * 06/08/2020
  * BNORMAND
@@ -636,6 +544,7 @@ add_action('wp_head', function() {
 
 add_action( 'woocommerce_account_profil_endpoint', function() {
     wp_register_script( 'chosen', JOB_MANAGER_PLUGIN_URL . '/assets/js/jquery-chosen/chosen.jquery.min.js', [ 'jquery' ], '1.1.0', true , 0);
+    wp_enqueue_script('remove-file-js', JOB_MANAGER_PLUGIN_URL . '/assets/js/job-submission.min.js');
     wc_get_template_part('myaccount/profil');
 });
 
@@ -672,35 +581,40 @@ function save_profil_details() {
     $wjmfsj->init_fields();
     $company_fields = array_merge($wjmfsj->get_fields('company'), jobhunt_submit_job_form_fields());
 
-    //VALIDATION des champs publiques
+    //Récupération des champs.
     foreach ( $company_fields as $key => $field ) :
-        if($field['required']){
-            //DO VERIF REQUIRED
+        if($key === 'company_logo') {
+            $company_infos[$key] = $_POST['current_company_logo'];
+        } else {
+            $company_infos[$key] = ! empty( $_POST[$key] ) ? wc_clean( wp_unslash( $_POST[$key] ) ) : '';
         }
-        if($field['type'] === 'file') {
-            //DO FILE
-        }
-        $company_infos[$key] = ! empty( $_POST[$key] ) ? wc_clean( wp_unslash( $_POST[$key] ) ) : '';
+    endforeach;
+
+    //Validation des champs
+    foreach ( $company_fields as $key => $field ) :
+        if($field['required'] && empty($company_infos[$key]))
+            wc_add_notice(__( 'Le champs '. $field['label'] . ' est obligatoire. Veuillez le renseigner', 'agiraa' ), 'error');
     endforeach;
 
     //Validation du fichier de déclaration :
+    //TODO Vérifier pour faire un attachment ou une gestion de fichier WP.
+    $fileok = false;
     $declaration_file = $_FILES['declaration_file'];
     if($declaration_file['size'] > 0) {
         if($declaration_file["type"] !== "application/pdf"){
-            wc_add_notice(__( 'Declaration file must be a PDF.', 'woocommerce' ), 'error');
+            wc_add_notice(__( 'Le récépissé de déclaration doit être au format PDF.', 'agiraa' ), 'error');
         } else {
-            $target_file =  "/wp-content/uploads/declaration_file/" . $user_id . "_declaration_file.pdf";
-            $target_full_path = $_SERVER['DOCUMENT_ROOT'] . $target_file;
-            if(file_exists($target_full_path)) {
-                unlink($target_full_path);
+            if ( ! function_exists( 'wp_handle_upload' ) ) {
+                require_once( ABSPATH . 'wp-admin/includes/file.php' );
             }
-            update_user_meta($user_id, 'declaration_file_path', $target_file);
-            if (!move_uploaded_file($declaration_file["tmp_name"], $target_full_path)) {
-                wc_add_notice(__( 'Error while uploading file. Please try again.', 'woocommerce' ), 'error');
+            $movefile = wp_handle_upload( $declaration_file, array('test_form' => false) );
+            if ( $movefile && ! isset( $movefile['error'] ) ) {
+                $fileok = true;
+            } else {
+                wc_add_notice(__( 'Une erreur est survenue lors de la mise en ligne.', 'agiraa' ), 'error');
             }
         }
-    }
-
+    } 
 
     // Allow plugins to return their own errors.
     $errors = new WP_Error();
@@ -713,45 +627,64 @@ function save_profil_details() {
     if ( wc_notice_count( 'error' ) === 0 ) {
         //Vérification de l'existence d'une company.
         $posts = get_posts(array( 'author' => $user_id, 'post_type' => 'company' ));
-        //TODO HANDLE TAXONOMY & FILES
+        $posts_id;
         if(empty($posts)){
-            //CREATION
+            //CREATION de la company (Post WP).
             $company = array(
                 'post_title'    => $company_infos['company_name'],
                 'post_content'  => $company_infos['company_description'],
                 'post_author'   => $user_id,
                 'post_type'     => 'company'
-              );
+                );
             $post_id = wp_insert_post($company);
-            if ( is_array( $company_infos['company_specialite'] ) ) {
-                wp_set_post_terms( $post_id, $company_infos['company_specialite'], 'company_specialite', false );
-            } else {
-                wp_set_post_terms( $post_id, [ $company_infos['company_specialite'] ], 'company_specialite', false );
-            }
-            add_post_meta($post_id, '_company_facebook', $company_infos['company_facebook']);
-            add_post_meta($post_id, '_company_email', $company_infos['company_email']);
-            add_post_meta($post_id, '_company_phone', $company_infos['company_phone']);
-            add_post_meta($post_id, '_company_location', $company_infos['company_location']);
-            add_post_meta($post_id, '_company_website', $company_infos['company_website']);
         } else {
-            //MISE A JOUR
-            $company = array(
-                'ID'            => $posts[0]->ID,
-                'post_title'    => $company_infos['company_name'],
-                'post_content'  => $company_infos['company_description'],
-              );
-            $post_id = wp_update_post($company);
-            if ( is_array( $company_infos['company_specialite'] ) ) {
-                wp_set_post_terms( $post_id, $company_infos['company_specialite'], 'company_specialite', true );
-            } else {
-                wp_set_post_terms( $post_id, [ $company_infos['company_specialite'] ], 'company_specialite', true );
-            }
-            update_post_meta($post_id, '_company_facebook', $company_infos['company_facebook']);
-            update_post_meta($post_id, '_company_email', $company_infos['company_email']);
-            update_post_meta($post_id, '_company_phone', $company_infos['company_phone']);
-            update_post_meta($post_id, '_company_location', $company_infos['company_location']);
-            update_post_meta($post_id, '_company_website', $company_infos['company_website']);
+                //MISE A JOUR
+                $company = array(
+                    'ID'            => $posts[0]->ID,
+                    'post_title'    => $company_infos['company_name'],
+                    'post_content'  => $company_infos['company_description'],
+                    );
+                $post_id = wp_update_post($company);
         }
+        //Ajout des taxonomies pour la company.
+        if ( is_array( $company_infos['company_specialite'] ) ) {
+            wp_set_post_terms( $post_id, $company_infos['company_specialite'], 'company_specialite', false );
+        } else {
+            wp_set_post_terms( $post_id, [ $company_infos['company_specialite'] ], 'company_specialite', false );
+        }
+        //Gestion du logo
+        $wp_filetype = wp_check_filetype($company_infos['company_logo'], null );
+        $attachment = array(
+            'post_mime_type' => $wp_filetype['type'],
+            'post_parent'    => $post_id,
+            'post_title'     => preg_replace( '/\.[^.]+$/', '', basename($company_infos['company_logo']) ),
+            'post_content'   => '',
+            'post_status'    => 'inherit'
+        );
+        $attachment_id = wp_insert_attachment( $attachment, $company_infos['company_logo'], $post_id );
+        if ( ! is_wp_error( $attachment_id ) ) {
+            require_once(ABSPATH . "wp-admin" . '/includes/image.php');
+            if(has_post_thumbnail($post_id)){
+                delete_post_thumbnail($post_id);
+            }
+            $attachment_data = wp_generate_attachment_metadata( $attachment_id, $company_infos['company_logo'] );
+            wp_update_attachment_metadata( $attachment_id,  $attachment_data );
+            set_post_thumbnail( $post_id, $attachment_id );
+            update_user_meta( get_current_user_id(), '_company_logo', $attachment_id );
+        }
+        //Ajout des autres informations
+        update_post_meta($post_id, '_company_facebook', $company_infos['company_facebook']);
+        update_post_meta($post_id, '_company_email', $company_infos['company_email']);
+        update_post_meta($post_id, '_company_phone', $company_infos['company_phone']);
+        update_post_meta($post_id, '_company_location', $company_infos['company_location']);
+        update_post_meta($post_id, '_company_website', $company_infos['company_website']);
+
+        //Sauvegarde au niveau utilisateur car utilisé comme tel. (Save time for future)
+        update_user_meta( get_current_user_id(), '_company_name', isset( $company_infos['company_name'] ) ? $company_infos['company_name'] : '' );
+        update_user_meta( get_current_user_id(), '_company_website', isset( $company_infos['company_website'] ) ? $company_infos['company_website'] : '' );
+
+        update_post_meta($post_id, 'declaration_file', $movefile['url']);
+        //Message pour indiquer à l'utilisateur que les changements sont OK.
         wc_add_notice( __( 'Account details changed successfully.', 'woocommerce' ) );
         do_action( 'woocommerce_profil_details', $user_id );
         wp_safe_redirect( wc_get_page_permalink( 'myaccount' ) );
@@ -845,9 +778,150 @@ add_filter( 'jobhunt_header_register_page_url', 'jh_child_custom_header_register
 
 }
 
+/*
+ * 10/09/2020
+ * BNORMAND
+ * Modification du formulaire de login lors de l'appel à la page de login woocommerce. 
+ * */
 add_action('woocommerce_before_customer_login_form', 'redirect_jobhunt_login_form');
 
 function redirect_jobhunt_login_form(){
     echo do_shortcode( '[jobhunt_register_login_form]' );
     exit();
+}
+
+
+add_action( 'add_meta_boxes', 'add_meta_boxes_company_certification' );
+
+function add_meta_boxes_company_certification(){
+    add_meta_box( 'certification', esc_html__( 'Certification', 'jobhunt-extensions' ),  'show_company_certification_data' , 'company', 'normal', 'high' );
+}
+
+function generate_company_certification_fields(){
+    $default_field = array(
+        'description'        => null,
+        'priority'           => 10,
+        'value'              => null,
+        'default'            => null,
+        'classes'            => array(),
+        'show_in_admin'      => true,
+        'show_in_rest'       => false,
+        'auth_edit_callback' => array( WP_Job_Manager_Writepanels::class, 'auth_check_can_edit_job_listings' ),
+        'auth_view_callback' => null,
+        'sanitize_callback'  => array( WP_Job_Manager_Writepanels::class, 'sanitize_meta_field_based_on_input_type' ),
+    );
+    $fields = array(
+        'rna_code' => array(
+            'label' => "Code RNA",
+            'placeholder' => "",
+            'type' => "text",
+            'data_type' => "string",
+        ),
+        'certified_label' => array(
+            'label' => "Label certifié ?",
+            'placeholder' => "",
+            'type' => "checkbox",
+            'data_type' => "boolean",
+            'description' => "Une association certifié possède un signe distinctif."
+        ),
+        'declaration_file' => array(
+            'label' => "Récépissé de déclaration",
+            'placeholder' => 'Mettre en ligne le fichier',
+            'description' => 'Ce fichier permet de valider que l\'association existe et que son code RNA correspond à celui rempli',
+            'type' => 'file',
+            'data_type' => 'string'
+        )
+        );
+    foreach($fields as $key => $field) {
+        $fields[$key] = array_merge($default_field, $field);
+    }
+    return $fields;
+}
+
+function show_company_certification_data($post) {
+    global $post, $thepostid;
+    include_once JOB_MANAGER_PLUGIN_DIR . "/includes/admin/class-wp-job-manager-writepanels.php";
+    $wpjmwp = WP_Job_Manager_Writepanels::instance();
+    $thepostid = $post->ID;
+
+    $fields = generate_company_certification_fields();
+    echo '<div class="wp_company_manager_meta_data wp_job_manager_meta_data">';
+
+    wp_nonce_field( 'save_meta_data', 'company_manager_nonce' );
+
+    do_action( 'company_manager_certification_start', $thepostid );
+    foreach($fields as $key => $field){
+        $type = ! empty( $field['type'] ) ? $field['type'] : 'text';
+        if ( ! isset( $field['value'] ) && metadata_exists( 'post', $thepostid, $key ) ) {
+            $field['value'] = get_post_meta( $thepostid, $key, true );
+        }
+        if ( ! isset( $field['value'] ) && isset( $field['default'] ) ) {
+            $field['value'] = $field['default'];
+        }
+        if( has_action( 'company_manager_input_' . $type ) ) {
+            do_action( 'company_manager_input_' . $type, $key, $field );
+        } elseif( method_exists( $wpjmwp, 'input_' . $type ) ) {
+            call_user_func( array( $wpjmwp, 'input_' . $type ), $key, $field );
+        }
+    }
+    do_action( 'company_manager_certification_end', $thepostid );
+
+    echo '</div>';
+}
+
+add_action( 'company_manager_save_company', 'save_company_certification_data' , 10, 2 );
+
+function save_company_certification_data($post_id, $post) {
+    $fields = generate_company_certification_fields();
+    foreach($fields as $key => $field){
+        $type = ! empty( $field['type'] ) ? $field['type'] : '';
+        if($type === 'checkbox') {
+            if ( isset( $_POST[ $key ] ) ) {
+                update_post_meta( $post_id, $key, 1 );
+            } else {
+                update_post_meta( $post_id, $key, 0 );
+            }
+        } else {
+            if ( is_array( $_POST[ $key ] ) ) {
+                update_post_meta( $post_id, $key, array_filter( array_map( 'sanitize_text_field', $_POST[ $key ] ) ) );
+            } else {
+                update_post_meta( $post_id, $key, sanitize_text_field( $_POST[ $key ] ) );
+            }
+        }
+    }
+}
+
+if ( ! function_exists( 'jobhunt_add_custom_job_company_fields' ) ) {
+    function jobhunt_add_custom_job_company_fields() {
+        $company_fields = jobhunt_submit_job_form_fields();
+
+
+        $user_id = get_current_user_id();
+        $posts = get_posts(array( 'author' => $user_id, 'post_type' => 'company' ));
+        if(!empty($posts)){
+            $post_id = $posts[0]->ID;
+            foreach($company_fields as $key => $field) {
+                $company_fields[$key]['disabled'] = true;
+                if($key === "company_name") {
+                    $company_fields[$key]['value'] = $posts[0]->post_title;
+                } else if ($key === "company_description"){
+                    $company_fields[$key]['value'] = $posts[0]->post_content;
+                } else if($key === "company_logo") {
+                    $company_fields[$key]['value'] = has_post_thumbnail($post_id) ? get_the_post_thumbnail_url($post_id) : '';
+                } else if($key === "company_specialite") {
+                    $company_fields[$key]['value'] = wp_get_post_terms($post_id, 'company_specialite', [ 'fields' => 'ids' ]);
+                } else {
+                    $company_fields[$key]['value'] = empty(get_post_meta( $post_id, '_' . $key)[0]) ? '' : get_post_meta( $post_id, '_' . $key)[0];
+                }
+            }
+        } ?>
+        <?php  foreach($company_fields as $key => $field) { ?>
+        <fieldset class="fieldset-<?php echo esc_attr( $key ); ?>">
+            <label for="<?php echo esc_attr( $key ); ?>"><?php echo esc_html( $field['label'] ) . wp_kses_post( apply_filters( 'submit_job_form_required_label', $field['required'] ? '' : ' <small>' . esc_html__( '(optional)', 'jobhunt' ) . '</small>', $field ) ); ?></label>
+            <div class="field <?php echo esc_attr( $field['required'] ? 'required-field' : '' ); ?>">
+                <?php get_job_manager_template( 'form-fields/' . $field['type'] . '-field.php', array( 'key' => $key, 'field' => $field ) ); ?>
+            </div>
+        </fieldset>
+    <?php }
+    }
 }

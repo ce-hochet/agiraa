@@ -50,13 +50,14 @@ global $job_manager;
 		<?php endforeach; ?>
 
 		<?php do_action( 'submit_job_form_job_fields_end' ); ?>
-
+		
 		<!-- Company Information Fields -->
 		<?php if ( $company_fields ) : ?>
+		<div style="display: none">
 			<h2><?php esc_html_e( 'Information de l\'association', 'wp-job-manager' ); ?></h2>
 
 			<?php do_action( 'submit_job_form_company_fields_start' ); ?>
-
+			
 			<?php foreach ( $company_fields as $key => $field ) : ?>
 				<fieldset class="fieldset-<?php echo esc_attr( $key ); ?> fieldset-type-<?php echo esc_attr( $field['type'] ); ?>">
 					<label for="<?php echo esc_attr( $key ); ?>"><?php echo wp_kses_post( $field['label'] ) . wp_kses_post( apply_filters( 'submit_job_form_required_label', $field['required'] ? '' : ' <small>' . __( '(optional)', 'wp-job-manager' ) . '</small>', $field ) ); ?></label>
@@ -65,8 +66,9 @@ global $job_manager;
 					</div>
 				</fieldset>
 			<?php endforeach; ?>
-
+					
 			<?php do_action( 'submit_job_form_company_fields_end' ); ?>
+		</div>	
 		<?php endif; ?>
 
 		<?php do_action( 'submit_job_form_end' ); ?>
