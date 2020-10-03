@@ -477,14 +477,13 @@ if ( ! function_exists( 'jobhunt_template_job_listing_company_details' ) ) {
     function jobhunt_template_job_listing_company_details() {
         $job_id = get_the_ID();
         $company = '';
-
         if( $job_id ) {
             $post_title = get_post_meta( $job_id, '_company_name', true );
             if( ! empty( $post_title ) ) {
                 $company = get_page_by_title( $post_title, OBJECT, 'company' );
             }
         }
-        $certified_label = empty(get_user_meta($company->post_author, 'certified_label')) ? false : get_user_meta($company->post_author, 'certified_label')[0];
+        $certified_label = empty(get_post_meta($company->ID, 'certified_label')) ? false : get_post_meta($company->ID, 'certified_label')[0];
         ?><div class="job-listing-company company">
             <?php the_company_name( '<strong>', '</strong> ' );
             if($certified_label) {
@@ -638,6 +637,15 @@ function save_profil_details() {
                 );
             $post_id = wp_insert_post($company);
         } else {
+                //Dans le cas ou le nom de la company a été changé, il faut également changer les noms présents sur tous les jobs. 
+                //Pour ce faire on requete tous les post_meta "_company_name" correspondant à l'ancien titre et on les modifie. 
+                if($posts[0]->post_title !== $company_infos['company_name']){
+                    global $wpdb;
+                    $all_company_name = $wpdb->get_results('SELECT * from wp_postmeta where meta_key = "_company_name" and meta_value = "' . $posts[0]->post_title . '"');
+                    foreach ($all_company_name as $key => $company_name) {
+                        update_post_meta($company_name->post_id, $company_name->meta_key, $company_infos['company_name']);
+                    }
+                }
                 //MISE A JOUR
                 $company = array(
                     'ID'            => $posts[0]->ID,

@@ -57,7 +57,7 @@ if( $job_id ) {
                 } else {
                     echo esc_html( get_the_title( $company ) );
                 }
-            $certified_label = empty(get_user_meta($company->post_author, 'certified_label')) ? false : get_user_meta($company->post_author, 'certified_label')[0];
+            $certified_label = empty(get_post_meta($company->ID, 'certified_label')) ? false : get_post_meta($company->ID, 'certified_label')[0];
             $after = $certified_label ? "<i class='lar la-check-circle'></i></h3>" : "</h3>";    
             echo $after;
         } else {
