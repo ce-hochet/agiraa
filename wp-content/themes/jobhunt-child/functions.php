@@ -695,7 +695,7 @@ function save_profil_details() {
         //Message pour indiquer à l'utilisateur que les changements sont OK.
         wc_add_notice( __( 'Account details changed successfully.', 'woocommerce' ) );
         do_action( 'woocommerce_profil_details', $user_id );
-        wp_safe_redirect( wc_get_page_permalink( 'myaccount' ) );
+        wp_safe_redirect( "/mon-compte/profil/" );
         exit;
     }
 }
@@ -902,14 +902,11 @@ function save_company_certification_data($post_id, $post) {
 if ( ! function_exists( 'jobhunt_add_custom_job_company_fields' ) ) {
     function jobhunt_add_custom_job_company_fields() {
         $company_fields = jobhunt_submit_job_form_fields();
-
-
         $user_id = get_current_user_id();
         $posts = get_posts(array( 'author' => $user_id, 'post_type' => 'company' ));
         if(!empty($posts)){
             $post_id = $posts[0]->ID;
             foreach($company_fields as $key => $field) {
-                $company_fields[$key]['disabled'] = true;
                 if($key === "company_name") {
                     $company_fields[$key]['value'] = $posts[0]->post_title;
                 } else if ($key === "company_description"){
@@ -933,3 +930,4 @@ if ( ! function_exists( 'jobhunt_add_custom_job_company_fields' ) ) {
     <?php }
     }
 }
+
