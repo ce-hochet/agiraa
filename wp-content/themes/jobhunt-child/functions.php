@@ -613,7 +613,7 @@ function save_profil_details() {
                 wc_add_notice(__( 'Une erreur est survenue lors de la mise en ligne.', 'agiraa' ), 'error');
             }
         }
-    } 
+    }
 
     // Allow plugins to return their own errors.
     $errors = new WP_Error();
@@ -637,8 +637,8 @@ function save_profil_details() {
                 );
             $post_id = wp_insert_post($company);
         } else {
-                //Dans le cas ou le nom de la company a été changé, il faut également changer les noms présents sur tous les jobs. 
-                //Pour ce faire on requete tous les post_meta "_company_name" correspondant à l'ancien titre et on les modifie. 
+                //Dans le cas ou le nom de la company a été changé, il faut également changer les noms présents sur tous les jobs.
+                //Pour ce faire on requete tous les post_meta "_company_name" correspondant à l'ancien titre et on les modifie.
                 if($posts[0]->post_title !== $company_infos['company_name']){
                     global $wpdb;
                     $all_company_name = $wpdb->get_results('SELECT * from wp_postmeta where meta_key = "_company_name" and meta_value = "' . $posts[0]->post_title . '"');
@@ -789,7 +789,7 @@ add_filter( 'jobhunt_header_register_page_url', 'jh_child_custom_header_register
 /*
  * 10/09/2020
  * BNORMAND
- * Modification du formulaire de login lors de l'appel à la page de login woocommerce. 
+ * Modification du formulaire de login lors de l'appel à la page de login woocommerce.
  * */
 add_action('woocommerce_before_customer_login_form', 'redirect_jobhunt_login_form');
 
@@ -931,3 +931,23 @@ if ( ! function_exists( 'jobhunt_add_custom_job_company_fields' ) ) {
     }
 }
 
+/*
+ * 09/10/2020
+ * CEHOCHET
+ * Fonction pour modifier l'adresse email de l'expéditeur
+ * */
+function wpm_email_from( $original_email_address ) {
+
+    return 'contact@agiraa-benevolat.fr';
+
+}
+add_filter( 'wp_mail_from', 'wpm_email_from' );
+
+
+// Fonction pour changer le nom de l'expéditeur de l'email
+function wpm_expediteur( $original_email_from ) {
+
+    return 'AGIRAA - Agir pour les Associations Animales';
+
+}
+add_filter( 'wp_mail_from_name', 'wpm_expediteur' );
