@@ -243,11 +243,11 @@ if ( ! function_exists( 'jobhunt_add_new_member' ) ) {
 
                 if( $new_user_id ) {
                     // send an email to the admin alerting them of the registration
-                    if( apply_filters( 'jobhunt_wc_new_user_notification', false ) && jobhunt_is_woocommerce_activated() ) {
+                /*    if( apply_filters( 'jobhunt_wc_new_user_notification', false ) && jobhunt_is_woocommerce_activated() ) {
                         wc()->mailer()->customer_new_account( $new_user_id, $new_user_data, $password_generated );
                     } else {
                         wp_new_user_notification( $new_user_id, null, 'both' );
-                    }
+                    }*/
                     //Insertion du code RNA en BDD.
                     if($user_role === "employer") {
                         $company = array(
