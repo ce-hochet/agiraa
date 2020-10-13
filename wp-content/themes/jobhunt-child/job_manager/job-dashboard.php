@@ -4,6 +4,10 @@
  *
  * This template can be overridden by copying it to yourtheme/job_manager/job-dashboard.php.
  *
+ * BNORMAND
+ * 12/10/2020
+ * Modification de la template afin d'ajouter un contrôle sur la possibilité d'ajouter une mission.
+ * 
  * @see         https://wpjobmanager.com/document/template-overrides/
  * @author      Automattic
  * @package     wp-job-manager
@@ -114,15 +118,8 @@ $post_a_job_page_id = get_option( 'job_manager_submit_job_form_page_id' );
                     <tfoot>
                         <tr>
                             <td colspan="<?php echo sizeof( $job_dashboard_columns ); ?>">
-                            <?php                         
-                                    $user_id = get_current_user_id();
-                                    $posts = get_posts(array( 'author' => $user_id, 'post_type' => 'company' ));
-                                    //TODO Ajouter un controle plus précis sur tous les champs obligatoire.
-                                    if(empty($posts)) { ?>
-                                        <p> Pour poster une mission veuillez remplir les information de votre association sur votre profil. </p>
-                                    <?php } else { ?>
-                                        <a href="<?php echo esc_url( get_permalink( $post_a_job_page_id ) ); ?>"><?php echo apply_filters( 'jobhunt_wpjm_job_dashboard_post_a_job_button_text', esc_html__( 'Post A Job', 'jobhunt' ) ); ?></a>
-                                    <?php } ?>                            </td>
+                                <?php do_action("agiraa_display_post_mission_button"); ?>
+                            </td>
                         </tr>
                     </tfoot>
                 <?php endif; ?>
