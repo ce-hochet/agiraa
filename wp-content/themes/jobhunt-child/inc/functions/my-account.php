@@ -1,5 +1,5 @@
 <?php
-/* 
+/*
  * 28/07/2020
  * BNORMAND
  * Modification du formulaire d'inscription, Ajout du RNA si ASSO & verif du RNA.
@@ -15,10 +15,10 @@ if ( ! function_exists( 'jobhunt_registration_form_fields' ) ) {
 
             <?php
             // show any error messages after form submission
-            jobhunt_show_error_messages(); 
+            jobhunt_show_error_messages();
 
             // show any success messages after form submission
-            jobhunt_show_success_messages(); 
+            jobhunt_show_success_messages();
 
             do_action( 'jobhunt_registration_form_before' ); ?>
 
@@ -64,8 +64,15 @@ if ( ! function_exists( 'jobhunt_registration_form_fields' ) ) {
                                 <input name="jobhunt_user_rna" id="jobhunt_register_user_rna" minlength="10" maxlength="10" required class="required" type="text"/>
                             </label>
                             <span id="jobhunt_register_user_rna_error">
-                                
-                            </span> 
+                            </span>
+                        </p>
+                        <p id="jobhunt_register_user_cgu_block">
+                            <label for="jobhunt_register_user_cgu_block"><?php echo esc_html__('CGU', 'jobhunt'); ?>
+                              <input type="checkbox" name="jobhunt_user_cgu" id="jobhunt_register_user_cgu_block" minlength="10" maxlength="10" required class="required">
+                                  <label for="cgu"> J’ai lu et j’accepte les conditions d’utilisation </label>
+                            </label>
+                            <span id="jobhunt_register_user_cgu_error">
+                            </span>
                         </p>
                     <?php do_action( 'jobhunt_registration_form_fields_after' ); ?>
                     <p>
@@ -97,7 +104,7 @@ if ( ! function_exists( 'jobhunt_login_form_fields' ) ) {
             jobhunt_show_error_messages();
 
             // show any success messages after form submission
-            jobhunt_show_success_messages(); 
+            jobhunt_show_success_messages();
 
             do_action( 'jobhunt_login_form_before' ); ?>
 
@@ -174,7 +181,8 @@ if ( ! function_exists( 'jobhunt_add_new_member' ) ) {
                 }
             }
 
-            // Ajout de la partie RNA. 
+
+            // Ajout de la partie RNA.
             if($user_role === "employer") {
                 $rna_code = $_POST["jobhunt_user_rna"];
             }
@@ -201,9 +209,16 @@ if ( ! function_exists( 'jobhunt_add_new_member' ) ) {
             }
             //Check si RNA non vide et OK.
             if($user_role === "employer" && $rna_code == ''){
-                jobhunt_form_errors()->add('rna_empty', esc_html__('Please enter your RNA code', 'jobhunt')); 
+                jobhunt_form_errors()->add('rna_empty', esc_html__('Please enter your RNA code', 'jobhunt'));
             }
-            
+            //Check si CGU existe et est coché
+              if (!isset($_POST['jobhunt_user_cgu']))
+                  {
+                    jobhunt_form_errors()->add('cgu_empty', esc_html__('Veuillez cocher la case', 'jobhunt'));
+                  }
+
+
+
             $password = wp_generate_password();
             $password_generated = true;
 
@@ -245,6 +260,7 @@ if ( ! function_exists( 'jobhunt_add_new_member' ) ) {
                             );
                         $post_id = wp_insert_post($company);
                         update_post_meta($post_id, 'rna_code', $rna_code);
+                        update_post_meta($post_id, 'user_cgu', $user_cgu);
                     }
                     // log the new user in
                     $creds = array();
