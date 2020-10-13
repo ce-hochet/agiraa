@@ -67,7 +67,7 @@ if ( ! function_exists( 'jobhunt_registration_form_fields' ) ) {
                             </span>
                         </p>
                         <p id="jobhunt_register_user_cgu_block">
-                                <label for="jobhunt_register_user_cgu_block"> J’ai lu et j’accepte les conditions d'utilisation (<a href="http://dev.agiraa-benevolat.fr/cgu/">voir</a>) </label>
+                                <label for="jobhunt_register_user_cgu"> J’ai lu et j’accepte les conditions d'utilisation (<a href="http://dev.agiraa-benevolat.fr/cgu/">voir</a>) 
                               <input type="checkbox" name="jobhunt_user_cgu" id="jobhunt_register_user_cgu_block" minlength="10" maxlength="10" required class="required">
                                 <span id="jobhunt_register_user_cgu_error">          </span>
                             </label>
