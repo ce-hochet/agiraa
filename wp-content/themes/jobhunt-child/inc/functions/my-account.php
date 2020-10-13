@@ -60,16 +60,16 @@ if ( ! function_exists( 'jobhunt_registration_form_fields' ) ) {
                         </p>
                     <?php endif; ?>
                         <p id="jobhunt_register_user_rna_block">
-                            <label for="jobhunt_register_user_rna"><?php echo esc_html__('RNA', 'jobhunt'); ?>
+                            <label for="jobhunt_register_user_rna"><?php echo esc_html__('J’ai lu et j’accepte les conditions d’utilisation', 'jobhunt'); ?>
                                 <input name="jobhunt_user_rna" id="jobhunt_register_user_rna" minlength="10" maxlength="10" required class="required" type="text"/>
                             </label>
                             <span id="jobhunt_register_user_rna_error">
                             </span>
                         </p>
                         <p id="jobhunt_register_user_cgu_block">
-                            <label for="jobhunt_register_user_cgu_block"><?php echo esc_html__('CGU', 'jobhunt'); ?>
+                            <label for="jobhunt_register_user_cgu_block">
                               <input type="checkbox" name="jobhunt_user_cgu" id="jobhunt_register_user_cgu_block" minlength="10" maxlength="10" required class="required">
-                                  <label for="cgu"> J’ai lu et j’accepte les conditions d’utilisation </label>
+                                  <label for="cgu"> J’ai lu et j’accepte les <a href="http://dev.agiraa-benevolat.fr/cgu/">conditions d’utilisation</a> </label>
                             </label>
                             <span id="jobhunt_register_user_cgu_error">
                             </span>
