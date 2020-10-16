@@ -525,6 +525,7 @@ add_filter( 'woocommerce_account_menu_items', function($items) {
 
             return $my_items;
     }
+    return $items;
 }, 99, 1 );
 
 add_action( 'init', function() {
