@@ -620,7 +620,7 @@ function save_profil_details() {
                 wc_add_notice(__( 'Une erreur est survenue lors de la mise en ligne.', 'agiraa' ), 'error');
             }
         }
-    } else if(!metadata_exists('post', $post_id, 'declaration_file')) {
+    } else if(!metadata_exists('post',  $posts[0]->ID, 'declaration_file')) {
         wc_add_notice(__( 'Aucune déclaration n\'a été transmise.', 'agiraa' ), 'error');
     }
     // Allow plugins to return their own errors.
@@ -689,7 +689,8 @@ function save_profil_details() {
             update_user_meta( get_current_user_id(), '_company_name', isset( $company_infos['company_name'] ) ? $company_infos['company_name'] : '' );
             update_user_meta( get_current_user_id(), '_company_website', isset( $company_infos['company_website'] ) ? $company_infos['company_website'] : '' );
         }
-        update_post_meta($post_id, 'declaration_file', $movefile['url']);
+        if($fileok)
+            update_post_meta($post_id, 'declaration_file', $movefile['url']);
         //Message pour indiquer à l'utilisateur que les changements sont OK.
         wc_add_notice( __( 'Account details changed successfully.', 'woocommerce' ) );
         do_action( 'woocommerce_profil_details', $user_id );
@@ -954,7 +955,7 @@ add_action("agiraa_display_post_mission_button", "agiraa_control_display_post_mi
 
 function agiraa_control_display_post_mission_button() {
     $user_id = get_current_user_id();
-    $posts = get_posts(array( 'author' => $user_id, 'post_type' => 'company', 'post_status' => 'publish' ));
+    $posts = get_posts(array( 'author' => $user_id, 'post_type' => 'company', 'post_status' => array('publish', 'pending')));
     //Récupération des champs "Company"
     include_once JOB_MANAGER_PLUGIN_DIR . "/includes/forms/class-wp-job-manager-form-submit-job.php";
     $wjmfsj = WP_Job_Manager_Form_Submit_Job::instance();
@@ -972,9 +973,41 @@ function agiraa_control_display_post_mission_button() {
             $company_fill = false;
         }
     }
-    if(!$company_fill) { ?>
+    if($posts[0]->post_status === "pending"){ ?>
+        <p> Votre association est en attente de validation auprès des administrateurs.  </p>
+    <?php } else if(!$company_fill) { ?>
         <p> Pour poster une mission veuillez remplir les information de votre association sur votre profil. </p>
     <?php } else { ?>
         <a href="<?php echo esc_url( get_permalink( $post_a_job_page_id ) ); ?>"><?php echo apply_filters( 'jobhunt_wpjm_job_dashboard_post_a_job_button_text', esc_html__( 'Post A Job', 'jobhunt' ) ); ?></a>
+    <?php }
+}
+
+/*
+ * BNORMAND 16/10/2020
+ * Ajout du logo certifié sur la page liste-association
+ * 
+ */
+if ( ! function_exists( 'jobhunt_template_company_title' ) ) {
+    function jobhunt_template_company_title() {
+        $post = get_post();
+        $certified_label = empty(get_post_meta($post->ID, 'certified_label')) ? false : get_post_meta($post->ID, 'certified_label')[0];
+        ?>
+        <a class="company-name" href="<?php the_company_permalink(); ?>">
+            <?php the_title(); 
+            if($certified_label) { ?>
+                <i class="lar la-check-circle"></i>
+            <?php } ?>
+        </a>
+        <?php
+    }
+}
+
+add_filter('jobhunt_company_name', 'add_certified_label');
+function add_certified_label($name) {
+    echo $name;
+    $post = get_post();
+    $certified_label = empty(get_post_meta($post->ID, 'certified_label')) ? false : get_post_meta($post->ID, 'certified_label')[0];
+    if($certified_label) { ?>
+        <i class="lar la-check-circle"></i>
     <?php }
 }

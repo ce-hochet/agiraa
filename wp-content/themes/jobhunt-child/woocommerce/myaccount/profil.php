@@ -48,23 +48,26 @@ if(!empty($posts)){
 }
 do_action('woocommerce_before_profil_form');
 ?>
+<?php if($posts[0]->post_status === 'pending') { ?>
+<div class="woocommerce">
+    <ul class="woocommerce-message" role="alert">
+		<li>Votre association est en attente de validation auprès des administrateurs.</li>
+	</ul>
+</div>
+<?php } ?>
 <form class="job-manager-form" action="save_profil_details" method="post" enctype="multipart/form-data">
-    <?php if(get_post_status($posts[0]->ID) === "publish") { ?>
-        <h2><?php esc_html_e( 'Informations Publiques', 'jobhunt' ); ?></h2>
+    <h2><?php esc_html_e( 'Informations Publiques', 'jobhunt' ); ?></h2>
 
-        <?php do_action( 'submit_job_form_company_fields_start' ); ?>
+    <?php do_action( 'submit_job_form_company_fields_start' ); ?>
 
-        <?php foreach ( $company_fields as $key => $field ) : ?>
-            <fieldset class="fieldset-<?php echo esc_attr( $key ); ?>">
-                <label for="<?php echo esc_attr( $key ); ?>"><?php echo esc_html( $field['label'] ) . wp_kses_post( apply_filters( 'submit_job_form_required_label', $field['required'] ? '' : ' <small>' . esc_html__( '(optional)', 'jobhunt' ) . '</small>', $field ) ); ?></label>
-                <div class="field <?php echo esc_attr( $field['required'] ? 'required-field' : '' ); ?>">
-                    <?php get_job_manager_template( 'form-fields/' . $field['type'] . '-field.php', array( 'key' => $key, 'field' => $field ) ); ?>
-                </div>
-            </fieldset>
-        <?php endforeach; ?>
-    <?php } else { ?>
-        <p> Votre association est en attente de validation. Pour que vous puissiez être validé, veuillez renseigner votre récépissé de déclaration ci-dessous.
-    <?php } ?>
+    <?php foreach ( $company_fields as $key => $field ) : ?>
+        <fieldset class="fieldset-<?php echo esc_attr( $key ); ?>">
+            <label for="<?php echo esc_attr( $key ); ?>"><?php echo esc_html( $field['label'] ) . wp_kses_post( apply_filters( 'submit_job_form_required_label', $field['required'] ? '' : ' <small>' . esc_html__( '(optional)', 'jobhunt' ) . '</small>', $field ) ); ?></label>
+            <div class="field <?php echo esc_attr( $field['required'] ? 'required-field' : '' ); ?>">
+                <?php get_job_manager_template( 'form-fields/' . $field['type'] . '-field.php', array( 'key' => $key, 'field' => $field ) ); ?>
+            </div>
+        </fieldset>
+    <?php endforeach; ?>
     <?php 
     $rna = empty(get_post_meta( $post_id, 'rna_code')) ? "" : get_post_meta( $post_id, 'rna_code')[0];
     $declaration = empty(get_post_meta($post_id, 'declaration_file')) ? "" : get_post_meta($post_id, 'declaration_file')[0];
