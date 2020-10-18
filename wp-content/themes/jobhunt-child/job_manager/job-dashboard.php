@@ -118,7 +118,7 @@ $post_a_job_page_id = get_option( 'job_manager_submit_job_form_page_id' );
                     <tfoot>
                         <tr>
                             <td colspan="<?php echo sizeof( $job_dashboard_columns ); ?>">
-                                <?php do_action("agiraa_display_post_mission_button"); ?>
+                                <?php do_action("agiraa_display_post_mission_button", $post_a_job_page_id); ?>
                             </td>
                         </tr>
                     </tfoot>

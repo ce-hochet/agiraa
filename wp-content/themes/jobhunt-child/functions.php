@@ -634,61 +634,60 @@ function save_profil_details() {
     if ( wc_notice_count( 'error' ) === 0 ) {
         $post_id = $posts[0]->ID;
         //Vérification de l'existence d'une company.
-        if(get_post_status($post_id) === 'publish'){
-            //Dans le cas ou le nom de la company a été changé, il faut également changer les noms présents sur tous les jobs.
-            //Pour ce faire on requete tous les post_meta "_company_name" correspondant à l'ancien titre et on les modifie.
-            if($posts[0]->post_title !== $company_infos['company_name']){
-                global $wpdb;
-                $all_company_name = $wpdb->get_results('SELECT * from wp_postmeta where meta_key = "_company_name" and meta_value = "' . $posts[0]->post_title . '"');
-                foreach ($all_company_name as $key => $company_name) {
-                    update_post_meta($company_name->post_id, $company_name->meta_key, $company_infos['company_name']);
-                }
+        //Dans le cas ou le nom de la company a été changé, il faut également changer les noms présents sur tous les jobs.
+        //Pour ce faire on requete tous les post_meta "_company_name" correspondant à l'ancien titre et on les modifie.
+        if($posts[0]->post_title !== $company_infos['company_name']){
+            global $wpdb;
+            $all_company_name = $wpdb->get_results('SELECT * from wp_postmeta where meta_key = "_company_name" and meta_value = "' . $posts[0]->post_title . '"');
+            foreach ($all_company_name as $key => $company_name) {
+                update_post_meta($company_name->post_id, $company_name->meta_key, $company_infos['company_name']);
             }
-            //MISE A JOUR
-            $company = array(
-                'ID'            => $posts[0]->ID,
-                'post_title'    => $company_infos['company_name'],
-                'post_content'  => $company_infos['company_description'],
-                );
-            $post_id = wp_update_post($company);
-            
-            //Ajout des taxonomies pour la company.
-            if ( is_array( $company_infos['company_specialite'] ) ) {
-                wp_set_post_terms( $post_id, $company_infos['company_specialite'], 'company_specialite', false );
-            } else {
-                wp_set_post_terms( $post_id, [ $company_infos['company_specialite'] ], 'company_specialite', false );
-            }
-            //Gestion du logo
-            $wp_filetype = wp_check_filetype($company_infos['company_logo'], null );
-            $attachment = array(
-                'post_mime_type' => $wp_filetype['type'],
-                'post_parent'    => $post_id,
-                'post_title'     => preg_replace( '/\.[^.]+$/', '', basename($company_infos['company_logo']) ),
-                'post_content'   => '',
-                'post_status'    => 'inherit'
-            );
-            $attachment_id = wp_insert_attachment( $attachment, $company_infos['company_logo'], $post_id );
-            if ( ! is_wp_error( $attachment_id ) ) {
-                require_once(ABSPATH . "wp-admin" . '/includes/image.php');
-                if(has_post_thumbnail($post_id)){
-                    delete_post_thumbnail($post_id);
-                }
-                $attachment_data = wp_generate_attachment_metadata( $attachment_id, $company_infos['company_logo'] );
-                wp_update_attachment_metadata( $attachment_id,  $attachment_data );
-                set_post_thumbnail( $post_id, $attachment_id );
-                update_user_meta( get_current_user_id(), '_company_logo', $attachment_id );
-            }
-            //Ajout des autres informations
-            update_post_meta($post_id, '_company_facebook', $company_infos['company_facebook']);
-            update_post_meta($post_id, '_company_email', $company_infos['company_email']);
-            update_post_meta($post_id, '_company_phone', $company_infos['company_phone']);
-            update_post_meta($post_id, '_company_location', $company_infos['company_location']);
-            update_post_meta($post_id, '_company_website', $company_infos['company_website']);
-
-            //Sauvegarde au niveau utilisateur car utilisé comme tel. (Save time for future)
-            update_user_meta( get_current_user_id(), '_company_name', isset( $company_infos['company_name'] ) ? $company_infos['company_name'] : '' );
-            update_user_meta( get_current_user_id(), '_company_website', isset( $company_infos['company_website'] ) ? $company_infos['company_website'] : '' );
         }
+        //MISE A JOUR
+        $company = array(
+            'ID'            => $posts[0]->ID,
+            'post_title'    => $company_infos['company_name'],
+            'post_content'  => $company_infos['company_description'],
+            );
+        $post_id = wp_update_post($company);
+        
+        //Ajout des taxonomies pour la company.
+        if ( is_array( $company_infos['company_specialite'] ) ) {
+            wp_set_post_terms( $post_id, $company_infos['company_specialite'], 'company_specialite', false );
+        } else {
+            wp_set_post_terms( $post_id, [ $company_infos['company_specialite'] ], 'company_specialite', false );
+        }
+        //Gestion du logo
+        $wp_filetype = wp_check_filetype($company_infos['company_logo'], null );
+        $attachment = array(
+            'post_mime_type' => $wp_filetype['type'],
+            'post_parent'    => $post_id,
+            'post_title'     => preg_replace( '/\.[^.]+$/', '', basename($company_infos['company_logo']) ),
+            'post_content'   => '',
+            'post_status'    => 'inherit'
+        );
+        $attachment_id = wp_insert_attachment( $attachment, $company_infos['company_logo'], $post_id );
+        if ( ! is_wp_error( $attachment_id ) ) {
+            require_once(ABSPATH . "wp-admin" . '/includes/image.php');
+            if(has_post_thumbnail($post_id)){
+                delete_post_thumbnail($post_id);
+            }
+            $attachment_data = wp_generate_attachment_metadata( $attachment_id, $company_infos['company_logo'] );
+            wp_update_attachment_metadata( $attachment_id,  $attachment_data );
+            set_post_thumbnail( $post_id, $attachment_id );
+            update_user_meta( get_current_user_id(), '_company_logo', $attachment_id );
+        }
+        //Ajout des autres informations
+        update_post_meta($post_id, '_company_facebook', $company_infos['company_facebook']);
+        update_post_meta($post_id, '_company_email', $company_infos['company_email']);
+        update_post_meta($post_id, '_company_phone', $company_infos['company_phone']);
+        update_post_meta($post_id, '_company_location', $company_infos['company_location']);
+        update_post_meta($post_id, '_company_website', $company_infos['company_website']);
+
+        //Sauvegarde au niveau utilisateur car utilisé comme tel. (Save time for future)
+        update_user_meta( get_current_user_id(), '_company_name', isset( $company_infos['company_name'] ) ? $company_infos['company_name'] : '' );
+        update_user_meta( get_current_user_id(), '_company_website', isset( $company_infos['company_website'] ) ? $company_infos['company_website'] : '' );
+    
         if($fileok)
             update_post_meta($post_id, 'declaration_file', $movefile['url']);
         //Message pour indiquer à l'utilisateur que les changements sont OK.
@@ -953,7 +952,7 @@ add_filter( 'wp_mail_from_name', 'wpm_expediteur' );
 
 add_action("agiraa_display_post_mission_button", "agiraa_control_display_post_mission_button");
 
-function agiraa_control_display_post_mission_button() {
+function agiraa_control_display_post_mission_button($post_a_job_page_id) {
     $user_id = get_current_user_id();
     $posts = get_posts(array( 'author' => $user_id, 'post_type' => 'company', 'post_status' => array('publish', 'pending')));
     //Récupération des champs "Company"
