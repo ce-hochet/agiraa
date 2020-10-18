@@ -81,14 +81,9 @@ function save_profil_details() {
     $company_infos = [];
     $file_fields = [];
 
-    //Si l'asso n'est pas encore publié, On ne récupère pas les champs.
-    if(get_post_status($posts[0]->ID) === "publish"){
-        $wjmfsj = WP_Job_Manager_Form_Submit_Job::instance();
-        $wjmfsj->init_fields();
-        $company_fields = array_merge($wjmfsj->get_fields('company'), jobhunt_submit_job_form_fields());
-    } else {
-        $company_fields = [];
-    }
+    $wjmfsj = WP_Job_Manager_Form_Submit_Job::instance();
+    $wjmfsj->init_fields();
+    $company_fields = array_merge($wjmfsj->get_fields('company'), jobhunt_submit_job_form_fields());
     //Récupération des champs.
     foreach ( $company_fields as $key => $field ) :
         if($key === 'company_logo') {
