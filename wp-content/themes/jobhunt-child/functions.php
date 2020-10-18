@@ -578,7 +578,7 @@ function save_profil_details() {
 
     $company_infos = [];
     $file_fields = [];
-    
+
     //Si l'asso n'est pas encore publié, On ne récupère pas les champs.
     if(get_post_status($posts[0]->ID) === "publish"){
         $wjmfsj = WP_Job_Manager_Form_Submit_Job::instance();
@@ -651,7 +651,7 @@ function save_profil_details() {
                 'post_content'  => $company_infos['company_description'],
                 );
             $post_id = wp_update_post($company);
-            
+
             //Ajout des taxonomies pour la company.
             if ( is_array( $company_infos['company_specialite'] ) ) {
                 wp_set_post_terms( $post_id, $company_infos['company_specialite'], 'company_specialite', false );
@@ -946,7 +946,7 @@ add_filter( 'wp_mail_from', 'wpm_email_from' );
 // Fonction pour changer le nom de l'expéditeur de l'email
 function wpm_expediteur( $original_email_from ) {
 
-    return 'AGIRAA - Agir pour les Associations Animales';
+    return 'AGIRAA';
 
 }
 add_filter( 'wp_mail_from_name', 'wpm_expediteur' );
@@ -960,9 +960,9 @@ function agiraa_control_display_post_mission_button() {
     include_once JOB_MANAGER_PLUGIN_DIR . "/includes/forms/class-wp-job-manager-form-submit-job.php";
     $wjmfsj = WP_Job_Manager_Form_Submit_Job::instance();
     $wjmfsj->init_fields();
-    $company_fields = array_merge($wjmfsj->get_fields('company'), jobhunt_submit_job_form_fields());                            
+    $company_fields = array_merge($wjmfsj->get_fields('company'), jobhunt_submit_job_form_fields());
     $company_fill = true;
-    //Vérification de chaque champs pour savoir si c'est ok. 
+    //Vérification de chaque champs pour savoir si c'est ok.
     foreach($company_fields as $key => $field) {
         $post_id = $posts[0]->ID;
         if(($key === "company_name" && $posts[0]->post_title === "")
@@ -985,7 +985,7 @@ function agiraa_control_display_post_mission_button() {
 /*
  * BNORMAND 16/10/2020
  * Ajout du logo certifié sur la page liste-association
- * 
+ *
  */
 if ( ! function_exists( 'jobhunt_template_company_title' ) ) {
     function jobhunt_template_company_title() {
@@ -993,7 +993,7 @@ if ( ! function_exists( 'jobhunt_template_company_title' ) ) {
         $certified_label = empty(get_post_meta($post->ID, 'certified_label')) ? false : get_post_meta($post->ID, 'certified_label')[0];
         ?>
         <a class="company-name" href="<?php the_company_permalink(); ?>">
-            <?php the_title(); 
+            <?php the_title();
             if($certified_label) { ?>
                 <i class="lar la-check-circle"></i>
             <?php } ?>
