@@ -117,8 +117,6 @@ function save_profil_details() {
                 wc_add_notice(__( 'Une erreur est survenue lors de la mise en ligne.', 'agiraa' ), 'error');
             }
         }
-    } else if(!metadata_exists('post',  $posts[0]->ID, 'declaration_file')) {
-        wc_add_notice(__( 'Aucune déclaration n\'a été transmise.', 'agiraa' ), 'error');
     }
     // Allow plugins to return their own errors.
     $errors = new WP_Error();

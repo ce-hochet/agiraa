@@ -73,7 +73,7 @@ do_action('woocommerce_before_profil_form');
     $declaration = empty(get_post_meta($post_id, 'declaration_file')) ? "" : get_post_meta($post_id, 'declaration_file')[0];
     ?>
     
-    <h2><?php esc_html_e( 'Informations Privées', 'jobhunt' ); ?></h2>
+    <h2><?php esc_html_e( 'Informations de certification', 'jobhunt' ); ?></h2>
     <fieldset>
         <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
             <label for="rna"><?php _e( 'RNA Code', 'jobhunt' ); ?></label>
