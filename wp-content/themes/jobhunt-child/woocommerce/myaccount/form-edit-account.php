@@ -110,4 +110,14 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
               require_once( ABSPATH.'wp-admin/includes/user.php' );
               wp_delete_user( $current_user->ID );
                  }
+
+ add_action( 'delete_user', 'my_delete_user' );
+
+    function my_delete_user() {
+    $user_data = get_userdata( $user_id );
+
+    $headers    = 'From: ' . get_bloginfo( 'name' ) . ' ' . "\r\n";
+
+    wp_mail( $user_data->user_email, 'We are deleting your account', 'Your account at ' . get_bloginfo( 'name' ) . ' will be deleted.', $headers);
+}
     ?>
