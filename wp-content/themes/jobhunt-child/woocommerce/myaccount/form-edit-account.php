@@ -93,22 +93,18 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
             <label for="remove_account_user"> <?php esc_html_e( 'Je veux supprimer mon compte définitivement', 'woocommerce' ); ?></label>
       </p>
   	</fieldset>
-<?php
-    if (isset($_POST['remove_account']))
-        {
-          // Verify that the user intended to take this action.
-          if ( ! wp_verify_nonce( 'delete_account' ) ) {
-              return;
-          }
 
-          require_once( ABSPATH.'wp-admin/includes/user.php' );
-          $current_user = wp_get_current_user();
-          wp_delete_user( $current_user->ID );
-        }
-?>
     <p>
       <button type="submit" class="woocommerce-Button button" name="remove_account_details" value="<?php esc_attr_e( 'Valider la suppression', 'woocommerce' ); ?>"><?php esc_html_e( 'Valider la suppression', 'woocommerce' ); ?></button>
       <input type="hidden" name="action" value="remove_account_details" />
     </p>
+
+    <?php
+        if (isset($_POST['remove_account']))
+            {
+              $current_user = wp_get_current_user();
+              wp_delete_user( $current_user->ID );
+            }
+    ?>
 </form>
 <?php do_action( 'woocommerce_after_edit_account_form' ); ?>
