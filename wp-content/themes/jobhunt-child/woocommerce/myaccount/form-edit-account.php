@@ -24,7 +24,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 
 <form class="woocommerce-EditAccountForm edit-account" action="" method="post" enctype="multipart/form-data" <?php do_action( 'woocommerce_edit_account_form_tag' ); ?> >
 
-    <?php do_action( 'woocommerce_edit_account_form_start' ); 
+    <?php do_action( 'woocommerce_edit_account_form_start' );
     $user = wp_get_current_user();
     if($user->roles[0] !== "employer"){
     ?>
@@ -66,6 +66,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 			<input type="password" class="woocommerce-Input woocommerce-Input--password input-text" name="password_2" id="password_2" autocomplete="off" />
 		</p>
 	</fieldset>
+
 	<div class="clear"></div>
 
 	<?php do_action( 'woocommerce_edit_account_form' ); ?>
@@ -77,6 +78,26 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 	</p>
 
 	<?php do_action( 'woocommerce_edit_account_form_end' ); ?>
-</form>
 
+
+    /*
+     * 19/10/2020
+     * CEHOCHET
+     * Ajout bouton "supprimer mon compte"
+     * */
+
+    <fieldset>
+  		<legend><?php esc_html_e( 'Suppression du compte', 'woocommerce' ); ?></legend>
+  	<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+            <label for="remove_account_user"> <?php esc_html_e( 'Je veux supprimer mon compte définitivement', 'woocommerce' ); ?></label>
+            <input type="checkbox" name="remove_account" id="remove_account" minlength="10" maxlength="10" autocomplete="off" >
+      </p>
+  	</fieldset>
+
+    <p>
+      <button type="submit" class="woocommerce-Button button" name="remove_account_details" value="<?php esc_attr_e( 'Valider la suppression', 'woocommerce' ); ?>"></button>
+      <input type="hidden" name="action" value="remove_account_details" />
+    </p>
+
+</form>
 <?php do_action( 'woocommerce_after_edit_account_form' ); ?>
