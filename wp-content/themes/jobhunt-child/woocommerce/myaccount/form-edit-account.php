@@ -77,7 +77,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 		<input type="hidden" name="action" value="save_account_details" />
 	</p>
 
-	<?php do_action( 'woocommerce_edit_account_form_end' ); ?>
+	<?php do_action( 'woocommerce_edit_account_form_end' );
 
 
     /*
@@ -85,7 +85,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
      * CEHOCHET
      * Ajout bouton "supprimer mon compte"
      * */
-
+?>
     <fieldset>
   		<legend><?php esc_html_e( 'Suppression du compte', 'woocommerce' ); ?></legend>
   	<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
@@ -95,7 +95,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
   	</fieldset>
 
     <p>
-      <button type="submit" class="woocommerce-Button button" name="remove_account_details" value="<?php esc_attr_e( 'Valider la suppression', 'woocommerce' ); ?>"></button>
+      <button type="submit" class="woocommerce-Button button" name="remove_account_details" value="<?php esc_attr_e( 'Valider la suppression', 'woocommerce' ); ?>"><?php esc_html_e( 'Valider la suppression', 'woocommerce' ); ?></button>
       <input type="hidden" name="action" value="remove_account_details" />
     </p>
 
