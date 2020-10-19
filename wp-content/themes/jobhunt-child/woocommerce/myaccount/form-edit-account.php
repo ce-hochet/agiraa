@@ -108,11 +108,11 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
     if(wp_verify_nonce($_REQUEST['remove_account_details-nonce'], 'remove_account_details')){
 
               $current_user = wp_get_current_user();
+              require_once( ABSPATH.'wp-admin/includes/user.php' );
               $to = $current_user->user_email;
               $sujet = 'Suppression définitive de votre compte';
               $message = 'Votre compte a été supprimé définitement';
+              wp_delete_user( $current_user->ID );        
               wp_mail( $to, $sujet, $message );
-              require_once( ABSPATH.'wp-admin/includes/user.php' );
-              wp_delete_user( $current_user->ID );
          }
     ?>
