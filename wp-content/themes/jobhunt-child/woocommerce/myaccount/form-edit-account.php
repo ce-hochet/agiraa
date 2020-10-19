@@ -89,8 +89,8 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
     <fieldset>
   		<legend><?php esc_html_e( 'Suppression du compte', 'woocommerce' ); ?></legend>
   	<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-            <label for="remove_account_user"> <?php esc_html_e( 'Je veux supprimer mon compte définitivement', 'woocommerce' ); ?></label>
             <input type="checkbox" name="remove_account" id="remove_account" minlength="10" maxlength="10" autocomplete="off" >
+            <label for="remove_account_user"> <?php esc_html_e( 'Je veux supprimer mon compte définitivement', 'woocommerce' ); ?></label>
       </p>
   	</fieldset>
 
