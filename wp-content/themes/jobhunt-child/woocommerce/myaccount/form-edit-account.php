@@ -81,7 +81,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
   	<?php do_action( 'woocommerce_edit_account_form_end' ); ?>
   </form>
 
-  <?php do_action( 'woocommerce_edit_account_form_end' ); ?>
+  <?php do_action( 'woocommerce_after_edit_account_form' ); ?>
 <?php
     /*
      * 19/10/2020
@@ -99,31 +99,17 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
   	</fieldset>
 
     <p>
+      <?php wp_nonce_field( 'remove_account_details', 'remove_account_details-nonce' ); ?>
       <button type="submit" class="woocommerce-Button button" name="remove_account_details" value="<?php esc_attr_e( 'Valider la suppression', 'woocommerce' ); ?>"><?php esc_html_e( 'Valider la suppression', 'woocommerce' ); ?></button>
-      <input type="hidden" name="remove_account" value="remove_account_details" required class="required"/>
+      <input type="hidden" name="action" value="remove_account_details" required class="required"/>
     </p>
 
     <?php
+    if(wp_verify_nonce($_REQUEST['remove_account_details-nonce'], 'remove_account_details')){  
+              require_once( ABSPATH.'wp-admin/includes/user.php' );
+              $current_user = wp_get_current_user();
+              wp_delete_user( $current_user->ID );
+         }
 
 
-    /**
-     * Remove the logged in user.
-     */
-    function wpdocs_remove_logged_in_user() {
-        // Verify that the user intended to take this action.
-        if ( ! wp_verify_nonce( 'delete_account' ) ) {
-            return;
-        }
-
-        require_once( ABSPATH.'wp-admin/includes/user.php' );
-        $current_user = wp_get_current_user();
-        wp_delete_user( $current_user->ID );
-    }
-
-        if (isset($_POST['remove_account_checkbox']))
-            {
-              if ( is_user_logged_in() && ! empty( $_GET['DeleteMyAccount'] ) ) {
-                  add_action( 'init', 'wpdocs_remove_logged_in_user' );
-              }
-            }
     ?>
