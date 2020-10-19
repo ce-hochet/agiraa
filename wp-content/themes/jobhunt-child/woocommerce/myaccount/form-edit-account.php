@@ -96,21 +96,15 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 <?php
     if (isset($_POST['remove_account']))
         {
-          add_action( 'init', 'wpdocs_remove_logged_in_user' );
-        }
-/**
- * Remove the logged in user.
- */
-function wpdocs_remove_logged_in_user() {
-    // Verify that the user intended to take this action.
-    if ( ! wp_verify_nonce( 'delete_account' ) ) {
-        return;
-    }
+          // Verify that the user intended to take this action.
+          if ( ! wp_verify_nonce( 'delete_account' ) ) {
+              return;
+          }
 
-    require_once( ABSPATH.'wp-admin/includes/user.php' );
-    $current_user = wp_get_current_user();
-    wp_delete_user( $current_user->ID );
-}
+          require_once( ABSPATH.'wp-admin/includes/user.php' );
+          $current_user = wp_get_current_user();
+          wp_delete_user( $current_user->ID );
+        }
 ?>
     <p>
       <button type="submit" class="woocommerce-Button button" name="remove_account_details" value="<?php esc_attr_e( 'Valider la suppression', 'woocommerce' ); ?>"><?php esc_html_e( 'Valider la suppression', 'woocommerce' ); ?></button>
