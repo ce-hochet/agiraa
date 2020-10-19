@@ -604,5 +604,30 @@ add_filter( 'wp_mail_from_name', 'wpm_expediteur' );
 // Appel des fonction permettant de gérer la page profil pour les association
 require_once( __DIR__ . '/includes/manage_association_profil.php');
 
-// Appel des fonction permettant la gestion de la certification 
+// Appel des fonction permettant la gestion de la certification
 require_once( __DIR__ . '/includes/manage_certification.php');
+
+
+/*
+ * 09/10/2020
+ * CEHOCHET
+ * Supprimer tous les post du user
+ * */
+add_action('delete_user', 'my_delete_user');
+
+function my_delete_user($user_id) {
+$args = array (
+   'numberposts' => -1,
+   'post_type' => 'any',
+   'author' => $user_id
+);
+// get all posts by this user: posts, pages, attachments, etc..
+$user_posts = get_posts($args);
+
+if (empty($user_posts)) return;
+
+// delete all the user posts
+foreach ($user_posts as $user_post) {
+   wp_delete_post($user_post->ID, true);
+ }
+}
