@@ -100,7 +100,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
     </p>
 
     <?php
-
+add_action( 'delete_user', 'my_delete_user' );
    function my_delete_user() {
     $user_data = get_userdata( $user_id );
 
@@ -110,7 +110,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 }
         if (isset($_POST['remove_account']))
             {
-                add_action( 'delete_user', 'my_delete_user' );
+                do_action('delete_user');
             }
     ?>
 </form>
