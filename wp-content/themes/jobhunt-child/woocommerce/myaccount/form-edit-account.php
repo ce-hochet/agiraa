@@ -93,7 +93,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
     <fieldset>
   		<legend><?php esc_html_e( 'Suppression du compte', 'woocommerce' ); ?></legend>
   	<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-            <input type="checkbox" name="remove_account_checkbox" id="remove_account" minlength="10" maxlength="10" autocomplete="off" >
+            <input type="checkbox" name="remove_account_checkbox" id="remove_account" minlength="10" maxlength="10" required class="required" >
             <label for="remove_account_user"> <?php esc_html_e( 'Je veux supprimer mon compte définitivement', 'woocommerce' ); ?></label>
       </p>
   	</fieldset>
@@ -105,10 +105,18 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
     </p>
 
     <?php
-    if(wp_verify_nonce($_REQUEST['remove_account_details-nonce'], 'remove_account_details')){  
+    if(wp_verify_nonce($_REQUEST['remove_account_details-nonce'], 'remove_account_details')){
               require_once( ABSPATH.'wp-admin/includes/user.php' );
               $current_user = wp_get_current_user();
+              $to = $current_user->user_email;
+              $sujet = 'Suppression définitive de votre compte';
+              $message = 'Votre compte a été supprimé définitement';
+              wp_mail( $to, $sujet, $message );
+
               wp_delete_user( $current_user->ID );
+
+
+
          }
 
 
