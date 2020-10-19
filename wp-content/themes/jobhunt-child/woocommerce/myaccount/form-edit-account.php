@@ -101,18 +101,42 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
     <p>
       <?php wp_nonce_field( 'remove_account_details', 'remove_account_details-nonce' ); ?>
       <button type="submit" class="woocommerce-Button button" name="remove_account_details" value="<?php esc_attr_e( 'Valider la suppression', 'woocommerce' ); ?>"><?php esc_html_e( 'Valider la suppression', 'woocommerce' ); ?></button>
-      <input type="hidden" name="action" value="remove_account_details" required class="required"/>
+      <input type="hidden" name="actionr" value="remove_account_details" required class="required"/>
     </p>
 
     <?php
-    if(wp_verify_nonce($_REQUEST['remove_account_details-nonce'], 'remove_account_details')){
+
+// DELETE ALL POST OF THE USER
+/*
+    add_action('delete_user', 'my_delete_user');
+function my_delete_user($user_id) {
+$args = array (
+   'numberposts' => -1,
+   'post_type' => 'any',
+   'author' => $user_id
+);
+// get all posts by this user: posts, pages, attachments, etc..
+$user_posts = get_posts($args);
+
+if (empty($user_posts)) return;
+
+// delete all the user posts
+foreach ($user_posts as $user_post) {
+   wp_delete_post($user_post->ID, true);
+}
+}*/
+
+// DELETE USER
+  if (isset($_POST ['remove_account_details']) ) {
 
               $current_user = wp_get_current_user();
-
+              require_once( ABSPATH.'wp-admin/includes/user.php' );
               $to = $current_user->user_email;
               $sujet = 'Suppression définitive de votre compte';
               $message = 'Votre compte a été supprimé définitement';
-              wp_delete_user( $current_user->ID );
               wp_mail( $to, $sujet, $message );
+              wp_delete_user( $current_user->ID );
          }
+
+
     ?>
