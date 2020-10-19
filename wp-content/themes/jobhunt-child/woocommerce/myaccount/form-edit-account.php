@@ -81,13 +81,14 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
   	<?php do_action( 'woocommerce_edit_account_form_end' ); ?>
   </form>
 
-  <?php do_action( 'woocommerce_after_edit_account_form' ); ?>
-
+  <?php do_action( 'woocommerce_edit_account_form_end' ); ?>
+<?php
     /*
      * 19/10/2020
      * CEHOCHET
      * Ajout bouton "supprimer mon compte"
      * */
+     ?>
 <form class="woocommerce-EditAccountForm delete-account" action="" method="post" enctype="multipart/form-data">
     <fieldset>
   		<legend><?php esc_html_e( 'Suppression du compte', 'woocommerce' ); ?></legend>
