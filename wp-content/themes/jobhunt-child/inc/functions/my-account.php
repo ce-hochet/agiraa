@@ -7,14 +7,15 @@
 
 
 if ( ! function_exists( 'jobhunt_registration_form_fields' ) ) {
-  // CEHOCHET
-  // Afficher message si utilsateur a supprimé son compte
-  if(isset($_COOKIE["done"]) && !empty($_COOKIE["done"]) ) { ?>
-    <div class="woocommerce-message" role="alert"> Votre compte a été supprimé définitivement.</div>
-    <?php }
-    
+
 
   function jobhunt_registration_form_fields() {
+    // CEHOCHET
+    // Afficher message si utilsateur a supprimé son compte
+    if(isset($_COOKIE["done"]) && !empty($_COOKIE["done"]) ) { ?>
+      <div class="woocommerce-message" role="alert"> Votre compte a été supprimé définitivement.</div>
+      <?php }
+      
 
     ob_start();
     ?>
