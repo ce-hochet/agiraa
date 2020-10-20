@@ -632,6 +632,6 @@ function my_delete_user($user_id) {
   }
 }
 
-add_action('wp_delete_user',function(){
+add_action('delete_user',function(){
     wc_add_notice( 'Votre compte a bien été supprimé définitivement', 'woocommerce' );
 });
