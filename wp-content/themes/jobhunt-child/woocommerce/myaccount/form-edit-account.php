@@ -111,9 +111,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
     if (isset($_POST ['remove_account_details']) ) {
       $current_user = wp_get_current_user();
       require_once( ABSPATH.'wp-admin/includes/user.php' );
-      wc_add_notice( __( 'Votre compte a bien été supprimé', 'woocommerce' ) );
       wp_delete_user( $current_user->ID );
       wp_redirect('http://dev.agiraa-benevolat.fr/inscription-connexion/');
-
     }
     ?>

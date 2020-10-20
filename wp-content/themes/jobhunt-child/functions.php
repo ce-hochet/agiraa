@@ -632,6 +632,7 @@ function my_delete_user($user_id) {
   }
 }
 
+setcookie('done', null, -1, '/');
 add_action('delete_user',function(){
-    wc_add_notice( 'Votre compte a bien été supprimé définitivement', 'woocommerce' );
+   setcookie("done", "done", time() + (86400 * 30), "/");
 });
