@@ -4,7 +4,16 @@
 * BNORMAND
 * Modification du formulaire d'inscription, Ajout du RNA si ASSO & verif du RNA.
 * */
+
+
 if ( ! function_exists( 'jobhunt_registration_form_fields' ) ) {
+  // CEHOCHET
+  // Afficher message si utilsateur a supprimé son compte
+  if(isset($_COOKIE["done"]) && !empty($_COOKIE["done"]) ) { ?>
+    <div class="woocommerce-message" role="alert"> Votre compte a été supprimé définitivement.</div>
+    <?php }
+    
+
   function jobhunt_registration_form_fields() {
 
     ob_start();
@@ -20,11 +29,7 @@ if ( ! function_exists( 'jobhunt_registration_form_fields' ) ) {
     // show any success messages after form submission
     jobhunt_show_success_messages();
 
-    // CEHOCHET
-    // Afficher message si utilsateur a supprimé son compte
-    if(isset($_COOKIE["done"]) && !empty($_COOKIE["done"]) ) { ?>
-      <div class="woocommerce-message" role="alert"> Votre compte a été supprimé définitivement.</div>
-      <?php }
+
 
       do_action( 'jobhunt_registration_form_before' ); ?>
 
