@@ -10,7 +10,11 @@ if ( ! function_exists( 'jobhunt_registration_form_fields' ) ) {
 
 
   function jobhunt_registration_form_fields() {
+    // CODE A INTEGRER JE NE SAIS PAS OU
 
+    if(isset($_COOKIE["done"]) && !empty($_COOKIE["done"]) ) { ?>
+     <div class="woocommerce-message" role="alert"> Votre compte a été supprimé définitivement.</div>
+     <?php }
 
     ob_start();
     ?>
@@ -24,7 +28,6 @@ if ( ! function_exists( 'jobhunt_registration_form_fields' ) ) {
 
     // show any success messages after form submission
     jobhunt_show_success_messages();
-
 
 
       do_action( 'jobhunt_registration_form_before' ); ?>
