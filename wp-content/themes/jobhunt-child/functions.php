@@ -642,10 +642,7 @@ add_action('delete_user',function(){
    setcookie("done", "done", time() + (86400 * 30), "/");
 });
 
-/** CODE A INTEGRER JE NE SAIS PAS OU
-**
-**if(isset($_COOKIE["done"]) && !empty($_COOKIE["done"]) ) { ?>
-**  <div class="woocommerce-message" role="alert"> Votre compte a été supprimé définitivement.</div>
-**  <?php }
+// CODE A INTEGRER JE NE SAIS PAS OU
 
-  **/
+if(isset($_COOKIE["done"]) && !empty($_COOKIE["done"]) ) {
+wc_add_notice( __( 'Votre compte a été supprimé définitivement', 'woocommerce' ) );}
