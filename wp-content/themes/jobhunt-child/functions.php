@@ -632,7 +632,20 @@ function my_delete_user($user_id) {
   }
 }
 
+/*
+* 20/10/2020
+* CEHOCHET
+* Afficher message "compte supprimé définitivement" sur la page inscription/connexion
+* */
 setcookie('done', null, -1, '/');
 add_action('delete_user',function(){
    setcookie("done", "done", time() + (86400 * 30), "/");
 });
+
+/** CODE A INTEGRER JE NE SAIS PAS OU
+**
+**if(isset($_COOKIE["done"]) && !empty($_COOKIE["done"]) ) { ?>
+**  <div class="woocommerce-message" role="alert"> Votre compte a été supprimé définitivement.</div>
+**  <?php }
+
+  **/
