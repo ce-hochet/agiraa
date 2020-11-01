@@ -112,6 +112,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
       $current_user = wp_get_current_user();
       require_once( ABSPATH.'wp-admin/includes/user.php' );
       wp_delete_user( $current_user->ID );
-      wp_redirect('http://dev.agiraa-benevolat.fr/inscription-connexion/');
+      wc_add_notice(__( 'Votre compte a bien été supprimé définitivement', 'agiraa' ), 'success');
+      wp_safe_redirect( "/mon-compte/profil/" );
     }
     ?>
