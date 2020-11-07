@@ -104,7 +104,12 @@ class JH_WPJMC_Widget_Layered_Nav extends WP_Widget {
             return;
         }
 
-        $_chosen_taxonomies = JH_WPJMC_Query::get_layered_nav_chosen_taxonomies();
+        if( function_exists( 'jobhunt_is_mas_wp_job_manager_company_activated' ) && jobhunt_is_mas_wp_job_manager_company_activated() ) {
+            $_chosen_taxonomies = MAS_WPJMC_Query::get_layered_nav_chosen_taxonomies();
+        } else {
+            $_chosen_taxonomies = JH_WPJMC_Query::get_layered_nav_chosen_taxonomies();
+        }
+
         $title              = isset( $instance['title'] ) ? $instance['title'] : esc_html__( 'Filter by', 'jobhunt' );
         $taxonomy           = isset( $instance['taxonomy'] ) ? $instance['taxonomy'] : '';
         $query_type         = isset( $instance['query_type'] ) ? $instance['query_type'] : 'and';
@@ -185,9 +190,15 @@ class JH_WPJMC_Widget_Layered_Nav extends WP_Widget {
     protected function get_filtered_term_company_counts( $term_ids, $taxonomy, $query_type ) {
         global $wpdb;
 
-        $tax_query  = JH_WPJMC_Query::get_main_tax_query();
-        $meta_query = JH_WPJMC_Query::get_main_meta_query();
-        $date_query = JH_WPJMC_Query::get_main_date_query();
+        if( function_exists( 'jobhunt_is_mas_wp_job_manager_company_activated' ) && jobhunt_is_mas_wp_job_manager_company_activated() ) {
+            $tax_query  = MAS_WPJMC_Query::get_main_tax_query();
+            $meta_query = MAS_WPJMC_Query::get_main_meta_query();
+            $date_query = MAS_WPJMC_Query::get_main_date_query();
+        } else {
+            $tax_query  = JH_WPJMC_Query::get_main_tax_query();
+            $meta_query = JH_WPJMC_Query::get_main_meta_query();
+            $date_query = JH_WPJMC_Query::get_main_date_query();
+        }
 
         if ( 'or' === $query_type ) {
             foreach ( $tax_query as $key => $query ) {
@@ -220,7 +231,11 @@ class JH_WPJMC_Widget_Layered_Nav extends WP_Widget {
             . $tax_query_sql['where'] . $meta_query_sql['where'] . $date_query_sql .
             'AND terms.term_id IN (' . implode( ',', array_map( 'absint', $term_ids ) ) . ')';
 
-        $search = JH_WPJMC_Query::get_main_search_query_sql();
+        if( function_exists( 'jobhunt_is_mas_wp_job_manager_company_activated' ) && jobhunt_is_mas_wp_job_manager_company_activated() ) {
+            $search = MAS_WPJMC_Query::get_main_search_query_sql();
+        } else {
+            $search = JH_WPJMC_Query::get_main_search_query_sql();
+        }
         if ( $search ) {
             $query['where'] .= ' AND ' . $search;
         }
@@ -265,7 +280,11 @@ class JH_WPJMC_Widget_Layered_Nav extends WP_Widget {
         echo '<ul class="jobhunt-wpjmc-widget-layered-nav-list tax-' . esc_attr( $taxonomy ) . '">';
 
         $term_counts        = $this->get_filtered_term_company_counts( wp_list_pluck( $terms, 'term_id' ), $taxonomy, $query_type );
-        $_chosen_taxonomies = JH_WPJMC_Query::get_layered_nav_chosen_taxonomies();
+        if( function_exists( 'jobhunt_is_mas_wp_job_manager_company_activated' ) && jobhunt_is_mas_wp_job_manager_company_activated() ) {
+            $_chosen_taxonomies = MAS_WPJMC_Query::get_layered_nav_chosen_taxonomies();
+        } else {
+            $_chosen_taxonomies = JH_WPJMC_Query::get_layered_nav_chosen_taxonomies();
+        }
         $found              = false;
 
         foreach ( $terms as $term ) {

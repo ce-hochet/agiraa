@@ -271,6 +271,15 @@ if ( ! function_exists( 'jobhunt_is_wp_company_manager_activated' ) ) {
     }
 }
 
+if ( ! function_exists( 'jobhunt_is_mas_wp_job_manager_company_activated' ) ) {
+    /**
+     * Check if MAS Companies for WP Job Manager is activated
+     */
+    function jobhunt_is_mas_wp_job_manager_company_activated() {
+        return jobhunt_is_wp_job_manager_activated() && function_exists( 'mas_wpjmc' ) ? true : false;
+    }
+}
+
 if ( ! function_exists( 'jobhunt_is_wp_job_manager_alert_activated' ) ) {
     /**
      * Check if WP Job Manager Alerts is activated
@@ -678,7 +687,9 @@ if ( ! function_exists( 'jobhunt_get_sidebar' ) ) {
      * @since 1.0.0
      */
     function jobhunt_get_sidebar( $name = null ) {
-        get_sidebar( $name );
+        // if ( is_active_sidebar( $name ) ) {
+            get_sidebar( $name );
+        // }
     }
 }
 

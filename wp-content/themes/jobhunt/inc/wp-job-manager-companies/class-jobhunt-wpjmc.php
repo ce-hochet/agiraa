@@ -14,10 +14,98 @@ if ( ! class_exists( 'Jobhunt_WPJMC' ) ) :
     class Jobhunt_WPJMC {
 
         public function __construct() {
-            $this->includes();
+            if ( function_exists( 'jobhunt_is_mas_wp_job_manager_company_activated' ) && jobhunt_is_mas_wp_job_manager_company_activated() ) {
+                add_filter( 'mas_wpjmc_enqueue_scripts_enable_frontend_css', '__return_false' );
+                add_filter( 'job_manager_enhanced_select_enabled', array( $this, 'mas_wpjmc_enhanced_select_enabled' ), 20 );
+                add_filter( 'job_manager_shortcodes' , array( $this, 'mas_wpjmc_job_manager_shortcodes' ), 20 );
+                add_filter( 'job_manager_settings', array( $this, 'job_manager_mas_company_settings' ), 20 );
+                add_filter( 'mas_company_taxonomies_list', array( $this, 'mas_company_modify_taxonomies_list' ), 20 );
+            } else {
+                $this->includes();
+            }
             add_filter( 'body_class', array( $this, 'company_body_classes' ) );
             add_action( 'jobhunt_sidebar_args', array( $this, 'sidebar_register' ) );
             add_action( 'widgets_init', array( $this, 'widgets_register' ) );
+        }
+
+        public function mas_wpjmc_enhanced_select_enabled( $enabled ) {
+            if ( has_wpjm_shortcode( null, [ 'mas_submit_company_form', 'mas_company_dashboard' ] ) ) {
+                $enabled = true;
+            }
+            return $enabled;
+        }
+
+        public function mas_wpjmc_job_manager_shortcodes( $shortcodes ) {
+            $shortcodes = array_unique( array_merge( $shortcodes, [ 'mas_submit_company_form', 'mas_company_dashboard' ] ) );
+            return $shortcodes;
+        }
+
+        public function job_manager_mas_company_settings( $settings ) {
+            $settings['mas_wpjmc_settings'][1]['job_manager_companies_listing_style'] = array(
+                'name'      => 'job_manager_companies_listing_style',
+                'std'       => 'v1',
+                'label'     => esc_html__( 'Company Listings Style', 'jobhunt' ),
+                'desc'      => esc_html__( 'Select the style for company listing style. This lets the plugin know the style of company listings.', 'jobhunt' ),
+                'type'      => 'select',
+                'options'   => array(
+                    'v1'        => esc_html__( 'Style v1', 'jobhunt' ),
+                    'v2'        => esc_html__( 'Style v2', 'jobhunt' ),
+                    'v3'        => esc_html__( 'Style v3', 'jobhunt' ),
+                )
+            );
+            $settings['mas_wpjmc_settings'][1]['job_manager_companies_listing_sidebar'] = array(
+                'name'      => 'job_manager_companies_listing_sidebar',
+                'std'       => 'left-sidebar',
+                'label'     => esc_html__( 'Company Listings Sidebar', 'jobhunt' ),
+                'desc'      => esc_html__( 'Select the position for company listing sidebar. This lets the plugin know the position of company listings sidebar.', 'jobhunt' ),
+                'type'      => 'select',
+                'options'   => array(
+                    'left-sidebar'      => esc_html__( 'Left Sidebar', 'jobhunt' ),
+                    'right-sidebar'     => esc_html__( 'Right Sidebar', 'jobhunt' ),
+                    'full-width'        => esc_html__( 'Full Width', 'jobhunt' ),
+                )
+            );
+            $settings['mas_wpjmc_settings'][1]['job_manager_single_company_style'] = array(
+                'name'      => 'job_manager_single_company_style',
+                'std'       => 'v1',
+                'label'     => esc_html__( 'Single Company Style', 'jobhunt' ),
+                'desc'      => esc_html__( 'Select the style for single company style. This lets the plugin know the style of single company.', 'jobhunt' ),
+                'type'      => 'select',
+                'options'   => array(
+                    'v1'        => esc_html__( 'Style v1', 'jobhunt' ),
+                    'v2'        => esc_html__( 'Style v2', 'jobhunt' ),
+                )
+            );
+            $settings['mas_wpjmc_settings'][1]['job_manager_single_company_contact_form'] = array(
+                'name'      => 'job_manager_single_company_contact_form',
+                'std'       => '',
+                'label'     => esc_html__( 'Single Company Contact Form', 'jobhunt' ),
+                'desc'      => esc_html__( 'Select the form for single company contact form. This lets the plugin know the contact form of single company.', 'jobhunt' ),
+                'type'      => 'select',
+                'options'   => function_exists( 'jobhunt_get_forms' ) ? jobhunt_get_forms() : array( 0 => esc_html__( 'Please select a form', 'jobhunt' ) )
+            );
+            return $settings;
+        }
+
+        public function mas_company_modify_taxonomies_list( $taxonomies_args ) {
+            if( isset( $taxonomies_args['company_strength'] ) ) {
+                unset( $taxonomies_args['company_strength'] );
+            }
+            if( isset( $taxonomies_args['company_average_salary'] ) ) {
+                unset( $taxonomies_args['company_average_salary'] );
+            }
+            if( isset( $taxonomies_args['company_revenue'] ) ) {
+                unset( $taxonomies_args['company_revenue'] );
+            }
+
+            $taxonomies_args['company_team_size'] = array(
+                'singular'                  => esc_html__( 'Team size', 'jobhunt' ),
+                'plural'                    => esc_html__( 'Team sizes', 'jobhunt' ),
+                'slug'                      => esc_html_x( 'company-team-size', 'Company permalink - resave permalinks after changing this', 'jobhunt' ),
+                'enable'                    => get_option('job_manager_company_enable_company_team_size', true)
+            );
+
+            return $taxonomies_args;
         }
 
         public function includes() {
@@ -125,8 +213,14 @@ if ( ! class_exists( 'Jobhunt_WPJMC' ) ) :
                 $link = add_query_arg( 'posted_before', jobhunt_clean( wp_unslash( $_GET['posted_before'] ) ), $link );
             }
 
+            if ( function_exists( 'jobhunt_is_mas_wp_job_manager_company_activated' ) && jobhunt_is_mas_wp_job_manager_company_activated() ) {
+                $_chosen_taxonomies = MAS_WPJMC_Query::get_layered_nav_chosen_taxonomies();
+            } else {
+                $_chosen_taxonomies = JH_WPJMC_Query::get_layered_nav_chosen_taxonomies();
+            }
+
             // All current filters.
-            if ( $_chosen_taxonomies = JH_WPJMC_Query::get_layered_nav_chosen_taxonomies() ) { // phpcs:ignore Squiz.PHP.DisallowMultipleAssignments.Found, WordPress.CodeAnalysis.AssignmentInCondition.Found
+            if ( $_chosen_taxonomies ) { // phpcs:ignore Squiz.PHP.DisallowMultipleAssignments.Found, WordPress.CodeAnalysis.AssignmentInCondition.Found
                 foreach ( $_chosen_taxonomies as $name => $data ) {
                     $filter_name = sanitize_title( $name );
                     if ( ! empty( $data['terms'] ) ) {
@@ -172,8 +266,14 @@ if ( ! class_exists( 'Jobhunt_WPJMC' ) ) :
                 $args['posted_before'] = jobhunt_clean( wp_unslash( $_GET['posted_before'] ) );
             }
 
+            if ( function_exists( 'jobhunt_is_mas_wp_job_manager_company_activated' ) && jobhunt_is_mas_wp_job_manager_company_activated() ) {
+                $_chosen_taxonomies = MAS_WPJMC_Query::get_layered_nav_chosen_taxonomies();
+            } else {
+                $_chosen_taxonomies = JH_WPJMC_Query::get_layered_nav_chosen_taxonomies();
+            }
+
             // All current filters.
-            if ( $_chosen_taxonomies = JH_WPJMC_Query::get_layered_nav_chosen_taxonomies() ) { // phpcs:ignore Squiz.PHP.DisallowMultipleAssignments.Found, WordPress.CodeAnalysis.AssignmentInCondition.Found
+            if ( $_chosen_taxonomies ) { // phpcs:ignore Squiz.PHP.DisallowMultipleAssignments.Found, WordPress.CodeAnalysis.AssignmentInCondition.Found
                 foreach ( $_chosen_taxonomies as $name => $data ) {
                     $filter_name = sanitize_title( $name );
                     if ( ! empty( $data['terms'] ) ) {

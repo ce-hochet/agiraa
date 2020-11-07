@@ -136,41 +136,45 @@ if ( ! function_exists( 'jobhunt_wpjm_page_subtitle' ) ) {
 if ( ! function_exists( 'jobhunt_wpjm_wc_account_dashboard' ) ) {
     function jobhunt_wpjm_wc_account_dashboard() {
         echo '<p>';
+            $company_dashboard_page_id = get_option( 'job_manager_company_dashboard_page_id' );
+            $job_dashboard_page_id = get_option( 'job_manager_job_dashboard_page_id' );
             $candidate_dashboard_page_id = get_option( 'resume_manager_candidate_dashboard_page_id' );
-            $employer_dashboard_page_id = get_option( 'job_manager_job_dashboard_page_id' );
-            $user = wp_get_current_user();
-            if( jobhunt_is_wp_job_manager_applications_activated() ) {
-                if ( in_array( 'employer', (array) $user->roles ) || in_array( 'administrator', (array) $user->roles ) ) : 
-                echo sprintf( 
-                    esc_attr__( 'To check your Job Listings and Applications visit %1$sEmployer Dashboard%2$s.', 'jobhunt' ),
-                    '<a href="' . esc_url( get_permalink($employer_dashboard_page_id)) . '">', 
-                    '</a>'
-                    );
-                echo '<br/>';
-                endif;
-                if ( in_array( 'candidate', (array) $user->roles ) || in_array( 'administrator', (array) $user->roles ) ) :
-                echo sprintf( 
-                    esc_attr__( 'To check your Resumes and Past Applications visit %1$sCandidate Dashboard%2$s.', 'jobhunt' ),
-                    '<a href="' . esc_url( get_permalink($candidate_dashboard_page_id)) . '">', 
-                    '</a>'
-                    );
-                endif;
+
+            $is_applications_manager_active = function_exists( 'jobhunt_is_wp_job_manager_applications_activated' ) && jobhunt_is_wp_job_manager_applications_activated();
+
+            if( $is_applications_manager_active ) {
+                $job_dashboard_text = esc_html__( 'To check your Job Listings and Applications visit %1$sJob Dashboard%2$s.', 'jobhunt' );
             } else {
-                if ( in_array( 'employer', (array) $user->roles ) || in_array( 'administrator', (array) $user->roles ) ) : 
-                echo sprintf( 
-                    esc_attr__( 'To check your Job Listings visit %1$sEmployer Dashboard%2$s.', 'jobhunt' ),
-                    '<a href="' . esc_url( get_permalink($employer_dashboard_page_id)) . '">', 
-                    '</a>'
+                $job_dashboard_text = esc_html__( 'To check your Job Listings visit %1$sJob Dashboard%2$s.', 'jobhunt' );
+            }
+
+            $company_dashboard_text = esc_html__( 'To check your Company Listings visit %1$sCompany Dashboard%2$s.', 'jobhunt' );
+            $candidate_dashboard_text = esc_html__( 'To check your Resumes visit %1$sCandidate Dashboard%2$s.', 'jobhunt' );
+
+            $user = wp_get_current_user();
+
+            if ( in_array( 'employer', (array) $user->roles ) || in_array( 'administrator', (array) $user->roles ) ) {
+                if( function_exists( 'jobhunt_is_mas_wp_job_manager_company_activated' ) && jobhunt_is_mas_wp_job_manager_company_activated() ) {
+                    echo sprintf(
+                        $company_dashboard_text,
+                        '<a href="' . esc_url( get_permalink($company_dashboard_page_id)) . '">',
+                        '</a>'
                     );
-                endif;
-                if ( in_array( 'candidate', (array) $user->roles ) || in_array( 'administrator', (array) $user->roles ) ) :
-                echo sprintf( 
-                    esc_attr__( 'To check your Resumes visit %1$sCandidate Dashboard%2$s.', 'jobhunt' ),
-                    '<a href="' . esc_url( get_permalink($candidate_dashboard_page_id)) . '">', 
+                    echo '<br/>';
+                }
+                echo sprintf(
+                    $job_dashboard_text,
+                    '<a href="' . esc_url( get_permalink($job_dashboard_page_id)) . '">',
                     '</a>'
-                    );
-                endif;
-            
+                );
+                echo '<br/>';
+            }
+            if ( in_array( 'candidate', (array) $user->roles ) || in_array( 'administrator', (array) $user->roles ) ) {
+                echo sprintf(
+                    $candidate_dashboard_text,
+                    '<a href="' . esc_url( get_permalink($candidate_dashboard_page_id)) . '">',
+                    '</a>'
+                );
             }
         echo '</p>';
     }

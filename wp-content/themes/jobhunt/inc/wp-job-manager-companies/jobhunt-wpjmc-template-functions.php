@@ -1,21 +1,38 @@
 <?php
+
+if ( ! function_exists( 'jobhunt_company_posts_first_character_where_filter' ) ) {
+    function jobhunt_company_posts_first_character_where_filter( $where, $query ) {
+        global $wpdb;
+
+        if ( $query->query_vars['post_type'] == 'company' ) {
+            $alpha_filter = isset( $_GET['alpha'] ) ? jobhunt_clean( (string) wp_unslash( $_GET['alpha'] ) ) : jobhunt_clean( get_query_var( 'alpha' ) ); // WPCS: sanitization ok, input var ok, CSRF ok.
+
+            if( ! empty( $alpha_filter ) ) {
+                $where .= $wpdb->prepare( " AND $wpdb->posts.post_title REGEXP %s",'^'.$alpha_filter );
+            }
+        }
+
+        return $where;
+    }
+}
+
 if ( ! function_exists( 'jobhunt_get_company_sidebar' ) ) {
     function jobhunt_get_company_sidebar() {
         jobhunt_get_sidebar( 'company' );
     }
 }
 
-add_action( 'template_redirect', 'jh_wpjmc_template_redirect' );
+if ( ! function_exists( 'jh_wpjmc_template_redirect' ) ) {
+    function jh_wpjmc_template_redirect() {
+        global $wp_query, $wp;
 
-function jh_wpjmc_template_redirect() {
-    global $wp_query, $wp;
+        if ( ! empty( $_GET['page_id'] ) && '' === get_option( 'permalink_structure' ) && jh_wpjmc_get_page_id( 'companies' ) === absint( $_GET['page_id'] ) && get_post_type_archive_link( 'company' ) ) { // WPCS: input var ok, CSRF ok.
 
-    if ( ! empty( $_GET['page_id'] ) && '' === get_option( 'permalink_structure' ) && jh_wpjmc_get_page_id( 'companies' ) === absint( $_GET['page_id'] ) && get_post_type_archive_link( 'company' ) ) { // WPCS: input var ok, CSRF ok.
+            // When default permalinks are enabled, redirect shop page to post type archive url.
+            wp_safe_redirect( get_post_type_archive_link( 'company' ) );
+            exit;
 
-        // When default permalinks are enabled, redirect shop page to post type archive url.
-        wp_safe_redirect( get_post_type_archive_link( 'company' ) );
-        exit;
-
+        }
     }
 }
 

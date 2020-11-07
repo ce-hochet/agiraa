@@ -1,5 +1,8 @@
 <?php
 
+add_filter( 'posts_where', 'jobhunt_company_posts_first_character_where_filter', 10, 2 );
+add_action( 'template_redirect', 'jh_wpjmc_template_redirect' );
+
 add_action( 'jobhunt_before_company_loop', 'jobhunt_handheld_sidebar_switcher', 15 );
 add_action( 'jobhunt_before_company_loop', 'jobhunt_company_listing_control_bar', 10 );
 add_action( 'jobhunt_after_company_loop', 'jobhunt_wpjmc_pagination', 999 );

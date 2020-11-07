@@ -157,6 +157,7 @@ if ( ! class_exists( 'Jobhunt' ) ) :
 
 			add_theme_support( 'job-manager-templates' );
 			add_theme_support( 'resume-manager-templates' );
+			add_theme_support( 'resume-manager-templates' );
 			add_theme_support( 'wc-product-gallery-zoom' );
 			add_theme_support( 'wc-product-gallery-lightbox' );
 			add_theme_support( 'wc-product-gallery-slider' );
@@ -166,6 +167,9 @@ if ( ! class_exists( 'Jobhunt' ) ) :
 
 			// Declare support for selective refreshing of widgets.
 			add_theme_support( 'customize-selective-refresh-widgets' );
+
+			// Declare MAS WP Job Manager Company Archive support.
+			add_theme_support( 'mas-wp-job-manager-company-archive' );
 
 			// Register theme images sizes.
 			if( apply_filters( 'jobhunt_register_image_sizes', false ) ) {
@@ -374,11 +378,11 @@ if ( ! class_exists( 'Jobhunt' ) ) :
 			wp_enqueue_script( 'jobhunt-navigation', get_template_directory_uri() . '/assets/js/navigation' . $suffix . '.js', array(), $jobhunt_version, true );
 
 			if( apply_filters( 'jobhunt_enable_scrollup', true ) ) {
-                wp_enqueue_script( 'jquery-easing', get_template_directory_uri() . '/assets/js/jquery.easing' . $suffix . '.js', array( 'jquery' ), $jobhunt_version, true );
-                wp_enqueue_script( 'jobhunt-scrollup', get_template_directory_uri() . '/assets/js/scrollup' . $suffix . '.js', array( 'jquery' ), $jobhunt_version, true );
-            }
+				wp_enqueue_script( 'jquery-easing', get_template_directory_uri() . '/assets/js/jquery.easing' . $suffix . '.js', array( 'jquery' ), $jobhunt_version, true );
+				wp_enqueue_script( 'jobhunt-scrollup', get_template_directory_uri() . '/assets/js/scrollup' . $suffix . '.js', array( 'jquery' ), $jobhunt_version, true );
+			}
 
-            $gmaps_api_key = apply_filters( 'jobhunt_gmaps_browser_api', '' );
+			$gmaps_api_key = apply_filters( 'jobhunt_gmaps_browser_api', '' );
 			if( apply_filters( 'jobhunt_enable_location_geocomplete', false ) && ! empty( $gmaps_api_key ) ) {
 				wp_enqueue_script( 'jobhunt-google-maps', 'https://maps.google.com/maps/api/js?key=' . $gmaps_api_key . '&libraries=places', array(), $jobhunt_version, true );
 				wp_enqueue_script( 'jquery-geocomplete', get_template_directory_uri() . '/assets/js/jquery.geocomplete' . $suffix . '.js', array( 'jobhunt-google-maps' ), $jobhunt_version, true );
@@ -487,8 +491,8 @@ if ( ! class_exists( 'Jobhunt' ) ) :
 		}
 
 		public function add_theme_editor_style() {
-            add_editor_style();
-        }
+			add_editor_style();
+		}
 
 		/**
 		 * Custom navigation markup template hooked into `navigation_markup_template` filter hook.
@@ -507,21 +511,21 @@ if ( ! class_exists( 'Jobhunt' ) ) :
 			$plugins = apply_filters( 'jobhunt_tgmpa_plugins', array(
 
 				array(
-                    'name'                  => esc_html__( 'Envato Market', 'jobhunt' ),
-                    'slug'                  => 'envato-market',
-                    'source'                => 'https://envato.github.io/wp-envato-market/dist/envato-market.zip',
-                    'required'              => false,
-                    'version'               => '2.0.3',
-                    'force_activation'      => false,
-                    'force_deactivation'    => false,
-                    'external_url'          => '',
-                ),
+					'name'                  => esc_html__( 'Envato Market', 'jobhunt' ),
+					'slug'                  => 'envato-market',
+					'source'                => 'https://envato.github.io/wp-envato-market/dist/envato-market.zip',
+					'required'              => false,
+					'version'               => '2.0.5',
+					'force_activation'      => false,
+					'force_deactivation'    => false,
+					'external_url'          => '',
+				),
 
 				array(
 					'name'					=> esc_html__( 'Jetpack', 'jobhunt' ),
 					'slug'					=> 'jetpack',
 					'required'				=> false,
-					'version'				=> '8.6.1',
+					'version'				=> '9.0.2',
 					'force_activation'		=> false,
 					'force_deactivation'	=> false,
 					'external_url'			=> '',
@@ -542,7 +546,7 @@ if ( ! class_exists( 'Jobhunt' ) ) :
 					'name'					=> esc_html__( 'KingComposer', 'jobhunt' ),
 					'slug'					=> 'kingcomposer',
 					'required'				=> false,
-					'version'				=> '2.9.4',
+					'version'				=> '2.9.5',
 					'force_activation'		=> false,
 					'force_deactivation'	=> false,
 					'external_url'			=> '',
@@ -552,7 +556,7 @@ if ( ! class_exists( 'Jobhunt' ) ) :
 					'name'					=> esc_html__( 'One Click Demo Import', 'jobhunt' ),
 					'slug'					=> 'one-click-demo-import',
 					'required'				=> false,
-					'version'				=> '2.5.2',
+					'version'				=> '2.6.1',
 					'force_activation'		=> false,
 					'force_deactivation'	=> false,
 					'external_url'			=> '',
@@ -562,21 +566,21 @@ if ( ! class_exists( 'Jobhunt' ) ) :
 					'name'					=> esc_html__( 'Redux Framework', 'jobhunt' ),
 					'slug'					=> 'redux-framework',
 					'required'				=> true,
-					'version'				=> '3.6.18',
+					'version'				=> '4.1.23',
 					'force_activation'		=> false,
 					'force_deactivation'	=> false,
 					'external_url'			=> '',
 				),
 
 				array(
-                    'name'                  => esc_html__( 'Regenerate Thumbnails', 'jobhunt' ),
-                    'slug'                  => 'regenerate-thumbnails',
-                    'required'              => false,
-                    'version'               => '3.1.3',
-                    'force_activation'      => false,
-                    'force_deactivation'    => false,
-                    'external_url'          => '',
-                ),
+					'name'                  => esc_html__( 'Regenerate Thumbnails', 'jobhunt' ),
+					'slug'                  => 'regenerate-thumbnails',
+					'required'              => false,
+					'version'               => '3.1.4',
+					'force_activation'      => false,
+					'force_deactivation'    => false,
+					'external_url'          => '',
+				),
 
 				array(
 					'name'					=> esc_html__( 'Testimonials', 'jobhunt' ),
@@ -592,7 +596,7 @@ if ( ! class_exists( 'Jobhunt' ) ) :
 					'name'					=> esc_html__( 'WooCommerce', 'jobhunt' ),
 					'slug'					=> 'woocommerce',
 					'required'				=> true,
-					'version'				=> '4.2.0',
+					'version'				=> '4.6.1',
 					'force_activation'		=> false,
 					'force_deactivation'	=> false,
 					'external_url'			=> '',
@@ -602,7 +606,7 @@ if ( ! class_exists( 'Jobhunt' ) ) :
 					'name'					=> esc_html__( 'WP Job Manager', 'jobhunt' ),
 					'slug'					=> 'wp-job-manager',
 					'required'				=> true,
-					'version'				=> '1.34.2',
+					'version'				=> '1.34.3',
 					'force_activation'		=> false,
 					'force_deactivation'	=> false,
 					'external_url'			=> '',
@@ -612,7 +616,7 @@ if ( ! class_exists( 'Jobhunt' ) ) :
 					'name'					=> esc_html__( 'WPForms Lite', 'jobhunt' ),
 					'slug'					=> 'wpforms-lite',
 					'required'				=> true,
-					'version'				=> '1.6.0.2',
+					'version'				=> '1.6.3.1',
 					'force_activation'		=> false,
 					'force_deactivation'	=> false,
 					'external_url'			=> '',

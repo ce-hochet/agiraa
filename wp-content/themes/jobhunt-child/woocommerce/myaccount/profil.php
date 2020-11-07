@@ -20,6 +20,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
+include_once get_stylesheet_directory() . "/includes/utils.php";
 include_once JOB_MANAGER_PLUGIN_DIR . "/includes/forms/class-wp-job-manager-form-submit-job.php";
 
 
@@ -48,7 +49,14 @@ if(!empty($posts)){
 }
 do_action('woocommerce_before_profil_form');
 ?>
-<?php if($posts[0]->post_status === 'pending') { ?>
+
+<?php if(!checkCompanyFill($posts[0])) { ?>
+<div class="woocommerce">
+    <ul class="woocommerce-error" role="alert">
+		<li>Veuillez remplir les informations de votre association.</li>
+	</ul>
+</div>
+<?php } else if($posts[0]->post_status === 'pending') { ?>
 <div class="woocommerce">
     <ul class="woocommerce-message" role="alert">
 		<li>Votre association est en attente de validation auprès des administrateurs.</li>
@@ -71,9 +79,11 @@ do_action('woocommerce_before_profil_form');
     <?php 
     $rna = empty(get_post_meta( $post_id, 'rna_code')) ? "" : get_post_meta( $post_id, 'rna_code')[0];
     $declaration = empty(get_post_meta($post_id, 'declaration_file')) ? "" : get_post_meta($post_id, 'declaration_file')[0];
+    $certified = empty(get_post_meta($post_id, 'certified_label')) ? "" : get_post_meta($post_id, 'certified_label')[0]
     ?>
     
     <h2><?php esc_html_e( 'Informations de certification', 'jobhunt' ); ?></h2>
+    <?php if(!$certified) { ?>
     <fieldset>
         <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
             <label for="rna"><?php _e( 'RNA Code', 'jobhunt' ); ?></label>
@@ -91,7 +101,9 @@ do_action('woocommerce_before_profil_form');
             <span> <em> Veuillez charger le "Récépissé de déclaration" de votre association pour obtenir le statut "Compte certifié" et attesté de la bonne existence de votre association. </em> </span>
         </p>
     </fieldset>
-    
+    <?php } else { ?>
+        <p> Félicitations vous possédez le profil certifié. </p>
+    <?php } ?>
 
     <p>
         <?php wp_nonce_field( 'save_profil_details', 'save-profil-details-nonce' ); ?>

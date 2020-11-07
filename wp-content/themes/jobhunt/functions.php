@@ -19,12 +19,12 @@ if ( ! isset( $content_width ) ) {
 }
 
 $jobhunt = (object) array(
-	'version' => $jobhunt_version,
+	'version'	=> $jobhunt_version,
 
 	/**
 	 * Initialize all the things.
 	 */
-	'main'       => require get_template_directory() . '/inc/class-jobhunt.php',
+	'main'		=> require get_template_directory() . '/inc/class-jobhunt.php',
 );
 
 require get_template_directory() . '/inc/jobhunt-functions.php';
@@ -37,9 +37,9 @@ if ( class_exists( 'Jetpack' ) ) {
 }
 
 if ( jobhunt_is_redux_activated() ) {
-    require get_template_directory() . '/inc/redux-framework/jobhunt-options.php';
-    require get_template_directory() . '/inc/redux-framework/hooks.php';
-    require get_template_directory() . '/inc/redux-framework/functions.php';
+	require get_template_directory() . '/inc/redux-framework/jobhunt-options.php';
+	require get_template_directory() . '/inc/redux-framework/hooks.php';
+	require get_template_directory() . '/inc/redux-framework/functions.php';
 }
 
 if ( jobhunt_is_woocommerce_activated() ) {
@@ -67,22 +67,27 @@ if ( jobhunt_is_wp_job_manager_activated() && jobhunt_is_wp_resume_manager_activ
 	require get_template_directory() . '/inc/wp-job-manager-resumes/jobhunt-wpjmr-template-functions.php';
 }
 
-if ( jobhunt_is_wp_job_manager_activated() && jobhunt_is_wp_company_manager_activated() ) {
+if ( ( function_exists( 'jobhunt_is_mas_wp_job_manager_company_activated' ) && jobhunt_is_mas_wp_job_manager_company_activated() ) || ( function_exists( 'jobhunt_is_wp_company_manager_activated' ) && jobhunt_is_wp_company_manager_activated() ) ) {
 	$jobhunt->wpjmc = require get_template_directory() . '/inc/wp-job-manager-companies/class-jobhunt-wpjmc.php';
 
-	require get_template_directory() . '/inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php';
+	if ( function_exists( 'jobhunt_is_mas_wp_job_manager_company_activated' ) && jobhunt_is_mas_wp_job_manager_company_activated() ) {
+		require get_template_directory() . '/inc/mas-wp-job-manager-company/jobhunt-mas-wpjmc-functions.php';
+	} elseif ( function_exists( 'jobhunt_is_wp_company_manager_activated' ) && jobhunt_is_wp_company_manager_activated() ) {
+		require get_template_directory() . '/inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php';
+	}
+
+	require get_template_directory() . '/inc/wp-job-manager-companies/jobhunt-wpjmc-common-functions.php';
 	require get_template_directory() . '/inc/wp-job-manager-companies/jobhunt-wpjmc-template-hooks.php';
 	require get_template_directory() . '/inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php';
 }
 
 if ( is_admin() ) {
 	$jobhunt->admin = require get_template_directory() . '/inc/admin/class-jobhunt-admin.php';
-	// require get_template_directory() . '/inc/admin/class-jobhunt-admin.php';
 }
 
 if ( jobhunt_is_ocdi_activated() ) {
-    require get_template_directory() . '/inc/ocdi/hooks.php';
-    require get_template_directory() . '/inc/ocdi/functions.php';
+	require get_template_directory() . '/inc/ocdi/hooks.php';
+	require get_template_directory() . '/inc/ocdi/functions.php';
 }
 
 /**

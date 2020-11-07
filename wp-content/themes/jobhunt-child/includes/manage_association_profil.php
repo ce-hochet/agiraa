@@ -8,6 +8,8 @@
  * @package jobhunt-child
  */
 
+include_once get_stylesheet_directory() . "/includes/utils.php";
+
 /*
  * Ajout du lien dans le menu latéral de gauche
  */
@@ -201,27 +203,12 @@ add_action("agiraa_display_post_mission_button", "agiraa_control_display_post_mi
 function agiraa_control_display_post_mission_button($post_a_job_page_id) {
     $user_id = get_current_user_id();
     $posts = get_posts(array( 'author' => $user_id, 'post_type' => 'company', 'post_status' => array('publish', 'pending')));
-    //Récupération des champs "Company"
-    include_once JOB_MANAGER_PLUGIN_DIR . "/includes/forms/class-wp-job-manager-form-submit-job.php";
-    $wjmfsj = WP_Job_Manager_Form_Submit_Job::instance();
-    $wjmfsj->init_fields();
-    $company_fields = array_merge($wjmfsj->get_fields('company'), jobhunt_submit_job_form_fields());
-    $company_fill = true;
-    //Vérification de chaque champs pour savoir si c'est ok.
-    foreach($company_fields as $key => $field) {
-        $post_id = $posts[0]->ID;
-        if(($key === "company_name" && $posts[0]->post_title === "")
-            || ($key === "company_description" && $posts[0]->post_content === "")
-            || ($key === "company_logo" && !has_post_thumbnail($post_id))
-            || ($key === "company_specialite" && empty(wp_get_post_terms($post_id, 'company_specialite', [ 'fields' => 'ids' ])))
-            || ($key !== "company_name" && $key !== "company_description"  && $key !== "company_logo" && $key !== "company_specialite" && $company_fields[$key]['required'] && empty(get_post_meta( $post_id, '_' . $key)[0]))) {
-            $company_fill = false;
-        }
-    }
-    if($posts[0]->post_status === "pending"){ ?>
+
+    $company_fill = checkCompanyFill($posts[0]);
+    if(!$company_fill){ ?>
+            <p> Pour poster une mission veuillez remplir les informations de votre association sur votre profil. </p>
+    <?php } else if( $posts[0]->post_status === "pending") { ?>
         <p> Votre association est en attente de validation auprès des administrateurs.  </p>
-    <?php } else if(!$company_fill) { ?>
-        <p> Pour poster une mission veuillez remplir les information de votre association sur votre profil. </p>
     <?php } else { ?>
         <a href="<?php echo esc_url( get_permalink( $post_a_job_page_id ) ); ?>"><?php echo apply_filters( 'jobhunt_wpjm_job_dashboard_post_a_job_button_text', esc_html__( 'Post A Job', 'jobhunt' ) ); ?></a>
     <?php }

@@ -1,4 +1,5 @@
-.job-manager-job-dashboard-content {
+.job-manager-job-dashboard-content,
+.job-manager-company-dashboard-content {
     table {
         td {
             vertical-align: top;
@@ -9,7 +10,8 @@
             }
         }
 
-        ul.job-dashboard-actions {
+        ul.job-dashboard-actions,
+        ul.company-dashboard-actions {
             font-size: 0.92em;
             padding:0;
             margin-bottom: 0;
@@ -25,7 +27,8 @@
                 font-weight: normal;
                 list-style: none outside;
 
-                .job-dashboard-action-delete {
+                .job-dashboard-action-delete,
+                .company-dashboard-action-delete {
                     color: red;
                 }
 
@@ -43,7 +46,8 @@
         tr {
             @include media-breakpoint-up(xl) {
                 @include hover-focus() {
-                    ul.job-dashboard-actions {
+                    ul.job-dashboard-actions,
+                    ul.company-dashboard-actions, {
                         visibility: visible;
                     }
                 }

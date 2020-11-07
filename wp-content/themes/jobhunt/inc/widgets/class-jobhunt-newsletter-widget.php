@@ -83,7 +83,7 @@ class Jobhunt_Newsletter_Widget extends WP_Widget {
 		</p>
 
 		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'newsletter_description' ) ); ?>"><?php esc_html_e('Newsletter Dsecription', 'jobhunt'); ?>:</label>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'newsletter_description' ) ); ?>"><?php esc_html_e('Newsletter Description', 'jobhunt'); ?>:</label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'newsletter_description' ) ); ?>" type="text" name="<?php echo esc_attr( $this->get_field_name( 'newsletter_description' ) ); ?>" value="<?php echo esc_attr( $instance['newsletter_description'] ); ?>" class="widefat" />
 		</p>
 

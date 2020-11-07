@@ -37,7 +37,11 @@ if( class_exists( 'WP_Widget' ) ) :
             }
 
             $link = $this->get_current_page_url();
-            $query_vars = Jobhunt_WPJMC::get_current_page_query_args();
+            if( function_exists( 'jobhunt_is_mas_wp_job_manager_company_activated' ) && jobhunt_is_mas_wp_job_manager_company_activated() ) {
+                $query_vars = MAS_WPJMC::get_current_page_query_args();
+            } else {
+                $query_vars = Jobhunt_WPJMC::get_current_page_query_args();
+            }
             $value = isset( $_GET['search_location'] ) ? jobhunt_clean( wp_unslash( $_GET['search_location'] ) ) : '';
             ?>
             <form method="get" class="jobhunt-wpjmc-location-search" action="<?php echo esc_url( $link ); ?>">

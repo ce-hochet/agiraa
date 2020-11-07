@@ -5,7 +5,7 @@ Theme URI:          https://themeforest.net/item/jobhunt-job-board-wordpress-the
 Author:             MadrasThemes
 Author URI:         https://madrasthemes.com/
 Description:        Jobhunt is an easy to use, cleanly coded and light weight Job Board WordPress theme built for WP Job Manager. It supports all the features of WP Job Manager such as Filterable Job Listings, Job Submissions, Employer Dashboard and Job Submissions. It also supports WP Job Manager Core Add-on Bundle that includes features such as Resume Manager, Job Alerts, Indeed Integration, Job Tags, Paid Listings, Job Applications, etc
-Version:            1.2.4
+Version:            1.2.5
 GitHub Theme URI:   https://github.com/Transvelo/jobhunt
 GitHub Branch:      theme
 License:            GNU General Public License v2 or later
@@ -16645,6 +16645,18 @@ h1, h2, h3, h4, h5, h6,
   #submit-job-form .select2 .select2-selection.select2-selection--multiple {
     min-height: 44px; }
 
+#submit-company-form {
+  padding-top: 30px; }
+  #submit-company-form fieldset {
+    margin-bottom: 1.5em; }
+  #submit-company-form > p:last-child {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2; }
+  #submit-company-form .select2 .select2-selection.select2-selection--single,
+  #submit-company-form .select2 .select2-selection.select2-selection--multiple {
+    min-height: 44px; }
+
 #submit-resume-form [class^=fieldset-] {
   margin-bottom: 2em; }
   @media (min-width: 768px) {
@@ -18478,6 +18490,7 @@ p.job-manager-single-alert-link {
   margin-top: 15px; }
 
 .woocommerce-active.logged-in .job-manager-job-dashboard-inner,
+.woocommerce-active.logged-in .job-manager-company-dashboard-inner,
 .woocommerce-active.logged-in #resume-manager-candidate-dashboard,
 .woocommerce-active.logged-in #job-manager-job-applications {
   display: -webkit-box;
@@ -18489,6 +18502,7 @@ p.job-manager-single-alert-link {
   margin-right: -15px; }
 
 .woocommerce-active.logged-in .job-manager-job-dashboard-content,
+.woocommerce-active.logged-in .job-manager-company-dashboard-content,
 .woocommerce-active.logged-in .resume-manager-candidate-dashboard,
 .woocommerce-active.logged-in .job-manager-job-applications {
   position: relative;
@@ -18500,15 +18514,15 @@ p.job-manager-single-alert-link {
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
   max-width: 100%; }
-
-@media (min-width: 992px) {
-  .woocommerce-active.logged-in .job-manager-job-dashboard-content,
-  .woocommerce-active.logged-in .resume-manager-candidate-dashboard,
-  .woocommerce-active.logged-in .job-manager-job-applications {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 75%;
-            flex: 0 0 75%;
-    max-width: 75%; } }
+  @media (min-width: 992px) {
+    .woocommerce-active.logged-in .job-manager-job-dashboard-content,
+    .woocommerce-active.logged-in .job-manager-company-dashboard-content,
+    .woocommerce-active.logged-in .resume-manager-candidate-dashboard,
+    .woocommerce-active.logged-in .job-manager-job-applications {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 75%;
+              flex: 0 0 75%;
+      max-width: 75%; } }
 
 .wpjm-activated .woocommerce-MyAccount-navigation-link {
   background-color: transparent; }
@@ -18553,18 +18567,29 @@ p.job-manager-single-alert-link {
 
 #resume-manager-candidate-dashboard table.resume-manager-resumes ul.candidate-dashboard-actions,
 #resume-manager-candidate-dashboard table.resume-manager-resumes ul.job-dashboard-actions,
+#resume-manager-candidate-dashboard table.resume-manager-resumes ul.company-dashboard-actions,
 #job-manager-job-dashboard table.job-manager-jobs ul.candidate-dashboard-actions,
-#job-manager-job-dashboard table.job-manager-jobs ul.job-dashboard-actions {
+#job-manager-job-dashboard table.job-manager-jobs ul.job-dashboard-actions,
+#job-manager-job-dashboard table.job-manager-jobs ul.company-dashboard-actions,
+#job-manager-company-dashboard table.job-manager-companies ul.candidate-dashboard-actions,
+#job-manager-company-dashboard table.job-manager-companies ul.job-dashboard-actions,
+#job-manager-company-dashboard table.job-manager-companies ul.company-dashboard-actions {
   visibility: visible; }
   @media (min-width: 1200px) {
     #resume-manager-candidate-dashboard table.resume-manager-resumes ul.candidate-dashboard-actions,
     #resume-manager-candidate-dashboard table.resume-manager-resumes ul.job-dashboard-actions,
+    #resume-manager-candidate-dashboard table.resume-manager-resumes ul.company-dashboard-actions,
     #job-manager-job-dashboard table.job-manager-jobs ul.candidate-dashboard-actions,
-    #job-manager-job-dashboard table.job-manager-jobs ul.job-dashboard-actions {
+    #job-manager-job-dashboard table.job-manager-jobs ul.job-dashboard-actions,
+    #job-manager-job-dashboard table.job-manager-jobs ul.company-dashboard-actions,
+    #job-manager-company-dashboard table.job-manager-companies ul.candidate-dashboard-actions,
+    #job-manager-company-dashboard table.job-manager-companies ul.job-dashboard-actions,
+    #job-manager-company-dashboard table.job-manager-companies ul.company-dashboard-actions {
       visibility: hidden; } }
 
 #resume-manager-candidate-dashboard table.resume-manager-resumes tfoot a,
-#job-manager-job-dashboard table.job-manager-jobs tfoot a {
+#job-manager-job-dashboard table.job-manager-jobs tfoot a,
+#job-manager-company-dashboard table.job-manager-companies tfoot a {
   font-family: "Quicksand", sans-serif;
   display: inline-block;
   font-weight: 500;
@@ -18584,31 +18609,42 @@ p.job-manager-single-alert-link {
   border-radius: 4px; }
   @media screen and (prefers-reduced-motion: reduce) {
     #resume-manager-candidate-dashboard table.resume-manager-resumes tfoot a,
-    #job-manager-job-dashboard table.job-manager-jobs tfoot a {
+    #job-manager-job-dashboard table.job-manager-jobs tfoot a,
+    #job-manager-company-dashboard table.job-manager-companies tfoot a {
       -webkit-transition: none;
       transition: none; } }
   #resume-manager-candidate-dashboard table.resume-manager-resumes tfoot a:hover, #resume-manager-candidate-dashboard table.resume-manager-resumes tfoot a:focus,
   #job-manager-job-dashboard table.job-manager-jobs tfoot a:hover,
-  #job-manager-job-dashboard table.job-manager-jobs tfoot a:focus {
+  #job-manager-job-dashboard table.job-manager-jobs tfoot a:focus,
+  #job-manager-company-dashboard table.job-manager-companies tfoot a:hover,
+  #job-manager-company-dashboard table.job-manager-companies tfoot a:focus {
     text-decoration: none; }
   #resume-manager-candidate-dashboard table.resume-manager-resumes tfoot a:focus, #resume-manager-candidate-dashboard table.resume-manager-resumes tfoot a.focus,
   #job-manager-job-dashboard table.job-manager-jobs tfoot a:focus,
-  #job-manager-job-dashboard table.job-manager-jobs tfoot a.focus {
+  #job-manager-job-dashboard table.job-manager-jobs tfoot a.focus,
+  #job-manager-company-dashboard table.job-manager-companies tfoot a:focus,
+  #job-manager-company-dashboard table.job-manager-companies tfoot a.focus {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
   #resume-manager-candidate-dashboard table.resume-manager-resumes tfoot a.disabled, #resume-manager-candidate-dashboard table.resume-manager-resumes tfoot a:disabled,
   #job-manager-job-dashboard table.job-manager-jobs tfoot a.disabled,
-  #job-manager-job-dashboard table.job-manager-jobs tfoot a:disabled {
+  #job-manager-job-dashboard table.job-manager-jobs tfoot a:disabled,
+  #job-manager-company-dashboard table.job-manager-companies tfoot a.disabled,
+  #job-manager-company-dashboard table.job-manager-companies tfoot a:disabled {
     opacity: 0.65; }
   #resume-manager-candidate-dashboard table.resume-manager-resumes tfoot a:not(:disabled):not(.disabled),
-  #job-manager-job-dashboard table.job-manager-jobs tfoot a:not(:disabled):not(.disabled) {
+  #job-manager-job-dashboard table.job-manager-jobs tfoot a:not(:disabled):not(.disabled),
+  #job-manager-company-dashboard table.job-manager-companies tfoot a:not(:disabled):not(.disabled) {
     cursor: pointer; }
   #resume-manager-candidate-dashboard table.resume-manager-resumes tfoot a:not(:disabled):not(.disabled):active, #resume-manager-candidate-dashboard table.resume-manager-resumes tfoot a:not(:disabled):not(.disabled).active,
   #job-manager-job-dashboard table.job-manager-jobs tfoot a:not(:disabled):not(.disabled):active,
-  #job-manager-job-dashboard table.job-manager-jobs tfoot a:not(:disabled):not(.disabled).active {
+  #job-manager-job-dashboard table.job-manager-jobs tfoot a:not(:disabled):not(.disabled).active,
+  #job-manager-company-dashboard table.job-manager-companies tfoot a:not(:disabled):not(.disabled):active,
+  #job-manager-company-dashboard table.job-manager-companies tfoot a:not(:disabled):not(.disabled).active {
     background-image: none; }
   #resume-manager-candidate-dashboard table.resume-manager-resumes tfoot a::before,
-  #job-manager-job-dashboard table.job-manager-jobs tfoot a::before {
+  #job-manager-job-dashboard table.job-manager-jobs tfoot a::before,
+  #job-manager-company-dashboard table.job-manager-companies tfoot a::before {
     content: "";
     font-family: "Line Awesome Free";
     font-weight: 900;
@@ -18630,23 +18666,43 @@ p.job-manager-single-alert-link {
 
 @media (min-width: 1200px) {
   #resume-manager-candidate-dashboard table.resume-manager-resumes tr:hover ul.job-dashboard-actions,
+  #resume-manager-candidate-dashboard table.resume-manager-resumes tr:hover ul.company-dashboard-actions,
   #resume-manager-candidate-dashboard table.resume-manager-resumes tr:hover ul.candidate-dashboard-actions, #resume-manager-candidate-dashboard table.resume-manager-resumes tr:focus ul.job-dashboard-actions,
+  #resume-manager-candidate-dashboard table.resume-manager-resumes tr:focus ul.company-dashboard-actions,
   #resume-manager-candidate-dashboard table.resume-manager-resumes tr:focus ul.candidate-dashboard-actions,
   #job-manager-job-dashboard table.job-manager-jobs tr:hover ul.job-dashboard-actions,
+  #job-manager-job-dashboard table.job-manager-jobs tr:hover ul.company-dashboard-actions,
   #job-manager-job-dashboard table.job-manager-jobs tr:hover ul.candidate-dashboard-actions,
   #job-manager-job-dashboard table.job-manager-jobs tr:focus ul.job-dashboard-actions,
-  #job-manager-job-dashboard table.job-manager-jobs tr:focus ul.candidate-dashboard-actions {
+  #job-manager-job-dashboard table.job-manager-jobs tr:focus ul.company-dashboard-actions,
+  #job-manager-job-dashboard table.job-manager-jobs tr:focus ul.candidate-dashboard-actions,
+  #job-manager-company-dashboard table.job-manager-companies tr:hover ul.job-dashboard-actions,
+  #job-manager-company-dashboard table.job-manager-companies tr:hover ul.company-dashboard-actions,
+  #job-manager-company-dashboard table.job-manager-companies tr:hover ul.candidate-dashboard-actions,
+  #job-manager-company-dashboard table.job-manager-companies tr:focus ul.job-dashboard-actions,
+  #job-manager-company-dashboard table.job-manager-companies tr:focus ul.company-dashboard-actions,
+  #job-manager-company-dashboard table.job-manager-companies tr:focus ul.candidate-dashboard-actions {
     visibility: visible; } }
 
 #resume-manager-candidate-dashboard table.resume-manager-resumes .candidate-dashboard-actions,
 #resume-manager-candidate-dashboard table.resume-manager-resumes .job-dashboard-actions,
+#resume-manager-candidate-dashboard table.resume-manager-resumes .company-dashboard-actions,
 #job-manager-job-dashboard table.job-manager-jobs .candidate-dashboard-actions,
-#job-manager-job-dashboard table.job-manager-jobs .job-dashboard-actions {
+#job-manager-job-dashboard table.job-manager-jobs .job-dashboard-actions,
+#job-manager-job-dashboard table.job-manager-jobs .company-dashboard-actions,
+#job-manager-company-dashboard table.job-manager-companies .candidate-dashboard-actions,
+#job-manager-company-dashboard table.job-manager-companies .job-dashboard-actions,
+#job-manager-company-dashboard table.job-manager-companies .company-dashboard-actions {
   margin-top: 6px; }
   #resume-manager-candidate-dashboard table.resume-manager-resumes .candidate-dashboard-actions a::before,
   #resume-manager-candidate-dashboard table.resume-manager-resumes .job-dashboard-actions a::before,
+  #resume-manager-candidate-dashboard table.resume-manager-resumes .company-dashboard-actions a::before,
   #job-manager-job-dashboard table.job-manager-jobs .candidate-dashboard-actions a::before,
-  #job-manager-job-dashboard table.job-manager-jobs .job-dashboard-actions a::before {
+  #job-manager-job-dashboard table.job-manager-jobs .job-dashboard-actions a::before,
+  #job-manager-job-dashboard table.job-manager-jobs .company-dashboard-actions a::before,
+  #job-manager-company-dashboard table.job-manager-companies .candidate-dashboard-actions a::before,
+  #job-manager-company-dashboard table.job-manager-companies .job-dashboard-actions a::before,
+  #job-manager-company-dashboard table.job-manager-companies .company-dashboard-actions a::before {
     font-family: "Line Awesome Free";
     font-weight: 900;
     display: inline-block;
@@ -18666,60 +18722,87 @@ p.job-manager-single-alert-link {
     padding-left: 2px; }
 
 #resume-manager-candidate-dashboard table.resume-manager-resumes .job-dashboard-action-mark_not_filled::before,
-#job-manager-job-dashboard table.job-manager-jobs .job-dashboard-action-mark_not_filled::before {
+#job-manager-job-dashboard table.job-manager-jobs .job-dashboard-action-mark_not_filled::before,
+#job-manager-company-dashboard table.job-manager-companies .job-dashboard-action-mark_not_filled::before {
   content: "\f057"; }
 
 #resume-manager-candidate-dashboard table.resume-manager-resumes .job-dashboard-action-mark_filled::before,
-#job-manager-job-dashboard table.job-manager-jobs .job-dashboard-action-mark_filled::before {
+#job-manager-job-dashboard table.job-manager-jobs .job-dashboard-action-mark_filled::before,
+#job-manager-company-dashboard table.job-manager-companies .job-dashboard-action-mark_filled::before {
   content: "\f058"; }
 
 #resume-manager-candidate-dashboard table.resume-manager-resumes .job-dashboard-action-duplicate::before,
-#job-manager-job-dashboard table.job-manager-jobs .job-dashboard-action-duplicate::before {
+#job-manager-job-dashboard table.job-manager-jobs .job-dashboard-action-duplicate::before,
+#job-manager-company-dashboard table.job-manager-companies .job-dashboard-action-duplicate::before {
   content: "\f0c5"; }
 
 #resume-manager-candidate-dashboard table.resume-manager-resumes .job-dashboard-action-relist::before,
-#job-manager-job-dashboard table.job-manager-jobs .job-dashboard-action-relist::before {
+#job-manager-job-dashboard table.job-manager-jobs .job-dashboard-action-relist::before,
+#job-manager-company-dashboard table.job-manager-companies .job-dashboard-action-relist::before {
   content: "\f2f9"; }
 
 #resume-manager-candidate-dashboard table.resume-manager-resumes .candidate-dashboard-action-edit::before,
 #resume-manager-candidate-dashboard table.resume-manager-resumes .job-dashboard-action-edit::before,
+#resume-manager-candidate-dashboard table.resume-manager-resumes .company-dashboard-action-edit::before,
 #job-manager-job-dashboard table.job-manager-jobs .candidate-dashboard-action-edit::before,
-#job-manager-job-dashboard table.job-manager-jobs .job-dashboard-action-edit::before {
+#job-manager-job-dashboard table.job-manager-jobs .job-dashboard-action-edit::before,
+#job-manager-job-dashboard table.job-manager-jobs .company-dashboard-action-edit::before,
+#job-manager-company-dashboard table.job-manager-companies .candidate-dashboard-action-edit::before,
+#job-manager-company-dashboard table.job-manager-companies .job-dashboard-action-edit::before,
+#job-manager-company-dashboard table.job-manager-companies .company-dashboard-action-edit::before {
   content: "\f044"; }
 
 #resume-manager-candidate-dashboard table.resume-manager-resumes .candidate-dashboard-action-delete::before,
 #resume-manager-candidate-dashboard table.resume-manager-resumes .job-dashboard-action-delete::before,
+#resume-manager-candidate-dashboard table.resume-manager-resumes .company-dashboard-action-delete::before,
 #job-manager-job-dashboard table.job-manager-jobs .candidate-dashboard-action-delete::before,
-#job-manager-job-dashboard table.job-manager-jobs .job-dashboard-action-delete::before {
+#job-manager-job-dashboard table.job-manager-jobs .job-dashboard-action-delete::before,
+#job-manager-job-dashboard table.job-manager-jobs .company-dashboard-action-delete::before,
+#job-manager-company-dashboard table.job-manager-companies .candidate-dashboard-action-delete::before,
+#job-manager-company-dashboard table.job-manager-companies .job-dashboard-action-delete::before,
+#job-manager-company-dashboard table.job-manager-companies .company-dashboard-action-delete::before {
   content: "\f2ed"; }
 
 #resume-manager-candidate-dashboard table.resume-manager-resumes .candidate-dashboard-action-hide::before,
-#job-manager-job-dashboard table.job-manager-jobs .candidate-dashboard-action-hide::before {
+#resume-manager-candidate-dashboard table.resume-manager-resumes .company-dashboard-action-hide::before,
+#job-manager-job-dashboard table.job-manager-jobs .candidate-dashboard-action-hide::before,
+#job-manager-job-dashboard table.job-manager-jobs .company-dashboard-action-hide::before,
+#job-manager-company-dashboard table.job-manager-companies .candidate-dashboard-action-hide::before,
+#job-manager-company-dashboard table.job-manager-companies .company-dashboard-action-hide::before {
   content: "\f070"; }
 
 #resume-manager-candidate-dashboard table.resume-manager-resumes .candidate-dashboard-action-publish::before,
-#job-manager-job-dashboard table.job-manager-jobs .candidate-dashboard-action-publish::before {
+#resume-manager-candidate-dashboard table.resume-manager-resumes .company-dashboard-action-publish::before,
+#job-manager-job-dashboard table.job-manager-jobs .candidate-dashboard-action-publish::before,
+#job-manager-job-dashboard table.job-manager-jobs .company-dashboard-action-publish::before,
+#job-manager-company-dashboard table.job-manager-companies .candidate-dashboard-action-publish::before,
+#job-manager-company-dashboard table.job-manager-companies .company-dashboard-action-publish::before {
   content: "\f06e"; }
 
 @media (max-width: 767.98px) {
   #resume-manager-candidate-dashboard table.resume-manager-resumes,
-  #job-manager-job-dashboard table.job-manager-jobs {
+  #job-manager-job-dashboard table.job-manager-jobs,
+  #job-manager-company-dashboard table.job-manager-companies {
     border: none; }
     #resume-manager-candidate-dashboard table.resume-manager-resumes thead,
-    #job-manager-job-dashboard table.job-manager-jobs thead {
+    #job-manager-job-dashboard table.job-manager-jobs thead,
+    #job-manager-company-dashboard table.job-manager-companies thead {
       display: none; }
     #resume-manager-candidate-dashboard table.resume-manager-resumes tbody th,
-    #job-manager-job-dashboard table.job-manager-jobs tbody th {
+    #job-manager-job-dashboard table.job-manager-jobs tbody th,
+    #job-manager-company-dashboard table.job-manager-companies tbody th {
       display: none; }
     #resume-manager-candidate-dashboard table.resume-manager-resumes tr td,
-    #job-manager-job-dashboard table.job-manager-jobs tr td {
+    #job-manager-job-dashboard table.job-manager-jobs tr td,
+    #job-manager-company-dashboard table.job-manager-companies tr td {
       display: block;
       clear: both;
       padding: .75rem;
       width: 100%;
       border-bottom: none; }
       #resume-manager-candidate-dashboard table.resume-manager-resumes tr td:last-child,
-      #job-manager-job-dashboard table.job-manager-jobs tr td:last-child {
+      #job-manager-job-dashboard table.job-manager-jobs tr td:last-child,
+      #job-manager-company-dashboard table.job-manager-companies tr td:last-child {
         margin-bottom: 30px;
         border-bottom: 1px solid #dee2e6; } }
 
@@ -25070,7 +25153,8 @@ p.job-manager-single-alert-link {
 .job-single-type-v2 .job-manager-error + #submit-job-form {
   padding-top: 10px; }
 
-#submit-job-form > p a {
+#submit-job-form > p a,
+#submit-company-form > p a {
   font-family: "Quicksand", sans-serif;
   display: inline-block;
   font-weight: 500;
@@ -25090,22 +25174,33 @@ p.job-manager-single-alert-link {
   border-radius: 4px;
   color: #fff !important; }
   @media screen and (prefers-reduced-motion: reduce) {
-    #submit-job-form > p a {
+    #submit-job-form > p a,
+    #submit-company-form > p a {
       -webkit-transition: none;
       transition: none; } }
-  #submit-job-form > p a:hover, #submit-job-form > p a:focus {
+  #submit-job-form > p a:hover, #submit-job-form > p a:focus,
+  #submit-company-form > p a:hover,
+  #submit-company-form > p a:focus {
     text-decoration: none; }
-  #submit-job-form > p a:focus, #submit-job-form > p a.focus {
+  #submit-job-form > p a:focus, #submit-job-form > p a.focus,
+  #submit-company-form > p a:focus,
+  #submit-company-form > p a.focus {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
-  #submit-job-form > p a.disabled, #submit-job-form > p a:disabled {
+  #submit-job-form > p a.disabled, #submit-job-form > p a:disabled,
+  #submit-company-form > p a.disabled,
+  #submit-company-form > p a:disabled {
     opacity: 0.65; }
-  #submit-job-form > p a:not(:disabled):not(.disabled) {
+  #submit-job-form > p a:not(:disabled):not(.disabled),
+  #submit-company-form > p a:not(:disabled):not(.disabled) {
     cursor: pointer; }
-  #submit-job-form > p a:not(:disabled):not(.disabled):active, #submit-job-form > p a:not(:disabled):not(.disabled).active {
+  #submit-job-form > p a:not(:disabled):not(.disabled):active, #submit-job-form > p a:not(:disabled):not(.disabled).active,
+  #submit-company-form > p a:not(:disabled):not(.disabled):active,
+  #submit-company-form > p a:not(:disabled):not(.disabled).active {
     background-image: none; }
 
-#submit-job-form .job-manager-uploaded-file-preview {
+#submit-job-form .job-manager-uploaded-file-preview,
+#submit-company-form .job-manager-uploaded-file-preview {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -25114,7 +25209,8 @@ p.job-manager-single-alert-link {
           align-items: center;
   position: relative;
   margin: 26px 0; }
-  #submit-job-form .job-manager-uploaded-file-preview .job-manager-remove-uploaded-file {
+  #submit-job-form .job-manager-uploaded-file-preview .job-manager-remove-uploaded-file,
+  #submit-company-form .job-manager-uploaded-file-preview .job-manager-remove-uploaded-file {
     text-indent: -9999px;
     width: 20px;
     height: 20px;
@@ -25122,9 +25218,11 @@ p.job-manager-single-alert-link {
     top: -6px;
     left: -16px;
     color: #fff; }
-    #submit-job-form .job-manager-uploaded-file-preview .job-manager-remove-uploaded-file:hover {
+    #submit-job-form .job-manager-uploaded-file-preview .job-manager-remove-uploaded-file:hover,
+    #submit-company-form .job-manager-uploaded-file-preview .job-manager-remove-uploaded-file:hover {
       color: #fff; }
-    #submit-job-form .job-manager-uploaded-file-preview .job-manager-remove-uploaded-file::before {
+    #submit-job-form .job-manager-uploaded-file-preview .job-manager-remove-uploaded-file::before,
+    #submit-company-form .job-manager-uploaded-file-preview .job-manager-remove-uploaded-file::before {
       content: "";
       font-family: "Line Awesome Free";
       font-weight: 900;
@@ -26656,36 +26754,66 @@ p.resume-submitted,
         border-color: #e6e7ef;
         border-radius: 4px; } }
 
-.job-manager-job-dashboard-content table td {
+.job-manager-job-dashboard-content table td,
+.job-manager-company-dashboard-content table td {
   vertical-align: top; }
-  .job-manager-job-dashboard-content table td small {
+  .job-manager-job-dashboard-content table td small,
+  .job-manager-company-dashboard-content table td small {
     font-size: 0.92em;
     color: #999;
     display: block; }
 
-.job-manager-job-dashboard-content table ul.job-dashboard-actions {
+.job-manager-job-dashboard-content table ul.job-dashboard-actions,
+.job-manager-job-dashboard-content table ul.company-dashboard-actions,
+.job-manager-company-dashboard-content table ul.job-dashboard-actions,
+.job-manager-company-dashboard-content table ul.company-dashboard-actions {
   font-size: 0.92em;
   padding: 0;
   margin-bottom: 0; }
   @media (min-width: 1200px) {
-    .job-manager-job-dashboard-content table ul.job-dashboard-actions {
+    .job-manager-job-dashboard-content table ul.job-dashboard-actions,
+    .job-manager-job-dashboard-content table ul.company-dashboard-actions,
+    .job-manager-company-dashboard-content table ul.job-dashboard-actions,
+    .job-manager-company-dashboard-content table ul.company-dashboard-actions {
       visibility: hidden; } }
-  .job-manager-job-dashboard-content table ul.job-dashboard-actions li {
+  .job-manager-job-dashboard-content table ul.job-dashboard-actions li,
+  .job-manager-job-dashboard-content table ul.company-dashboard-actions li,
+  .job-manager-company-dashboard-content table ul.job-dashboard-actions li,
+  .job-manager-company-dashboard-content table ul.company-dashboard-actions li {
     display: inline-block;
     padding: 0;
     margin: 0 0 0 .5em;
     font-weight: normal;
     list-style: none outside; }
-    .job-manager-job-dashboard-content table ul.job-dashboard-actions li .job-dashboard-action-delete {
+    .job-manager-job-dashboard-content table ul.job-dashboard-actions li .job-dashboard-action-delete,
+    .job-manager-job-dashboard-content table ul.job-dashboard-actions li .company-dashboard-action-delete,
+    .job-manager-job-dashboard-content table ul.company-dashboard-actions li .job-dashboard-action-delete,
+    .job-manager-job-dashboard-content table ul.company-dashboard-actions li .company-dashboard-action-delete,
+    .job-manager-company-dashboard-content table ul.job-dashboard-actions li .job-dashboard-action-delete,
+    .job-manager-company-dashboard-content table ul.job-dashboard-actions li .company-dashboard-action-delete,
+    .job-manager-company-dashboard-content table ul.company-dashboard-actions li .job-dashboard-action-delete,
+    .job-manager-company-dashboard-content table ul.company-dashboard-actions li .company-dashboard-action-delete {
       color: red; }
-    .job-manager-job-dashboard-content table ul.job-dashboard-actions li:after {
+    .job-manager-job-dashboard-content table ul.job-dashboard-actions li:after,
+    .job-manager-job-dashboard-content table ul.company-dashboard-actions li:after,
+    .job-manager-company-dashboard-content table ul.job-dashboard-actions li:after,
+    .job-manager-company-dashboard-content table ul.company-dashboard-actions li:after {
       padding: 0 .5em 0 0;
       content: "\2023"; }
-    .job-manager-job-dashboard-content table ul.job-dashboard-actions li:last-child:after {
+    .job-manager-job-dashboard-content table ul.job-dashboard-actions li:last-child:after,
+    .job-manager-job-dashboard-content table ul.company-dashboard-actions li:last-child:after,
+    .job-manager-company-dashboard-content table ul.job-dashboard-actions li:last-child:after,
+    .job-manager-company-dashboard-content table ul.company-dashboard-actions li:last-child:after {
       content: ''; }
 
 @media (min-width: 1200px) {
-  .job-manager-job-dashboard-content table tr:hover ul.job-dashboard-actions, .job-manager-job-dashboard-content table tr:focus ul.job-dashboard-actions {
+  .job-manager-job-dashboard-content table tr:hover ul.job-dashboard-actions,
+  .job-manager-job-dashboard-content table tr:hover ul.company-dashboard-actions, .job-manager-job-dashboard-content table tr:focus ul.job-dashboard-actions,
+  .job-manager-job-dashboard-content table tr:focus ul.company-dashboard-actions,
+  .job-manager-company-dashboard-content table tr:hover ul.job-dashboard-actions,
+  .job-manager-company-dashboard-content table tr:hover ul.company-dashboard-actions,
+  .job-manager-company-dashboard-content table tr:focus ul.job-dashboard-actions,
+  .job-manager-company-dashboard-content table tr:focus ul.company-dashboard-actions {
     visibility: visible; } }
 
 .wpjmcl_form_claim_listing .fieldset-wpjmcl_listing label,

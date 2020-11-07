@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Jobhunt 1.2.4\n"
+"Project-Id-Version: Jobhunt 1.2.5\n"
 "Report-Msgid-Bugs-To: https://madrasthemes.freshdesk.com/\n"
-"POT-Creation-Date: 2020-06-15 15:28:32+00:00\n"
+"POT-Creation-Date: 2020-10-30 07:20:01+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -82,11 +82,11 @@ msgstr ""
 #: inc/template-functions/home-v4.php:16 inc/template-functions/home-v4.php:210
 #: inc/template-functions/homepage.php:635
 #: inc/woocommerce/jobhunt-woocommerce-template-functions.php:343
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:227
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:231
 #: inc/wp-job-manager/widgets/class-jh-wpjm-widget-job-location-search.php:46
 #: inc/wp-job-manager/widgets/class-jh-wpjm-widget-job-search.php:45
-#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-location-search.php:46
-#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-search.php:45
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-location-search.php:50
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-search.php:49
 #: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:1314
 #: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-resume-location-search.php:46
 #: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-resume-search.php:45
@@ -328,8 +328,8 @@ msgid "Id"
 msgstr ""
 
 #: inc/admin/jobhunt-meta-box-functions.php:413
-#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:296
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:101
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:302
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:118
 msgid "Menu Order"
 msgstr ""
 
@@ -541,6 +541,7 @@ msgstr ""
 #: inc/redux-framework/options/blog-options.php:31
 #: inc/redux-framework/options/blog-options.php:44
 #: inc/wp-job-manager/class-jobhunt-wpjm.php:381
+#: inc/wp-job-manager-companies/class-jobhunt-wpjmc.php:65
 #: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:292
 msgid "Full Width"
 msgstr ""
@@ -639,7 +640,7 @@ msgstr ""
 #: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:78
 #: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v3.php:670
 #: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:846
-#: inc/class-jobhunt.php:583
+#: inc/class-jobhunt.php:586
 msgid "Testimonials"
 msgstr ""
 
@@ -1437,7 +1438,7 @@ msgstr ""
 #: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v1.php:139
 #: inc/template-functions/home-v1.php:11 inc/template-functions/home-v1.php:177
 #: inc/template-functions/homepage.php:630
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:222
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:226
 #: inc/wp-job-manager/widgets/class-jh-wpjm-widget-job-search.php:44
 msgid "Job title, keywords or company name"
 msgstr ""
@@ -1465,7 +1466,7 @@ msgstr ""
 #: inc/template-functions/home-v3.php:13 inc/template-functions/home-v3.php:238
 #: inc/template-functions/home-v4.php:12 inc/template-functions/home-v4.php:206
 #: inc/template-functions/homepage.php:631
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:223
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:227
 #: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:1310
 msgid "City, province or region"
 msgstr ""
@@ -1503,7 +1504,7 @@ msgstr ""
 #: inc/template-functions/home-v3.php:15 inc/template-functions/home-v3.php:240
 #: inc/template-functions/home-v5.php:14 inc/template-functions/home-v5.php:209
 #: inc/template-functions/homepage.php:632
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:224
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:228
 #: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:1311
 msgid "Any Category"
 msgstr ""
@@ -1745,11 +1746,11 @@ msgstr ""
 
 #: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v2.php:144
 #: inc/template-functions/home-v2.php:11 inc/template-functions/home-v2.php:217
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:258
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:262
 #: inc/wp-job-manager/widgets/class-jh-wpjm-widget-job-location-search.php:44
 #: inc/wp-job-manager/widgets/class-jh-wpjm-widget-job-search.php:43
-#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-location-search.php:44
-#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-search.php:43
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-location-search.php:48
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-search.php:47
 #: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:1343
 #: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-resume-location-search.php:44
 #: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-resume-search.php:43
@@ -2040,7 +2041,7 @@ msgstr ""
 
 #: inc/admin/meta-boxes/class-jobhunt-meta-box-home-v5.php:147
 #: inc/template-functions/home-v5.php:12 inc/template-functions/home-v5.php:207
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:394
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:411
 msgid "Locations"
 msgstr ""
 
@@ -2152,23 +2153,23 @@ msgstr ""
 msgid "Add custom classes to page <body>"
 msgstr ""
 
-#: inc/class-jobhunt.php:106
+#: inc/class-jobhunt.php:105
 msgid "Top Bar Left Menu"
 msgstr ""
 
-#: inc/class-jobhunt.php:107
+#: inc/class-jobhunt.php:106
 msgid "Top Bar Right Menu"
 msgstr ""
 
-#: inc/class-jobhunt.php:108
+#: inc/class-jobhunt.php:107
 msgid "Primary Menu"
 msgstr ""
 
-#: inc/class-jobhunt.php:109
+#: inc/class-jobhunt.php:108
 msgid "Handheld Menu"
 msgstr ""
 
-#: inc/class-jobhunt.php:113
+#: inc/class-jobhunt.php:112
 msgid "User Dropdown Menu"
 msgstr ""
 
@@ -2176,108 +2177,108 @@ msgstr ""
 msgid "Sidebar"
 msgstr ""
 
-#: inc/class-jobhunt.php:188
+#: inc/class-jobhunt.php:191
 msgid "Widgets added to this region will appear in the blog and single post page."
 msgstr ""
 
-#: inc/class-jobhunt.php:200
+#: inc/class-jobhunt.php:203
 msgid "Footer Column %1$d"
 msgstr ""
 
-#: inc/class-jobhunt.php:201
+#: inc/class-jobhunt.php:204
 msgid "Widgets added here will appear in column %1$d of the footer."
 msgstr ""
 
-#: inc/class-jobhunt.php:203
+#: inc/class-jobhunt.php:206
 msgid "Footer Row %1$d - Column %2$d"
 msgstr ""
 
-#: inc/class-jobhunt.php:204
+#: inc/class-jobhunt.php:207
 msgid "Widgets added here will appear in column %1$d of footer row %2$d."
 msgstr ""
 
-#: inc/class-jobhunt.php:400
+#: inc/class-jobhunt.php:403
 msgid "Expand child menu"
 msgstr ""
 
-#: inc/class-jobhunt.php:401
+#: inc/class-jobhunt.php:404
 msgid "Collapse child menu"
 msgstr ""
 
-#: inc/class-jobhunt.php:498
+#: inc/class-jobhunt.php:501
 msgid "Post Navigation"
 msgstr ""
 
-#: inc/class-jobhunt.php:511
+#: inc/class-jobhunt.php:514
 msgid "Envato Market"
 msgstr ""
 
-#: inc/class-jobhunt.php:522
+#: inc/class-jobhunt.php:525
 msgid "Jetpack"
 msgstr ""
 
-#: inc/class-jobhunt.php:532
+#: inc/class-jobhunt.php:535
 msgid "Jobhunt Extensions"
 msgstr ""
 
-#: inc/class-jobhunt.php:543
+#: inc/class-jobhunt.php:546
 msgid "KingComposer"
 msgstr ""
 
-#: inc/class-jobhunt.php:553
+#: inc/class-jobhunt.php:556
 msgid "One Click Demo Import"
 msgstr ""
 
-#: inc/class-jobhunt.php:563
+#: inc/class-jobhunt.php:566
 msgid "Redux Framework"
 msgstr ""
 
-#: inc/class-jobhunt.php:573
+#: inc/class-jobhunt.php:576
 msgid "Regenerate Thumbnails"
 msgstr ""
 
-#: inc/class-jobhunt.php:593
+#: inc/class-jobhunt.php:596
 msgid "WooCommerce"
 msgstr ""
 
-#: inc/class-jobhunt.php:603
+#: inc/class-jobhunt.php:606
 msgid "WP Job Manager"
 msgstr ""
 
-#: inc/class-jobhunt.php:613
+#: inc/class-jobhunt.php:616
 msgid "WPForms Lite"
 msgstr ""
 
-#: inc/class-jobhunt.php:633 inc/classes/class-tgm-plugin-activation.php:334
+#: inc/class-jobhunt.php:636 inc/classes/class-tgm-plugin-activation.php:334
 msgid "Install Required Plugins"
 msgstr ""
 
-#: inc/class-jobhunt.php:634 inc/classes/class-tgm-plugin-activation.php:335
+#: inc/class-jobhunt.php:637 inc/classes/class-tgm-plugin-activation.php:335
 msgid "Install Plugins"
 msgstr ""
 
-#: inc/class-jobhunt.php:635 inc/classes/class-tgm-plugin-activation.php:337
+#: inc/class-jobhunt.php:638 inc/classes/class-tgm-plugin-activation.php:337
 #. translators: %s: plugin name.
 msgid "Installing Plugin: %s"
 msgstr ""
 
-#: inc/class-jobhunt.php:636 inc/classes/class-tgm-plugin-activation.php:340
+#: inc/class-jobhunt.php:639 inc/classes/class-tgm-plugin-activation.php:340
 msgid "Something went wrong with the plugin API."
 msgstr ""
 
-#: inc/class-jobhunt.php:637
+#: inc/class-jobhunt.php:640
 msgid "This theme requires the following plugin: %1$s."
 msgid_plural "This theme requires the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/class-jobhunt.php:638
+#: inc/class-jobhunt.php:641
 msgid "This theme recommends the following plugin: %1$s."
 msgid_plural "This theme recommends the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/class-jobhunt.php:639
+#: inc/class-jobhunt.php:642
 msgid ""
 "Sorry, but you do not have the correct permissions to install the %s "
 "plugin. Contact the administrator of this site for help on getting the "
@@ -2289,19 +2290,19 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/class-jobhunt.php:640
+#: inc/class-jobhunt.php:643
 msgid "The following required plugin is currently inactive: %1$s."
 msgid_plural "The following required plugins are currently inactive: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/class-jobhunt.php:641
+#: inc/class-jobhunt.php:644
 msgid "The following recommended plugin is currently inactive: %1$s."
 msgid_plural "The following recommended plugins are currently inactive: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/class-jobhunt.php:642
+#: inc/class-jobhunt.php:645
 msgid ""
 "Sorry, but you do not have the correct permissions to activate the %s "
 "plugin. Contact the administrator of this site for help on getting the "
@@ -2313,7 +2314,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/class-jobhunt.php:643
+#: inc/class-jobhunt.php:646
 msgid ""
 "The following plugin needs to be updated to its latest version to ensure "
 "maximum compatibility with this theme: %1$s."
@@ -2323,7 +2324,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/class-jobhunt.php:644
+#: inc/class-jobhunt.php:647
 msgid ""
 "Sorry, but you do not have the correct permissions to update the %s plugin. "
 "Contact the administrator of this site for help on getting the plugin "
@@ -2335,29 +2336,29 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/class-jobhunt.php:645 inc/classes/class-tgm-plugin-activation.php:377
+#: inc/class-jobhunt.php:648 inc/classes/class-tgm-plugin-activation.php:377
 #. translators: 1: plugin name(s).
 msgid "Begin installing plugin"
 msgid_plural "Begin installing plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/class-jobhunt.php:646
+#: inc/class-jobhunt.php:649
 msgid "Activate installed plugin"
 msgid_plural "Activate installed plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/class-jobhunt.php:647 inc/classes/class-tgm-plugin-activation.php:392
+#: inc/class-jobhunt.php:650 inc/classes/class-tgm-plugin-activation.php:392
 msgid "Return to Required Plugins Installer"
 msgstr ""
 
-#: inc/class-jobhunt.php:648 inc/classes/class-tgm-plugin-activation.php:394
+#: inc/class-jobhunt.php:651 inc/classes/class-tgm-plugin-activation.php:394
 #: inc/classes/class-tgm-plugin-activation.php:3244
 msgid "Plugin activated successfully."
 msgstr ""
 
-#: inc/class-jobhunt.php:649
+#: inc/class-jobhunt.php:652
 msgid "All plugins installed and activated successfully. %s"
 msgstr ""
 
@@ -2736,7 +2737,7 @@ msgid "Link Relationship (XFN)"
 msgstr ""
 
 #: inc/functions/menu.php:242
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:713
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:685
 msgid "Description"
 msgstr ""
 
@@ -2789,7 +2790,7 @@ msgid "Username"
 msgstr ""
 
 #: inc/functions/my-account.php:33
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:745
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:717
 msgid "Email"
 msgstr ""
 
@@ -2873,8 +2874,63 @@ msgstr ""
 msgid "Prev Post"
 msgstr ""
 
-#: inc/jobhunt-functions.php:700 inc/jobhunt-functions.php:701
+#: inc/jobhunt-functions.php:711 inc/jobhunt-functions.php:712
 msgid "Enter Valid Email Address"
+msgstr ""
+
+#: inc/mas-wp-job-manager-company/jobhunt-mas-wpjmc-functions.php:30
+#: inc/mas-wp-job-manager-company/jobhunt-mas-wpjmc-functions.php:78
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:738
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:741
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:870
+msgid "Google+"
+msgstr ""
+
+#: inc/mas-wp-job-manager-company/jobhunt-mas-wpjmc-functions.php:31
+msgid "company google plus page link"
+msgstr ""
+
+#: inc/mas-wp-job-manager-company/jobhunt-mas-wpjmc-functions.php:34
+#: inc/mas-wp-job-manager-company/jobhunt-mas-wpjmc-functions.php:86
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:745
+msgid "LinkedIn"
+msgstr ""
+
+#: inc/mas-wp-job-manager-company/jobhunt-mas-wpjmc-functions.php:35
+msgid "company linkedin page link"
+msgstr ""
+
+#: inc/mas-wp-job-manager-company/jobhunt-mas-wpjmc-functions.php:57
+#: inc/template-functions/home-v1.php:18 inc/template-functions/home-v1.php:184
+#: inc/template-functions/homepage.php:638
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:234
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:278
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:700
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:1317
+#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:1352
+#: job_manager/job-filters.php:45
+msgid "Category"
+msgstr ""
+
+#: inc/mas-wp-job-manager-company/jobhunt-mas-wpjmc-functions.php:67
+#: inc/wp-job-manager-companies/class-jobhunt-wpjmc.php:102
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:691
+msgid "Team size"
+msgstr ""
+
+#: inc/mas-wp-job-manager-company/jobhunt-mas-wpjmc-functions.php:70
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:694
+msgid "Choose Team Size&hellip;"
+msgstr ""
+
+#: inc/mas-wp-job-manager-company/jobhunt-mas-wpjmc-functions.php:81
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:741
+msgid "Google+ url"
+msgstr ""
+
+#: inc/mas-wp-job-manager-company/jobhunt-mas-wpjmc-functions.php:89
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:748
+msgid "LinkedIn url"
 msgstr ""
 
 #: inc/ocdi/functions.php:20 inc/ocdi/functions.php:38
@@ -2946,6 +3002,7 @@ msgstr ""
 #: inc/redux-framework/options/blog-options.php:32
 #: inc/redux-framework/options/blog-options.php:45
 #: inc/wp-job-manager/class-jobhunt-wpjm.php:379
+#: inc/wp-job-manager-companies/class-jobhunt-wpjmc.php:63
 #: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:290
 msgid "Left Sidebar"
 msgstr ""
@@ -2953,6 +3010,7 @@ msgstr ""
 #: inc/redux-framework/options/blog-options.php:33
 #: inc/redux-framework/options/blog-options.php:46
 #: inc/wp-job-manager/class-jobhunt-wpjm.php:380
+#: inc/wp-job-manager-companies/class-jobhunt-wpjmc.php:64
 #: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:291
 msgid "Right Sidebar"
 msgstr ""
@@ -2976,6 +3034,7 @@ msgstr ""
 
 #: inc/redux-framework/options/blog-options.php:55
 #: inc/redux-framework/options/blog-options.php:64
+#: mas-wp-job-manager-company/company-dashboard.php:62
 #: wp-job-manager-resumes/candidate-dashboard.php:65
 msgid "Hide"
 msgstr ""
@@ -3438,7 +3497,7 @@ msgstr ""
 
 #: inc/template-functions/about.php:97 inc/template-functions/home-v2.php:114
 #: inc/template-functions/home-v5.php:115
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:73
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-common-functions.php:6
 msgid "Companies"
 msgstr ""
 
@@ -3483,19 +3542,8 @@ msgstr ""
 
 #: inc/template-functions/home-v1.php:17 inc/template-functions/home-v1.php:183
 #: inc/template-functions/homepage.php:637
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:229
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:233
 msgid "Or browse job offers by"
-msgstr ""
-
-#: inc/template-functions/home-v1.php:18 inc/template-functions/home-v1.php:184
-#: inc/template-functions/homepage.php:638
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:230
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:274
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:728
-#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:1317
-#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:1352
-#: job_manager/job-filters.php:45
-msgid "Category"
 msgstr ""
 
 #: inc/template-functions/home-v1.php:25 inc/template-functions/home-v1.php:215
@@ -3803,7 +3851,7 @@ msgstr ""
 
 #: inc/template-functions/homepage.php:90 inc/template-functions/pages.php:67
 #: inc/template-functions/posts.php:371 inc/template-functions/posts.php:411
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:367
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:384
 msgid "Pages:"
 msgstr ""
 
@@ -3845,6 +3893,9 @@ msgstr ""
 
 #: inc/template-functions/posts.php:280 job_manager/job-dashboard.php:59
 #: job_manager/job-dashboard.php:76
+#: mas-wp-job-manager-company/company-dashboard.php:58
+#: mas-wp-job-manager-company/company-dashboard.php:74
+#: mas-wp-job-manager-company/company-dashboard.php:86
 #: wp-job-manager-resumes/candidate-dashboard.php:60
 #: wp-job-manager-resumes/candidate-dashboard.php:72
 #: wp-job-manager-resumes/candidate-dashboard.php:85
@@ -3889,7 +3940,7 @@ msgid "Newsletter Title"
 msgstr ""
 
 #: inc/widgets/class-jobhunt-newsletter-widget.php:86
-msgid "Newsletter Dsecription"
+msgid "Newsletter Description"
 msgstr ""
 
 #: inc/widgets/class-jobhunt-posts-widget.php:13
@@ -3929,8 +3980,8 @@ msgstr ""
 #: inc/wp-job-manager/widgets/class-jh-wpjm-widget-job-location-search.php:79
 #: inc/wp-job-manager/widgets/class-jh-wpjm-widget-job-search.php:78
 #: inc/wp-job-manager/widgets/class-jh-wpjm-widget-layered-nav.php:70
-#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-location-search.php:78
-#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-search.php:78
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-location-search.php:82
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-search.php:82
 #: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-layered-nav.php:70
 #: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-layered-nav.php:70
 #: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-resume-date-filter.php:91
@@ -4152,18 +4203,23 @@ msgid ""
 msgstr ""
 
 #: inc/wp-job-manager/class-jobhunt-wpjm.php:391
+#: inc/wp-job-manager-companies/class-jobhunt-wpjmc.php:51
+#: inc/wp-job-manager-companies/class-jobhunt-wpjmc.php:75
 #: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:278
 #: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:302
 msgid "Style v1"
 msgstr ""
 
 #: inc/wp-job-manager/class-jobhunt-wpjm.php:392
+#: inc/wp-job-manager-companies/class-jobhunt-wpjmc.php:52
+#: inc/wp-job-manager-companies/class-jobhunt-wpjmc.php:76
 #: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:279
 #: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:303
 msgid "Style v2"
 msgstr ""
 
 #: inc/wp-job-manager/class-jobhunt-wpjm.php:393
+#: inc/wp-job-manager-companies/class-jobhunt-wpjmc.php:53
 #: inc/wp-job-manager-resumes/class-jobhunt-wpjmr.php:280
 msgid "Style v3"
 msgstr ""
@@ -4180,90 +4236,86 @@ msgid_plural "Showing all %s jobs"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:145
-msgid ""
-"To check your Job Listings and Applications visit %1$sEmployer "
-"Dashboard%2$s."
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:146
+msgid "To check your Job Listings and Applications visit %1$sJob Dashboard%2$s."
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:153
-msgid ""
-"To check your Resumes and Past Applications visit %1$sCandidate "
-"Dashboard%2$s."
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:148
+msgid "To check your Job Listings visit %1$sJob Dashboard%2$s."
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:161
-msgid "To check your Job Listings visit %1$sEmployer Dashboard%2$s."
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:151
+msgid "To check your Company Listings visit %1$sCompany Dashboard%2$s."
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:168
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:152
 msgid "To check your Resumes visit %1$sCandidate Dashboard%2$s."
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:220
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:224
 msgid "Explore Thousand Of Jobs With Just Simple Search..."
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:263
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:267
 msgid "Region"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:268
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:737
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:272
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:709
 #: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:1347
 #: job_manager/job-filters.php:35 job_manager/job-filters.php:36
 msgid "Location"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:391
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:395
 #: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:252
 msgid "Last Hour"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:392
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:396
 #: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:253
 msgid "Last 24 Hours"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:393
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:397
 #: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:254
 msgid "Last 7 Days"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:394
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:398
 #: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:255
 msgid "Last 14 Days"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:395
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:399
 #: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:256
 msgid "Last 30 Days"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:396
-#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:386
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:164
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:400
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:392
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:181
 #: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:257
 msgid "All"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:896
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:904
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:910
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:918
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:924
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:900
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:908
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:914
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:922
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:928
 msgid "Remove filter"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:924
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:928
 msgid "Clean"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:972
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:976
 msgid "Posted on "
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:975
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:979
 #: indeed/content-imported-job-listing.php:31
 #: ziprecruiter/content-imported-job-listing.php:31
 #. translators: Placeholder %s is the relative, human readable time since the
@@ -4271,56 +4323,57 @@ msgstr ""
 msgid "%s ago"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1054
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1058
 msgid "Job Salary"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1058
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1062
 msgid "Choose a salary…"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1065
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1069
 msgid "Job Career Level"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1069
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1073
 msgid "Choose a career level…"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1076
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1080
 msgid "Job Experience"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1080
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1084
 msgid "Choose a job experience…"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1087
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1091
 msgid "Job Gender"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1091
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1095
 #: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:837
 msgid "Choose a gender…"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1098
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1102
 msgid "Job Industry"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1102
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1106
 msgid "Choose a job industry…"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1109
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1113
 msgid "Job Qualification"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1113
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1117
 msgid "Choose a job qualification…"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1219
+#: inc/wp-job-manager/jobhunt-wpjm-functions.php:1223
+#: inc/wp-job-manager-companies/class-jobhunt-wpjmc.php:85
 msgid "Please select a form"
 msgstr ""
 
@@ -4335,66 +4388,66 @@ msgstr ""
 msgid "Sign in"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:200
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:206
 #. translators: %d: total results
 msgid "Showing the single job"
 msgid_plural "Showing all %d jobs"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:213
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:219
 msgid "No jobs were found matching your selection."
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:294
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:300
 msgid "New Jobs"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:295
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:301
 msgid "Featured"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:297
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:102
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:303
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:119
 msgid "Name: Ascending"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:298
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:103
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:304
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:120
 msgid "Name: Descending"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:305
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:110
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:311
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:127
 msgid "Relevance"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:315
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:121
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:321
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:138
 msgid "Sort by"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:385
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:391
 msgid "Show %s"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:446
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:452
 msgid "Monthly Salary : "
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:452
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:458
 msgid "Roles :"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:475
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:481
 msgid "Closed"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:475
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:481
 msgid "Closes"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:475
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:481
 msgid "M j, Y"
 msgstr ""
 
@@ -4410,8 +4463,8 @@ msgstr ""
 #: inc/wp-job-manager/widgets/class-jh-wpjm-widget-job-location-search.php:74
 #: inc/wp-job-manager/widgets/class-jh-wpjm-widget-job-search.php:73
 #: inc/wp-job-manager/widgets/class-jh-wpjm-widget-layered-nav.php:65
-#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-location-search.php:73
-#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-search.php:73
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-location-search.php:77
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-search.php:77
 #: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-layered-nav.php:65
 #: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-layered-nav.php:65
 #: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-resume-date-filter.php:86
@@ -4429,7 +4482,7 @@ msgid "Jobhunt Job Location Search"
 msgstr ""
 
 #: inc/wp-job-manager/widgets/class-jh-wpjm-widget-job-location-search.php:45
-#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-location-search.php:45
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-location-search.php:49
 #: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-resume-location-search.php:45
 msgid "All Locations"
 msgstr ""
@@ -4475,16 +4528,60 @@ msgid "OR"
 msgstr ""
 
 #: inc/wp-job-manager/widgets/class-jh-wpjm-widget-layered-nav.php:108
-#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-layered-nav.php:108
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-layered-nav.php:113
 #: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-layered-nav.php:108
 msgid "Filter by"
+msgstr ""
+
+#: inc/wp-job-manager-companies/class-jobhunt-wpjmc.php:47
+msgid "Company Listings Style"
+msgstr ""
+
+#: inc/wp-job-manager-companies/class-jobhunt-wpjmc.php:48
+msgid ""
+"Select the style for company listing style. This lets the plugin know the "
+"style of company listings."
+msgstr ""
+
+#: inc/wp-job-manager-companies/class-jobhunt-wpjmc.php:59
+msgid "Company Listings Sidebar"
+msgstr ""
+
+#: inc/wp-job-manager-companies/class-jobhunt-wpjmc.php:60
+msgid ""
+"Select the position for company listing sidebar. This lets the plugin know "
+"the position of company listings sidebar."
+msgstr ""
+
+#: inc/wp-job-manager-companies/class-jobhunt-wpjmc.php:71
+msgid "Single Company Style"
+msgstr ""
+
+#: inc/wp-job-manager-companies/class-jobhunt-wpjmc.php:72
+msgid ""
+"Select the style for single company style. This lets the plugin know the "
+"style of single company."
+msgstr ""
+
+#: inc/wp-job-manager-companies/class-jobhunt-wpjmc.php:82
+msgid "Single Company Contact Form"
+msgstr ""
+
+#: inc/wp-job-manager-companies/class-jobhunt-wpjmc.php:83
+msgid ""
+"Select the form for single company contact form. This lets the plugin know "
+"the contact form of single company."
+msgstr ""
+
+#: inc/wp-job-manager-companies/class-jobhunt-wpjmc.php:103
+msgid "Team sizes"
 msgstr ""
 
 #. Template Name of the plugin/theme
 msgid "Company Sidebar"
 msgstr ""
 
-#: inc/wp-job-manager-companies/class-jobhunt-wpjmc.php:66
+#: inc/wp-job-manager-companies/class-jobhunt-wpjmc.php:154
 msgid "Widgets added to this region will appear in the Company page."
 msgstr ""
 
@@ -4492,134 +4589,108 @@ msgstr ""
 msgid "Showing %s - %s of %s companies"
 msgstr ""
 
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:719
-msgid "Team size"
-msgstr ""
-
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:722
-msgid "Choose Team Size&hellip;"
-msgstr ""
-
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:738
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:710
 msgid "Leave this blank if the location is not important"
 msgstr ""
 
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:741
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:713
 msgid "e.g. \"London\""
 msgstr ""
 
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:748
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:720
 msgid "you@yourdomain.com"
 msgstr ""
 
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:752
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:724
 msgid "Phone"
 msgstr ""
 
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:755
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:727
 msgid "Phone Number"
 msgstr ""
 
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:759
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:731
 #: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:737
 #: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:863
 msgid "Facebook"
 msgstr ""
 
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:762
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:734
 msgid "Facebook page url"
 msgstr ""
 
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:766
-#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:741
-#: inc/wp-job-manager-resumes/jobhunt-wpjmr-functions.php:870
-msgid "Google+"
-msgstr ""
-
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:769
-msgid "Google+ url"
-msgstr ""
-
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:773
-msgid "LinkedIn"
-msgstr ""
-
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:776
-msgid "LinkedIn url"
-msgstr ""
-
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:780
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:425
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:752
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:442
 msgid "Since"
 msgstr ""
 
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:783
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:755
 msgid "Established date/year"
 msgstr ""
 
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:841
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:813
 #: wp-job-manager-resumes/account-signin.php:61
 msgid "(optional)"
 msgstr ""
 
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:67
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:234
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:84
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:251
 msgid "%s Job"
 msgid_plural "%s Jobs"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:89
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:106
 msgid "Total of %s Employer"
 msgid_plural "Total of %s Employers"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:100
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:117
 msgid "New Employer"
 msgstr ""
 
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:231
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:343
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:248
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:360
 #: templates/home/company-info-carousel.php:73
 msgid "%s Open Position"
 msgid_plural "%s Open Positions"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:354
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:371
 msgid "See On Map"
 msgstr ""
 
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:363
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:380
 msgid "About Business Network"
 msgstr ""
 
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:379
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:396
 msgid "Company Information"
 msgstr ""
 
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:408
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:425
 msgid "Categories"
 msgstr ""
 
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:446
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:463
 msgid "Team Size"
 msgstr ""
 
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:460
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:477
 msgid "Posted Jobs"
 msgstr ""
 
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:474
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:491
 msgid "Jobs From Business Network"
 msgstr ""
 
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:487
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:504
 msgid "No companies were found matching your selection."
 msgstr ""
 
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:499
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-template-functions.php:516
 msgid "Contact Business Network"
 msgstr ""
 
@@ -4639,7 +4710,7 @@ msgstr ""
 msgid "Jobhunt Company Search"
 msgstr ""
 
-#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-search.php:44
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-search.php:48
 msgid "Company title or keywords"
 msgstr ""
 
@@ -5072,6 +5143,7 @@ msgid "Duplicate"
 msgstr ""
 
 #: job_manager/job-dashboard.php:70
+#: mas-wp-job-manager-company/company-dashboard.php:94
 #: wp-job-manager-resumes/candidate-dashboard.php:92
 msgid "Relist"
 msgstr ""
@@ -5081,6 +5153,7 @@ msgid "Continue Submission"
 msgstr ""
 
 #: job_manager/job-dashboard.php:85
+#: mas-wp-job-manager-company/company-dashboard.php:101
 #: wp-job-manager-resumes/candidate-dashboard.php:98
 msgid "Delete"
 msgstr ""
@@ -5121,6 +5194,26 @@ msgstr ""
 
 #: job_manager/job-submitted.php:33
 msgid "%s submitted successfully. Your listing will be visible once approved."
+msgstr ""
+
+#: mas-wp-job-manager-company/company-dashboard.php:26
+msgid "Your company can be viewed, edited or removed below."
+msgid_plural "Your companies can be viewed, edited or removed below."
+msgstr[0] ""
+msgstr[1] ""
+
+#: mas-wp-job-manager-company/company-dashboard.php:38
+msgid "You do not have any active company listings."
+msgstr ""
+
+#: mas-wp-job-manager-company/company-dashboard.php:68
+#: mas-wp-job-manager-company/company-dashboard.php:78
+#: wp-job-manager-resumes/candidate-dashboard.php:77
+msgid "Publish"
+msgstr ""
+
+#: mas-wp-job-manager-company/company-dashboard.php:130
+msgid "Add Company"
 msgstr ""
 
 #: templates/home/about-content-block.php:34
@@ -5203,10 +5296,6 @@ msgstr[1] ""
 
 #: wp-job-manager-resumes/candidate-dashboard.php:39
 msgid "You do not have any active resume listings."
-msgstr ""
-
-#: wp-job-manager-resumes/candidate-dashboard.php:77
-msgid "Publish"
 msgstr ""
 
 #: wp-job-manager-resumes/candidate-dashboard.php:127
@@ -5320,7 +5409,7 @@ msgctxt "post date"
 msgid "%s"
 msgstr ""
 
-#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:205
+#: inc/wp-job-manager/jobhunt-wpjm-template-functions.php:211
 #. translators: 1: first job 2: last job 3: total jobs
 msgctxt "with first and last job"
 msgid "Showing the single job"
@@ -5330,15 +5419,20 @@ msgstr[1] ""
 
 #: inc/wp-job-manager/widgets/class-jh-wpjm-widget-job-location-search.php:46
 #: inc/wp-job-manager/widgets/class-jh-wpjm-widget-job-search.php:45
-#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-location-search.php:46
-#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-search.php:45
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-location-search.php:50
+#: inc/wp-job-manager-companies/widgets/class-jh-wpjmc-widget-company-search.php:49
 #: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-resume-location-search.php:46
 #: inc/wp-job-manager-resumes/widgets/class-jh-wpjmr-widget-resume-search.php:45
 msgctxt "submit button"
 msgid "Search"
 msgstr ""
 
-#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:694
+#: inc/wp-job-manager-companies/class-jobhunt-wpjmc.php:104
+msgctxt "Company permalink - resave permalinks after changing this"
+msgid "company-team-size"
+msgstr ""
+
+#: inc/wp-job-manager-companies/jobhunt-wpjmc-functions.php:666
 msgctxt "Company permalink - resave permalinks after changing this"
 msgid "company"
 msgstr ""

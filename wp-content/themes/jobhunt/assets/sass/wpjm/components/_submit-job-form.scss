@@ -67,7 +67,8 @@
     padding-top: 10px;
 }
 
-#submit-job-form {
+#submit-job-form,
+#submit-company-form {
     > p {
         a {
             @include make-new-button(500);

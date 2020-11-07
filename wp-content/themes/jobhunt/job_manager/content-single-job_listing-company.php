@@ -28,9 +28,15 @@ $job_id = get_the_ID();
 $company = '';
 
 if( $job_id ) {
-    $post_title = get_post_meta( $job_id, '_company_name', true );
-    if( ! empty( $post_title ) ) {
-        $company = get_page_by_title( $post_title, OBJECT, 'company' );
+    if( function_exists( 'jobhunt_is_mas_wp_job_manager_company_activated' ) && jobhunt_is_mas_wp_job_manager_company_activated() && $comapny_id = get_post_meta( $job_id, '_company_id', true ) ) {
+        if( ! empty( $comapny_id ) ) {
+            $company = get_post( $comapny_id );
+        }
+    } else {
+        $post_title = get_post_meta( $job_id, '_company_name', true );
+        if( ! empty( $post_title ) ) {
+            $company = get_page_by_title( $post_title, OBJECT, 'company' );
+        }
     }
 }
 ?>

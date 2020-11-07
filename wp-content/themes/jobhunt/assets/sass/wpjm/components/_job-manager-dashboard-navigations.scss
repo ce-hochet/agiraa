@@ -1,20 +1,18 @@
 .woocommerce-active.logged-in {
     .job-manager-job-dashboard-inner,
+    .job-manager-company-dashboard-inner,
     #resume-manager-candidate-dashboard,
     #job-manager-job-applications {
         @include make-row;
     }
 
     .job-manager-job-dashboard-content,
+    .job-manager-company-dashboard-content,
     .resume-manager-candidate-dashboard,
     .job-manager-job-applications {
         @include make-col-ready;
         @include make-col(12);
-    }
 
-    .job-manager-job-dashboard-content,
-    .resume-manager-candidate-dashboard,
-    .job-manager-job-applications {
         @include media-breakpoint-up(lg) {
             @include make-col(9);
         }
@@ -86,9 +84,11 @@
 }
 
 #resume-manager-candidate-dashboard table.resume-manager-resumes,
-#job-manager-job-dashboard table.job-manager-jobs {
+#job-manager-job-dashboard table.job-manager-jobs,
+#job-manager-company-dashboard table.job-manager-companies, {
     ul.candidate-dashboard-actions,
-    ul.job-dashboard-actions {
+    ul.job-dashboard-actions,
+    ul.company-dashboard-actions {
         visibility: visible;
 
         @include media-breakpoint-up(xl) {
@@ -113,6 +113,7 @@
         @include media-breakpoint-up(xl) {
             @include hover-focus() {
                 ul.job-dashboard-actions,
+                ul.company-dashboard-actions,
                 ul.candidate-dashboard-actions {
                     visibility: visible;
                 }
@@ -121,7 +122,8 @@
     }
 
     .candidate-dashboard-actions,
-    .job-dashboard-actions {
+    .job-dashboard-actions,
+    .company-dashboard-actions {
         margin-top: 6px;
 
         a {
@@ -158,26 +160,30 @@
     }
 
     .candidate-dashboard-action-edit,
-    .job-dashboard-action-edit {
+    .job-dashboard-action-edit,
+    .company-dashboard-action-edit {
         &::before {
             content: "\f044";
         }
     }
 
     .candidate-dashboard-action-delete,
-    .job-dashboard-action-delete {
+    .job-dashboard-action-delete,
+    .company-dashboard-action-delete {
         &::before {
             content: "\f2ed";
         }
     }
 
-    .candidate-dashboard-action-hide {
+    .candidate-dashboard-action-hide,
+    .company-dashboard-action-hide {
         &::before {
             content: "\f070";
         }
     }
 
-    .candidate-dashboard-action-publish {
+    .candidate-dashboard-action-publish,
+    .company-dashboard-action-publish {
         &::before {
             content: "\f06e";
         }

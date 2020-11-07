@@ -631,15 +631,3 @@ function my_delete_user($user_id) {
     wp_delete_post($user_post->ID, true);
   }
 }
-
-/*
-* 20/10/2020
-* CEHOCHET
-* Afficher message "compte supprimé définitivement" sur la page inscription/connexion
-* *
-setcookie('done', null, -1, '/');
-add_action('delete_user',function(){
-   setcookie("done", "done", time() + (86400 * 30), "/");
-});
-
-*/
