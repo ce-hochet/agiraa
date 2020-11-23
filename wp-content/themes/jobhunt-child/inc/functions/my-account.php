@@ -11,7 +11,6 @@ if ( ! function_exists( 'jobhunt_registration_form_fields' ) ) {
 
   function jobhunt_registration_form_fields() {
 
-
     ob_start();
     ?>
     <div class="entry-header">
@@ -27,7 +26,8 @@ if ( ! function_exists( 'jobhunt_registration_form_fields' ) ) {
 
 
 
-      do_action( 'jobhunt_registration_form_before' ); ?>
+      do_action( 'jobhunt_registration_form_before' ); 
+      ?>
 
       <form id="jobhunt_registration_form" class="jobhunt_registration_form" action="#" method="POST">
       <p class="status"></p>

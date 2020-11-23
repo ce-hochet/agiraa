@@ -100,19 +100,8 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
     <fieldset>
       <div class="clear"></div>
       <p>
-        <?php wp_nonce_field( 'remove_account_details', 'remove_account_details-nonce' ); ?>
+        <?php wp_nonce_field( 'remove_account_details', 'remove-account-details-nonce' ); ?>
         <button type="submit" class="woocommerce-Button button" name="remove_account_details" value="<?php esc_attr_e( 'Valider la suppression', 'woocommerce' ); ?>"><?php esc_html_e( 'Valider la suppression', 'woocommerce' ); ?></button>
         <input type="hidden" name="action" value="remove_account_details" required class="required"/>
       </p>
     </form>
-    <?php
-
-    // DELETE USER + SEND EMAIL
-    if (isset($_POST ['remove_account_details']) ) {
-      $current_user = wp_get_current_user();
-      require_once( ABSPATH.'wp-admin/includes/user.php' );
-      wp_delete_user( $current_user->ID );
-      wc_add_notice(__( 'Votre compte a bien été supprimé définitivement', 'agiraa' ), 'success');
-      wp_safe_redirect( "/mon-compte/profil/" );
-    }
-    ?>

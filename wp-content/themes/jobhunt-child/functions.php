@@ -495,6 +495,11 @@ if ( ! function_exists( 'jobhunt_register_login_form' ) ) {
     $output = '';
 
     if( ! is_user_logged_in() ) {
+      if(isset($_COOKIE["account_removed"]) && !empty($_COOKIE["account_removed"])) {
+        wc_add_notice(__( 'Votre compte a bien été supprimé définitivement.', 'agiraa' ), 'success');
+        unset($_COOKIE['account_removed']);
+      }
+      wc_print_notices();
       ob_start();
       ?>
       <div class="jobhunt-register-login-form">
@@ -631,3 +636,23 @@ function my_delete_user($user_id) {
     wp_delete_post($user_post->ID, true);
   }
 }
+
+
+add_action( 'template_redirect', 'redirect_after_remove', 5 );
+// DELETE USER + SEND EMAIL
+function redirect_after_remove() {
+  $nonce_value = wc_get_var( $_REQUEST['remove-account-details-nonce'], wc_get_var( $_REQUEST['_wpnonce'], '' ) ); // @codingStandardsIgnoreLine.
+  if ( ! wp_verify_nonce( $nonce_value, 'remove_account_details' ) ) {
+    return;
+  }
+  if ( empty( $_POST['action'] ) || 'remove_account_details' !== $_POST['action'] ) {
+    return;
+  }
+  wc_nocache_headers();
+  $current_user = wp_get_current_user();
+  require_once( ABSPATH.'wp-admin/includes/user.php' );
+  wp_delete_user( $current_user->ID );
+  setcookie("account_removed", "1", time()+45, "/");
+  wp_safe_redirect( "/inscription-connexion");
+  exit();
+}  
