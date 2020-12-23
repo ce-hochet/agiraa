@@ -27,6 +27,7 @@ jQuery(document).ready(function( $ ){
 	    }
 	});   
     $('#search_location, #job_location, #company_location, #candidate_location, #_company_location').geocomplete(jobhunt_options.location_geocomplete_options).bind( "geocode:result", function( event, result ) {
+        console.log(result);
     });
 
 
@@ -60,7 +61,7 @@ jQuery(document).ready(function( $ ){
             $("#jobhunt_register_user_rna_error").text("Le RNA est un code à 10 caractères.");
             $("#jobhunt_register_user_rna_error").css('color', '#DF3F52');
         } else {
-            let url = "https://data.opendatasoft.com/api/records/1.0/search/?dataset=associations%40public&q=" + rna_value + "&facet=commune&facet=datedeclaration&facet=nom_dep&facet=nom_reg&facet=code_epci&facet=dept";
+            let url = "https://data.opendatasoft.com/api/records/1.0/search/?dataset=ref-france-association-repertoire-national%40public&q=" + rna_value + "&facet=management&facet=nature&facet=group&facet=ispublic&facet=position&facet=dep_name&facet=epci_name&facet=reg_name&facet=com_arm_area_code"
             $("#jobhunt_register_user_rna_error").text("Loading...");
             $.ajax({url: url, 
                 success: function(result){
