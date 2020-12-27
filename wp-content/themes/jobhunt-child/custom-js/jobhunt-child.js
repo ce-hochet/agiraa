@@ -27,7 +27,6 @@ jQuery(document).ready(function( $ ){
 	    }
 	});   
     $('#search_location, #job_location, #company_location, #candidate_location, #_company_location').geocomplete(jobhunt_options.location_geocomplete_options).bind( "geocode:result", function( event, result ) {
-        console.log(result);
     });
 
 

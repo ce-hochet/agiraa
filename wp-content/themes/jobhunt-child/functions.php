@@ -656,3 +656,11 @@ function redirect_after_remove() {
   wp_safe_redirect( "/inscription-connexion");
   exit();
 }  
+
+
+function remove_html5_required_wp_editor($maybe_required, $field) {
+  //On WP_EDITOR deactivate HTML5_required
+  return false;
+}
+
+add_filter('field_editor_wp_editor_html5_required', 'remove_html5_required_wp_editor', 10, 2);
