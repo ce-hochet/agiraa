@@ -265,7 +265,6 @@ if ( ! function_exists( 'jobhunt_registration_form_fields' ) ) {
                 );
                 $post_id = wp_insert_post($company);
                 update_post_meta($post_id, 'rna_code', $rna_code);
-                update_post_meta($post_id, 'user_cgu', $user_cgu);
               }
               // log the new user in
               $creds = array();
