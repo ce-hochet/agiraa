@@ -664,3 +664,9 @@ function remove_html5_required_wp_editor($maybe_required, $field) {
 }
 
 add_filter('field_editor_wp_editor_html5_required', 'remove_html5_required_wp_editor', 10, 2);
+
+
+/**
+ * EVO_01 - Changement de la valeur du button "Prévisualiser" en "Valider";
+ */
+add_filter( 'submit_job_form_submit_button_text', function () { return 'Valider'; });
