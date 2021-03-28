@@ -97,7 +97,7 @@ do_action('woocommerce_before_profil_form');
             <?php } else { ?>
                 <p style="color: #DF3F52;"> Aucune déclaration n'a été mise en ligne.</p>
             <?php } ?>
-            <input type="file" class="woocommerce-Input woocommerce-Input--text input-text" name="declaration_file" id="declaration_file"/>
+            <input type="file" class="woocommerce-Input woocommerce-Input--text input-text" name="declaration_file" id="declaration_file" accept=".pdf"/>
             <span> <em> Veuillez charger le "Récépissé de déclaration" de votre association pour obtenir le statut "Compte certifié" et attesté de la bonne existence de votre association. </em> </span>
         </p>
     </fieldset>

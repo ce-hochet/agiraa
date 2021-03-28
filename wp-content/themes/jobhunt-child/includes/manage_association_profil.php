@@ -8,6 +8,8 @@
  * @package jobhunt-child
  */
 
+define('DECLARATION_FILE_MSG', "Bonjour, \n\nUn nouveau récépissé de déclaration d'association à été déposé. \n\n Agiraa,");
+
 include_once get_stylesheet_directory() . "/includes/utils.php";
 
 /*
@@ -185,8 +187,10 @@ function save_profil_details() {
         update_user_meta( get_current_user_id(), '_company_name', isset( $company_infos['company_name'] ) ? $company_infos['company_name'] : '' );
         update_user_meta( get_current_user_id(), '_company_website', isset( $company_infos['company_website'] ) ? $company_infos['company_website'] : '' );
     
-        if($fileok)
+        if($fileok) {
             update_post_meta($post_id, 'declaration_file', $movefile['url']);
+            agiraa_send_notification_admin("Récépissé déposé par ". $company_infos['company_name'] . ".", DECLARATION_FILE_MSG);
+        }
         //Message pour indiquer à l'utilisateur que les changements sont OK.
         wc_add_notice( __( 'Account details changed successfully.', 'woocommerce' ) );
         do_action( 'woocommerce_profil_details', $user_id );

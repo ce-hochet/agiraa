@@ -32,3 +32,12 @@ function checkCompanyFill($post) {
     }
     return $company_fill;
 }
+
+/**
+ * Function utilitaire permettant d'envoyer un mail aux admins sur un sujet. 
+ * True si mail envoyé, false sinon.
+ */
+function agiraa_send_notification_admin($subject, $message) {
+    $admin_mail = get_option('admin_email');
+    return wp_mail($admin_mail, '[AGIRAA][ADMIN] ' . $subject, $message);
+}
